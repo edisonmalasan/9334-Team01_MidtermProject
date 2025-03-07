@@ -1,15 +1,24 @@
 # 9334-Team01_PreProject
 
-## CLIENT-SERVER CLASSES [TODO]
+## CLIENT-SERVER RMI
 
 ### Common* [for both]
 - [ ] .java
 
-### Client
-- [ ] .java
+### data [TODO]
+- classic_leaderboard.JSON
+- endless_leaderboard.JSON
+- player_data.JSON
+- question.JSON
 
-### Server
-- [ ] .java
+### Client [TODO]
+- JSON INSTEAD OF XML (for storing data)
+- REGISTER & LOGIN FEATURE
+- (MORE)
 
-### GUI
-- [ ] .java
+### Server [TODO]
+- IMPLEMENT RMI INSTEAD OF SERVER SOCKET
+- IMPROVEMENT OF GUI (fxml)
+- BANNING USER/CLIENT FEATURE
+- ADDING THE (server can be started/stopped manually without restarting the program) FEATURE GUI
+- (MORE)
