@@ -4,7 +4,6 @@ package Client.controller;
  */
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
-import Client.view.ViewManager;
 import exception.ConnectionException;
 import exception.InvalidUsernameException;
 import exception.ServerNotRunningException;
@@ -22,6 +21,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import java.io.FileWriter;
+
+import org.json.JSONObject;
 
 public class InputUsernameController {
     private static final Logger logger = Logger.getLogger(InputUsernameController.class.getName());
@@ -77,11 +80,30 @@ public class InputUsernameController {
 
         playerName = username;
         logger.info("\nInputUsernameController: Username entered: " + playerName);
+        writeUsrnameToJson(); //testing
         switchToMainMenu(event);
     }
 
     public static String getPlayerName() {
         return playerName;
+    }
+
+    /**
+     * A method that writes the userName to a .json file
+     */
+    private void writeUsrnameToJson() {
+        try {
+            JSONObject usrName = new JSONObject();
+            usrName.put("username", playerName);
+
+            try (FileWriter file = new FileWriter("usrName_test.json")) {
+                file.write(usrName.toString(4));
+            }
+
+            logger.info("\nInputUsernameController: Username saved to JSON file.");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Failed to save username to JSON.", e);
+        }
     }
 
     private void switchToMainMenu(ActionEvent event) {

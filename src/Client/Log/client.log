@@ -2314,3 +2314,15 @@ ClientConnection: Waiting to receive object from server...
 Feb 20, 2025 2:04:49 AM Client.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15, eruki  : 17]}
+Mar 07, 2025 10:04:23 PM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 07, 2025 10:04:23 PM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 07, 2025 10:04:24 PM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 07, 2025 10:04:24 PM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
