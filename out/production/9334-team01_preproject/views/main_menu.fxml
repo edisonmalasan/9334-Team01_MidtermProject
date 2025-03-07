@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainMenu" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.controller.MainMenuController">
+   <children>
+      <ImageView fx:id="titleImage" fitHeight="397.0" fitWidth="414.0" layoutX="314.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TITLE.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="418.0" layoutY="431.0" prefHeight="241.0" prefWidth="189.0" spacing="30.0" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="418.0" AnchorPane.rightAnchor="417.0" AnchorPane.topAnchor="431.0">
+         <children>
+            <Button fx:id="playButton" prefHeight="50.0" prefWidth="200.0" text="PLAY" />
+            <Button fx:id="leaderboardButton" prefHeight="50.0" prefWidth="200.0" text="LEADERBOARD" />
+            <Button fx:id="quitButton" prefHeight="50.0" prefWidth="200.0" text="EXIT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
