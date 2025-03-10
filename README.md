@@ -6,10 +6,8 @@
 - [ ] .java
 
 ### data [TODO]
-- classic_leaderboard.JSON
-- endless_leaderboard.JSON
 - player_data.JSON
-- question.JSON
+- questions.JSON
 
 ### Client [TODO]
 - JSON INSTEAD OF XML (for storing data)
