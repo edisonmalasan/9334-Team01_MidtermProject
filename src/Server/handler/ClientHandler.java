@@ -3,6 +3,7 @@ package Server.handler;
  * Handles requests from the client
  */
 
+import Server.controller.JSONStorageController;
 import common.AnsiFormatter;
 import Client.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
@@ -60,12 +61,16 @@ public class ClientHandler implements Runnable {
                         Response response = handleQuestionRequest(category);
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_CLASSIC")) {
-                        List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
-                        Response response = handleLeaderboardUpdate(classicLeaderboard,"classic");
+                        // List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+                        // Response response = handleLeaderboardUpdate(classicLeaderboard,"classic");
+                        List<LeaderboardEntryModelServer> classicLeaderboard = JSONStorageController.loadLeaderboardFromJSON("data/classic_leaderboard.json");
+                        Response response = handleLeaderboardUpdate(classicLeaderboard);
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_ENDLESS")) {
-                        List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
-                        Response response = handleLeaderboardUpdate(endlessLeaderboard,"endless");
+                        // List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+                        //Response response = handleLeaderboardUpdate(endlessLeaderboard,"endless");
+                        List<LeaderboardEntryModelServer> endlessLeaderboard = JSONStorageController.loadLeaderboardFromJSON("data/endless_leaderboard.json");
+                        Response response = handleLeaderboardUpdate(endlessLeaderboard);
                         sendResponse(response);
                     }
                 } else if (request instanceof PlayerModel) {
@@ -100,19 +105,36 @@ public class ClientHandler implements Runnable {
     }
 
     // Handles leaderboard updates based on the game mode (classic/endless)
-    private Response handleLeaderboardUpdate(List<?> list, String xmlFile) {
+//    private Response handleLeaderboardUpdate(List<?> list, String xmlFile) {
+//        try {
+//            if (list == null) {
+//                logger.severe("Received null player data.");
+//                return new Response(false, "Received null player data.", null);
+//            }
+//
+//            if (xmlFile.equals("classic")) {
+//                fileName = "data/classic_leaderboard.xml";
+//            } else {
+//                fileName = "data/endless_leaderboard.xml";
+//            }
+//            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+//            logger.info("Returning leaderboard data.");
+//            return new Response(true, "Leaderboard displayed successfully.", leaderboard);
+//        } catch (Exception e) {
+//            logger.severe("Error retrieving leaderboard: " + e.getMessage());
+//            return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
+//        }
+//    }
+
+    public static Response handleLeaderboardUpdate(List<?> list, String gameMode) {
         try {
             if (list == null) {
                 logger.severe("Received null player data.");
                 return new Response(false, "Received null player data.", null);
             }
 
-            if (xmlFile.equals("classic")) {
-                fileName = "data/classic_leaderboard.xml";
-            } else {
-                fileName = "data/endless_leaderboard.xml";
-            }
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            String fileName = gameMode.equals("classic") ? CLASSIC_LEADERBOARD_FILE : ENDLESS_LEADERBOARD_FILE;
+            List<LeaderboardEntryModelServer> leaderboard = JSONStorageController.loadLeaderboardFromJSON(fileName);
             logger.info("Returning leaderboard data.");
             return new Response(true, "Leaderboard displayed successfully.", leaderboard);
         } catch (Exception e) {
@@ -121,33 +143,31 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    // Handles player score updates and modifies the leaderboard accordingly
+    /**
+     * A method that handles player score updates and modifies the leaderboard accordingly. (JSON)
+     * @param player
+     * @return Response
+     */
     private Response handlePlayerScoreUpdate(PlayerModel player) {
         try {
             if (player == null) {
                 logger.severe("Received null player data.");
                 return new Response(false, "Received null player data.", null);
             }
-
             String usernameLower = player.getName().toLowerCase();
             int newScore = player.getScore();
             logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
-
-            fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-
+            fileName = "data/classic_leaderboard.json";
             if (player.getName().endsWith("  ")) {
                 player.setName(player.getName().trim());
-                fileName = "data/endless_leaderboard.xml";
-                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+                fileName = "data/endless_leaderboard.json";
             }
-
+            List<LeaderboardEntryModelServer> leaderboard = JSONStorageController.loadLeaderboardFromJSON(fileName);
             boolean found = false;
             for (LeaderboardEntryModelServer entry : leaderboard) {
                 if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
-                    // compare the new score with the existing score
                     if (newScore > entry.getScore()) {
-                        entry.setScore(newScore); // update the score only if the new score is higher
+                        entry.setScore(newScore);
                         logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
                     } else {
                         logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
@@ -156,21 +176,68 @@ public class ClientHandler implements Runnable {
                     break;
                 }
             }
-
             if (!found) {
                 leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
                 logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
             }
-
-            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
-
-            logger.info("Player score updated successfully.");
+            JSONStorageController.saveLeaderboardToJSON(fileName, leaderboard);
             return new Response(true, "Player score updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error updating player score: " + e.getMessage());
             return new Response(false, "Error updating player score: " + e.getMessage(), null);
         }
     }
+
+    // Handles player score updates and modifies the leaderboard accordingly
+//    private Response handlePlayerScoreUpdate(PlayerModel player) {
+//        try {
+//            if (player == null) {
+//                logger.severe("Received null player data.");
+//                return new Response(false, "Received null player data.", null);
+//            }
+//
+//            String usernameLower = player.getName().toLowerCase();
+//            int newScore = player.getScore();
+//            logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
+//
+//            fileName = "data/classic_leaderboard.xml";
+//            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+//
+//            if (player.getName().endsWith("  ")) {
+//                player.setName(player.getName().trim());
+//                fileName = "data/endless_leaderboard.xml";
+//                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+//            }
+//
+//            boolean found = false;
+//            for (LeaderboardEntryModelServer entry : leaderboard) {
+//                if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
+//                    // compare the new score with the existing score
+//                    if (newScore > entry.getScore()) {
+//                        entry.setScore(newScore); // update the score only if the new score is higher
+//                        logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
+//                    } else {
+//                        logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
+//                    }
+//                    found = true;
+//                    break;
+//                }
+//            }
+//
+//            if (!found) {
+//                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
+//                logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
+//            }
+//
+//            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+//
+//            logger.info("Player score updated successfully.");
+//            return new Response(true, "Player score updated successfully.", null);
+//        } catch (Exception e) {
+//            logger.severe("Error updating player score: " + e.getMessage());
+//            return new Response(false, "Error updating player score: " + e.getMessage(), null);
+//        }
+//    }
 
     // Handles a request for a question based on the selected category
     private Response handleQuestionRequest(String category) {
