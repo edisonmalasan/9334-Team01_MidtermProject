@@ -8,7 +8,11 @@ import Server.view.AdminView;
 import common.AnsiFormatter;
 import Server.model.QuestionBankModel;
 import Server.controller.LeaderboardControllerServer;
+import utility.BombGameServer;
 
+import java.rmi.Remote;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -30,14 +34,6 @@ public class ServerMain {
 
         logger.info("Server Main: 📖 QuestionBank loaded: " + questionBank.getQuestions().size() + " questions.");
         logger.info("Server Main: 🏆 Leaderboard controller initialized.");
-
-        AdminView classicView = new AdminView("data/classic_leaderboard.xml", "Classic Leaderboards");
-        AdminViewController classicController = new AdminViewController(classicView);
-        classicController.loadXML();
-
-        AdminView endlessView = new AdminView("data/endless_leaderboard.xml", "Endless Leaderboards");
-        AdminViewController endlessController = new AdminViewController(endlessView);
-        endlessController.loadXML();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -76,15 +72,13 @@ public class ServerMain {
     }
 
     private static void startServer(QuestionBankModel questionBank, LeaderboardControllerServer leaderboardControllerServer) {
-        if (isServerRunning) {
-            logger.info("Server is already running.");
-            return;
+        try {
+            BombGameServer server = new BombGameServerImpl();
+            Registry registry = LocateRegistry.createRegistry(1099);
+            registry.rebind("server", server);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        serverHandler = new ServerHandler(questionBank, leaderboardControllerServer);
-        serverThread = new Thread(() -> serverHandler.start());
-        serverThread.start();
-        isServerRunning = true;
 
         logger.info("[INFO] Server started successfully.");
         logger.info("[INFO] Server Handler: ✅ Server started on port " + PORT_NUMBER);
