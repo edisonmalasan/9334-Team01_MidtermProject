@@ -3,7 +3,6 @@ package Server.handler;
  * Handles requests from the client
  */
 
-import Server.controller.JSONStorageController;
 import common.AnsiFormatter;
 import Client.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
@@ -61,25 +60,31 @@ public class ClientHandler implements Runnable {
                         Response response = handleQuestionRequest(category);
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_CLASSIC")) {
-                        // List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
-                        // Response response = handleLeaderboardUpdate(classicLeaderboard,"classic");
-                        List<LeaderboardEntryModelServer> classicLeaderboard = JSONStorageController.loadLeaderboardFromJSON("data/classic_leaderboard.json");
-                        Response response = handleLeaderboardUpdate(classicLeaderboard);
+                        List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+                        Response response = handleLeaderboardUpdate(classicLeaderboard,"classic");
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_ENDLESS")) {
-                        // List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
-                        //Response response = handleLeaderboardUpdate(endlessLeaderboard,"endless");
-                        List<LeaderboardEntryModelServer> endlessLeaderboard = JSONStorageController.loadLeaderboardFromJSON("data/endless_leaderboard.json");
-                        Response response = handleLeaderboardUpdate(endlessLeaderboard);
+                        List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+                        Response response = handleLeaderboardUpdate(endlessLeaderboard,"endless");
+                        sendResponse(response);
+                    } else if (reqString.equals("GET_QUESTIONS_LIST")) {
+                        Response response = handleQuestionListRequest();
                         sendResponse(response);
                     }
                 } else if (request instanceof PlayerModel) {
                     logger.info("Player score update request received.");
                     Response response = handlePlayerScoreUpdate((PlayerModel) request);
                     sendResponse(response);
+                } else if (request instanceof LeaderboardEntryModelServer) {
+                    logger.info("Leaderboard update request received.");
+                    Response response = handleLeaderboardUpdateRequest((LeaderboardEntryModelServer) request);
+                    sendResponse(response);
+                } else if (request instanceof QuestionModel) {
+                    logger.info("Questions update request received.");
+                    Response response = handleQuestionUpdate((QuestionModel) request);
+                    sendResponse(response);
                 }
             }
-
         } catch (EOFException e) {
             logger.info("Client disconnected.");
         } catch (SocketException e) {
@@ -105,36 +110,19 @@ public class ClientHandler implements Runnable {
     }
 
     // Handles leaderboard updates based on the game mode (classic/endless)
-//    private Response handleLeaderboardUpdate(List<?> list, String xmlFile) {
-//        try {
-//            if (list == null) {
-//                logger.severe("Received null player data.");
-//                return new Response(false, "Received null player data.", null);
-//            }
-//
-//            if (xmlFile.equals("classic")) {
-//                fileName = "data/classic_leaderboard.xml";
-//            } else {
-//                fileName = "data/endless_leaderboard.xml";
-//            }
-//            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-//            logger.info("Returning leaderboard data.");
-//            return new Response(true, "Leaderboard displayed successfully.", leaderboard);
-//        } catch (Exception e) {
-//            logger.severe("Error retrieving leaderboard: " + e.getMessage());
-//            return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
-//        }
-//    }
-
-    public static Response handleLeaderboardUpdate(List<?> list, String gameMode) {
+    private Response handleLeaderboardUpdate(List<?> list, String xmlFile) {
         try {
             if (list == null) {
                 logger.severe("Received null player data.");
                 return new Response(false, "Received null player data.", null);
             }
 
-            String fileName = gameMode.equals("classic") ? CLASSIC_LEADERBOARD_FILE : ENDLESS_LEADERBOARD_FILE;
-            List<LeaderboardEntryModelServer> leaderboard = JSONStorageController.loadLeaderboardFromJSON(fileName);
+            if (xmlFile.equals("classic")) {
+                fileName = "data/classic_leaderboard.xml";
+            } else {
+                fileName = "data/endless_leaderboard.xml";
+            }
+            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
             logger.info("Returning leaderboard data.");
             return new Response(true, "Leaderboard displayed successfully.", leaderboard);
         } catch (Exception e) {
@@ -143,31 +131,34 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    /**
-     * A method that handles player score updates and modifies the leaderboard accordingly. (JSON)
-     * @param player
-     * @return Response
-     */
+    // Handles player score updates and modifies the leaderboard accordingly
     private Response handlePlayerScoreUpdate(PlayerModel player) {
         try {
             if (player == null) {
                 logger.severe("Received null player data.");
                 return new Response(false, "Received null player data.", null);
             }
+
             String usernameLower = player.getName().toLowerCase();
             int newScore = player.getScore();
             logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
-            fileName = "data/classic_leaderboard.json";
+
+            fileName = "data/classic_leaderboard.xml";
+            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+
             if (player.getName().endsWith("  ")) {
-                player.setName(player.getName().trim());
-                fileName = "data/endless_leaderboard.json";
+                player.getName().trim();
+                player.setName(player.getName());
+                fileName = "data/endless_leaderboard.xml";
+                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
             }
-            List<LeaderboardEntryModelServer> leaderboard = JSONStorageController.loadLeaderboardFromJSON(fileName);
+
             boolean found = false;
             for (LeaderboardEntryModelServer entry : leaderboard) {
                 if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
+                    // compare the new score with the existing score
                     if (newScore > entry.getScore()) {
-                        entry.setScore(newScore);
+                        entry.setScore(newScore); // update the score only if the new score is higher
                         logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
                     } else {
                         logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
@@ -176,68 +167,21 @@ public class ClientHandler implements Runnable {
                     break;
                 }
             }
+
             if (!found) {
                 leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
                 logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
             }
-            JSONStorageController.saveLeaderboardToJSON(fileName, leaderboard);
+
+            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+
+            logger.info("Player score updated successfully.");
             return new Response(true, "Player score updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error updating player score: " + e.getMessage());
             return new Response(false, "Error updating player score: " + e.getMessage(), null);
         }
     }
-
-    // Handles player score updates and modifies the leaderboard accordingly
-//    private Response handlePlayerScoreUpdate(PlayerModel player) {
-//        try {
-//            if (player == null) {
-//                logger.severe("Received null player data.");
-//                return new Response(false, "Received null player data.", null);
-//            }
-//
-//            String usernameLower = player.getName().toLowerCase();
-//            int newScore = player.getScore();
-//            logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
-//
-//            fileName = "data/classic_leaderboard.xml";
-//            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-//
-//            if (player.getName().endsWith("  ")) {
-//                player.setName(player.getName().trim());
-//                fileName = "data/endless_leaderboard.xml";
-//                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-//            }
-//
-//            boolean found = false;
-//            for (LeaderboardEntryModelServer entry : leaderboard) {
-//                if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
-//                    // compare the new score with the existing score
-//                    if (newScore > entry.getScore()) {
-//                        entry.setScore(newScore); // update the score only if the new score is higher
-//                        logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
-//                    } else {
-//                        logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
-//                    }
-//                    found = true;
-//                    break;
-//                }
-//            }
-//
-//            if (!found) {
-//                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
-//                logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
-//            }
-//
-//            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
-//
-//            logger.info("Player score updated successfully.");
-//            return new Response(true, "Player score updated successfully.", null);
-//        } catch (Exception e) {
-//            logger.severe("Error updating player score: " + e.getMessage());
-//            return new Response(false, "Error updating player score: " + e.getMessage(), null);
-//        }
-//    }
 
     // Handles a request for a question based on the selected category
     private Response handleQuestionRequest(String category) {
@@ -253,6 +197,88 @@ public class ClientHandler implements Runnable {
 
         logger.info("Question retrieved successfully for category: " + category);
         return new Response(true, "Question retrieved successfully.", questions);
+    }
+
+    // Handle a request for a list that contains all the questions in the database
+    private Response handleQuestionListRequest() {
+        logger.info("Server received request for question list");
+
+        QuestionController questionController = new QuestionController();
+        List<QuestionModel> allQuestions = questionController.getQuestionsList();
+
+        if (allQuestions.isEmpty()) {
+            logger.warning("No question list found.");
+            return new Response(false, "No question list found", null);
+        }
+
+        logger.info("Question list retrieved successfully");
+        return new Response(true, "Question list retrieved successfully.", allQuestions);
+    }
+
+    private Response handleQuestionUpdate(QuestionModel question) {
+        try {
+            logger.info("Server received request for removing question in database");
+            if (question == null) {
+                logger.severe("Received null question data.");
+                return new Response(false, "Received null question data.", null);
+            }
+
+            fileName = "data/questions.xml";
+            List<QuestionModel> questionList = XMLStorageController.loadQuestionsFromXML(fileName);
+
+            boolean found = false;
+            for (QuestionModel questionModel : questionList) {
+                if (question.equals(questionModel)) {
+                    logger.info("Removed question from database: " + questionModel.getCategory() + " with text: " + questionModel.getQuestionText());
+                    questionList.remove(questionModel);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                questionList.add(question);
+                logger.info("Question added to database: " + question.getCategory() + " with text: " + question.getQuestionText());
+            }
+
+            XMLStorageController.saveQuestionsToXML(fileName, questionList);
+            logger.info("Question database updated successfully.");
+            return new Response(true, "Question database updated successfully.", null);
+        } catch (Exception e) {
+            logger.severe("Error updating: " + e.getMessage());
+            return new Response(false, "Error updating question database: " + e.getMessage(), null);
+        }
+    }
+
+    private Response handleLeaderboardUpdateRequest(LeaderboardEntryModelServer leaderboardEntry) {
+        try {
+            logger.info("Server received request for removal of entry in leaderboard");
+            if (leaderboardEntry == null) {
+                logger.severe("Received null leaderboard entry data.");
+                return new Response(false, "Received null leaderboard entry data.", null);
+            }
+
+            fileName = "data/classic_leaderboard.xml";
+            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+
+            if (leaderboardEntry.getPlayerName().endsWith("  ")) {
+                fileName = "data/endless_leaderboard.xml";
+                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            }
+            for (LeaderboardEntryModelServer entry : leaderboard) {
+                if (leaderboardEntry.equals(entry)) {
+                    logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
+                    leaderboard.remove(entry);
+                    break;
+                }
+            }
+            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+            logger.info("Leaderboard updated successfully.");
+            return new Response(true, "Leaderboard updated successfully.", null);
+        } catch (Exception e) {
+            logger.severe("Error removing entry from leaderboard: " + e.getMessage());
+            return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
+        }
     }
 
     // Closes the connection to the client (streams and socket)
