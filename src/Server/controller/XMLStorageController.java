@@ -62,6 +62,53 @@ private static final Logger logger = Logger.getLogger(XMLStorageController.class
         return questions;
     }
 
+    public static void saveQuestionsToXML(String filename, List<QuestionModel> questions) {
+        try {
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document doc = builder.newDocument();
+            Element rootElement = doc.createElement("questions");
+            doc.appendChild(rootElement);
+
+            for (QuestionModel question : questions) {
+                List<String> choices = question.getChoices();
+
+                Element questionElement = doc.createElement("question");
+                questionElement.setAttribute("category", question.getCategory());
+
+                Element questionText = doc.createElement("text");
+                questionText.appendChild(doc.createTextNode(question.getQuestionText()));
+                questionElement.appendChild(questionText);
+
+                for (String choice : choices) {
+                    Element choiceElement = doc.createElement("choice");
+                    choiceElement.appendChild(doc.createTextNode(choice));
+                    questionElement.appendChild(choiceElement);
+                }
+
+                Element correctAnswer = doc.createElement("answer");
+                correctAnswer.appendChild(doc.createTextNode(question.getCorrectAnswer()));
+                questionElement.appendChild(correctAnswer);
+
+                Element score = doc.createElement("score");
+                score.appendChild(doc.createTextNode(String.valueOf(question.getScore())));
+                questionElement.appendChild(score);
+
+                rootElement.appendChild(questionElement);
+            }
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(new File(filename));
+            transformer.transform(source, result);
+
+            logger.info("XMLStorageModel: Questions successfully saved to " + filename);
+        } catch (Exception e) {
+            logger.severe("XMLStorageModel: Error saving Questions to XML: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Returns a list containing leaderboard entries
      */

@@ -4,6 +4,7 @@ package Server.model;
  */
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class LeaderboardEntryModelServer implements Serializable {
     private String playerName;
@@ -33,5 +34,9 @@ public class LeaderboardEntryModelServer implements Serializable {
     @Override
     public String toString() {
         return playerName + ": " + score;
+    }
+
+    public boolean equals(LeaderboardEntryModelServer other) {
+        return Objects.equals(this.playerName, other.getPlayerName()) && this.score == other.getScore();
     }
 }

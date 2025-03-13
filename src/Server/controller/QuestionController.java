@@ -21,4 +21,10 @@ public class QuestionController {
                 .filter(q -> q.getCategory().equalsIgnoreCase(category))
                 .collect(Collectors.toList());
     }
+    /**
+     * Returns a list that contains all the questions in the database
+     */
+    public List<QuestionModel> getQuestionsList() {
+        return XMLStorageController.loadQuestionsFromXML(QUESTIONS_FILE);
+    }
 }
