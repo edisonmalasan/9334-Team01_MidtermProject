@@ -2,7 +2,6 @@ package Client.controller;
 /**
  * Controls main menu view window
  */
-import Client.view.ViewManager;
 import common.AnsiFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

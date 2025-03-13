@@ -57,12 +57,6 @@ public class LeaderboardControllerClient {
     @FXML
     private TextField endlessSearchBox;
 
-    @FXML
-    private ImageView classicImageView;
-
-    @FXML
-    private ImageView endlessImageView;
-
     // Observable list to hold leaderboard data
     private ObservableList<LeaderboardEntryModelServer> classicLeaderboard;
     private ObservableList<LeaderboardEntryModelServer> endlessLeaderboard;

@@ -2,7 +2,6 @@ package Client.controller;
 /**
  * Controls category view
  */
-import Client.view.ViewManager;
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
 import common.Response;
