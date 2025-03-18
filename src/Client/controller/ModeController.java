@@ -46,11 +46,11 @@ public class ModeController {
 
     private void switchToCategory(ActionEvent event, boolean isEndless) {
         CategoryController.isEndlessMode = isEndless;
-        switchScene(event, "/views/category_menu.fxml", "Bomb Defusing Game");
+        switchScene(event, "/views/client/category_menu.fxml", "Bomb Defusing Game");
     }
 
     private void switchToMainMenu(ActionEvent event) {
-        switchScene(event, "/views/main_menu.fxml", "Bomb Defusing Game");
+        switchScene(event, "/views/client/main_menu.fxml", "Bomb Defusing Game");
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {

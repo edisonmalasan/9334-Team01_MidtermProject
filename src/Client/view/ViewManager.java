@@ -19,13 +19,13 @@ public class ViewManager {
     private static final Logger logger = Logger.getLogger(ViewManager.class.getName());
 
     // fxml paths
-    public static final String MAIN_MENU = "/views/main_menu.fxml";
-    public static final String LEADERBOARD = "/views/leaderboard.fxml";
-    public static final String MODE_MENU = "/views/mode_menu.fxml";
-    public static final String CATEGORY_MENU = "/views/category_menu.fxml";
-    public static final String CLASSIC_GAME = "/views/classic_game.fxml";
-    public static final String ENDLESS_GAME = "/views/endless_game.fxml";
-    public static final String SCORE_VIEW = "/views/score_view.fxml";
+    public static final String MAIN_MENU = "/views/client/main_menu.fxml";
+    public static final String LEADERBOARD = "/views/client/leaderboard.fxml";
+    public static final String MODE_MENU = "/views/client/mode_menu.fxml";
+    public static final String CATEGORY_MENU = "/views/client/category_menu.fxml";
+    public static final String CLASSIC_GAME = "/views/client/classic_game.fxml";
+    public static final String ENDLESS_GAME = "/views/client/endless_game.fxml";
+    public static final String SCORE_VIEW = "/views/client/score_view.fxml";
 
     public static void goTo(ActionEvent event, String url, String title) {
         goTo(event, url, title, null);

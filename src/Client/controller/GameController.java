@@ -163,7 +163,7 @@ public abstract class GameController {
 
         Platform.runLater(() -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/score_view.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/score_view.fxml"));
                 Parent root = loader.load();
 
                 ScoreController scoreController = loader.getController();

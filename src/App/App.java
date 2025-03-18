@@ -31,7 +31,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws FXMLLoadingException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/input_username.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/input_username.fxml"));
             Parent root = fxmlLoader.load();
             //test
             SoundUtility.playBackgroundMusic();

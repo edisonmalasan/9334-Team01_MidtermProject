@@ -106,7 +106,7 @@ public class LeaderboardControllerClient {
 
     public void returnToMainMenu() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/main_menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/main_menu.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) returnButton.getScene().getWindow();
