@@ -5,11 +5,15 @@ import Server.controller.QuestionController;
 import Server.controller.XMLStorageController;
 import Server.handler.ClientHandler;
 import Server.model.LeaderboardEntryModelServer;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
 import common.AnsiFormatter;
 import common.Response;
 import common.model.QuestionModel;
 import utility.BombGameServer;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
@@ -19,15 +23,17 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     private String fileName;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
+    private JsonParser jsonParser;
+    private JsonArray jsonArray = (JsonArray) jsonParser.parse(new FileReader("players.json"));
 
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
-    public BombGameServerImpl() throws RemoteException {
+    public BombGameServerImpl() throws RemoteException, FileNotFoundException {
     }
 
     @Override
-    public void getQuestionsPerCategory(String category) throws RemoteException {
+    public Response getQuestionsPerCategory(String category) throws RemoteException {
         logger.info("Server received question request for category: " + category);
 
         QuestionController questionController = new QuestionController();
@@ -35,11 +41,11 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
         if (questions.isEmpty()) {
             logger.warning("No questions found for category: " + category);
-        //    return new Response(false, "No questions found for category: " + category, null);
+            return new Response(false, "No questions found for category: " + category, null);
         }
 
         logger.info("Question retrieved successfully for category: " + category);
-        // return new Response(true, "Question retrieved successfully.", questions);
+         return new Response(true, "Question retrieved successfully.", questions);
     }
 
     @Override
@@ -65,7 +71,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     }
 
     @Override
-    public void getQuestionsList() throws RemoteException {
+    public Response getQuestionsList() throws RemoteException {
         logger.info("Server received request for question list");
 
         QuestionController questionController = new QuestionController();
@@ -73,11 +79,11 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
         if (allQuestions.isEmpty()) {
             logger.warning("No question list found.");
-         //   return new Response(false, "No question list found", null);
+            return new Response(false, "No question list found", null);
         }
 
         logger.info("Question list retrieved successfully");
-       // return new Response(true, "Question list retrieved successfully.", allQuestions);
+        return new Response(true, "Question list retrieved successfully.", allQuestions);
     }
     @Override
     public void updatePlayerScore(PlayerModel player) throws RemoteException {
@@ -197,6 +203,10 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     }
     @Override
     public void login() throws RemoteException {
+
+    }
+
+    public void register() throws RemoteException {
 
     }
 }

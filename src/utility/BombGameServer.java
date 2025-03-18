@@ -2,6 +2,7 @@ package utility;
 
 import Client.model.PlayerModel;
 import Server.model.LeaderboardEntryModelServer;
+import common.Response;
 import common.model.QuestionModel;
 
 import java.rmi.Remote;
@@ -11,13 +12,13 @@ import java.util.List;
 public interface BombGameServer extends Remote {
 
     // Load questions for given category
-    public void getQuestionsPerCategory(String category) throws RemoteException;
+    public Response getQuestionsPerCategory(String category) throws RemoteException;
 
     // Get data for leaderboards (classic and endless)
     public void getLeaderboards(List<?> list, String fileName) throws RemoteException;
 
     // Get the list of all questions
-    public void getQuestionsList() throws RemoteException;
+    public Response getQuestionsList() throws RemoteException;
 
     // Update score of existing player
     public void updatePlayerScore(PlayerModel player) throws RemoteException;
@@ -30,4 +31,7 @@ public interface BombGameServer extends Remote {
 
     // Login account (player and admin)
     public void login() throws RemoteException;
+
+    //Register an account
+    public void register() throws RemoteException;
 }
