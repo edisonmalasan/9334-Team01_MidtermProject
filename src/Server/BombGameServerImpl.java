@@ -1,11 +1,13 @@
 package Server;
 
 import Client.model.PlayerModel;
+import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import Server.controller.XMLStorageController;
 import Server.handler.ClientHandler;
 import Server.model.LeaderboardEntryModelServer;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import common.AnsiFormatter;
 import common.Response;
@@ -16,6 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -25,6 +28,8 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private JsonParser jsonParser;
     private JsonArray jsonArray = (JsonArray) jsonParser.parse(new FileReader("players.json"));
+    private List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+    private List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -49,24 +54,27 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     }
 
     @Override
-    public void getLeaderboards(List<?> leaderboardList, String jsonFile) throws RemoteException {
+    public Response getLeaderboards(String leaderboardType) throws RemoteException {
         try {
-            if (leaderboardList == null) {
-                logger.severe("Received null player data.");
-               // return new Response(false, "Received null player data.", null);
+            List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
+            for (Object object : jsonArray) {
+                JsonObject player = (JsonObject) object;
+                String name = String.valueOf(player.get("username"));
+                int score = Integer.parseInt(String.valueOf(player.get(leaderboardType+"Score")));
+                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(name, score);
+                leaderboard.add(leaderboardEntry);
             }
 
-            if (jsonFile.equals("classic")) {
-                fileName = "data/classic_leaderboard.xml";
-            } else {
-                fileName = "data/endless_leaderboard.xml";
+            if (leaderboard == null) {
+                logger.severe("Received null player data.");
+               return new Response(false, "Received null player data.", null);
             }
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+
             logger.info("Returning leaderboard data.");
-           // return new Response(true, "Leaderboard displayed successfully.", leaderboard);
+            return new Response(true, "Leaderboard displayed successfully.", leaderboard);
         } catch (Exception e) {
             logger.severe("Error retrieving leaderboard: " + e.getMessage());
-            // return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
+            return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
         }
     }
 

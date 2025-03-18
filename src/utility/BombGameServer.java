@@ -15,7 +15,7 @@ public interface BombGameServer extends Remote {
     public Response getQuestionsPerCategory(String category) throws RemoteException;
 
     // Get data for leaderboards (classic and endless)
-    public void getLeaderboards(List<?> list, String fileName) throws RemoteException;
+    public Response getLeaderboards(String fileName) throws RemoteException;
 
     // Get the list of all questions
     public Response getQuestionsList() throws RemoteException;
