@@ -18,7 +18,7 @@
         <ImageView fx:id="categoryLabel" fitHeight="140.0" fitWidth="374.0" pickOnBounds="true" preserveRatio="true"
                    AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="325.0">
             <image>
-                <Image url="@../images/CATEGORY.png" />
+                <Image url="@../../images/CATEGORY.png" />
             </image>
         </ImageView>
 

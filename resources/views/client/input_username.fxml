@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="226.0" fitWidth="278.0" layoutX="51.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/login.png" />
+                  <Image url="@../../images/login.png" />
                </image>
             </ImageView>
             <Button fx:id="enterButton" layoutX="105.0" layoutY="205.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="ENTER" />

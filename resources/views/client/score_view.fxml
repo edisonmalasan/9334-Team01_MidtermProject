@@ -10,7 +10,7 @@
          <children>
             <ImageView fitHeight="244.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/scorebox.png" />
+                  <Image url="@../../images/scorebox.png" />
                </image>
             </ImageView>
             <Label fx:id="scoreLabel" alignment="CENTER" layoutX="106.0" layoutY="109.0" prefHeight="25.0" prefWidth="72.0" text="0" />

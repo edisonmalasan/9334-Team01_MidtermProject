@@ -1,4 +1,4 @@
-package Server.controller;
+package Admin.controller;
 
 import javax.swing.*;
 import javax.xml.parsers.*;
@@ -9,14 +9,16 @@ import org.w3c.dom.*;
 import java.io.*;
 
 import Server.view.AdminView;
+// TODO: ensure admin client communicates with the server independently
+// FIXME: update lgoic
 
 /**
  * Manipulates the admin GUI
  */
-public class AdminViewController {
+public class PlayerControllerAdmin {
     private AdminView view;
 
-    public AdminViewController(AdminView view) {
+    public PlayerControllerAdmin(AdminView view) {
         this.view = view;
 
         // Set up event listeners

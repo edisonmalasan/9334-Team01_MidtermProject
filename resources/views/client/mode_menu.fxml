@@ -15,7 +15,7 @@
                pickOnBounds="true" preserveRatio="true"
                AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="325.0">
         <image>
-            <Image url="@../images/gamemode.png" />
+            <Image url="@../../images/gamemode.png" />
         </image>
     </ImageView>
     <VBox alignment="CENTER" spacing="30.0"
