@@ -1,6 +1,6 @@
 package utility;
 
-import Client.model.PlayerModel;
+import utility.PlayerModel;
 import Server.model.LeaderboardEntryModelServer;
 import common.Response;
 import common.model.QuestionModel;

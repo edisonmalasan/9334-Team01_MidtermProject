@@ -1,14 +1,13 @@
 package Server;
 
-import Client.model.PlayerModel;
+import utility.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import Server.controller.XMLStorageController;
 import Server.handler.ClientHandler;
 import Server.model.LeaderboardEntryModelServer;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import common.AnsiFormatter;
 import common.Response;
 import common.model.QuestionModel;
@@ -16,18 +15,20 @@ import utility.BombGameServer;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
 
     private String fileName;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
-    private JsonParser jsonParser;
-    private JsonArray jsonArray = (JsonArray) jsonParser.parse(new FileReader("players.json"));
+    private List<PlayerModel> playerList = new ArrayList<>();
     private List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
     private List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
 
@@ -35,6 +36,10 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         AnsiFormatter.enableColorLogging(logger);
     }
     public BombGameServerImpl() throws RemoteException, FileNotFoundException {
+        Gson gson = new Gson();
+        Reader fileReader = new FileReader(System.getProperty("user.dir")+ "/data/players.json");
+        Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+        playerList = gson.fromJson(fileReader, playerListType);
     }
 
     @Override
@@ -56,14 +61,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     @Override
     public Response getLeaderboards(String leaderboardType) throws RemoteException {
         try {
-            List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
-            for (Object object : jsonArray) {
-                JsonObject player = (JsonObject) object;
-                String name = String.valueOf(player.get("username"));
-                int score = Integer.parseInt(String.valueOf(player.get(leaderboardType+"Score")));
-                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(name, score);
-                leaderboard.add(leaderboardEntry);
-            }
+            List<LeaderboardEntryModelServer> leaderboard = getLeaderboardEntries(leaderboardType);
 
             if (leaderboard == null) {
                 logger.severe("Received null player data.");
@@ -76,6 +74,30 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error retrieving leaderboard: " + e.getMessage());
             return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
         }
+    }
+    // Method for populating and arranging list for leaderboards
+    private List<LeaderboardEntryModelServer> getLeaderboardEntries(String leaderboardType) {
+        List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
+        if (Objects.equals(leaderboardType, "classic")) {
+            for (PlayerModel player : playerList) {
+                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(player.getUsername(), player.getClassicScore());
+                leaderboard.add(leaderboardEntry);
+            }
+        } else {
+            for (PlayerModel player : playerList) {
+                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(player.getUsername(), player.getEndlessScore());
+                leaderboard.add(leaderboardEntry);
+            }
+        }
+        leaderboard.sort((entry1, entry2) -> {
+            int scoreComparison = Integer.compare(entry2.getScore(), entry1.getScore());
+            if (scoreComparison == 0) {
+                // If scores are equal, sort alphabetically by player name
+                return entry1.getPlayerName().compareTo(entry2.getPlayerName());
+            }
+            return scoreComparison;
+        });
+        return leaderboard;
     }
 
     @Override
@@ -93,6 +115,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         logger.info("Question list retrieved successfully");
         return new Response(true, "Question list retrieved successfully.", allQuestions);
     }
+
     @Override
     public void updatePlayerScore(PlayerModel player) throws RemoteException {
         try {
@@ -101,41 +124,41 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 //return new Response(false, "Received null player data.", null);
             }
 
-            String usernameLower = player.getName().toLowerCase();
-            int newScore = player.getScore();
-            logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
-
-            fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-
-            if (player.getName().endsWith("  ")) {
-                player.getName().trim();
-                player.setName(player.getName());
-                fileName = "data/endless_leaderboard.xml";
-                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-            }
-
-            boolean found = false;
-            for (LeaderboardEntryModelServer entry : leaderboard) {
-                if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
-                    // compare the new score with the existing score
-                    if (newScore > entry.getScore()) {
-                        entry.setScore(newScore); // update the score only if the new score is higher
-                        logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
-                    } else {
-                        logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
-                    }
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
-                logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
-            }
-
-            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+//            String usernameLower = player.getName().toLowerCase();
+//            int newScore = player.getScore();
+//            logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
+//
+//            fileName = "data/classic_leaderboard.xml";
+//            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+//
+//            if (player.getName().endsWith("  ")) {
+//                player.getName().trim();
+//                player.setName(player.getName());
+//                fileName = "data/endless_leaderboard.xml";
+//                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+//            }
+//
+//            boolean found = false;
+//            for (LeaderboardEntryModelServer entry : leaderboard) {
+//                if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
+//                    // compare the new score with the existing score
+//                    if (newScore > entry.getScore()) {
+//                        entry.setScore(newScore); // update the score only if the new score is higher
+//                        logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
+//                    } else {
+//                        logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
+//                    }
+//                    found = true;
+//                    break;
+//                }
+//            }
+//
+//            if (!found) {
+//                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
+//                logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
+//            }
+//
+//            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
 
             logger.info("Player score updated successfully.");
             //return new Response(true, "Player score updated successfully.", null);
