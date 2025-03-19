@@ -1,4 +1,4 @@
-package Server.model;
+package utility;
 /**
  * Represents an entry to the leaderboard (server side)
  */
@@ -6,11 +6,11 @@ package Server.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class LeaderboardEntryModelServer implements Serializable {
+public class LeaderboardEntryModel implements Serializable {
     private String playerName;
     private int score;
 
-    public LeaderboardEntryModelServer(String playerName, int score) {
+    public LeaderboardEntryModel(String playerName, int score) {
         this.playerName = playerName;
         this.score = score;
     }
@@ -36,7 +36,7 @@ public class LeaderboardEntryModelServer implements Serializable {
         return playerName + ": " + score;
     }
 
-    public boolean equals(LeaderboardEntryModelServer other) {
+    public boolean equals(LeaderboardEntryModel other) {
         return Objects.equals(this.playerName, other.getPlayerName()) && this.score == other.getScore();
     }
 }
