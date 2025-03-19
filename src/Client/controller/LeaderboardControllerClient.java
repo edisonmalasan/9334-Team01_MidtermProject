@@ -2,9 +2,10 @@ package Client.controller;
 /**
  * Controls leaderboard view
  */
+import App.App;
 import Client.connection.ClientConnection;
 import Client.model.LeaderboardEntryModelClient;
-import Server.model.LeaderboardEntryModelServer;
+import utility.LeaderboardEntryModel;
 import common.Response;
 import exception.ConnectionException;
 import javafx.beans.property.SimpleStringProperty;
@@ -19,7 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ import java.util.List;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import utility.BombGameServer;
 
 public class LeaderboardControllerClient {
     // FXML Elements
@@ -34,22 +36,22 @@ public class LeaderboardControllerClient {
     public TableColumn endlessRank;
     public Button returnButton;
     @FXML
-    private TableView<LeaderboardEntryModelServer> classicTable;
+    private TableView<LeaderboardEntryModel> classicTable;
 
     @FXML
-    private TableColumn<LeaderboardEntryModelServer, String> classicUsername;
+    private TableColumn<LeaderboardEntryModel, String> classicUsername;
 
     @FXML
-    private TableColumn<LeaderboardEntryModelServer, Integer> classicScore;
+    private TableColumn<LeaderboardEntryModel, Integer> classicScore;
 
     @FXML
-    private TableView<LeaderboardEntryModelServer> endlessTable;
+    private TableView<LeaderboardEntryModel> endlessTable;
 
     @FXML
-    private TableColumn<LeaderboardEntryModelServer, String> endlessUsername;
+    private TableColumn<LeaderboardEntryModel, String> endlessUsername;
 
     @FXML
-    private TableColumn<LeaderboardEntryModelServer, Integer> endlessScore;
+    private TableColumn<LeaderboardEntryModel, Integer> endlessScore;
 
     @FXML
     private TextField classicSearchBox;
@@ -58,9 +60,10 @@ public class LeaderboardControllerClient {
     private TextField endlessSearchBox;
 
     // Observable list to hold leaderboard data
-    private ObservableList<LeaderboardEntryModelServer> classicLeaderboard;
-    private ObservableList<LeaderboardEntryModelServer> endlessLeaderboard;
+    private ObservableList<LeaderboardEntryModel> classicLeaderboard;
+    private ObservableList<LeaderboardEntryModel> endlessLeaderboard;
     private ClientConnection clientConnection;
+    public BombGameServer bombGameServer = App.bombGameServer;
 
     public LeaderboardControllerClient() throws ConnectionException {
         this.clientConnection = ClientConnection.getInstance();
@@ -77,11 +80,11 @@ public class LeaderboardControllerClient {
 
         // Initialize leaderboard data (this data would be fetched from a server in a real-world scenario)
         classicLeaderboard = FXCollections.observableArrayList(
-                getClassicLeaderboard()
+                (List<LeaderboardEntryModel>) bombGameServer.getLeaderboards("classic").getData()
         );
 
         endlessLeaderboard = FXCollections.observableArrayList(
-                getEndlessLeaderboard()
+                (List<LeaderboardEntryModel>) bombGameServer.getLeaderboards("endless").getData()
         );
 
         // Sort the leaderboard based on score in descending order
@@ -127,7 +130,7 @@ public class LeaderboardControllerClient {
      *
      * @param leaderboard The leaderboard to be sorted.
      */
-    private void sortLeaderboardByScore(ObservableList<LeaderboardEntryModelServer> leaderboard) {
+    private void sortLeaderboardByScore(ObservableList<LeaderboardEntryModel> leaderboard) {
         leaderboard.sort((entry1, entry2) -> {
             // Compare scores in descending order
             int scoreComparison = Integer.compare(entry2.getScore(), entry1.getScore());
@@ -147,12 +150,12 @@ public class LeaderboardControllerClient {
      * @param index The index of the current entry.
      * @return The rank (1-based index) of the entry.
      */
-    private int getRankForIndex(ObservableList<LeaderboardEntryModelServer> leaderboard, int index) {
+    private int getRankForIndex(ObservableList<LeaderboardEntryModel> leaderboard, int index) {
         if (index == 0) {
             return 1;
         } else {
-            LeaderboardEntryModelServer previous = leaderboard.get(index - 1);
-            LeaderboardEntryModelServer current = leaderboard.get(index);
+            LeaderboardEntryModel previous = leaderboard.get(index - 1);
+            LeaderboardEntryModel current = leaderboard.get(index);
 
             // If scores are the same, assign the same rank
             if (previous.getScore() == current.getScore()) {
@@ -170,18 +173,18 @@ public class LeaderboardControllerClient {
      * @param type  Type of leaderboard (classic or endless).
      */
     private void filterLeaderboardData(String query, String type) {
-        ObservableList<LeaderboardEntryModelServer> filteredList = FXCollections.observableArrayList();
+        ObservableList<LeaderboardEntryModel> filteredList = FXCollections.observableArrayList();
 
         // Apply search filter based on the type of leaderboard
         if ("classic".equalsIgnoreCase(type)) {
-            for (LeaderboardEntryModelServer entry : classicLeaderboard) {
+            for (LeaderboardEntryModel entry : classicLeaderboard) {
                 if (entry.getPlayerName().toLowerCase().contains(query.toLowerCase())) {
                     filteredList.add(entry);
                 }
             }
             classicTable.setItems(filteredList);
         } else if ("endless".equalsIgnoreCase(type)) {
-            for (LeaderboardEntryModelServer entry : endlessLeaderboard) {
+            for (LeaderboardEntryModel entry : endlessLeaderboard) {
                 if (entry.getPlayerName().toLowerCase().contains(query.toLowerCase())) {
                     filteredList.add(entry);
                 }
@@ -190,8 +193,8 @@ public class LeaderboardControllerClient {
         }
     }
 
-    public List<LeaderboardEntryModelServer> getClassicLeaderboard() {
-        List<LeaderboardEntryModelServer> leaderboardEntryModelServerList = new ArrayList<>();
+    public List<LeaderboardEntryModel> getClassicLeaderboard() {
+        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
         try {
             // send obj req
             clientConnection.sendObject("GET_LEADERBOARD_CLASSIC");
@@ -200,17 +203,17 @@ public class LeaderboardControllerClient {
             Response response = (Response) clientConnection.receiveObject();
 
             if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelServerList = (List<LeaderboardEntryModelServer>) response.getData();
+                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
                 System.out.println(response.getData().toString());
             }
-            return leaderboardEntryModelServerList;
+            return leaderboardEntryModelList;
         } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelServerList;
+            return leaderboardEntryModelList;
         }
     }
 
-    public List<LeaderboardEntryModelServer> getEndlessLeaderboard() {
-        List<LeaderboardEntryModelServer> leaderboardEntryModelServerList = new ArrayList<>();
+    public List<LeaderboardEntryModel> getEndlessLeaderboard() {
+        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
         try {
             // send obj req
             clientConnection.sendObject("GET_LEADERBOARD_ENDLESS");
@@ -219,12 +222,12 @@ public class LeaderboardControllerClient {
             Response response = (Response) clientConnection.receiveObject();
 
             if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelServerList = (List<LeaderboardEntryModelServer>) response.getData();
+                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
                 System.out.println(response.getData().toString());
             }
-            return leaderboardEntryModelServerList;
+            return leaderboardEntryModelList;
         } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelServerList;
+            return leaderboardEntryModelList;
         }
     }
 }

@@ -5,7 +5,7 @@ package Server.controller;
 
 import common.AnsiFormatter;
 import common.model.QuestionModel;
-import Server.model.LeaderboardEntryModelServer;
+import utility.LeaderboardEntryModel;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
@@ -112,8 +112,8 @@ private static final Logger logger = Logger.getLogger(XMLStorageController.class
     /**
      * Returns a list containing leaderboard entries
      */
-    public static List<LeaderboardEntryModelServer> loadLeaderboardFromXML(String filename) {
-        List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
+    public static List<LeaderboardEntryModel> loadLeaderboardFromXML(String filename) {
+        List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
         try {
             File file = new File(filename);
             File parentDir = file.getParentFile();
@@ -137,7 +137,7 @@ private static final Logger logger = Logger.getLogger(XMLStorageController.class
                 Element element = (Element) nodes.item(i);
                 String playerName = element.getElementsByTagName("player").item(0).getTextContent();
                 int score = Integer.parseInt(element.getElementsByTagName("score").item(0).getTextContent());
-                leaderboard.add(new LeaderboardEntryModelServer(playerName, score));
+                leaderboard.add(new LeaderboardEntryModel(playerName, score));
             }
             logger.info("XMLStorageModel: Leaderboard loaded successfully from " + filename);
         } catch (Exception e) {
@@ -150,14 +150,14 @@ private static final Logger logger = Logger.getLogger(XMLStorageController.class
     /**
      * Saves the list of leaderboard entries to the xml file
      */
-    public static void saveLeaderboardToXML(String filename, List<LeaderboardEntryModelServer> leaderboard) {
+    public static void saveLeaderboardToXML(String filename, List<LeaderboardEntryModel> leaderboard) {
         try {
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = builder.newDocument();
             Element rootElement = doc.createElement("leaderboard");
             doc.appendChild(rootElement);
 
-            for (LeaderboardEntryModelServer entry : leaderboard) {
+            for (LeaderboardEntryModel entry : leaderboard) {
                 Element entryElement = doc.createElement("entry");
 
                 Element player = doc.createElement("player");

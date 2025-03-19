@@ -1,5 +1,6 @@
 package App;
 
+import Client.controller.InputIPAddressController;
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
 import Client.utils.SoundUtility;
@@ -12,13 +13,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import utility.BombGameServer;
 
 import java.io.IOException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class App extends Application {
     private static final Logger logger = Logger.getLogger(App.class.getName());
+    public static BombGameServer bombGameServer;
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -31,15 +36,16 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws FXMLLoadingException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/input_username.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/input_IP.fxml"));
             Parent root = fxmlLoader.load();
             //test
             SoundUtility.playBackgroundMusic();
 
             try {
-                ClientConnection.getInstance().connect();
+                Registry registry = LocateRegistry.getRegistry(InputIPAddressController.ipAddress, 1099);
+                bombGameServer = (BombGameServer) registry.lookup("server");
                 logger.info("✅ Client successfully connected to the server.");
-            } catch (ConnectionException e) {
+            } catch (Exception e) {
                 logger.warning("⚠ Server is not running. The client will continue in offline mode.");
             }
 

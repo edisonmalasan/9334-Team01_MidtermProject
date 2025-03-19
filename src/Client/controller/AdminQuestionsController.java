@@ -1,7 +1,6 @@
 package Client.controller;
 
 import Client.connection.ClientConnection;
-import Server.model.LeaderboardEntryModelServer;
 import common.Response;
 import common.model.QuestionModel;
 import exception.ConnectionException;

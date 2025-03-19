@@ -5,7 +5,7 @@ import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import Server.controller.XMLStorageController;
 import Server.handler.ClientHandler;
-import Server.model.LeaderboardEntryModelServer;
+import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import common.AnsiFormatter;
@@ -29,8 +29,8 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private String fileName;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
-    private List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
-    private List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+    private List<LeaderboardEntryModel> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+    private List<LeaderboardEntryModel> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -61,7 +61,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     @Override
     public Response getLeaderboards(String leaderboardType) throws RemoteException {
         try {
-            List<LeaderboardEntryModelServer> leaderboard = getLeaderboardEntries(leaderboardType);
+            List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
             if (leaderboard == null) {
                 logger.severe("Received null player data.");
@@ -76,16 +76,16 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
     // Method for populating and arranging list for leaderboards
-    private List<LeaderboardEntryModelServer> getLeaderboardEntries(String leaderboardType) {
-        List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
+    private List<LeaderboardEntryModel> getLeaderboardEntries(String leaderboardType) {
+        List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
         if (Objects.equals(leaderboardType, "classic")) {
             for (PlayerModel player : playerList) {
-                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(player.getUsername(), player.getClassicScore());
+                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
                 leaderboard.add(leaderboardEntry);
             }
         } else {
             for (PlayerModel player : playerList) {
-                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(player.getUsername(), player.getEndlessScore());
+                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getEndlessScore());
                 leaderboard.add(leaderboardEntry);
             }
         }
@@ -202,7 +202,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
 
-    public void updateLeaderboard(LeaderboardEntryModelServer leaderboardEntry) throws RemoteException {
+    public void updateLeaderboard(LeaderboardEntryModel leaderboardEntry) throws RemoteException {
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
@@ -211,13 +211,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             }
 
             fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
 
             if (leaderboardEntry.getPlayerName().endsWith("  ")) {
                 fileName = "data/endless_leaderboard.xml";
                 leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
             }
-            for (LeaderboardEntryModelServer entry : leaderboard) {
+            for (LeaderboardEntryModel entry : leaderboard) {
                 if (leaderboardEntry.equals(entry)) {
                     logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
                     leaderboard.remove(entry);

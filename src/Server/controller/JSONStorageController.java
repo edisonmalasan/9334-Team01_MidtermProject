@@ -3,7 +3,7 @@ package Server.controller;
  * Manages JSON files
  */
 
-import Server.model.LeaderboardEntryModelServer;
+import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -25,10 +25,10 @@ public class JSONStorageController {
     /**
      * Returns a list containing leaderboard entries
      */
-    public static List<LeaderboardEntryModelServer> loadLeaderboardFromJSON(String filename) {
-        List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
+    public static List<LeaderboardEntryModel> loadLeaderboardFromJSON(String filename) {
+        List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
         try (Reader reader = new FileReader(filename)) {
-            Type leaderboardListType = new TypeToken<List<LeaderboardEntryModelServer>>() {}.getType();
+            Type leaderboardListType = new TypeToken<List<LeaderboardEntryModel>>() {}.getType();
             leaderboard = gson.fromJson(reader, leaderboardListType);
             logger.info("JSONStorageController: Leaderboard loaded successfully from " + filename);
         } catch (FileNotFoundException e) {
@@ -42,7 +42,7 @@ public class JSONStorageController {
     /**
      * Saves the list of leaderboard entries to the JSON file
      */
-    public static void saveLeaderboardToJSON(String filename, List<LeaderboardEntryModelServer> leaderboard) {
+    public static void saveLeaderboardToJSON(String filename, List<LeaderboardEntryModel> leaderboard) {
         try (Writer writer = new FileWriter(filename)) {
             gson.toJson(leaderboard, writer);
             logger.info("JSONStorageController: Leaderboard successfully saved to " + filename);
