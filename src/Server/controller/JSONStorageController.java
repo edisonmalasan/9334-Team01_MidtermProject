@@ -7,6 +7,7 @@ import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import utility.PlayerModel;
 
 
 import java.io.*;
@@ -46,6 +47,31 @@ public class JSONStorageController {
         try (Writer writer = new FileWriter(filename)) {
             gson.toJson(leaderboard, writer);
             logger.info("JSONStorageController: Leaderboard successfully saved to " + filename);
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
+        }
+    }
+
+    public static List<PlayerModel> loadPlayersFromJSON(String fileName) {
+        List<PlayerModel> playerList = new ArrayList<>();
+        try (Reader reader = new FileReader(fileName)) {
+            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+            playerList = gson.fromJson(reader, playerListType);
+            reader.close();
+            logger.info("JSONStorageController: Players list loaded successfully from " + fileName);
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Players file not found, returning empty list.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading leaderboard from JSON: " + e.getMessage());
+        }
+        return playerList;
+    }
+    public static void savePlayerToJSON(String fileName, PlayerModel player) {
+        List<PlayerModel> playerList = loadPlayersFromJSON(fileName);
+        try (Writer writer = new FileWriter(fileName)) {
+            playerList.add(player);
+            gson.toJson(playerList, writer);
+            logger.info("JSONStorageController: Player successfully saved to " + fileName);
         } catch (IOException e) {
             logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
         }
