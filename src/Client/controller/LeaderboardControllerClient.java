@@ -66,7 +66,6 @@ public class LeaderboardControllerClient {
     public BombGameServer bombGameServer = App.bombGameServer;
 
     public LeaderboardControllerClient() throws ConnectionException {
-        this.clientConnection = ClientConnection.getInstance();
     }
 
     public void initialize() throws IOException, ClassNotFoundException {
@@ -190,44 +189,6 @@ public class LeaderboardControllerClient {
                 }
             }
             endlessTable.setItems(filteredList);
-        }
-    }
-
-    public List<LeaderboardEntryModel> getClassicLeaderboard() {
-        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
-        try {
-            // send obj req
-            clientConnection.sendObject("GET_LEADERBOARD_CLASSIC");
-
-            // receive the response obj from server
-            Response response = (Response) clientConnection.receiveObject();
-
-            if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
-                System.out.println(response.getData().toString());
-            }
-            return leaderboardEntryModelList;
-        } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelList;
-        }
-    }
-
-    public List<LeaderboardEntryModel> getEndlessLeaderboard() {
-        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
-        try {
-            // send obj req
-            clientConnection.sendObject("GET_LEADERBOARD_ENDLESS");
-
-            // receive the response obj from server
-            Response response = (Response) clientConnection.receiveObject();
-
-            if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
-                System.out.println(response.getData().toString());
-            }
-            return leaderboardEntryModelList;
-        } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelList;
         }
     }
 }

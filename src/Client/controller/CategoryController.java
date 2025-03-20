@@ -2,6 +2,7 @@ package Client.controller;
 /**
  * Controls category view
  */
+import App.App;
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
 import common.Response;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import utility.BombGameServer;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,6 +42,7 @@ public class CategoryController {
     private ClientConnection clientConnection;
     private static String selectedCategory;
     public static boolean isEndlessMode = false;
+    public BombGameServer bombGameServer = App.bombGameServer;
 
     private static final Logger logger = Logger.getLogger(CategoryController.class.getName());
 
@@ -72,8 +75,7 @@ public class CategoryController {
 
         new Thread(() -> {
             try {
-                clientConnection.sendObject("GET_QUESTION:" + category);
-                Response response = (Response) clientConnection.receiveObject();
+                Response response = bombGameServer.getQuestionsPerCategory(category);
 
                 logger.info("\nCategoryController: DEBUG: Received response from server: " + response);
 
@@ -98,7 +100,7 @@ public class CategoryController {
                 } else {
                     logger.warning("CategoryController: No questions found for category: " + category);
                 }
-            } catch (IOException | ClassNotFoundException e) {
+            } catch (IOException e) {
                 logger.log(Level.SEVERE, "CategoryController: Failed to fetch questions from server.", e);
             }
         }).start();
