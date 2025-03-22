@@ -88,7 +88,6 @@
 
     <VBox prefHeight="885.0" prefWidth="741.0">
         <children>
-
             <AnchorPane id="title" prefHeight="114.0" prefWidth="244.0">
                 <VBox.margin>
                     <Insets left="30.0" top="20.0" />
@@ -105,7 +104,7 @@
                 </children>
             </AnchorPane>
 
-            <AnchorPane prefHeight="51.0" prefWidth="726.0">
+            <AnchorPane id="divider" prefHeight="51.0" prefWidth="726.0">
                 <children>
                     <ImageView fitHeight="38.0" fitWidth="677.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
                         <image>
