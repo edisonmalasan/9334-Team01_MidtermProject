@@ -40,10 +40,10 @@ public class ClientConnection {
                 try {
                     Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
                     bombGameServer = (BombGameServer) registry.lookup("server");
-                    logger.info("✅ Client successfully connected to the server.");
+                    break;
                 } catch (Exception e) {
                     logger.warning("⚠ Server is not running. The client will continue in offline mode.");
-
+                    logger.warning("⚠ Connection failed. Retrying in 5 seconds...");
 
                     try {
                         Thread.sleep(5000);  // Retry after 5 seconds

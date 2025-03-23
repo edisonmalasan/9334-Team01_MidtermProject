@@ -2,6 +2,7 @@ package App;
 
 import common.AnsiFormatter;
 import Client.User.utils.SoundUtility;
+import exception.ConnectionException;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -35,20 +36,31 @@ public class App extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws FXMLLoadingException {
+    public void start(Stage primaryStage) throws FXMLLoadingException, IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
             Parent root = fxmlLoader.load();
             //test
             SoundUtility.playBackgroundMusic();
 
-            try {
-                Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
-                bombGameServer = (BombGameServer) registry.lookup("server");
-                logger.info("✅ Client successfully connected to the server.");
-            } catch (Exception e) {
-                logger.warning("⚠ Server is not running. The client will continue in offline mode.");
-            }
+                while (true) {
+                    try {
+                        Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
+                        bombGameServer = (BombGameServer) registry.lookup("server");
+                        break;
+                    } catch (Exception e) {
+                        logger.warning("⚠ Server is not running. The client will continue in offline mode.");
+                        logger.warning("⚠ Connection failed. Retrying in 5 seconds...");
+
+                        try {
+                            Thread.sleep(5000);  // Retry after 5 seconds
+                        } catch (InterruptedException interruptedException) {
+                            interruptedException.printStackTrace();
+                        }
+
+                        logger.info("\nClientConnection: Connected to server successfully!");
+                    }
+                }
 
             primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/bomb_mad.png")));
 
@@ -61,9 +73,9 @@ public class App extends Application {
                 System.out.println("Closing application...");
                 Platform.exit();
                 System.exit(0);
-            });
+                });
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.log(Level.SEVERE, "❌ Failed to load FXML: login.fxml", e);
             throw new FXMLLoadingException("login.fxml", e);
         }
