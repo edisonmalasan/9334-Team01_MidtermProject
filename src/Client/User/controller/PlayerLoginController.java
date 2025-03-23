@@ -15,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -22,14 +23,17 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class InputUsernameController {
-    private static final Logger logger = Logger.getLogger(InputUsernameController.class.getName());
+public class PlayerLoginController {
+    private static final Logger logger = Logger.getLogger(PlayerLoginController.class.getName());
 
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
 
-    private static String playerName;
+    private static String playerUsername;
+    private static String playerPassword;
+    public PasswordField passwordField;
+    public Button registerButton;
 
     private ClientConnection clientConnection;
 
@@ -40,9 +44,9 @@ public class InputUsernameController {
     private Label errorLabel;
 
     @FXML
-    private Button enterButton;
+    private Button loginButton;
 
-    public InputUsernameController() {
+    public PlayerLoginController() {
         try {
             this.clientConnection = ClientConnection.getInstance();
 
@@ -59,28 +63,37 @@ public class InputUsernameController {
 
     @FXML
     public void initialize() {
-        enterButton.setOnAction(event -> handleEnterButtonClick(event));
+        loginButton.setOnAction(event -> handleLoginButtonClick(event));
 
         usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
             errorLabel.setText("");
         });
+
+        passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
+            errorLabel.setText("");
+        });
     }
 
-    private void handleEnterButtonClick(ActionEvent event) {
+    private void handleLoginButtonClick(ActionEvent event) {
         String username = usernameField.getText().trim().toLowerCase();
+        String password = playerPassword;
 
         if (username.isEmpty()) {
             handleException(new InvalidUsernameException("Username cannot be empty!"));
             return;
         }
 
-        playerName = username;
-        logger.info("\nInputUsernameController: Username entered: " + playerName);
+        playerUsername = username;
+        playerPassword = password;
+        logger.info("\nPlayerLoginController: Username entered: " + playerUsername);
         switchToMainMenu(event);
     }
 
-    public static String getPlayerName() {
-        return playerName;
+    public static String getPlayerUsername() {
+        return playerUsername;
+    }
+    public static String getPlayerPassword() {
+        return playerPassword;
     }
 
     private void switchToMainMenu(ActionEvent event) {
@@ -94,7 +107,7 @@ public class InputUsernameController {
             stage.setResizable(false);
             stage.show();
 
-            logger.info("\nInputUsernameController: Switched to Main Menu.");
+            logger.info("\nPlayerLoginController: Switched to Main Menu.");
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load Main Menu.", e);
         }
