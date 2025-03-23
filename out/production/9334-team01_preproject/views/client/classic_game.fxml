@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="classicGame" prefHeight="768.0" prefWidth="1024.0" stylesheets="@classic_game.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.User.controller.ClassicGameController">
+
+    <children>
+        <!-- Combo Counter -->
+        <VBox alignment="CENTER" layoutX="435.0" layoutY="161.0" prefHeight="50.0" prefWidth="183.0">
+            <children>
+                <Label fx:id="comboText" alignment="CENTER" prefHeight="21.0" prefWidth="175.0" text="Combo Count:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="comboLabel" alignment="CENTER" prefHeight="21.0" prefWidth="175.0" text="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+
+        <!-- Bomb & Timer -->
+        <Pane layoutX="53.0" layoutY="266.0" prefHeight="200.0" prefWidth="918.0">
+            <children>
+                <ImageView fx:id="bombImage" fitHeight="129.0" fitWidth="123.0" layoutX="765.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/bomb.png" />
+                    </image>
+                </ImageView>
+                <Line fx:id="wick" endX="195.0" endY="6.0" layoutX="596.0" layoutY="42.0" startX="-520.0" startY="8.0" strokeWidth="3.0" />
+                <ImageView fx:id="flame" fitHeight="36.0" fitWidth="42.0" layoutX="56.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/wick.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+
+        <Pane fx:id="QTEPane" layoutX="0" layoutY="0" prefHeight="768.0" prefWidth="1024.0" />
+
+        <!-- Timer -->
+        <Label fx:id="timerLabel" layoutX="505.0" layoutY="28.0" text="0 s." />
+        <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="478.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/Hour.png" />
+            </image>
+        </ImageView>
+
+        <!-- Question Display -->
+        <Label fx:id="questionLabel" alignment="CENTER" layoutX="100.0" layoutY="450.0" prefHeight="150.0" prefWidth="800.0" text="Game Question" wrapText="true">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+
+        <!-- Answer Choices -->
+        <HBox fx:id="choicesBox" alignment="CENTER" layoutX="171.0" layoutY="623.0" prefHeight="50.0" prefWidth="683.0" spacing="30.0">
+            <children>
+                <Button fx:id="optionOneButton" maxWidth="146.0" minWidth="146.0" prefHeight="50.0" prefWidth="146.0" style="-fx-font-family: 'Roboto Mono'; -fx-font-size: 18px;" text="Option 1" />
+                <Button fx:id="optionTwoButton" maxWidth="146.0" minWidth="146.0" prefHeight="50.0" prefWidth="146.0" style="-fx-font-family: 'Roboto Mono'; -fx-font-size: 18px;" text="Option 2" />
+                <Button fx:id="optionThreeButton" maxWidth="146.0" minWidth="146.0" prefHeight="50.0" prefWidth="146.0" style="-fx-font-family: 'Roboto Mono'; -fx-font-size: 18px;" text="Option 3" />
+                <Button fx:id="optionFourButton" maxWidth="146.0" minWidth="146.0" prefHeight="50.0" prefWidth="146.0" style="-fx-font-family: 'Roboto Mono'; -fx-font-size: 18px;" text="Option 4" />
+            </children>
+        </HBox>
+
+        <!-- Forfeit Button -->
+        <Button fx:id="forfeitButton" layoutX="840.0" layoutY="27.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="156.0" text="Forfeit" />
+
+    </children>
+
+</AnchorPane>
