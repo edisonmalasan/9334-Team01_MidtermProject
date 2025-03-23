@@ -2,10 +2,11 @@ package Client.User.controller;
 /**
  * Contains main game logic
  */
+import App.App;
 import common.AnsiFormatter;
 import Client.User.connection.ClientConnection;
 import Client.User.model.ComboModel;
-import Client.User.model.PlayerModel;
+import utility.PlayerModel;
 import Client.User.utils.BombUtility;
 import Client.User.utils.QTEUtility;
 import common.LoggerSetup;
@@ -199,13 +200,19 @@ public abstract class GameController {
 
         new Thread(() -> {
             try {
-                String playerName = InputUsernameController.getPlayerName();
-                PlayerModel player = new PlayerModel(playerName, score);
+                String playerUsername = PlayerLoginController.getPlayerUsername();
+                String playerPassword = PlayerLoginController.getPlayerPassword();
+                int classicScore = 0;
+                int endlessScore = 0;
 
                 if (checkMode) {
-                    player.setName(playerName + "  ");
+                    endlessScore = score;
+                } else {
+                    classicScore = score;
                 }
 
+                PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore);
+                App.bombGameServer.updatePlayerScore(player);
                 clientConnection.sendObject(player);
                 Response response = (Response) clientConnection.receiveObject();
 
