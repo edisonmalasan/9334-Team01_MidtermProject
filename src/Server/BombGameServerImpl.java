@@ -1,5 +1,6 @@
 package Server;
 
+import Server.controller.JSONStorageController;
 import utility.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
@@ -202,21 +203,18 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
 
-    public void updateLeaderboard(LeaderboardEntryModel leaderboardEntry) throws RemoteException {
+    public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException {
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
                 logger.severe("Received null leaderboard entry data.");
-              //  return new Response(false, "Received null leaderboard entry data.", null);
+                return new Response(false, "Received null leaderboard entry data.", null);
             }
+
 
             fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModel> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
-            if (leaderboardEntry.getPlayerName().endsWith("  ")) {
-                fileName = "data/endless_leaderboard.xml";
-                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-            }
             for (LeaderboardEntryModel entry : leaderboard) {
                 if (leaderboardEntry.equals(entry)) {
                     logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
@@ -224,12 +222,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                     break;
                 }
             }
-            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+            JSONStorageController.saveLeaderboardToJSON(fileName, leaderboard);
             logger.info("Leaderboard updated successfully.");
-           // return new Response(true, "Leaderboard updated successfully.", null);
+            return new Response(true, "Leaderboard updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error removing entry from leaderboard: " + e.getMessage());
-           // return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
+            return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
         }
     }
     @Override

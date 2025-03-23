@@ -2,6 +2,7 @@ package Client.controller;
 /**
  * Controls leaderboard view for admin
  */
+import App.App;
 import Client.connection.ClientConnection;
 import Client.model.LeaderboardEntryModelClient;
 import utility.LeaderboardEntryModel;
@@ -57,10 +58,8 @@ public class AdminLeaderboardControllerClient {
     // Observable list to hold leaderboard data
     private ObservableList<LeaderboardEntryModel> classicLeaderboard;
     private ObservableList<LeaderboardEntryModel> endlessLeaderboard;
-    private ClientConnection clientConnection;
 
-    public AdminLeaderboardControllerClient() throws ConnectionException {
-        this.clientConnection = ClientConnection.getInstance();
+    public AdminLeaderboardControllerClient() {
     }
 
     public void initialize() throws IOException, ClassNotFoundException {
@@ -74,11 +73,11 @@ public class AdminLeaderboardControllerClient {
 
         // Initialize leaderboard data (this data would be fetched from a server in a real-world scenario)
         classicLeaderboard = FXCollections.observableArrayList(
-                getClassicLeaderboard()
+                (List<LeaderboardEntryModel>) App.bombGameServer.getLeaderboards("classic").getData()
         );
 
         endlessLeaderboard = FXCollections.observableArrayList(
-                getEndlessLeaderboard()
+                (List<LeaderboardEntryModel>) App.bombGameServer.getLeaderboards("endless").getData()
         );
 
         // Sort the leaderboard based on score in descending order
@@ -187,78 +186,39 @@ public class AdminLeaderboardControllerClient {
         }
     }
 
-    public List<LeaderboardEntryModel> getClassicLeaderboard() {
-        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
-        try {
-            // send obj req
-            clientConnection.sendObject("GET_LEADERBOARD_CLASSIC");
-
-            // receive the response obj from server
-            Response response = (Response) clientConnection.receiveObject();
-
-            if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
-                System.out.println(response.getData().toString());
-            }
-            return leaderboardEntryModelList;
-        } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelList;
-        }
-    }
-
-    public List<LeaderboardEntryModel> getEndlessLeaderboard() {
-        List<LeaderboardEntryModel> leaderboardEntryModelList = new ArrayList<>();
-        try {
-            // send obj req
-            clientConnection.sendObject("GET_LEADERBOARD_ENDLESS");
-
-            // receive the response obj from server
-            Response response = (Response) clientConnection.receiveObject();
-
-            if (response.isSuccess() && response.getData() instanceof List) {
-                leaderboardEntryModelList = (List<LeaderboardEntryModel>) response.getData();
-                System.out.println(response.getData().toString());
-            }
-            return leaderboardEntryModelList;
-        } catch (IOException | ClassNotFoundException e) {
-            return leaderboardEntryModelList;
-        }
-    }
-
     @FXML
     private void deleteEntry() {
         // Get selected item from the classicTable or endlessTable
+        String leaderboardType = "classic";
         LeaderboardEntryModel selectedItem = classicTable.getSelectionModel().getSelectedItem();
         if (selectedItem == null) {
+            leaderboardType = "endless";
             selectedItem = endlessTable.getSelectionModel().getSelectedItem();
         }
 
         try {
-            clientConnection.sendObject(selectedItem);
-            Response response = (Response) clientConnection.receiveObject();
+            Response response = App.bombGameServer.removeFromLeaderboard(selectedItem, leaderboardType);
             if (response.isSuccess()) {
                 System.out.println(response.getMessage());
             }
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
         if (selectedItem != null) {
             // Here, you can remove the selected item from the table
-            if (selectedItem instanceof LeaderboardEntryModel) {
-                if (classicTable.getSelectionModel().getSelectedItem() != null) {
-                    classicTable.getItems().remove(selectedItem);
-                } else {
-                    endlessTable.getItems().remove(selectedItem);
-                }
-
-                // Optionally show a confirmation or success alert
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Delete Confirmation");
-                alert.setHeaderText("Item Deleted");
-                alert.setContentText("The selected entry has been deleted successfully.");
-                alert.showAndWait();
+            if (classicTable.getSelectionModel().getSelectedItem() != null) {
+                classicTable.getItems().remove(selectedItem);
+            } else {
+                endlessTable.getItems().remove(selectedItem);
             }
+
+            // Optionally show a confirmation or success alert
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Delete Confirmation");
+            alert.setHeaderText("Item Deleted");
+            alert.setContentText("The selected entry has been deleted successfully.");
+            alert.showAndWait();
         } else {
             // If no item is selected, show an alert
             Alert alert = new Alert(Alert.AlertType.WARNING);
