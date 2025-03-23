@@ -129,13 +129,8 @@ public class JSONStorageController {
     public static List<QuestionModel> loadQuestionsFromJSON() {
         List<QuestionModel> questions = new ArrayList<>();
         try (Reader reader = new FileReader(questionFileName)) {
-
-            Type questionWrapperType = new TypeToken<QuestionWrapper>() {}.getType();
-            QuestionWrapper wrapper = gson.fromJson(reader, questionWrapperType);
-
-            if (wrapper != null && wrapper.questions != null) {
-                questions = wrapper.questions;
-            }
+            Type questionModelType = new TypeToken<List<QuestionModel>>() {}.getType();
+            questions = gson.fromJson(reader, questionModelType);
 
             logger.info("JSONStorageController: Questions loaded successfully from " + questionFileName);
         } catch (FileNotFoundException e) {
@@ -155,12 +150,6 @@ public class JSONStorageController {
             e.printStackTrace();
         }
     }
-
-    // Wrapper class to match the JSON structure
-    class QuestionWrapper {
-        List<QuestionModel> questions;
-    }
-
 
 }
 
