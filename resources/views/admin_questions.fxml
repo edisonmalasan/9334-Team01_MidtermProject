@@ -13,7 +13,7 @@
 <?import java.lang.String?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.GridPane?>
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.User.controller.AdminQuestionsController">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminQuestionsController">
     <children>
         <!-- Return Button -->
         <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>

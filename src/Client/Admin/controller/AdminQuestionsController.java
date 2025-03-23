@@ -1,9 +1,9 @@
-package Client.User.controller;
+package Client.Admin.controller;
 
+import App.App;
 import Client.connection.ClientConnection;
 import common.Response;
 import common.model.QuestionModel;
-import exception.ConnectionException;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -66,8 +66,7 @@ public class AdminQuestionsController {
     private ObservableList<QuestionModel> questionList;
     private ClientConnection clientConnection;
 
-    public AdminQuestionsController() throws ConnectionException {
-        this.clientConnection = ClientConnection.getInstance();
+    public AdminQuestionsController() {
     }
 
     // Initialize the controller
@@ -102,8 +101,7 @@ public class AdminQuestionsController {
     private List<QuestionModel> getQuestionList() {
         List<QuestionModel> allQuestions = new ArrayList<>();
         try {
-            clientConnection.sendObject("GET_QUESTIONS_LIST");
-            Response response = (Response) clientConnection.receiveObject();
+            Response response = App.bombGameServer.getQuestionsList();
 
             if (response.isSuccess() && response.getData() instanceof List) {
                 allQuestions = (List<QuestionModel>) response.getData();
@@ -152,12 +150,11 @@ public class AdminQuestionsController {
                         Arrays.asList(choice1, choice2, choice3, choice4), correctAnswer, newScore);
 
                 try {
-                    clientConnection.sendObject(newQuestion);
-                    Response response = (Response) clientConnection.receiveObject();
+                    Response response = App.bombGameServer.updateQuestion(newQuestion);
                     if (response.isSuccess()) {
                         System.out.println(response.getMessage());
                     }
-                } catch (IOException | ClassNotFoundException e) {
+                } catch (IOException e) {
                     System.out.println(e.getMessage());
                 }
 
@@ -195,12 +192,11 @@ public class AdminQuestionsController {
         QuestionModel selectedItem = questionTable.getSelectionModel().getSelectedItem();
 
         try {
-            clientConnection.sendObject(selectedItem);
-            Response response = (Response) clientConnection.receiveObject();
+            Response response = App.bombGameServer.updateQuestion(selectedItem);
             if (response.isSuccess()) {
                 System.out.println(response.getMessage());
             }
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
 

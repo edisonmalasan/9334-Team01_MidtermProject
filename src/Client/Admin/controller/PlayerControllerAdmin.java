@@ -1,46 +1,53 @@
 package Client.Admin.controller;
 
-import javax.swing.*;
-import javax.xml.parsers.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.StreamResult;
-
 import Client.Admin.model.PlayerModelAdmin;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
-import org.w3c.dom.*;
+
 import java.io.*;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Optional;
 
 /**
- * Manipulates the admin GUI
+ * Manipulates the admin GUI with JSON data instead of XML
  */
 public class PlayerControllerAdmin {
+
     @FXML
     private TableView<PlayerModelAdmin> userTable;
-    @FXML private TableColumn<PlayerModelAdmin, String> username;
-    @FXML private TableColumn<PlayerModelAdmin, Integer> classicRank;
-    @FXML private TableColumn<PlayerModelAdmin, Integer> classicScore;
-    @FXML private TableColumn<PlayerModelAdmin, Integer> endlessRank;
-    @FXML private Button editBttn;
-    @FXML private Button saveBttn;
+    @FXML
+    private TableColumn<PlayerModelAdmin, String> username;
+    @FXML
+    private TableColumn<PlayerModelAdmin, Integer> classicRank;
+    @FXML
+    private TableColumn<PlayerModelAdmin, Integer> classicScore;
+    @FXML
+    private TableColumn<PlayerModelAdmin, Integer> endlessRank;
+    @FXML
+    private Button editBttn;
+    @FXML
+    private Button saveBttn;
+    @FXML
+    private Button deleteBttn;
 
     private ObservableList<PlayerModelAdmin> playerData = FXCollections.observableArrayList();
-    private File xmlFile = new File("players.xml");
+    private File jsonFile = new File("players.json");
 
     @FXML
     public void initialize() {
         setupTable();
-        loadXML();
+        loadJSON();
 
-        // add refresh bttn**
         editBttn.setOnAction(e -> enableEditing());
         saveBttn.setOnAction(e -> saveChanges());
+        deleteBttn.setOnAction(e -> deleteSelectedPlayer());
     }
 
     private void setupTable() {
@@ -57,66 +64,64 @@ public class PlayerControllerAdmin {
         userTable.setItems(playerData);
     }
 
-    private void loadXML() {
+    private void loadJSON() {
         playerData.clear();
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
+            if (jsonFile.exists()) {
+                // Read the entire file into a string
+                StringBuilder content = new StringBuilder();
+                BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    content.append(line);
+                }
+                reader.close();
 
-            NodeList nodeList = document.getElementsByTagName("entry");
+                // Parse the content as a JSON array
+                JSONArray jsonArray = new JSONArray(content.toString());
 
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                Node node = nodeList.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element element = (Element) node;
-                    String name = element.getElementsByTagName("player").item(0).getTextContent();
-                    int rank = Integer.parseInt(element.getElementsByTagName("classicRank").item(0).getTextContent());
-                    int score = Integer.parseInt(element.getElementsByTagName("classicScore").item(0).getTextContent());
-                    int endless = Integer.parseInt(element.getElementsByTagName("endlessRank").item(0).getTextContent());
+                // Loop through each player in the JSON array
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject playerObject = jsonArray.getJSONObject(i);
+                    String name = playerObject.getString("username");
+                    int rank = playerObject.getInt("classicRank");
+                    int score = playerObject.getInt("classicScore");
+                    int endless = playerObject.getInt("endlessRank");
 
                     playerData.add(new PlayerModelAdmin(name, rank, score, endless));
                 }
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void saveChanges() {
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(xmlFile);
-            document.getDocumentElement().normalize();
+            // Create a JSON array to hold all player objects
+            JSONArray jsonArray = new JSONArray();
 
-            NodeList nodeList = document.getElementsByTagName("entry");
+            // Iterate over player data and create a JSON object for each player
+            for (PlayerModelAdmin player : playerData) {
+                JSONObject playerObject = new JSONObject();
+                playerObject.put("username", player.getUsername());
+                playerObject.put("classicRank", player.getClassicRank());
+                playerObject.put("classicScore", player.getClassicScore());
+                playerObject.put("endlessRank", player.getEndlessRank());
 
-            for (int i = 0; i < playerData.size(); i++) {
-                PlayerModelAdmin player = playerData.get(i);
-                Node node = nodeList.item(i);
-
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element element = (Element) node;
-                    element.getElementsByTagName("player").item(0).setTextContent(player.getUsername());
-                    element.getElementsByTagName("classicRank").item(0).setTextContent(String.valueOf(player.getClassicRank()));
-                    element.getElementsByTagName("classicScore").item(0).setTextContent(String.valueOf(player.getClassicScore()));
-                    element.getElementsByTagName("endlessRank").item(0).setTextContent(String.valueOf(player.getEndlessRank()));
-                }
+                jsonArray.put(playerObject);
             }
 
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(xmlFile);
-            transformer.transform(source, result);
+            // Write the JSON array to the file
+            BufferedWriter writer = new BufferedWriter(new FileWriter(jsonFile));
+            writer.write(jsonArray.toString(4));  // Format the output with 4 spaces for indentation
+            writer.close();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Player data saved successfully!");
             alert.showAndWait();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -125,7 +130,6 @@ public class PlayerControllerAdmin {
         userTable.setEditable(true);
     }
 
-    // to revise i2 hehehe
     public void deleteSelectedPlayer() {
         PlayerModelAdmin selectedPlayer = userTable.getSelectionModel().getSelectedItem();
         if (selectedPlayer != null) {
@@ -148,5 +152,3 @@ public class PlayerControllerAdmin {
         }
     }
 }
-
-

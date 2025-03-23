@@ -1,5 +1,6 @@
-package Client.User.controller;
+package Client.Admin.controller;
 
+import Client.User.controller.MainMenuController;
 import common.AnsiFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

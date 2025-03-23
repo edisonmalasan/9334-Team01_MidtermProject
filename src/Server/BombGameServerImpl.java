@@ -131,17 +131,16 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
 
-    public Response addQuestion(QuestionModel question) throws RemoteException {
+    public Response updateQuestion(QuestionModel question) throws RemoteException {
         try {
             logger.info("Server received request for removing question in database");
             if (question == null) {
                 logger.severe("Received null question data.");
-               // return new Response(false, "Received null question data.", null);
+                return new Response(false, "Received null question data.", null);
             }
 
             fileName = "data/questions.json";
-            List<QuestionModel> questionList = JSONStorageController.loadQuestionsFromJSON(fileName);
-            //List<QuestionModel> questionList = XMLStorageController.loadQuestionsFromXML(fileName);
+            List<QuestionModel> questionList = JSONStorageController.loadQuestionsFromJSON();
 
             boolean found = false;
             for (QuestionModel questionModel : questionList) {
@@ -157,15 +156,14 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 logger.info("Question added to database: " + question.getCategory() + " with text: " + question.getQuestionText());
             }
 
-            // XMLStorageController.saveQuestionsToXML(fileName, questionList);
-            JSONStorageController.saveQuestionsToJSON(fileName, questionList);
+
+            JSONStorageController.saveQuestionToJSON(questionList);
             logger.info("Question database updated successfully.");
-          //  return new Response(true, "Question database updated successfully.", null);
+            return new Response(true, "Question database updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error updating: " + e.getMessage());
-          //  return new Response(false, "Error updating question database: " + e.getMessage(), null);
+            return new Response(false, "Error updating question database: " + e.getMessage(), null);
         }
-        return null;
     }
 
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException {

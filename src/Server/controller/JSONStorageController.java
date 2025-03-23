@@ -3,9 +3,6 @@ package Server.controller;
  * Manages JSON files
  */
 
-import com.fasterxml.jackson.databind.DatabindException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
@@ -129,9 +126,9 @@ public class JSONStorageController {
         }
     }
 
-    public static List<QuestionModel> loadQuestionsFromJSON(String fileName) {
+    public static List<QuestionModel> loadQuestionsFromJSON() {
         List<QuestionModel> questions = new ArrayList<>();
-        try (Reader reader = new FileReader(fileName)) {
+        try (Reader reader = new FileReader(questionFileName)) {
 
             Type questionWrapperType = new TypeToken<QuestionWrapper>() {}.getType();
             QuestionWrapper wrapper = gson.fromJson(reader, questionWrapperType);
@@ -140,7 +137,7 @@ public class JSONStorageController {
                 questions = wrapper.questions;
             }
 
-            logger.info("JSONStorageController: Questions loaded successfully from " + fileName);
+            logger.info("JSONStorageController: Questions loaded successfully from " + questionFileName);
         } catch (FileNotFoundException e) {
             logger.warning("JSONStorageController: Questions file not found, returning empty list.");
         } catch (IOException e) {
@@ -149,13 +146,10 @@ public class JSONStorageController {
         return questions;
     }
 
-    public static void saveQuestionsToJSON(String filename, List<QuestionModel> questions){
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-        try {
-            objectMapper.writeValue(new File(filename), questions);
-            logger.info("JSONStorageModel: Questions successfully saved to " + filename);
+    public static void saveQuestionToJSON(List<QuestionModel> questionsList){
+        try (Writer writer = new FileWriter(questionFileName)) {
+            gson.toJson(questionsList, writer);
+            logger.info("JSONStorageModel: Questions successfully saved to " + questionFileName);
         } catch (IOException e) {
             logger.severe("JSONStorageModel: Error saving Questions to JSON: " + e.getMessage());
             e.printStackTrace();
