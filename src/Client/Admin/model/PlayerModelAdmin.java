@@ -2,6 +2,8 @@ package Client.Admin.model;
 
 import javafx.beans.property.*;
 
+// paayos lol
+
 public class PlayerModelAdmin {
     private final StringProperty username;
     private final IntegerProperty classicRank;
