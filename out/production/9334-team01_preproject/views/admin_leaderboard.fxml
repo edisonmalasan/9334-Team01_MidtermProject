@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.User.controller.AdminLeaderboardControllerClient">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminLeaderboardControllerClient">
     <children>
         <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
 
