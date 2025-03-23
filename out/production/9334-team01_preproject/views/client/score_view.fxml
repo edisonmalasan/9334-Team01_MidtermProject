@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="scoreView" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.controller.ScoreController">
+   <children>
+      <Pane layoutX="362.0" layoutY="262.0" prefHeight="243.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="244.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/scorebox.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="scoreLabel" alignment="CENTER" layoutX="106.0" layoutY="109.0" prefHeight="25.0" prefWidth="72.0" text="0" />
+            <Button fx:id="backToMenuButton" layoutX="57.0" layoutY="177.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="170.0" text="MAIN MENU" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
