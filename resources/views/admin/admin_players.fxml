@@ -6,7 +6,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox fx:id="adminDashboard" prefHeight="733.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.AdminDashboardController">
+<HBox fx:id="adminDashboard" prefHeight="733.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.PlayerControllerAdmin">
     <VBox prefHeight="200.0" prefWidth="100.0">
         <children>
             <AnchorPane id="sdbar" prefHeight="767.0" prefWidth="258.0" styleClass="sidebar">
@@ -111,6 +111,15 @@
                                     </ImageView>
                                 </graphic>
                             </Button>
+                            <Button id="saveBttn" layoutX="501.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="156.0" styleClass="titleOption" text="Save Changes">
+                                <graphic>
+                                    <ImageView id="edit" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../../images/save-icon.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
                         </children>
                     </Pane>
 
@@ -146,17 +155,17 @@
 
             <HBox prefHeight="100.0" prefWidth="200.0">
                 <children>
-                    <TableView id="userTable" prefHeight="449.0" prefWidth="712.0">
+                    <TableView fx:id="userTable" prefHeight="449.0" prefWidth="712.0">
                         <columns>
-                            <TableColumn id="username" prefWidth="269.0" styleClass="table-view" text="USERNAME" />
+                            <TableColumn id="username" prefWidth="269.0" styleClass="table-view" text="USERNAME" editable="true" />
 
                             <TableColumn id="classicStats" prefWidth="245.0" styleClass="table-view" text="CLASSIC STATUS">
                                 <columns>
-                                    <TableColumn id="classicRank" prefWidth="75.0" styleClass="table-view" text="RANK" />
-                                    <TableColumn id="classicScore" prefWidth="120.0" styleClass="table-view" text="SCORE" />
+                                    <TableColumn id="classicRank" prefWidth="75.0" styleClass="table-view" text="RANK" editable="true" />
+                                    <TableColumn id="classicScore" prefWidth="120.0" styleClass="table-view" text="SCORE" editable="true" />
                                 </columns></TableColumn>
 
-                            <TableColumn id="endlessStats" prefWidth="160.0" styleClass="table-view" text="ENDLESS STATUS">
+                            <TableColumn id="endlessStats" prefWidth="160.0" styleClass="table-view" text="ENDLESS STATUS" editable="true" >
                                 <columns>
                                     <TableColumn id="endlessRank" prefWidth="75.0" styleClass="table-view" text="RANK" />
                                     <TableColumn prefWidth="120.0" styleClass="table-view" text="SCORE" />
@@ -175,6 +184,7 @@
                     <Insets right="30.0" />
                 </padding>
             </HBox>
+
             <AnchorPane id="deleteBttn">
                 <children>
                     <Button mnemonicParsing="false" prefWidth="77.0" styleClass="deleteBttn" text="DELETE ALL" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
