@@ -15,18 +15,20 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 
+//TODO to be revise
+// fix the connection  with fxml
 public class QuestionControllerAdmin {
 
     @FXML
-    private GridPane questionsGrid; // The grid that holds the questions
+    private GridPane questionsGrid; 
     @FXML
-    private TextField searchBox; // The search box for filtering questions
+    private TextField searchBox; 
     @FXML
-    private Button deleteBttn; // Button to delete all questions
+    private Button deleteBttn; 
     @FXML
-    private Button editBttn; // Button to edit questions
+    private Button editBttn; 
 
-    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); // List to hold question data
+    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); 
 
     @FXML
     public void initialize() {
