@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "category": "ALGEBRA",
       "text": "Solve the following equation: 10 - 2(3)",
@@ -2367,4 +2366,3 @@
       "score": 1
     }
   ]
-}
