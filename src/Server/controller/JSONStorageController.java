@@ -22,6 +22,9 @@ import java.util.logging.Logger;
 public class JSONStorageController {
     private static final Logger logger = Logger.getLogger(JSONStorageController.class.getName());
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static String playerFileName = "data/players.json";
+    private static String questionFileName = "data/questions.json";
+
 
     /**
      * Returns a list containing leaderboard entries
@@ -97,9 +100,30 @@ public class JSONStorageController {
         } catch (IOException e) {
             logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
         }
-
-
-
     }
+    public static void updatePlayerScore(PlayerModel newPlayer) {
+        List<PlayerModel> playerList = new ArrayList<>();
+        try (Reader reader = new FileReader(playerFileName);
+             Writer writer = new FileWriter(playerFileName)) {
+            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+            playerList = gson.fromJson(reader, playerListType);
+            reader.close();
+
+            for (PlayerModel player : playerList) {
+                if (player.equals(newPlayer)) {
+                    player.setClassicScore(newPlayer.getClassicScore());
+                    player.setEndlessScore(newPlayer.getEndlessScore());
+                }
+            }
+
+            gson.toJson(playerList, writer);
+            logger.info("JSONStorageController: Player score successfully updated for " + newPlayer.getUsername());
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Players file not found.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
+        }
+    }
+
 }
 
