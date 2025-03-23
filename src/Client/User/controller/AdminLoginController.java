@@ -3,7 +3,7 @@ package Client.User.controller;
  * Controls input username view window
  */
 import common.AnsiFormatter;
-import Client.User.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import exception.ConnectionException;
 import exception.InvalidUsernameException;
 import exception.ServerNotRunningException;

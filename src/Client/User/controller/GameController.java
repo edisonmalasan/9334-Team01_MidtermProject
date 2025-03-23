@@ -4,7 +4,7 @@ package Client.User.controller;
  */
 import App.App;
 import common.AnsiFormatter;
-import Client.User.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import Client.User.model.ComboModel;
 import utility.PlayerModel;
 import Client.User.utils.BombUtility;
