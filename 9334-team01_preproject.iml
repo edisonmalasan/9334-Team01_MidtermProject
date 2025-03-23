@@ -13,5 +13,7 @@
     <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" exported="" name="gson-2.12.1" level="project" />
     <orderEntry type="library" exported="" name="jackson-databind-2.18.3" level="project" />
+    <orderEntry type="library" exported="" name="jackson-core-2.18.3" level="project" />
+    <orderEntry type="library" exported="" name="jackson-annotations-2.18.3" level="project" />
   </component>
 </module>

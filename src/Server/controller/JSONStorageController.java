@@ -3,6 +3,9 @@ package Server.controller;
  * Manages JSON files
  */
 
+import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
@@ -146,9 +149,24 @@ public class JSONStorageController {
         return questions;
     }
 
+    public static void saveQuestionsToJSON(String filename, List<QuestionModel> questions){
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+
+        try {
+            objectMapper.writeValue(new File(filename), questions);
+            logger.info("JSONStorageModel: Questions successfully saved to " + filename);
+        } catch (IOException e) {
+            logger.severe("JSONStorageModel: Error saving Questions to JSON: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     // Wrapper class to match the JSON structure
     class QuestionWrapper {
         List<QuestionModel> questions;
     }
+
+
 }
 

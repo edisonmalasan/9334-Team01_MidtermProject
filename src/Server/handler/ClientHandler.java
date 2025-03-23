@@ -242,7 +242,8 @@ public class ClientHandler implements Runnable {
                 logger.info("Question added to database: " + question.getCategory() + " with text: " + question.getQuestionText());
             }
 
-            XMLStorageController.saveQuestionsToXML(fileName, questionList);
+            //XMLStorageController.saveQuestionsToXML(fileName, questionList);
+            JSONStorageController.saveQuestionsToJSON(fileName, questionList);
             logger.info("Question database updated successfully.");
             return new Response(true, "Question database updated successfully.", null);
         } catch (Exception e) {

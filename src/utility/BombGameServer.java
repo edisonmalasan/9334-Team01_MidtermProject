@@ -21,7 +21,7 @@ public interface BombGameServer extends Remote {
     public Response updatePlayerScore(PlayerModel player) throws RemoteException;
 
     // Add question to database
-    public void addQuestion(QuestionModel question) throws RemoteException;
+    public Response addQuestion(QuestionModel question) throws RemoteException;
 
     // Update leaderboards data
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException;
