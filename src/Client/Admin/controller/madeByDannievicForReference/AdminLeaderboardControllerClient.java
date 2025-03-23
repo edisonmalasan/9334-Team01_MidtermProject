@@ -1,4 +1,4 @@
-package Client.User.controller;
+package Client.Admin.controller.madeByDannievicForReference;
 /**
  * Controls leaderboard view for admin
  */
