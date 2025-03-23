@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="categoryMenu" prefHeight="744.0" prefWidth="1024.0" stylesheets="@styles.css"
+<AnchorPane fx:id="categoryMenu" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="Client.User.controller.CategoryController">

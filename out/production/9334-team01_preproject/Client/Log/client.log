@@ -218,3 +218,69 @@ Caused by: java.io.NotSerializableException: utility.PlayerModel
 Mar 23, 2025 4:29:52 PM Client.User.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
+Mar 24, 2025 1:25:22 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:25:22 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:28:38 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:28:38 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:29:04 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:29:04 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:29:48 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:29:48 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:32:49 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:32:49 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:11 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:11 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:16 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:16 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:22 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:22 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:26 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:26 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:30 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:30 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:34 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:34 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
