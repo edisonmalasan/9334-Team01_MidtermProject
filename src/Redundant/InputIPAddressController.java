@@ -1,4 +1,4 @@
-package Client.User.controller;
+package Redundant;
 /**
  * Controls input username view window
  */
