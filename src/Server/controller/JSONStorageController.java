@@ -57,7 +57,6 @@ public class JSONStorageController {
         try (Reader reader = new FileReader(fileName)) {
             Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
             playerList = gson.fromJson(reader, playerListType);
-            reader.close();
             logger.info("JSONStorageController: Players list loaded successfully from " + fileName);
         } catch (FileNotFoundException e) {
             logger.warning("JSONStorageController: Players file not found, returning empty list.");
@@ -73,8 +72,34 @@ public class JSONStorageController {
             gson.toJson(playerList, writer);
             logger.info("JSONStorageController: Player successfully saved to " + fileName);
         } catch (IOException e) {
-            logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
         }
+    }
+
+    public static void updatePlayerDetails(String fileName, String username, String password) {
+        List<PlayerModel> playerList = new ArrayList<>();
+        String originalPassword = "";
+        try (Reader reader = new FileReader(fileName);
+             Writer writer = new FileWriter(fileName)) {
+            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+            playerList = gson.fromJson(reader, playerListType);
+            reader.close();
+
+            for (PlayerModel player : playerList) {
+                if (player.getUsername().equals(username)) {
+                    originalPassword = player.getPassword();
+                    player.setPassword(password);
+                }
+            }
+            logger.info("JSONStorageController: Player password successfully changed from " + originalPassword + " to " + password);
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Players file not found.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
+        }
+
+
+
     }
 }
 
