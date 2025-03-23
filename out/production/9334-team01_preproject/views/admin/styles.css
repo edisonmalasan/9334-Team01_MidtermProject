@@ -149,7 +149,7 @@
     -fx-border-width: 0 0 1 0;
 }
 
-/* Delete Button */
+/* Buttons sa baba */
 .deleteBttn {
     -fx-background-image: url("../images/delete-bttn.png");
     -fx-background-size: 171px 31px;
@@ -181,6 +181,39 @@
     -fx-font-size: 15px;
     -fx-background-color: transparent;
     -fx-text-fill: #FFCC00;
+}
+
+.addCatBttn {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 200px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.addCatBttn:hover {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 200px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF9E9E;
+}
+
+.addCatBttn:pressed {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 200px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
 }
 
 /* Questions */

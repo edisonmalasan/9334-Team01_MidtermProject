@@ -91,6 +91,10 @@ public class ServerView extends JFrame {
         return clearLogButton;
     }
 
+    public JTextArea getLogArea() {
+        return logArea;
+    }
+
     // Log handling methods
     public void appendToLog(String message) {
         logArea.append(message);

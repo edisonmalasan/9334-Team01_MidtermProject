@@ -2,6 +2,7 @@ package Client.User.controller;
 /**
  * Controls input username view window
  */
+import common.LogManager;
 import common.AnsiFormatter;
 import exception.InvalidUsernameException;
 import javafx.application.Platform;
@@ -20,6 +21,8 @@ import java.util.logging.Logger;
 
 public class LoginController {
     private static final Logger logger = Logger.getLogger(LoginController.class.getName());
+
+    private final LogManager logManager = LogManager.getInstance();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -73,7 +76,7 @@ public class LoginController {
 
         playerUsername = username;
         playerPassword = password;
-        logger.info("\nPlayerLoginController: Username entered: " + playerUsername);
+        logManager.appendLog("\nPlayerLoginController: Username entered: " + playerUsername);
         switchToMainMenu(event);
     }
 
@@ -92,7 +95,7 @@ public class LoginController {
 
 
     private void handleException(Exception e) {
-        logger.severe("❌ ERROR: " + e.getMessage());
+        logManager.appendLog("ERROR: " + e.getMessage());
         Platform.runLater(() -> {
             usernameField.clear();
             usernameField.requestFocus();
