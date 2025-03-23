@@ -5,6 +5,8 @@ package Client.User.controller;
 import App.App;
 import Client.connection.ClientConnection;
 import Client.User.model.LeaderboardEntryModelClient;
+import common.AnsiFormatter;
+import common.LoggerSetup;
 import utility.LeaderboardEntryModel;
 import exception.ConnectionException;
 import javafx.beans.property.SimpleStringProperty;
@@ -22,6 +24,8 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.stage.Stage;
@@ -61,9 +65,18 @@ public class LeaderboardControllerClient {
     private ObservableList<LeaderboardEntryModel> classicLeaderboard;
     private ObservableList<LeaderboardEntryModel> endlessLeaderboard;
     private ClientConnection clientConnection;
-    public BombGameServer bombGameServer = App.bombGameServer;
+    static final Logger logger = LoggerSetup.setupLogger("ClientLogger", System.getProperty("user.dir") + "/src/Client/Log/client.log");
 
-    public LeaderboardControllerClient() throws ConnectionException {
+    static {
+        AnsiFormatter.enableColorLogging(logger);
+    }
+
+    public LeaderboardControllerClient() {
+        try {
+            this.clientConnection = ClientConnection.getInstance();
+        } catch (ConnectionException e) {
+            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+        }
     }
 
     public void initialize() throws IOException, ClassNotFoundException {
@@ -77,11 +90,11 @@ public class LeaderboardControllerClient {
 
         // Initialize leaderboard data (this data would be fetched from a server in a real-world scenario)
         classicLeaderboard = FXCollections.observableArrayList(
-                (List<LeaderboardEntryModel>) bombGameServer.getLeaderboards("classic").getData()
+                (List<LeaderboardEntryModel>) ClientConnection.bombGameServer.getLeaderboards("classic").getData()
         );
 
         endlessLeaderboard = FXCollections.observableArrayList(
-                (List<LeaderboardEntryModel>) bombGameServer.getLeaderboards("endless").getData()
+                (List<LeaderboardEntryModel>) ClientConnection.bombGameServer.getLeaderboards("endless").getData()
         );
 
         // Sort the leaderboard based on score in descending order

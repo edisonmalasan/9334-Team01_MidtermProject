@@ -212,7 +212,7 @@ public abstract class GameController {
                 }
 
                 PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore);
-                Response response = App.bombGameServer.updatePlayerScore(player);
+                Response response = ClientConnection.bombGameServer.updatePlayerScore(player);
 
                 if (response.isSuccess()) {
                     logger.info("\nGameController: Score successfully sent to the server.");

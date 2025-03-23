@@ -42,8 +42,6 @@ public class CategoryController {
     private ClientConnection clientConnection;
     private static String selectedCategory;
     public static boolean isEndlessMode = false;
-    public BombGameServer bombGameServer = App.bombGameServer;
-
     private static final Logger logger = Logger.getLogger(CategoryController.class.getName());
 
     static {
@@ -75,7 +73,7 @@ public class CategoryController {
 
         new Thread(() -> {
             try {
-                Response response = bombGameServer.getQuestionsPerCategory(category);
+                Response response = ClientConnection.bombGameServer.getQuestionsPerCategory(category);
 
                 logger.info("\nCategoryController: DEBUG: Received response from server: " + response);
 
