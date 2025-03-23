@@ -1,0 +1,6 @@
+Mar 23, 2025 1:39:00 PM Client.User.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 1:39:00 PM Client.User.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!

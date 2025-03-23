@@ -1,13 +1,13 @@
 @font-face
 {
     -fx-font-family: "Space Nova";
-    src: url("../fonts/SpaceNova-6Rpd1.otf");
+    src: url("./fonts/SpaceNova-6Rpd1.otf");
 }
 
 @font-face
 {
     -fx-font-family: "Roboto Mono";
-    src: url("../fonts/RobotoMono-Bold.ttf");
+    src: url("./fonts/RobotoMono-Bold.ttf");
 }
 
 #classicGame {
@@ -29,7 +29,7 @@
 }
 
 .button {
-    -fx-background-image: url("../images/blue.png");
+    -fx-background-image: url("./images/blue.png");
     -fx-background-size: 146px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -50,19 +50,19 @@
 }
 
 .button:hover {
-    -fx-background-image: url("../images/hover.png");
+    -fx-background-image: url("./images/hover.png");
     -fx-text-fill: white;
 }
 
 .button:pressed {
-    -fx-background-image: url("../images/hover.png");
+    -fx-background-image: url("./images/hover.png");
     -fx-text-fill: black;
 }
 
 
 
 #choiceButtons .button:hover {
-    -fx-background-image: url("../images/modehover.png") ;
+    -fx-background-image: url("./images/modehover.png") ;
 
     -fx-min-width: 146px ;
     -fx-max-width: 146px ;
@@ -77,7 +77,7 @@
 }
 
 #choiceButtons .button:pressed {
-    -fx-background-image: url("../images/modehover.png") ;
+    -fx-background-image: url("./images/modehover.png") ;
 
     -fx-min-width: 146px ;
     -fx-max-width: 146px ;
@@ -96,7 +96,7 @@
 }
 
 #forfeitButton {
-    -fx-background-image: url("../images/forfeit.png");
+    -fx-background-image: url("./images/forfeit.png");
     -fx-background-size: 146px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
