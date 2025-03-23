@@ -13,10 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -43,6 +40,8 @@ public class LoginController {
     private Button loginButton;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private Hyperlink registerLink;
 
     public LoginController() {
     }
@@ -57,6 +56,9 @@ public class LoginController {
         passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
             errorLabel.setText("");
         });
+
+        registerLink.setOnAction(event -> switchToRegister(event));
+
 
     }
 
@@ -108,4 +110,22 @@ public class LoginController {
             errorLabel.setText(e.getMessage());
         });
     }
+
+    private void switchToRegister(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/register.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Hyperlink) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Register - Bomb Defusing Game");
+            stage.setResizable(false);
+            stage.show();
+
+            logger.info("\nLoginController: Switched to Register Page.");
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Failed to load Register Page.", e);
+        }
+    }
+
 }
