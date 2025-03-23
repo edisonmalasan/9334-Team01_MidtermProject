@@ -3,11 +3,12 @@ package Server.handler;
  * Handles requests from the client
  */
 
+import Server.controller.JSONStorageController;
 import common.AnsiFormatter;
-import Client.model.PlayerModel;
+import Client.User.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
-import Server.model.LeaderboardEntryModelServer;
+import utility.LeaderboardEntryModel;
 import Server.controller.XMLStorageController;
 import common.Response;
 import common.model.QuestionModel;
@@ -60,11 +61,11 @@ public class ClientHandler implements Runnable {
                         Response response = handleQuestionRequest(category);
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_CLASSIC")) {
-                        List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+                        List<LeaderboardEntryModel> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
                         Response response = handleLeaderboardUpdate(classicLeaderboard,"classic");
                         sendResponse(response);
                     } else if (reqString.equals("GET_LEADERBOARD_ENDLESS")) {
-                        List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+                        List<LeaderboardEntryModel> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
                         Response response = handleLeaderboardUpdate(endlessLeaderboard,"endless");
                         sendResponse(response);
                     } else if (reqString.equals("GET_QUESTIONS_LIST")) {
@@ -75,9 +76,9 @@ public class ClientHandler implements Runnable {
                     logger.info("Player score update request received.");
                     Response response = handlePlayerScoreUpdate((PlayerModel) request);
                     sendResponse(response);
-                } else if (request instanceof LeaderboardEntryModelServer) {
+                } else if (request instanceof LeaderboardEntryModel) {
                     logger.info("Leaderboard update request received.");
-                    Response response = handleLeaderboardUpdateRequest((LeaderboardEntryModelServer) request);
+                    Response response = handleLeaderboardUpdateRequest((LeaderboardEntryModel) request);
                     sendResponse(response);
                 } else if (request instanceof QuestionModel) {
                     logger.info("Questions update request received.");
@@ -122,7 +123,7 @@ public class ClientHandler implements Runnable {
             } else {
                 fileName = "data/endless_leaderboard.xml";
             }
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
             logger.info("Returning leaderboard data.");
             return new Response(true, "Leaderboard displayed successfully.", leaderboard);
         } catch (Exception e) {
@@ -144,7 +145,7 @@ public class ClientHandler implements Runnable {
             logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
 
             fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
 
             if (player.getName().endsWith("  ")) {
                 player.getName().trim();
@@ -154,7 +155,7 @@ public class ClientHandler implements Runnable {
             }
 
             boolean found = false;
-            for (LeaderboardEntryModelServer entry : leaderboard) {
+            for (LeaderboardEntryModel entry : leaderboard) {
                 if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
                     // compare the new score with the existing score
                     if (newScore > entry.getScore()) {
@@ -169,7 +170,7 @@ public class ClientHandler implements Runnable {
             }
 
             if (!found) {
-                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
+                leaderboard.add(new LeaderboardEntryModel(usernameLower, newScore));
                 logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
             }
 
@@ -223,8 +224,8 @@ public class ClientHandler implements Runnable {
                 return new Response(false, "Received null question data.", null);
             }
 
-            fileName = "data/questions.xml";
-            List<QuestionModel> questionList = XMLStorageController.loadQuestionsFromXML(fileName);
+            fileName = "data/questions.json";
+            List<QuestionModel> questionList = JSONStorageController.loadQuestionsFromJSON(fileName);
 
             boolean found = false;
             for (QuestionModel questionModel : questionList) {
@@ -250,7 +251,7 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    private Response handleLeaderboardUpdateRequest(LeaderboardEntryModelServer leaderboardEntry) {
+    private Response handleLeaderboardUpdateRequest(LeaderboardEntryModel leaderboardEntry) {
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
@@ -259,13 +260,13 @@ public class ClientHandler implements Runnable {
             }
 
             fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
 
             if (leaderboardEntry.getPlayerName().endsWith("  ")) {
                 fileName = "data/endless_leaderboard.xml";
                 leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
             }
-            for (LeaderboardEntryModelServer entry : leaderboard) {
+            for (LeaderboardEntryModel entry : leaderboard) {
                 if (leaderboardEntry.equals(entry)) {
                     logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
                     leaderboard.remove(entry);

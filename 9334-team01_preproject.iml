@@ -9,7 +9,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" exported="" name="lib" level="project" />
-    <orderEntry type="library" exported="" name="json-20250107" level="project" />
+    <orderEntry type="library" name="google.code.gson" level="project" />
+    <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" exported="" name="gson-2.12.1" level="project" />
+    <orderEntry type="library" exported="" name="jackson-databind-2.18.3" level="project" />
   </component>
 </module>

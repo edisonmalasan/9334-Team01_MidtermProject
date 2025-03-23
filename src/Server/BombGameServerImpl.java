@@ -1,14 +1,14 @@
 package Server;
 
-import Client.model.PlayerModel;
-import Server.controller.LeaderboardControllerServer;
+import Server.controller.JSONStorageController;
+import utility.Callback;
+import utility.PlayerModel;
 import Server.controller.QuestionController;
 import Server.controller.XMLStorageController;
 import Server.handler.ClientHandler;
-import Server.model.LeaderboardEntryModelServer;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import utility.LeaderboardEntryModel;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import common.AnsiFormatter;
 import common.Response;
 import common.model.QuestionModel;
@@ -16,25 +16,28 @@ import utility.BombGameServer;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
 
     private String fileName;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
-    private JsonParser jsonParser;
-    private JsonArray jsonArray = (JsonArray) jsonParser.parse(new FileReader("players.json"));
-    private List<LeaderboardEntryModelServer> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
-    private List<LeaderboardEntryModelServer> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+    private List<PlayerModel> playerList = new ArrayList<>();
+    private Map<String, Callback> playerCallbacks = new Hashtable<>();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
     public BombGameServerImpl() throws RemoteException, FileNotFoundException {
+        Gson gson = new Gson();
+        Reader fileReader = new FileReader(System.getProperty("user.dir")+ "/data/players.json");
+        Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+        playerList = gson.fromJson(fileReader, playerListType);
     }
 
     @Override
@@ -56,14 +59,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     @Override
     public Response getLeaderboards(String leaderboardType) throws RemoteException {
         try {
-            List<LeaderboardEntryModelServer> leaderboard = new ArrayList<>();
-            for (Object object : jsonArray) {
-                JsonObject player = (JsonObject) object;
-                String name = String.valueOf(player.get("username"));
-                int score = Integer.parseInt(String.valueOf(player.get(leaderboardType+"Score")));
-                LeaderboardEntryModelServer leaderboardEntry = new LeaderboardEntryModelServer(name, score);
-                leaderboard.add(leaderboardEntry);
-            }
+            List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
             if (leaderboard == null) {
                 logger.severe("Received null player data.");
@@ -76,6 +72,30 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error retrieving leaderboard: " + e.getMessage());
             return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
         }
+    }
+    // Method for populating and arranging list for leaderboards
+    private List<LeaderboardEntryModel> getLeaderboardEntries(String leaderboardType) {
+        List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
+        if (Objects.equals(leaderboardType, "classic")) {
+            for (PlayerModel player : playerList) {
+                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
+                leaderboard.add(leaderboardEntry);
+            }
+        } else {
+            for (PlayerModel player : playerList) {
+                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getEndlessScore());
+                leaderboard.add(leaderboardEntry);
+            }
+        }
+        leaderboard.sort((entry1, entry2) -> {
+            int scoreComparison = Integer.compare(entry2.getScore(), entry1.getScore());
+            if (scoreComparison == 0) {
+                // If scores are equal, sort alphabetically by player name
+                return entry1.getPlayerName().compareTo(entry2.getPlayerName());
+            }
+            return scoreComparison;
+        });
+        return leaderboard;
     }
 
     @Override
@@ -93,55 +113,22 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         logger.info("Question list retrieved successfully");
         return new Response(true, "Question list retrieved successfully.", allQuestions);
     }
+
     @Override
-    public void updatePlayerScore(PlayerModel player) throws RemoteException {
+    public Response updatePlayerScore(PlayerModel player) throws RemoteException {
         try {
             if (player == null) {
                 logger.severe("Received null player data.");
-                //return new Response(false, "Received null player data.", null);
+                return new Response(false, "Received null player data.", null);
             }
-
-            String usernameLower = player.getName().toLowerCase();
-            int newScore = player.getScore();
-            logger.info("Updating player score: " + usernameLower + " with score: " + newScore);
-
-            fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-
-            if (player.getName().endsWith("  ")) {
-                player.getName().trim();
-                player.setName(player.getName());
-                fileName = "data/endless_leaderboard.xml";
-                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-            }
-
-            boolean found = false;
-            for (LeaderboardEntryModelServer entry : leaderboard) {
-                if (entry.getPlayerName().equalsIgnoreCase(usernameLower)) {
-                    // compare the new score with the existing score
-                    if (newScore > entry.getScore()) {
-                        entry.setScore(newScore); // update the score only if the new score is higher
-                        logger.info("Updated score for player: " + usernameLower + " to: " + newScore);
-                    } else {
-                        logger.info("New score is not higher. Keeping the existing score: " + entry.getScore());
-                    }
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
-                leaderboard.add(new LeaderboardEntryModelServer(usernameLower, newScore));
-                logger.info("Added new player to leaderboard: " + usernameLower + " with score: " + newScore);
-            }
-
-            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+            logger.info("Updating player score: " + player.getUsername());
+            JSONStorageController.updatePlayerScore(player);
 
             logger.info("Player score updated successfully.");
-            //return new Response(true, "Player score updated successfully.", null);
+            return new Response(true, "Player score updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error updating player score: " + e.getMessage());
-            //return new Response(false, "Error updating player score: " + e.getMessage(), null);
+            return new Response(false, "Error updating player score: " + e.getMessage(), null);
         }
     }
 
@@ -179,42 +166,53 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
 
-    public void updateLeaderboard(LeaderboardEntryModelServer leaderboardEntry) throws RemoteException {
+    public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException {
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
                 logger.severe("Received null leaderboard entry data.");
-              //  return new Response(false, "Received null leaderboard entry data.", null);
+                return new Response(false, "Received null leaderboard entry data.", null);
             }
+
 
             fileName = "data/classic_leaderboard.xml";
-            List<LeaderboardEntryModelServer> leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
+            List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
-            if (leaderboardEntry.getPlayerName().endsWith("  ")) {
-                fileName = "data/endless_leaderboard.xml";
-                leaderboard = XMLStorageController.loadLeaderboardFromXML(fileName);
-            }
-            for (LeaderboardEntryModelServer entry : leaderboard) {
+            for (LeaderboardEntryModel entry : leaderboard) {
                 if (leaderboardEntry.equals(entry)) {
                     logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
                     leaderboard.remove(entry);
                     break;
                 }
             }
-            XMLStorageController.saveLeaderboardToXML(fileName, leaderboard);
+            JSONStorageController.saveLeaderboardToJSON(fileName, leaderboard);
             logger.info("Leaderboard updated successfully.");
-           // return new Response(true, "Leaderboard updated successfully.", null);
+            return new Response(true, "Leaderboard updated successfully.", null);
         } catch (Exception e) {
             logger.severe("Error removing entry from leaderboard: " + e.getMessage());
-           // return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
+            return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
         }
     }
     @Override
-    public void login() throws RemoteException {
+    public void login(Callback callback) throws RemoteException {
+        PlayerModel player = callback.getPlayer();
 
+        if (playerCallbacks.containsValue(callback)) {
+            System.out.println("Player already logged in.");
+        } else {
+            playerCallbacks.put(player.getUsername(), callback);
+            System.out.println("Log In: " + player.getUsername());
+            System.out.println("Online : [");
+            Set<String> usernames = playerCallbacks.keySet();
+            int counter = 1;
+            for (String username : usernames) {
+                System.out.println(username + (counter++ == usernames.size() ? "" : ", "));
+                playerCallbacks.get(username).loginCall(player);
+            }
+            System.out.println("]");
+        }
     }
 
     public void register() throws RemoteException {
-
     }
 }

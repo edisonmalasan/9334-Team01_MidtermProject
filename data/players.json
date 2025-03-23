@@ -1,47 +1,44 @@
 [
   {
-    "player": {
-      "username": "SAMPLEUSER1",
-      "password": "PASSWORD1",
-      "role": "PLAYER",
-      "classicScore": 15,
-      "endlessScore": 5
-    }
+    "username": "SAMPLEUSER1",
+    "password": "PASSWORD1",
+    "role": "PLAYER",
+    "classicScore": 15,
+    "endlessScore": 5
   },
   {
-    "player": {
-      "username": "SAMPLEUSER2",
-      "password": "PASSWORD2",
-      "role": "ADMIN",
-      "classicScore": 30,
-      "endlessScore": 10
-    }
+    "username": "SAMPLEUSER2",
+    "password": "PASSWORD2",
+    "role": "ADMIN",
+    "classicScore": 30,
+    "endlessScore": 10
   },
   {
-    "player": {
-      "username": "SAMPLEUSER3",
-      "password": "PASSWORD3",
-      "role": "PLAYER",
-      "classicScore": 25,
-      "endlessScore": 12
-    }
+    "username": "SAMPLEUSER3",
+    "password": "PASSWORD3",
+    "role": "PLAYER",
+    "classicScore": 25,
+    "endlessScore": 12
   },
   {
-    "player": {
-      "username": "SAMPLEUSER4",
-      "password": "PASSWORD4",
-      "role": "PLAYER",
-      "classicScore": 50,
-      "endlessScore": 20
-    }
+    "username": "SAMPLEUSER4",
+    "password": "PASSWORD4",
+    "role": "PLAYER",
+    "classicScore": 50,
+    "endlessScore": 20
   },
   {
-    "player": {
-      "username": "SAMPLEUSER5",
-      "password": "PASSWORD5",
-      "role": "ADMIN",
-      "classicScore": 75,
-      "endlessScore": 30
-    }
+    "username": "SAMPLEUSER5",
+    "password": "PASSWORD5",
+    "role": "ADMIN",
+    "classicScore": 75,
+    "endlessScore": 30
+  },
+  {
+    "username": "Yuen",
+    "password": "Yuen",
+    "role": "PLAYER",
+    "classicScore": 0,
+    "endlessScore": 0
   }
 ]

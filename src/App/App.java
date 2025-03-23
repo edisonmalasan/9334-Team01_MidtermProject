@@ -1,9 +1,7 @@
 package App;
 
 import common.AnsiFormatter;
-import Client.connection.ClientConnection;
-import Client.utils.SoundUtility;
-import exception.ConnectionException;
+import Client.User.utils.SoundUtility;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -12,13 +10,21 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import utility.BombGameServer;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class App extends Application {
     private static final Logger logger = Logger.getLogger(App.class.getName());
+    public static BombGameServer bombGameServer;
+
+    public static String fetchIPAddress;
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -31,15 +37,16 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws FXMLLoadingException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/input_username.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
             Parent root = fxmlLoader.load();
             //test
             SoundUtility.playBackgroundMusic();
 
             try {
-                ClientConnection.getInstance().connect();
+                Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
+                bombGameServer = (BombGameServer) registry.lookup("server");
                 logger.info("✅ Client successfully connected to the server.");
-            } catch (ConnectionException e) {
+            } catch (Exception e) {
                 logger.warning("⚠ Server is not running. The client will continue in offline mode.");
             }
 
@@ -57,8 +64,18 @@ public class App extends Application {
             });
 
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "❌ Failed to load FXML: input_username.fxml", e);
-            throw new FXMLLoadingException("input_username.fxml", e);
+            logger.log(Level.SEVERE, "❌ Failed to load FXML: login.fxml", e);
+            throw new FXMLLoadingException("login.fxml", e);
+        }
+    }
+
+    static {
+        try {
+            fetchIPAddress = InetAddress.getLocalHost().getHostAddress();
+            logger.info("Detected IP Address: " + fetchIPAddress);
+        } catch (IOException e) {
+            logger.warning("Failed to detect local IP.");
+            fetchIPAddress = "127.0.0.1"; // make ip address default
         }
     }
 }
