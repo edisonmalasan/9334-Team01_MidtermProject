@@ -1,6 +1,6 @@
 package Client.User.controller;
 
-import Client.User.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import common.Response;
 import common.model.QuestionModel;
 import exception.ConnectionException;

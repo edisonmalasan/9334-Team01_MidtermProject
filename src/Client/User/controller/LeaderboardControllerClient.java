@@ -3,7 +3,7 @@ package Client.User.controller;
  * Controls leaderboard view
  */
 import App.App;
-import Client.User.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import Client.User.model.LeaderboardEntryModelClient;
 import utility.LeaderboardEntryModel;
 import exception.ConnectionException;

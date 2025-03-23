@@ -3,10 +3,7 @@ package Client.User.controller;
  * Controls input username view window
  */
 import common.AnsiFormatter;
-import Client.User.connection.ClientConnection;
-import exception.ConnectionException;
 import exception.InvalidUsernameException;
-import exception.ServerNotRunningException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
