@@ -1,7 +1,6 @@
 package Server;
 
 import Server.controller.JSONStorageController;
-import utility.Callback;
 import utility.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
@@ -21,7 +20,9 @@ import java.io.Reader;
 import java.lang.reflect.Type;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
@@ -29,7 +30,9 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private String fileName;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
-    private Map<String, Callback> playerCallbacks = new Hashtable<>();
+    private List<LeaderboardEntryModel> classicLeaderboard = LeaderboardControllerServer.getClassicLeaderboard();
+    private List<LeaderboardEntryModel> endlessLeaderboard = LeaderboardControllerServer.getEndlessLeaderboard();
+
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
@@ -194,23 +197,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
     }
     @Override
-    public void login(Callback callback) throws RemoteException {
-        PlayerModel player = callback.getPlayer();
-
-        if (playerCallbacks.containsValue(callback)) {
-            System.out.println("Player already logged in.");
-        } else {
-            playerCallbacks.put(player.getUsername(), callback);
-            System.out.println("Log In: " + player.getUsername());
-            System.out.println("Online : [");
-            Set<String> usernames = playerCallbacks.keySet();
-            int counter = 1;
-            for (String username : usernames) {
-                System.out.println(username + (counter++ == usernames.size() ? "" : ", "));
-                playerCallbacks.get(username).loginCall(player);
-            }
-            System.out.println("]");
-        }
+    public void login() throws RemoteException {
 
     }
 
