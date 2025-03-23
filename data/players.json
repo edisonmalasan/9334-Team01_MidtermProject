@@ -33,5 +33,12 @@
     "role": "ADMIN",
     "classicScore": 75,
     "endlessScore": 30
+  },
+  {
+    "username": "Yuen",
+    "password": "Yuen",
+    "role": "PLAYER",
+    "classicScore": 0,
+    "endlessScore": 0
   }
 ]

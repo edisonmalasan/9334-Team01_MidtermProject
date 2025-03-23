@@ -3,6 +3,7 @@ package Server.handler;
  * Handles requests from the client
  */
 
+import Server.controller.JSONStorageController;
 import common.AnsiFormatter;
 import Client.User.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
@@ -223,8 +224,8 @@ public class ClientHandler implements Runnable {
                 return new Response(false, "Received null question data.", null);
             }
 
-            fileName = "data/questions.xml";
-            List<QuestionModel> questionList = XMLStorageController.loadQuestionsFromXML(fileName);
+            fileName = "data/questions.json";
+            List<QuestionModel> questionList = JSONStorageController.loadQuestionsFromJSON(fileName);
 
             boolean found = false;
             for (QuestionModel questionModel : questionList) {
