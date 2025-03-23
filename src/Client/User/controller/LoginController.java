@@ -71,10 +71,17 @@ public class LoginController {
             return;
         }
 
+        // TODO: apply validateUser and and compare the input to the playerRole
+
         playerUsername = username;
         playerPassword = password;
         logger.info("\nPlayerLoginController: Username entered: " + playerUsername);
         switchToMainMenu(event);
+    }
+
+    private boolean validateUser(String username, String password) {
+        // TODO: VALIDATE CLIENT IF PLAYER OR ADMIN
+        return false;
     }
 
 
@@ -85,22 +92,6 @@ public class LoginController {
         return playerPassword;
     }
 
-    private void switchToMainMenu(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/main_menu.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Bomb Defusing Game");
-            stage.setResizable(false);
-            stage.show();
-
-            logger.info("\nLoginController: Switched to Main Menu.");
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load Main Menu.", e);
-        }
-    }
 
     private void handleException(Exception e) {
         logger.severe("❌ ERROR: " + e.getMessage());
@@ -111,21 +102,53 @@ public class LoginController {
         });
     }
 
-    private void switchToRegister(ActionEvent event) {
+
+
+    private void switchScene(ActionEvent event, String fxmlPath, String title) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/register.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
 
-            Stage stage = (Stage) ((Hyperlink) event.getSource()).getScene().getWindow();
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Register - Bomb Defusing Game");
+            stage.setTitle(title);
             stage.setResizable(false);
             stage.show();
 
-            logger.info("\nLoginController: Switched to Register Page.");
+            logger.info("\nLoginController: Switched to " + title);
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load Register Page.", e);
+            logger.log(Level.SEVERE, "Failed to load " + title, e);
         }
     }
 
+    private void switchToRegister(ActionEvent event) {
+        switchScene(event, "/views/client/register.fxml", "Register - Bomb Defusing Game");
+    }
+
+    private void switchToMainMenu(ActionEvent event) {
+        switchScene(event, "/views/client/main_menu.fxml", "Bomb Defusing Game");
+    }
+
+    private void switchToAdminDashboard(ActionEvent event) {
+        switchScene(event, "/views/admin/admin_dashboard.fxml", "Admin Dashboard");
+    }
+
+
+
+    //    private void switchToMainMenu(ActionEvent event) {
+//        try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/main_menu.fxml"));
+//            Parent root = loader.load();
+//
+//            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+//            stage.setScene(new Scene(root));
+//            stage.setTitle("Bomb Defusing Game");
+//            stage.setResizable(false);
+//            stage.show();
+//
+//            logger.info("\nLoginController: Switched to Main Menu.");
+//        } catch (IOException e) {
+//            logger.log(Level.SEVERE, "Failed to load Main Menu.", e);
+//        }
+//    }
 }

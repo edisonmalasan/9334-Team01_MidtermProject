@@ -50,6 +50,8 @@ public class RegisterController {
         // TODO:
     }
 
+
+
     private void switchToLogin(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
