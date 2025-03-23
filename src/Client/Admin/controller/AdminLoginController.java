@@ -1,4 +1,4 @@
-package Client.Admin.controller.madeByDannievicForReference;
+package Client.Admin.controller;
 /**
  * Controls input username view window
  */
