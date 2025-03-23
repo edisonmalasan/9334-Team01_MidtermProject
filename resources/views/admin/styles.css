@@ -1,103 +1,182 @@
-@font-face
-{
+@font-face {
     -fx-font-family: "Space Nova";
-    src: url("resources/fonts/SpaceNova-6Rpd1.otf");
+    src: url("fonts/RobotoMono-Bold.ttf");
 }
 
-@font-face
-{
+@font-face {
     -fx-font-family: "Roboto Mono";
-    src: url("resources/fonts/RobotoMono-Bold.ttf");
+    src: url("fonts/RobotoMono-Bold.ttf");
 }
 
 .parent{
-    -fx-background-color: #313131;
+    -fx-background-color: #313131 !important;
 }
 
+/* Sidebar */
 .sidebar{
     -fx-background-color: #545454;
-    -fx-background-radius: 20px;
+    -fx-background-radius: 15px;
 }
 
-.title{
-    -fx-background-color: #545454;
-    -fx-background-radius: 20px;
-}
-
-/* Labels */
-#titleText {
-    -fx-font-family: "Space Nova";
-    -fx-font-size: 48px;
+.unclicked {
     -fx-background-color: transparent;
-    -fx-text-fill: black;
-    -fx-stroke: #9E4747;
-    -fx-stroke-width: 2px;
-}
-
-.label {
+    -fx-border-radius: 3px;
+    -fx-background-size: 146px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 18px;
-    -fx-background-color: transparent;
-    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
 }
 
-/* Buttons */
-#sdbar .buttonSidebarClicked {
+.unclicked:hover {
+    -fx-background-color: #A38B2D;
+    -fx-border-radius: 3px;
+    -fx-background-size: 146px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-text-fill: #545454;
+}
+
+.clicked {
     -fx-background-color: #FFCC00;
     -fx-border-radius: 3px;
     -fx-background-size: 146px 50px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: left center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 25px;
+    -fx-font-size: 15px;
     -fx-text-fill: #545454;
 }
 
-#sdbar .buttonSidebar {
-    -fx-background-color: transparent;
-    -fx-border-radius: 3px;
+/* Exit Button */
+.exit {
+    -fx-background-image: url("../images/exit_bttn.png");
     -fx-background-size: 146px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 25px;
-    -fx-text-fill: white;
-}
-
-#sdbar .buttonExit {
-    -fx-background-image: url("../images/exit-bttn.png");
-    -fx-background-size: 146px 50px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-font-family: "Space Nova";
-    -fx-font-size: 25px;
+    -fx-font-size: 15px;
     -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
-
-
-
-
-
-#adminDashboard .button:hover {
+.exit:hover {
     -fx-background-image: url("../images/exit_bttn.png");
     -fx-background-size: 146px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 18px;
-    -fx-background-color: transparent;
-    -fx-text-fill: #F1C40F;
-}
-
-#adminDashboard .button:pressed {
-    -fx-background-image: url("../images/exit_bttn.png");
-    -fx-background-size: 146px 50px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-font-family: "Space Nova";
-    -fx-font-size: 18px;
+    -fx-font-size: 15px;
     -fx-background-color: transparent;
     -fx-text-fill: white;
+}
+
+.exit:pressed {
+    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-size: 146px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFCC00;
+}
+
+/* Title */
+.title{
+    -fx-background-color: #545454;
+    -fx-background-radius: 15px;
+}
+
+.titleText {
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 30px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFCC00;
+}
+
+.titleSubheadText {
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 20px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.titleOption {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 15px;
+    -fx-text-fill: #FFCC00;
+    -fx-underline: true;
+}
+
+/* Table */
+.table-view .column-header-background {
+    -fx-background-color: #545454;
+}
+
+.table-view .column-header {
+    -fx-background-color: #545454;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #F3F3F3;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-view .table-row-cell:nth-child(3n) {
+    -fx-background-color: #E2E2E2;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: #D3D3D3;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Delete Button */
+.deleteBttn {
+    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+
+}
+
+.deleteBttn:hover {
+    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFCC00;
+}
+
+.deleteBttn:pressed {
+    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFCC00;
 }
