@@ -1,11 +1,13 @@
-{
-  "questions": [
-    {
-      "category": "LOGIC",
-      "questionText": "What is the next number in the pattern? 3, 6, 9, 12, ?",
-      "choices": ["14", "15", "16", "17"],
-      "correctAnswer": "15",
-      "score": 1
-    }
-    ]
-}
+[ {
+  "category" : "LOGIC",
+  "questionText" : "All roses are flowers. Are roses plants?",
+  "choices" : [ "YES", "NO" ],
+  "correctAnswer" : "YES",
+  "score" : 1
+}, {
+  "category" : "LOGIC",
+  "questionText" : "All roses are flowers. Are roses plants?",
+  "choices" : [ "YES", "NO" ],
+  "correctAnswer" : "YES",
+  "score" : 1
+} ]
