@@ -1,11 +1,13 @@
 package Client.User.controller;
 
+import exception.InvalidUsernameException;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,12 +18,36 @@ public class RegisterController {
     private static final Logger logger = Logger.getLogger(RegisterController.class.getName());
 
     @FXML
+    private TextField usernameField;
+
+    @FXML
+    private Label errorLabel;
+
+    @FXML
+    private PasswordField passwordField;
+
+    @FXML
     private Hyperlink loginLink;
+
+    @FXML
+    private Button registerButton;
 
     @FXML
     public void initialize() {
 
         loginLink.setOnAction(this::switchToLogin);
+
+        usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            errorLabel.setText("");
+        });
+        passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
+            errorLabel.setText("");
+        });
+
+    }
+
+    private void handleRegisterButtonAction(ActionEvent actionEvent) {
+        // TODO:
     }
 
     private void switchToLogin(ActionEvent event) {
@@ -39,5 +65,14 @@ public class RegisterController {
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load Login Page.", e);
         }
+    }
+
+    private void handleException(Exception e) {
+        logger.severe("❌ ERROR: " + e.getMessage());
+        Platform.runLater(() -> {
+            usernameField.clear();
+            usernameField.requestFocus();
+            errorLabel.setText(e.getMessage());
+        });
     }
 }
