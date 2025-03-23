@@ -212,16 +212,14 @@ public abstract class GameController {
                 }
 
                 PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore);
-                App.bombGameServer.updatePlayerScore(player);
-                clientConnection.sendObject(player);
-                Response response = (Response) clientConnection.receiveObject();
+                Response response = App.bombGameServer.updatePlayerScore(player);
 
                 if (response.isSuccess()) {
                     logger.info("\nGameController: Score successfully sent to the server.");
                 } else {
                     logger.warning("\nGameController: Failed to send score to the server: " + response.getMessage());
                 }
-            } catch (IOException | ClassNotFoundException e) {
+            } catch (Exception e) {
                 logger.log(Level.SEVERE, "\nGameController: Error sending score to the server", e);
             }
         }).start();
