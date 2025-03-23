@@ -4,10 +4,12 @@ package Server;
  */
 
 
+import Server.controller.JSONStorageController;
 import common.AnsiFormatter;
 import Server.model.QuestionBankModel;
 import Server.controller.LeaderboardControllerServer;
 import utility.BombGameServer;
+import utility.PlayerModel;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -21,6 +23,7 @@ public class ServerMain {
     private static ServerHandler serverHandler;
     private static Thread serverThread;
     private static boolean isServerRunning = false;
+    private static Registry registry;
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -40,10 +43,10 @@ public class ServerMain {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    startServer(questionBank, leaderboardControllerServer);
+                    startServer();
                     break;
                 case 2:
-                    stopServer();
+                    resetServer();
                     break;
                 case 3:
                     stopServer();
@@ -62,18 +65,19 @@ public class ServerMain {
         logger.info("\n=======Server Menu:=========");
         logger.info("\n============================");
         logger.info("1. Start Server               ");
-        logger.info("2. Stop Server                ");
-        logger.info("3. Exit                       ");
+        logger.info("2. Reset Server               ");
+        logger.info("3. Stop Server and Exit       ");
         logger.info("\n============================");
         logger.info("Please enter your choice:");
 
     }
 
-    private static void startServer(QuestionBankModel questionBank, LeaderboardControllerServer leaderboardControllerServer) {
+    private static void startServer() {
         try {
             BombGameServer server = new BombGameServerImpl();
-            Registry registry = LocateRegistry.createRegistry(1099);
+            registry = LocateRegistry.createRegistry(1099);
             registry.rebind("server", server);
+            isServerRunning = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -89,12 +93,17 @@ public class ServerMain {
         }
 
         try {
-            serverThread.interrupt();
-            serverHandler.stop();
+            registry.unbind("server");
+            System.exit(0);
             isServerRunning = false;
             logger.info("Server stopped successfully.");
         } catch (Exception e) {
             logger.severe("Error stopping the server: " + e.getMessage());
         }
+    }
+
+    private static void resetServer() {
+        stopServer();
+        startServer();
     }
 }
