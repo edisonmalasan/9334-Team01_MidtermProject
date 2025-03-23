@@ -10,6 +10,9 @@ import java.util.logging.Logger;
 import static common.Protocol.IP_ADDRESS;
 import static common.Protocol.PORT_NUMBER;
 
+//Add authentication if wanted but edit server connection.
+//Chat if needed
+
 public class AdminClient {
     private static AdminClient instance;
     private Socket socket;
@@ -21,6 +24,34 @@ public class AdminClient {
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
+
+    /**
+     * Authenticates the admin by sending login credentials.
+        public boolean authenticate(String username, String password) {
+        try {
+        objectOutputStream.writeObject("ADMIN_LOGIN");
+        objectOutputStream.writeObject(username);
+        objectOutputStream.writeObject(password);
+        objectOutputStream.flush();
+
+        // Read authentication response
+        Object response = objectInputStream.readObject();
+        if (response instanceof Boolean) {
+        boolean isAuthenticated = (Boolean) response;
+        if (isAuthenticated) {
+        logger.info("\nAdminConnection: Admin authentication successful!");
+        return true;
+        } else {
+        logger.warning("\nAdminConnection: Admin authentication failed!");
+        return false;
+        }
+        }
+        } catch (IOException | ClassNotFoundException e) {
+        logger.severe("\nAdminConnection: Error during authentication: " + e.getMessage());
+        }
+        return false;
+        }
+     */
 
     private AdminClient() throws ConnectionException {
         try {
