@@ -41,16 +41,16 @@ public class ServerController {
 
             try {
                 registry = LocateRegistry.createRegistry(1099);
+                registry.rebind("server", server);
+                isServerRunning = true;
                 view.appendToLog("[ "+getTimestamp() + " ]"+ " --- New RMI registry created on port 1099.\n");
             } catch (Exception e) {
                 view.appendToLog("[ "+getTimestamp() + " ]"+ " --- RMI registry already exists. Connecting...\n");
-                registry = LocateRegistry.getRegistry(1099);
             }
 
-            registry.rebind("server", server);
-            isServerRunning = true;
 
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server started successfully on port " + PORT_NUMBER + ".\n");
+
+            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server started successfully on port " + 1099 + ".\n");
         } catch (Exception e) {
             view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Failed to start server: " + e.getMessage() + "\n");
             e.printStackTrace();
