@@ -15,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -29,9 +30,8 @@ public class LoginController {
         AnsiFormatter.enableColorLogging(logger);
     }
 
-    private static String playerName;
-
-    private ClientConnection clientConnection;
+    private static String playerUsername;
+    private static String playerPassword;
 
     @FXML
     private TextField usernameField;
@@ -40,35 +40,47 @@ public class LoginController {
     private Label errorLabel;
 
     @FXML
-    private Button enterButton;
+    private Button loginButton;
+    @FXML
+    private PasswordField passwordField;
 
     public LoginController() {
     }
 
     @FXML
     public void initialize() {
-        enterButton.setOnAction(event -> handleEnterButtonClick(event));
+        loginButton.setOnAction(event -> handleLoginButtonClick(event));
 
         usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
             errorLabel.setText("");
         });
+        passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
+            errorLabel.setText("");
+        });
+
     }
 
-    private void handleEnterButtonClick(ActionEvent event) {
+    private void handleLoginButtonClick(ActionEvent event) {
         String username = usernameField.getText().trim().toLowerCase();
+        String password = playerPassword;
 
         if (username.isEmpty()) {
             handleException(new InvalidUsernameException("Username cannot be empty!"));
             return;
         }
 
-        playerName = username;
-        logger.info("\nLoginController: Username entered: " + playerName);
+        playerUsername = username;
+        playerPassword = password;
+        logger.info("\nPlayerLoginController: Username entered: " + playerUsername);
         switchToMainMenu(event);
     }
 
-    public static String getPlayerName() {
-        return playerName;
+
+    public static String getPlayerUsername() {
+        return playerUsername;
+    }
+    public static String getPlayerPassword() {
+        return playerPassword;
     }
 
     private void switchToMainMenu(ActionEvent event) {
