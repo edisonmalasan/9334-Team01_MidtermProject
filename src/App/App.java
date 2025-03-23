@@ -1,6 +1,5 @@
 package App;
 
-import Client.User.controller.InputIPAddressController;
 import common.AnsiFormatter;
 import Client.User.utils.SoundUtility;
 import exception.FXMLLoadingException;
@@ -44,7 +43,7 @@ public class App extends Application {
             SoundUtility.playBackgroundMusic();
 
             try {
-                Registry registry = LocateRegistry.getRegistry(InputIPAddressController.ipAddress, 1099);
+                Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
                 bombGameServer = (BombGameServer) registry.lookup("server");
                 logger.info("✅ Client successfully connected to the server.");
             } catch (Exception e) {
