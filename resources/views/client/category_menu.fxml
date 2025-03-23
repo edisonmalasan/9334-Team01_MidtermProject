@@ -11,7 +11,7 @@
 <AnchorPane fx:id="categoryMenu" prefHeight="744.0" prefWidth="1024.0" stylesheets="@styles.css"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Client.controller.CategoryController">
+            fx:controller="Client.User.controller.CategoryController">
     <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
     <children>
 

@@ -234,7 +234,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base
    writer.endObject();
  }
 
- public void writeUser(JsonWriter writer, User user) throws IOException {
+ public void writeUser(JsonWriter writer, Client.User user) throws IOException {
    writer.beginObject();
    writer.name("name").value(user.getName());
    writer.name("followers_count").value(user.getFollowersCount());

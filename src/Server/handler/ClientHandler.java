@@ -4,7 +4,7 @@ package Server.handler;
  */
 
 import common.AnsiFormatter;
-import Client.model.PlayerModel;
+import Client.User.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import utility.LeaderboardEntryModel;

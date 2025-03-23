@@ -1,10 +1,8 @@
 package App;
 
-import Client.controller.InputIPAddressController;
+import Client.User.controller.InputIPAddressController;
 import common.AnsiFormatter;
-import Client.connection.ClientConnection;
-import Client.utils.SoundUtility;
-import exception.ConnectionException;
+import Client.User.utils.SoundUtility;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;
