@@ -14,7 +14,7 @@ public class TesterClient {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
             BombGameServer bombGameServer = (BombGameServer) registry.lookup("server");
             Response response = bombGameServer.getQuestionsList();
-            Response response1 = bombGameServer.getQuestionsPerCategory("Algebra");
+            Response response1 = bombGameServer.getQuestionsPerCategory("LOGIC");
             System.out.println(response1.getData());
 
         } catch (Exception e) {

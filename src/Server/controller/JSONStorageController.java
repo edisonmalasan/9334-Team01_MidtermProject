@@ -3,6 +3,7 @@ package Server.controller;
  * Manages JSON files
  */
 
+import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -125,5 +126,29 @@ public class JSONStorageController {
         }
     }
 
+    public static List<QuestionModel> loadQuestionsFromJSON(String fileName) {
+        List<QuestionModel> questions = new ArrayList<>();
+        try (Reader reader = new FileReader(fileName)) {
+
+            Type questionWrapperType = new TypeToken<QuestionWrapper>() {}.getType();
+            QuestionWrapper wrapper = gson.fromJson(reader, questionWrapperType);
+
+            if (wrapper != null && wrapper.questions != null) {
+                questions = wrapper.questions;
+            }
+
+            logger.info("JSONStorageController: Questions loaded successfully from " + fileName);
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Questions file not found, returning empty list.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading questions from JSON: " + e.getMessage());
+        }
+        return questions;
+    }
+
+    // Wrapper class to match the JSON structure
+    class QuestionWrapper {
+        List<QuestionModel> questions;
+    }
 }
 

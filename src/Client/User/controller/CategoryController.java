@@ -107,7 +107,7 @@ public class CategoryController {
     }
 
     private void switchToGameplay(String category, List<QuestionModel> questions, ActionEvent event) {
-        String gameMode = (isEndlessMode) ? "/views/endless_game.fxml" : "/views/classic_game.fxml";
+        String gameMode = (isEndlessMode) ? "/views/client/endless_game.fxml" : "/views/client/classic_game.fxml";
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(gameMode));
             Parent root = loader.load();
