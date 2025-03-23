@@ -9,7 +9,7 @@
 - player_data.JSON
 - questions.JSON
 
-### Client [TODO]
+### Client.User [TODO]
 - JSON INSTEAD OF XML (for storing data)
 - REGISTER & LOGIN FEATURE
 - (MORE)

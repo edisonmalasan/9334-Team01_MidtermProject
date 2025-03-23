@@ -3,6 +3,7 @@ package Server.controller;
  * Manages JSON files
  */
 
+import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -22,6 +23,9 @@ import java.util.logging.Logger;
 public class JSONStorageController {
     private static final Logger logger = Logger.getLogger(JSONStorageController.class.getName());
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static String playerFileName = "data/players.json";
+    private static String questionFileName = "data/questions.json";
+
 
     /**
      * Returns a list containing leaderboard entries
@@ -57,7 +61,6 @@ public class JSONStorageController {
         try (Reader reader = new FileReader(fileName)) {
             Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
             playerList = gson.fromJson(reader, playerListType);
-            reader.close();
             logger.info("JSONStorageController: Players list loaded successfully from " + fileName);
         } catch (FileNotFoundException e) {
             logger.warning("JSONStorageController: Players file not found, returning empty list.");
@@ -73,8 +76,79 @@ public class JSONStorageController {
             gson.toJson(playerList, writer);
             logger.info("JSONStorageController: Player successfully saved to " + fileName);
         } catch (IOException e) {
-            logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
         }
+    }
+
+    public static void updatePlayerDetails(String fileName, String username, String password) {
+        List<PlayerModel> playerList = new ArrayList<>();
+        String originalPassword = "";
+        try (Reader reader = new FileReader(fileName);
+             Writer writer = new FileWriter(fileName)) {
+            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+            playerList = gson.fromJson(reader, playerListType);
+            reader.close();
+
+            for (PlayerModel player : playerList) {
+                if (player.getUsername().equals(username)) {
+                    originalPassword = player.getPassword();
+                    player.setPassword(password);
+                }
+            }
+            logger.info("JSONStorageController: Player password successfully changed from " + originalPassword + " to " + password);
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Players file not found.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
+        }
+    }
+    public static void updatePlayerScore(PlayerModel newPlayer) {
+        List<PlayerModel> playerList = new ArrayList<>();
+        try (Reader reader = new FileReader(playerFileName);
+             Writer writer = new FileWriter(playerFileName)) {
+            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
+            playerList = gson.fromJson(reader, playerListType);
+            reader.close();
+
+            for (PlayerModel player : playerList) {
+                if (player.equals(newPlayer)) {
+                    player.setClassicScore(newPlayer.getClassicScore());
+                    player.setEndlessScore(newPlayer.getEndlessScore());
+                }
+            }
+
+            gson.toJson(playerList, writer);
+            logger.info("JSONStorageController: Player score successfully updated for " + newPlayer.getUsername());
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Players file not found.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
+        }
+    }
+
+    public static List<QuestionModel> loadQuestionsFromJSON(String fileName) {
+        List<QuestionModel> questions = new ArrayList<>();
+        try (Reader reader = new FileReader(fileName)) {
+
+            Type questionWrapperType = new TypeToken<QuestionWrapper>() {}.getType();
+            QuestionWrapper wrapper = gson.fromJson(reader, questionWrapperType);
+
+            if (wrapper != null && wrapper.questions != null) {
+                questions = wrapper.questions;
+            }
+
+            logger.info("JSONStorageController: Questions loaded successfully from " + fileName);
+        } catch (FileNotFoundException e) {
+            logger.warning("JSONStorageController: Questions file not found, returning empty list.");
+        } catch (IOException e) {
+            logger.severe("JSONStorageController: Error loading questions from JSON: " + e.getMessage());
+        }
+        return questions;
+    }
+
+    // Wrapper class to match the JSON structure
+    class QuestionWrapper {
+        List<QuestionModel> questions;
     }
 }
 

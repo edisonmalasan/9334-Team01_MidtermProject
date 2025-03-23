@@ -126,17 +126,17 @@ public @interface <span class="memberNameLabel">JsonAdapter</span></pre>
 
  <pre>
  &#64;JsonAdapter(UserJsonAdapter.class)
- public class User {
+ public class Client.User {
    public final String firstName, lastName;
 
-   private User(String firstName, String lastName) {
+   private Client.User(String firstName, String lastName) {
      this.firstName = firstName;
      this.lastName = lastName;
    }
  }
 
- public class UserJsonAdapter extends TypeAdapter&lt;User&gt; {
-   &#64;Override public void write(JsonWriter out, User user) throws IOException {
+ public class UserJsonAdapter extends TypeAdapter&lt;Client.User&gt; {
+   &#64;Override public void write(JsonWriter out, Client.User user) throws IOException {
      // implement write: combine firstName and lastName into name
      out.beginObject();
      out.name("name");
@@ -144,28 +144,28 @@ public @interface <span class="memberNameLabel">JsonAdapter</span></pre>
      out.endObject();
    }
 
-   &#64;Override public User read(JsonReader in) throws IOException {
+   &#64;Override public Client.User read(JsonReader in) throws IOException {
      // implement read: split name into firstName and lastName
      in.beginObject();
      in.nextName();
      String[] nameParts = in.nextString().split(" ");
      in.endObject();
-     return new User(nameParts[0], nameParts[1]);
+     return new Client.User(nameParts[0], nameParts[1]);
    }
  }
  </pre>
 
- Since <code>User</code> class specified <code>UserJsonAdapter.class</code> in <code>@JsonAdapter</code>
- annotation, it will automatically be invoked to serialize/deserialize <code>User</code> instances.
+ Since <code>Client.User</code> class specified <code>UserJsonAdapter.class</code> in <code>@JsonAdapter</code>
+ annotation, it will automatically be invoked to serialize/deserialize <code>Client.User</code> instances.
 
  <p>Here is an example of how to apply this annotation to a field.
 
  <pre>
  private static final class Gadget {
    &#64;JsonAdapter(UserJsonAdapter.class)
-   final User user;
+   final Client.User user;
 
-   Gadget(User user) {
+   Gadget(Client.User user) {
      this.user = user;
    }
  }

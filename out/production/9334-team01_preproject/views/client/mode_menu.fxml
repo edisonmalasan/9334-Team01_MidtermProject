@@ -9,7 +9,7 @@
 <AnchorPane fx:id="gameMode" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Client.controller.ModeController">
+            fx:controller="Client.User.controller.ModeController">
     <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
     <ImageView fx:id="gamemodeLabel" fitHeight="140.0" fitWidth="374.0"
                pickOnBounds="true" preserveRatio="true"

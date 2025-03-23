@@ -18,16 +18,16 @@ public interface BombGameServer extends Remote {
     public Response getQuestionsList() throws RemoteException;
 
     // Update score of existing player
-    public void updatePlayerScore(PlayerModel player) throws RemoteException;
+    public Response updatePlayerScore(PlayerModel player) throws RemoteException;
 
     // Add question to database
     public void addQuestion(QuestionModel question) throws RemoteException;
 
     // Update leaderboards data
-    public void updateLeaderboard(LeaderboardEntryModel leaderboardEntry) throws RemoteException;
+    public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException;
 
     // Login account (player and admin)
-    public void login() throws RemoteException;
+    public void login(Callback callback) throws RemoteException;
 
     //Register an account
     public void register() throws RemoteException;
