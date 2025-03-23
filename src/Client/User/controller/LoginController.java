@@ -22,8 +22,8 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class InputUsernameController {
-    private static final Logger logger = Logger.getLogger(InputUsernameController.class.getName());
+public class LoginController {
+    private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -42,7 +42,7 @@ public class InputUsernameController {
     @FXML
     private Button enterButton;
 
-    public InputUsernameController() {
+    public LoginController() {
         try {
             this.clientConnection = ClientConnection.getInstance();
 
@@ -75,7 +75,7 @@ public class InputUsernameController {
         }
 
         playerName = username;
-        logger.info("\nInputUsernameController: Username entered: " + playerName);
+        logger.info("\nLoginController: Username entered: " + playerName);
         switchToMainMenu(event);
     }
 
@@ -94,7 +94,7 @@ public class InputUsernameController {
             stage.setResizable(false);
             stage.show();
 
-            logger.info("\nInputUsernameController: Switched to Main Menu.");
+            logger.info("\nLoginController: Switched to Main Menu.");
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load Main Menu.", e);
         }
