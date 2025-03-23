@@ -1,4 +1,6 @@
 package Server.view;
 
-public class ServerView {
+import javax.swing.*;
+
+public class ServerView extends JFrame {
 }
