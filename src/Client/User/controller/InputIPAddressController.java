@@ -58,7 +58,7 @@ public class InputIPAddressController {
     }
     private void switchToChooseRole(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/choose_role.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/login.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();

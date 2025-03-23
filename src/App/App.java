@@ -61,8 +61,8 @@ public class App extends Application {
             });
 
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "❌ Failed to load FXML: input_username.fxml", e);
-            throw new FXMLLoadingException("input_username.fxml", e);
+            logger.log(Level.SEVERE, "❌ Failed to load FXML: login.fxml", e);
+            throw new FXMLLoadingException("login.fxml", e);
         }
     }
 }
