@@ -39,14 +39,22 @@ public class App extends Application {
             //test
             SoundUtility.playBackgroundMusic();
 
-            try {
-                Registry registry = LocateRegistry.getRegistry(InputIPAddressController.ipAddress, 1099);
-                bombGameServer = (BombGameServer) registry.lookup("server");
-                logger.info("✅ Client successfully connected to the server.");
-            } catch (Exception e) {
-                logger.warning("⚠ Server is not running. The client will continue in offline mode.");
+            while (true) {
+                try {
+                    Registry registry = LocateRegistry.getRegistry(InputIPAddressController.ipAddress, 1099);
+                    bombGameServer = (BombGameServer) registry.lookup("server");
+                    logger.info("✅ Client successfully connected to the server.");
+                    break;
+                } catch (Exception e) {
+                    logger.warning("⚠ Server is not running. The client will continue in offline mode.");
+                }
+                logger.info("⚠ Server is not running. Reconnecting...");
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    logger.info("Reconnection error: " + e.getMessage());
+                }
             }
-
             primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/bomb_mad.png")));
 
             primaryStage.setScene(new Scene(root));
