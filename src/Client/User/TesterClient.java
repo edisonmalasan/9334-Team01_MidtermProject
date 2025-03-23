@@ -23,7 +23,7 @@ public class TesterClient {
             Response response1 = bombGameServer.getQuestionsPerCategory("LOGIC");
             //testing addQuestion
             List<String> choices = Arrays.asList("YES", "NO");
-            Response response2 = bombGameServer.addQuestion(new QuestionModel("LOGIC", "All roses are flowers. Are roses plants?", choices, "YES", 1));
+//            Response response2 = bombGameServer.addQuestion(new QuestionModel("LOGIC", "All roses are flowers. Are roses plants?", choices, "YES", 1));
 
             System.out.println(response1.getData());
 

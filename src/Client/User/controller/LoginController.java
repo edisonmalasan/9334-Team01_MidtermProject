@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -68,7 +69,7 @@ public class LoginController {
             return;
         }
 
-        // TODO: apply validateUser and and compare the input to the playerRole
+        // TODO: apply validateUser and and compare the input to the playerRole, if not should return a message that there is no user in the record
 
         playerUsername = username;
         playerPassword = password;
@@ -77,7 +78,7 @@ public class LoginController {
     }
 
     private boolean validateUser(String username, String password) {
-        // TODO: VALIDATE CLIENT IF PLAYER OR ADMIN
+        // TODO: VALIDATE CLIENT IF PLAYER OR ADMIN (use switchToAdminDashboard method if admin)
         return false;
     }
 
@@ -106,7 +107,7 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
             Parent root = loader.load();
 
-            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // changed to Node instead of Button to check the type dynamically
             stage.setScene(new Scene(root));
             stage.setTitle(title);
             stage.setResizable(false);
