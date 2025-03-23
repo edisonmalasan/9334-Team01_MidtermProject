@@ -199,7 +199,7 @@ public abstract class GameController {
 
         new Thread(() -> {
             try {
-                String playerName = InputUsernameController.getPlayerName();
+                String playerName = LoginController.getPlayerName();
                 PlayerModel player = new PlayerModel(playerName, score);
 
                 if (checkMode) {

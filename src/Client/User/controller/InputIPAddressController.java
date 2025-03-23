@@ -54,11 +54,11 @@ public class InputIPAddressController {
         }
 
         logger.info("\nInputIPController: Username entered: " + ipAddress);
-        switchToChooseRole(event);
+        switchToLogin(event);
     }
-    private void switchToChooseRole(ActionEvent event) {
+    private void switchToLogin(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();

@@ -50,11 +50,11 @@ public class MainMenuController {
     }
 
     private void switchToModeMenu(ActionEvent event) {
-        switchScene(event, "/views/mode_menu.fxml", "Bomb Defusing Game");
+        switchScene(event, "/views/client/mode_menu.fxml", "Bomb Defusing Game");
     }
 
     private void switchToLeaderboard(ActionEvent event) {
-        switchScene(event, "/views/leaderboard.fxml", "Leaderboard");
+        switchScene(event, "/views/client/leaderboard.fxml", "Leaderboard");
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {

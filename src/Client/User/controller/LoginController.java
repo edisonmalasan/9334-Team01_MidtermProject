@@ -43,18 +43,6 @@ public class LoginController {
     private Button enterButton;
 
     public LoginController() {
-        try {
-            this.clientConnection = ClientConnection.getInstance();
-
-            if (this.clientConnection == null) {
-                logger.severe("❌ ERROR: ClientConnection is NULL! Server may not be running.");
-            } else {
-                logger.info("✅ Client is set up properly.");
-            }
-
-        } catch (ConnectionException e) {
-            handleException(new ServerNotRunningException("⚠ Server is not running."));
-        }
     }
 
     @FXML

@@ -23,7 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AdminLoginController {
-    private static final Logger logger = Logger.getLogger(InputUsernameController.class.getName());
+    private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
     static {
         AnsiFormatter.enableColorLogging(logger);
