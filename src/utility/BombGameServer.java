@@ -18,7 +18,7 @@ public interface BombGameServer extends Remote {
     public Response getQuestionsList() throws RemoteException;
 
     // Update score of existing player
-    public void updatePlayerScore(PlayerModel player) throws RemoteException;
+    public Response updatePlayerScore(PlayerModel player) throws RemoteException;
 
     // Add question to database
     public void addQuestion(QuestionModel question) throws RemoteException;
