@@ -219,7 +219,7 @@ public abstract class GameController {
                     logger.warning("\nGameController: Failed to send score to the server: " + response.getMessage());
                 }
             } catch (Exception e) {
-                logger.log(Level.SEVERE, "\nGameController: Error sending score to the server", e);
+                logger.log(Level.SEVERE, "\nGameController: Error sending score to the server" + e.getMessage());
             }
         }).start();
     }
