@@ -1,7 +1,10 @@
 package Client.User.controller;
 
+import Client.connection.ClientConnection;
+import common.Response;
 import common.model.PlayerModel;
 import common.LogManager;
+import exception.ConnectionException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,6 +26,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,6 +34,7 @@ import java.util.logging.Logger;
 public class RegisterController {
     private static final Logger logger = Logger.getLogger(RegisterController.class.getName());
     private final LogManager logManager = LogManager.getInstance();
+    protected ClientConnection clientConnection;
     private static final String USERS_JSON_PATH = "data/players.json";
 
     @FXML private TextField usernameField;
@@ -43,6 +48,13 @@ public class RegisterController {
     @FXML private Label confirmPasswordErrorLabel;
     @FXML private Label generalErrorLabel;
 
+    public RegisterController() {
+        try {
+            this.clientConnection = ClientConnection.getInstance();
+        } catch (ConnectionException e) {
+            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+        }
+    }
     @FXML
     public void initialize() {
         registerButton.setOnAction(this::handleRegister);
@@ -65,14 +77,14 @@ public class RegisterController {
         String password = passwordField.getText().trim();
 
         try {
-            JSONArray usersArray = readOrCreateUserArray();
-            if (usernameExists(usersArray, username)) {
+            Response response = ClientConnection.bombGameServer.getPlayerList();
+            if (usernameExists((List<PlayerModel>) response.getData(), username)) {
                 showFieldError(usernameErrorLabel, "Username already taken!");
                 usernameField.requestFocus();
                 return;
             }
 
-            addNewUserToJson(usersArray, username, password);
+            ClientConnection.bombGameServer.register(username, password);
             showSuccessAndRedirect(event);
 
         } catch (Exception e) {
@@ -81,9 +93,9 @@ public class RegisterController {
         }
     }
 
-    private boolean usernameExists(JSONArray usersArray, String username) {
-        for (int i = 0; i < usersArray.length(); i++) {
-            if (usersArray.getJSONObject(i).getString("username").equalsIgnoreCase(username)) {
+    private boolean usernameExists(List<PlayerModel> playerList, String username) {
+        for (PlayerModel player : playerList) {
+            if (player.getUsername().equalsIgnoreCase(username)) {
                 return true;
             }
         }
