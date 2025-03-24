@@ -1,92 +1,157 @@
 package Client.Admin.controller;
 
-import App.App;
-import common.Response;
-import common.model.QuestionModel;
+import Client.Admin.model.QuestionModelAdmin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.io.*;
 import java.util.List;
 
-//TODO to be revise
-// fix the connection  with fxml
+// TODO still to be revised
 public class QuestionControllerAdmin {
 
     @FXML
-    private GridPane questionsGrid; 
+    private TableView<QuestionModelAdmin> questionsTable; 
+    @FXML
+    private TableColumn<QuestionModelAdmin, String> questionColumn; 
+    @FXML
+    private TableColumn<QuestionModelAdmin, String> choicesColumn; 
+    @FXML
+    private TableColumn<QuestionModelAdmin, String> answerColumn; 
+    @FXML
+    private TableColumn<QuestionModelAdmin, Integer> pointsColumn; 
+    @FXML
+    private Button deleteAllButton;
+    @FXML
+    private Button editButton; 
+    @FXML
+    private Button saveButton; 
     @FXML
     private TextField searchBox; 
-    @FXML
-    private Button deleteBttn; 
-    @FXML
-    private Button editBttn; 
 
-    private ObservableList<QuestionModel> questionData;
+    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); 
 
     @FXML
     public void initialize() {
-        setupQuestions();
+        setupTable();
+        loadQuestions();
+        editButton.setOnAction(e -> toggleEditMode());
+        saveButton.setOnAction(e -> saveChanges());
+        deleteAllButton.setOnAction(e -> deleteAllQuestions());
+        searchBox.setOnKeyReleased(e -> searchQuestions());
     }
 
-    private void setupQuestions() {
+    private void setupTable() {
+        // Set up the table columns
+        questionColumn.setCellValueFactory(cellData -> cellData.getValue().textProperty());
+        choicesColumn.setCellValueFactory(cellData -> cellData.getValue().choicesProperty().asString());
+        answerColumn.setCellValueFactory(cellData -> cellData.getValue().answerProperty());
+        pointsColumn.setCellValueFactory(cellData -> cellData.getValue().scoreProperty().asObject());
+
+        questionsTable.setItems(questionData);
+    }
+
+    private void loadQuestions() {
         // Load questions from JSON file
         try {
-            questionData = FXCollections.observableArrayList(
-                    getQuestionList()
-            );
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Client/Admin/data/questions.json")));
+            StringBuilder content = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                content.append(line);
+            }
+            reader.close();
 
-            // Populate the grid with questions
-            for (int i = 0; i < questionData.size(); i++) {
-                QuestionModel question = questionData.get(i);
-                Pane questionPane = new Pane();
-                questionPane.setPrefHeight(200);
-                questionPane.setPrefWidth(200);
-                questionPane.getStyleClass().add("question");
+            // Parse the content as a JSON array
+            JSONArray jsonArray = new JSONArray(content.toString());
 
-                Label categoryLabel = new Label("Category: " + question.getCategory());
-                categoryLabel.setLayoutX(10);
-                categoryLabel.setLayoutY(10);
-                questionPane.getChildren().add(categoryLabel);
+            // Loop through each question in the JSON array
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject questionObject = jsonArray.getJSONObject(i);
+                String category = questionObject.getString("category");
+                String text = questionObject.getString("text");
+                JSONArray choicesArray = questionObject.getJSONArray("choices");
+                List<String> choices = choicesArray.toList().stream().map(Object::toString).toList();
+                String answer = questionObject.getString("answer");
+                int score = questionObject.getInt("score");
 
-                Label textLabel = new Label("Question: " + question.getQuestionText());
-                textLabel.setLayoutX(10);
-                textLabel.setLayoutY(30);
-                questionPane.getChildren().add(textLabel);
-
-                // Add more UI elements for choices, answer, etc. as needed
-
-                questionsGrid.add(questionPane, i % 2, i / 2); // Add to grid
+                questionData.add(new QuestionModelAdmin(category, text, choices, answer, score));
             }
         } catch (Exception e) {
-            showAlert("Error", "Failed to load questions from JSON file: " + e.getMessage());
+            System.out.println("Error loading questions: " + e.getMessage());
         }
     }
 
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    private void toggleEditMode() {
+       
+        if (editButton.getText().equals("Edit")) {
+            editButton.setText("Cancel");
+            saveButton.setVisible(true);
+            questionsTable.setEditable(true);
+        } else {
+            editButton.setText("Edit");
+            saveButton.setVisible(false);
+            questionsTable.setEditable(false);
+        }
     }
 
-    private List<QuestionModel> getQuestionList() {
-        List<QuestionModel> allQuestions = new ArrayList<>();
+    private void saveChanges() {
+        // Save changes to questions
         try {
-            Response response = App.bombGameServer.getQuestionsList();
+            // Create a JSON array to hold all question objects
+            JSONArray jsonArray = new JSONArray();
 
-            if (response.isSuccess() && response.getData() instanceof List) {
-                allQuestions = (List<QuestionModel>) response.getData();
-                System.out.println(response.getData().toString());
+            // Iterate over question data and create a JSON object for each question
+            for (QuestionModelAdmin question : questionData) {
+                JSONObject questionObject = new JSONObject();
+                questionObject.put("category", question.getCategory());
+                questionObject.put("text", question.getText());
+                questionObject.put("choices", question.getChoices());
+                questionObject.put("answer", question.getAnswer());
+                questionObject.put("score", question.getScore());
+
+                jsonArray.put(questionObject);
             }
-            return allQuestions;
-        } catch (Exception e){
-            return allQuestions;
+
+            // Write the JSON array to the file
+            BufferedWriter writer = new BufferedWriter(new FileWriter("questions.json"));
+            writer.write(jsonArray.toString(4));  // Format the output with 4 spaces for indentation
+            writer.close();
+
+            System.out.println("Changes saved successfully!");
+        } catch (IOException e) {
+            System.out.println("Error saving changes: " + e.getMessage());
+        }
+    }
+
+    private void deleteAllQuestions() {
+       
+        questionData.clear();
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("questions.json"));
+            writer.write("[]");  // Write an empty JSON array to the file
+            writer.close();
+
+            System.out.println("All questions deleted successfully!");
+        } catch (IOException e) {
+            System.out.println("Error deleting questions: " + e.getMessage());
+        }
+    }
+
+    private void searchQuestions() {
+     
+        String searchText = searchBox.getText().toLowerCase();
+        for (QuestionModelAdmin question : questionData) {
+            if (question.getText().toLowerCase().contains(searchText)) {
+                question.setVisible(true);
+            } else {
+                question.setVisible(false);
+            }
         }
     }
 }
