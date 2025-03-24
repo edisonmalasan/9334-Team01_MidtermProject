@@ -11,8 +11,6 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
 
 import java.io.*;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -31,9 +29,9 @@ public class PlayerControllerAdmin {
     @FXML
     private TableColumn<PlayerModelAdmin, Integer> endlessRank;
     @FXML
-    private Button editBttn;
+    private Button editButton;
     @FXML
-    private Button saveBttn;
+    private Button saveButton;
     @FXML
     private Button deleteBttn;
 
@@ -45,17 +43,19 @@ public class PlayerControllerAdmin {
         setupTable();
         loadJSON();
 
-        editBttn.setOnAction(e -> enableEditing());
-        saveBttn.setOnAction(e -> saveChanges());
+        editButton.setOnAction(e -> enableEditing());
+        saveButton.setOnAction(e -> saveChanges());
         deleteBttn.setOnAction(e -> deleteSelectedPlayer());
     }
 
     private void setupTable() {
+        // Set up the cell value factories for the table columns
         username.setCellValueFactory(cellData -> cellData.getValue().usernameProperty());
         classicRank.setCellValueFactory(cellData -> cellData.getValue().classicRankProperty().asObject());
         classicScore.setCellValueFactory(cellData -> cellData.getValue().classicScoreProperty().asObject());
         endlessRank.setCellValueFactory(cellData -> cellData.getValue().endlessRankProperty().asObject());
 
+        // Set cell factories for editable columns
         username.setCellFactory(TextFieldTableCell.forTableColumn());
         classicRank.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         classicScore.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
@@ -68,7 +68,7 @@ public class PlayerControllerAdmin {
         playerData.clear();
         try {
             if (jsonFile.exists()) {
-                // Read the entire file into a string
+
                 StringBuilder content = new StringBuilder();
                 BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
                 String line;
@@ -98,7 +98,7 @@ public class PlayerControllerAdmin {
 
     private void saveChanges() {
         try {
-            // Create a JSON array to hold all player objects
+
             JSONArray jsonArray = new JSONArray();
 
             // Iterate over player data and create a JSON object for each player
@@ -112,9 +112,8 @@ public class PlayerControllerAdmin {
                 jsonArray.put(playerObject);
             }
 
-            // Write the JSON array to the file
             BufferedWriter writer = new BufferedWriter(new FileWriter(jsonFile));
-            writer.write(jsonArray.toString(4));  // Format the output with 4 spaces for indentation
+            writer.write(jsonArray.toString(4));
             writer.close();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
