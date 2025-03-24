@@ -33,6 +33,9 @@ public interface BombGameServer extends Remote {
     // Login account (player and admin)
     public void login(Callback callback) throws RemoteException;
 
+    // Returns a specific player
+    public PlayerModel getPlayer(String username, String password) throws RemoteException;
+
     //Register an account
     public void register() throws RemoteException;
 }

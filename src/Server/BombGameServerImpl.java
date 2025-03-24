@@ -218,12 +218,21 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             System.out.println("Online : [");
             Set<String> usernames = playerCallbacks.keySet();
             int counter = 1;
-            for (String username : usernames) {
-                System.out.println(username + (counter++ == usernames.size() ? "" : ", "));
-                playerCallbacks.get(username).loginCall(player);
+            for (String playerUsername : usernames) {
+                System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
+                playerCallbacks.get(playerUsername).loginCall(player);
             }
             System.out.println("]");
         }
+    }
+
+    public PlayerModel getPlayer(String username, String password) {
+        for (PlayerModel player : playerList) {
+            if (player.getUsername().equalsIgnoreCase(username) && player.getPassword().equalsIgnoreCase(password)) {
+                return player;
+            }
+        }
+        return null;
     }
 
     public void register() throws RemoteException {
