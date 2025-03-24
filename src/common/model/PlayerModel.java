@@ -1,6 +1,12 @@
 package common.model;
 
-public class PlayerModel {
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Objects;
+
+public class PlayerModel implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     private String username;
     private String password;
     private String role;
@@ -64,5 +70,11 @@ public class PlayerModel {
                 ", classicScore=" + classicScore +
                 ", endlessScore=" + endlessScore +
                 '}';
+    }
+
+    public boolean equals(PlayerModel other) {
+        return Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password)
+                && Objects.equals(this.role, other.role) && this.classicScore == other.classicScore
+                && this.endlessScore == other.endlessScore;
     }
 }
