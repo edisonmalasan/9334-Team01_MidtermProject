@@ -50,10 +50,9 @@ public class ClientConnection {
                     } catch (InterruptedException interruptedException) {
                         interruptedException.printStackTrace();
                     }
-
-                    logger.info("\nClientConnection: Connected to server successfully!");
                 }
             }
+            logger.info("\nClientConnection: Connected to server successfully!");
         } catch (Exception e) {
             logger.severe("\nClientConnection: Connection to server failed!");
             throw new ConnectionException("Error connecting to the server.", e);

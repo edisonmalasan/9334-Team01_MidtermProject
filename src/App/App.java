@@ -57,10 +57,9 @@ public class App extends Application {
                         } catch (InterruptedException interruptedException) {
                             interruptedException.printStackTrace();
                         }
-
-                        logger.info("\nClientConnection: Connected to server successfully!");
                     }
                 }
+            logger.info("\nClientConnection: Connected to server successfully!");
 
             primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/bomb_mad.png")));
 
