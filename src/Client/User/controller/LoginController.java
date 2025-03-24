@@ -168,7 +168,7 @@ public class LoginController {
     }
 
     private void switchToAdminDashboard(ActionEvent event) {
-        switchScene(event, "/views/admin/admin_dashboard.fxml", "Admin Dashboard");
+        switchScene(event, "/views/admin/admin_db.fxml", "Admin Dashboard");
     }
 
     public static PlayerModel getCurrentUser() {
