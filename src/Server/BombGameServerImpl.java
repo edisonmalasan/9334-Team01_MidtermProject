@@ -191,6 +191,22 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
         }
     }
+
+    @Override
+    public Response getPlayerList() {
+        try {
+            if (playerList == null) {
+                logger.severe("Received null player data.");
+                return new Response(false, "Received null player data.", null);
+            }
+
+            logger.info("Returning player list data.");
+            return new Response(true, "Player list displayed successfully.", playerList);
+        } catch (Exception e) {
+            logger.severe("Error retrieving player list: " + e.getMessage());
+            return new Response(false, "Error retrieving player list: " + e.getMessage(), null);
+        }
+    }
     @Override
     public void login(Callback callback) throws RemoteException {
         PlayerModel player = callback.getPlayer();

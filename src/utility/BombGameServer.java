@@ -26,6 +26,9 @@ public interface BombGameServer extends Remote {
     // Update leaderboards data
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException;
 
+    // Get player list
+    public Response getPlayerList() throws RemoteException;
+
     // Login account (player and admin)
     public void login(Callback callback) throws RemoteException;
 
