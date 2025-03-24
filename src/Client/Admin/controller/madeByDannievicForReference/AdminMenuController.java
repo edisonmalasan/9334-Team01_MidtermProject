@@ -1,4 +1,4 @@
-package Client.Admin.controller;
+package Client.Admin.controller.madeByDannievicForReference;
 
 import Client.User.controller.MainMenuController;
 import common.AnsiFormatter;
@@ -41,11 +41,11 @@ public class AdminMenuController {
     }
 
     private void switchToQuestions(ActionEvent event) {
-        switchScene(event, "/views/admin_questions.fxml", "Questions List");
+        switchScene(event, "/Redundant/admin_questions.fxml", "Questions List");
     }
 
     private void switchToAdminLeaderboard(ActionEvent event) {
-        switchScene(event, "/views/admin_leaderboard.fxml", "Leaderboards");
+        switchScene(event, "/Redundant/admin_leaderboard.fxml", "Leaderboards");
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {

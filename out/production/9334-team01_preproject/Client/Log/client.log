@@ -326,3 +326,9 @@ ClientConnection: Attempting to connect to server...
 Mar 24, 2025 1:58:56 AM Client.connection.ClientConnection <init>
 SEVERE: 
 ClientConnection: Connection to server failed!
+Mar 24, 2025 2:00:08 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 2:00:08 AM Client.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!

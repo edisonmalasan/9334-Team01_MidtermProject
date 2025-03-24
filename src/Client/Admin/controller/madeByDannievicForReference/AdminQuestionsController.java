@@ -1,4 +1,4 @@
-package Client.Admin.controller;
+package Client.Admin.controller.madeByDannievicForReference;
 
 import App.App;
 import Client.connection.ClientConnection;
@@ -228,7 +228,7 @@ public class AdminQuestionsController {
 
     public void returnToMainMenu() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/admin_menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Redundant/admin_menu.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) returnButton.getScene().getWindow();

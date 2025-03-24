@@ -1,4 +1,4 @@
-package Client.Admin.controller;
+package Client.Admin.controller.madeByDannievicForReference;
 /**
  * Controls input username view window
  */
@@ -86,7 +86,7 @@ public class AdminLoginController {
 
     private void switchToAdminMenu(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/admin_menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Redundant/admin_menu.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
