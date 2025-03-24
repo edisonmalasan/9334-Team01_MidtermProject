@@ -1,2 +1,11 @@
 [2025-03-24 11:32:55] 
 PlayerLoginController: Username entered: 123414
+[2025-03-24 22:33:28] New registration: pleasepleaseplaese
+[2025-03-24 22:33:39] ERROR: Invalid username or password!
+[2025-03-24 22:33:57] ERROR: Invalid username or password!
+[2025-03-24 22:34:06] ERROR: Invalid username or password!
+[2025-03-24 22:34:26] ERROR: Invalid username or password!
+[2025-03-24 22:34:32] ERROR: Invalid username or password!
+[2025-03-24 22:34:49] User logged in: PLEASEPLEASEPLAESE
+[2025-03-24 22:52:26] ERROR: Invalid username or password!
+[2025-03-24 22:52:34] User logged in: TRUMAN

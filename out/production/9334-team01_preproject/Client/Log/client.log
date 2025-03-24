@@ -115,14 +115,14 @@ Mar 23, 2025 4:17:28 PM Client.User.controller.GameController lambda$sendScoreTo
 SEVERE: 
 GameController: Error sending score to the server
 java.rmi.MarshalException: error marshalling arguments; nested exception is: 
-	java.io.NotSerializableException: utility.PlayerModel
+	java.io.NotSerializableException: common.model.PlayerModel
 	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
 	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
 	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.io.NotSerializableException: utility.PlayerModel
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
 	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
 	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
@@ -201,14 +201,14 @@ Mar 23, 2025 4:29:51 PM Client.User.controller.GameController lambda$sendScoreTo
 SEVERE: 
 GameController: Error sending score to the server
 java.rmi.MarshalException: error marshalling arguments; nested exception is: 
-	java.io.NotSerializableException: utility.PlayerModel
+	java.io.NotSerializableException: common.model.PlayerModel
 	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
 	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
 	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-Caused by: java.io.NotSerializableException: utility.PlayerModel
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
 	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
 	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
@@ -332,3 +332,35 @@ ClientConnection: Attempting to connect to server...
 Mar 24, 2025 2:00:08 AM Client.connection.ClientConnection <init>
 SEVERE: 
 ClientConnection: Connection to server failed!
+Mar 24, 2025 11:32:56 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.103
+Mar 24, 2025 11:32:56 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 11:32:57 AM Client.User.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 24, 2025 11:32:58 AM Client.User.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 24, 2025 11:32:58 AM Client.User.controller.GameController lambda$sendScoreToServer$3
+SEVERE: 
+GameController: Error sending score to the server
+java.rmi.MarshalException: error marshalling arguments; nested exception is: 
+	java.io.NotSerializableException: common.model.PlayerModel
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
+	at jdk.proxy2/jdk.proxy2.$Proxy6.updatePlayerScore(Unknown Source)
+	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
+	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
+	... 5 more
+
+Mar 24, 2025 11:32:59 AM Client.User.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.

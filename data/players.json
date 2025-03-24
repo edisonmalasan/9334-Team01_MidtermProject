@@ -1,44 +1,65 @@
 [
-  {
-    "username": "SAMPLEUSER1",
-    "password": "PASSWORD1",
-    "role": "PLAYER",
-    "classicScore": 15,
-    "endlessScore": 5
-  },
-  {
-    "username": "SAMPLEUSER2",
-    "password": "PASSWORD2",
-    "role": "ADMIN",
-    "classicScore": 30,
-    "endlessScore": 10
-  },
-  {
-    "username": "SAMPLEUSER3",
-    "password": "PASSWORD3",
-    "role": "PLAYER",
-    "classicScore": 25,
-    "endlessScore": 12
-  },
-  {
-    "username": "SAMPLEUSER4",
-    "password": "PASSWORD4",
-    "role": "PLAYER",
-    "classicScore": 50,
-    "endlessScore": 20
-  },
-  {
-    "username": "SAMPLEUSER5",
-    "password": "PASSWORD5",
-    "role": "ADMIN",
-    "classicScore": 75,
-    "endlessScore": 30
-  },
-  {
-    "username": "Yuen",
-    "password": "Yuen",
-    "role": "PLAYER",
-    "classicScore": 0,
-    "endlessScore": 0
-  }
+    {
+        "password": "PASSWORD1",
+        "role": "PLAYER",
+        "classicScore": 15,
+        "endlessScore": 5,
+        "username": "SAMPLEUSER1"
+    },
+    {
+        "password": "PASSWORD2",
+        "role": "ADMIN",
+        "classicScore": 30,
+        "endlessScore": 10,
+        "username": "SAMPLEUSER2"
+    },
+    {
+        "password": "PASSWORD3",
+        "role": "PLAYER",
+        "classicScore": 25,
+        "endlessScore": 12,
+        "username": "SAMPLEUSER3"
+    },
+    {
+        "password": "PASSWORD4",
+        "role": "PLAYER",
+        "classicScore": 50,
+        "endlessScore": 20,
+        "username": "SAMPLEUSER4"
+    },
+    {
+        "password": "PASSWORD5",
+        "role": "ADMIN",
+        "classicScore": 75,
+        "endlessScore": 30,
+        "username": "SAMPLEUSER5"
+    },
+    {
+        "password": "Yuen",
+        "role": "PLAYER",
+        "classicScore": 0,
+        "endlessScore": 0,
+        "username": "Yuen"
+    },
+    {
+        "password": "truman",
+        "role": "PLAYER",
+        "classicScore": 0,
+        "endlessScore": 0,
+        "username": "PLEASEPLEASEPLAESE"
+    },
+    {
+        "password": "givengod",
+        "role": "PLAYER",
+        "classicScore": 0,
+        "endlessScore": 0,
+        "username": "TRUMAN"
+    },
+    {
+        "password": "workss",
+        "role": "PLAYER",
+        "classicScore": 0,
+        "endlessScore": 0,
+        "username": "PLEASE"
+    }
 ]

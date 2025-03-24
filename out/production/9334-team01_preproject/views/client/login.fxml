@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="login" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.User.controller.LoginController">
+<AnchorPane fx:id="login" prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.User.controller.LoginController">
    <children>
       <Pane layoutX="330.0" layoutY="218.0" prefHeight="332.0" prefWidth="364.0">
          <children>
@@ -19,11 +13,11 @@
                   <Image url="@../../images/login.png" />
                </image>
             </ImageView>
-            <Button fx:id="loginButton" layoutX="103.0" layoutY="228.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="LOGIN" />
+            <Button fx:id="loginButton" layoutX="103.0" layoutY="248.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="LOGIN" />
             <TextField fx:id="usernameField" layoutX="33.0" layoutY="68.0" prefHeight="50.0" prefWidth="306.0" promptText="Enter Username..." />
             <PasswordField fx:id="passwordField" layoutX="33.0" layoutY="156.0" prefHeight="50.0" prefWidth="306.0" promptText="Enter Password..." />
-            <Label fx:id="errorLabel" layoutX="91.0" layoutY="164.0" prefHeight="17.0" prefWidth="184.0" style="-fx-font-size: 12; -fx-font-family: 'Roboto Mono'; -fx-font-weight: bold;" />
-            <Hyperlink fx:id="registerLink" layoutX="81.0" layoutY="295.0" text="Don't have an account? Register Here" />
+            <Label fx:id="errorLabel" layoutX="33.0" layoutY="220.0" prefHeight="17.0" prefWidth="306.0" style="-fx-font-size: 12; -fx-font-family: 'Roboto Mono'; -fx-font-weight: bold;" />
+            <Hyperlink fx:id="registerLink" layoutX="81.0" layoutY="307.0" text="Don't have an account? Register Here" />
          </children>
       </Pane>
    </children>
