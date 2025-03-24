@@ -1,18 +1,16 @@
 package Client.Admin.controller;
 
-import Client.Admin.model.QuestionModelAdmin;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import App.App;
+import common.Response;
+import common.model.QuestionModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 //TODO to be revise
@@ -28,7 +26,7 @@ public class QuestionControllerAdmin {
     @FXML
     private Button editBttn; 
 
-    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); 
+    private ObservableList<QuestionModel> questionData;
 
     @FXML
     public void initialize() {
@@ -38,33 +36,13 @@ public class QuestionControllerAdmin {
     private void setupQuestions() {
         // Load questions from JSON file
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Client/Admin/data/questions.json")));
-            StringBuilder content = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                content.append(line);
-            }
-            reader.close();
-
-            // Parse the content as a JSON array
-            JSONArray jsonArray = new JSONArray(content.toString());
-
-            // Loop through each question in the JSON array
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject questionObject = jsonArray.getJSONObject(i);
-                String category = questionObject.getString("category");
-                String text = questionObject.getString("text");
-                JSONArray choicesArray = questionObject.getJSONArray("choices");
-                List<String> choices = choicesArray.toList().stream().map(Object::toString).toList();
-                String answer = questionObject.getString("answer");
-                int score = questionObject.getInt("score");
-
-                questionData.add(new QuestionModelAdmin(category, text, choices, answer, score));
-            }
+            questionData = FXCollections.observableArrayList(
+                    getQuestionList()
+            );
 
             // Populate the grid with questions
             for (int i = 0; i < questionData.size(); i++) {
-                QuestionModelAdmin question = questionData.get(i);
+                QuestionModel question = questionData.get(i);
                 Pane questionPane = new Pane();
                 questionPane.setPrefHeight(200);
                 questionPane.setPrefWidth(200);
@@ -75,7 +53,7 @@ public class QuestionControllerAdmin {
                 categoryLabel.setLayoutY(10);
                 questionPane.getChildren().add(categoryLabel);
 
-                Label textLabel = new Label("Question: " + question.getText());
+                Label textLabel = new Label("Question: " + question.getQuestionText());
                 textLabel.setLayoutX(10);
                 textLabel.setLayoutY(30);
                 questionPane.getChildren().add(textLabel);
@@ -95,5 +73,20 @@ public class QuestionControllerAdmin {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private List<QuestionModel> getQuestionList() {
+        List<QuestionModel> allQuestions = new ArrayList<>();
+        try {
+            Response response = App.bombGameServer.getQuestionsList();
+
+            if (response.isSuccess() && response.getData() instanceof List) {
+                allQuestions = (List<QuestionModel>) response.getData();
+                System.out.println(response.getData().toString());
+            }
+            return allQuestions;
+        } catch (Exception e){
+            return allQuestions;
+        }
     }
 }
