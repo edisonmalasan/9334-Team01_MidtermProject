@@ -13,9 +13,7 @@ import common.Response;
 import common.model.QuestionModel;
 import utility.BombGameServer;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -28,12 +26,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
+    private Gson gson = new Gson();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
     public BombGameServerImpl() throws RemoteException, FileNotFoundException {
-        Gson gson = new Gson();
         Reader fileReader = new FileReader(System.getProperty("user.dir")+ "/data/players.json");
         Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
         playerList = gson.fromJson(fileReader, playerListType);
@@ -174,20 +172,21 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 return new Response(false, "Received null leaderboard entry data.", null);
             }
 
-            List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
-
-            for (LeaderboardEntryModel entry : leaderboard) {
-                if (leaderboardEntry.equals(entry)) {
-                    logger.info("Removed entry from leaderboard: " + entry.getPlayerName() + " with score: " + entry.getScore());
-                    leaderboard.remove(entry);
+            for (PlayerModel player : playerList) {
+                if (leaderboardEntry.getPlayerName().equals(player.getUsername())) {
+                    logger.info("Removed entry from player list: " + player.getUsername());
+                    playerList.remove(player);
                     break;
                 }
             }
-            JSONStorageController.saveLeaderboardToJSON(leaderboard);
-            logger.info("Leaderboard updated successfully.");
-            return new Response(true, "Leaderboard updated successfully.", null);
+
+            Writer writer = new FileWriter(System.getProperty("user.dir")+ "/data/players.json");
+            gson.toJson(playerList, writer);
+
+            logger.info("Player list updated successfully.");
+            return new Response(true, "Player list updated successfully.", null);
         } catch (Exception e) {
-            logger.severe("Error removing entry from leaderboard: " + e.getMessage());
+            logger.severe("Error removing player from player list " + e.getMessage());
             return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
         }
     }
