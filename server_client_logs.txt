@@ -9,3 +9,5 @@ PlayerLoginController: Username entered: 123414
 [2025-03-24 22:34:49] User logged in: PLEASEPLEASEPLAESE
 [2025-03-24 22:52:26] ERROR: Invalid username or password!
 [2025-03-24 22:52:34] User logged in: TRUMAN
+[2025-03-24 22:58:34] User logged in: SAMPLEUSER2
+[2025-03-24 22:58:34] Admin SAMPLEUSER2 logged in
