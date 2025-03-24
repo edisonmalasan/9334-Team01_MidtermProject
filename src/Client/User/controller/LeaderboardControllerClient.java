@@ -4,7 +4,6 @@ package Client.User.controller;
  */
 import App.App;
 import Client.connection.ClientConnection;
-import Client.User.model.LeaderboardEntryModelClient;
 import common.AnsiFormatter;
 import common.LoggerSetup;
 import utility.LeaderboardEntryModel;
@@ -30,7 +29,6 @@ import java.util.logging.Logger;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import utility.BombGameServer;
 
 public class LeaderboardControllerClient {
     // FXML Elements
@@ -106,9 +104,9 @@ public class LeaderboardControllerClient {
         endlessTable.setItems(endlessLeaderboard);
 
         // Initialize Rank columns to compute the rank dynamically
-        classicRank.setCellValueFactory((Callback<TableColumn.CellDataFeatures<LeaderboardEntryModelClient, Integer>, ObservableValue<Integer>>) param -> new SimpleIntegerProperty(getRankForIndex(classicLeaderboard, classicLeaderboard.indexOf(param.getValue()))).asObject());
+        classicRank.setCellValueFactory((Callback<TableColumn.CellDataFeatures<LeaderboardEntryModel, Integer>, ObservableValue<Integer>>) param -> new SimpleIntegerProperty(getRankForIndex(classicLeaderboard, classicLeaderboard.indexOf(param.getValue()))).asObject());
 
-        endlessRank.setCellValueFactory((Callback<TableColumn.CellDataFeatures<LeaderboardEntryModelClient, Integer>, ObservableValue<Integer>>) param -> new SimpleIntegerProperty(getRankForIndex(endlessLeaderboard, endlessLeaderboard.indexOf(param.getValue()))).asObject());
+        endlessRank.setCellValueFactory((Callback<TableColumn.CellDataFeatures<LeaderboardEntryModel, Integer>, ObservableValue<Integer>>) param -> new SimpleIntegerProperty(getRankForIndex(endlessLeaderboard, endlessLeaderboard.indexOf(param.getValue()))).asObject());
 
         // Search box handlers for filtering Classic and Endless tables
         classicSearchBox.textProperty().addListener((observable, oldValue, newValue) -> filterLeaderboardData(newValue, "classic"));
