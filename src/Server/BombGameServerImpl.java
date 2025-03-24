@@ -2,7 +2,7 @@ package Server;
 
 import Server.controller.JSONStorageController;
 import utility.Callback;
-import utility.PlayerModel;
+import common.model.PlayerModel;
 import Server.controller.QuestionController;
 import Server.handler.ClientHandler;
 import utility.LeaderboardEntryModel;

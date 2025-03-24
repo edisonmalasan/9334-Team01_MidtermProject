@@ -8,7 +8,7 @@ import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import utility.PlayerModel;
+import common.model.PlayerModel;
 
 
 import java.io.*;

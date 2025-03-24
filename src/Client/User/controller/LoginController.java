@@ -2,9 +2,10 @@ package Client.User.controller;
 /**
  * Controls input username view window
  */
+import common.model.PlayerModel;
 import common.LogManager;
 import common.AnsiFormatter;
-import exception.InvalidUsernameException;
+import exception.InvalidCredentialsException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +15,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,12 +30,13 @@ public class LoginController {
 
     private final LogManager logManager = LogManager.getInstance();
 
+    private static final String USERS_JSON_PATH = "data/players.json";
+
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
 
-    private static String playerUsername;
-    private static String playerPassword;
+    protected static PlayerModel currentUser;
 
     @FXML
     private TextField usernameField;
@@ -49,50 +56,78 @@ public class LoginController {
 
     @FXML
     public void initialize() {
-        loginButton.setOnAction(event -> handleLoginButtonClick(event));
+        loginButton.setOnAction(this::handleLoginButtonClick);
 
         usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
-            errorLabel.setText("");
+            if (!newValue.isEmpty()) errorLabel.setText("");
         });
         passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
-            errorLabel.setText("");
+            if (!newValue.isEmpty()) errorLabel.setText("");
         });
 
-        registerLink.setOnAction(event -> switchToRegister(event));
-
-
+        if (registerLink != null) {
+            registerLink.setOnAction(this::switchToRegister);
+        }
     }
 
-    private void handleLoginButtonClick(ActionEvent event) {
-        String username = usernameField.getText().trim().toLowerCase();
-        String password = playerPassword;
+    protected void handleLoginButtonClick(ActionEvent event) {
+        String username = usernameField.getText().trim();
+        String password = passwordField.getText().trim();
 
-        if (username.isEmpty()) {
-            handleException(new InvalidUsernameException("Username cannot be empty!"));
+        if (username.isEmpty() || password.isEmpty()) {
+            handleException(new InvalidCredentialsException("Username or Password cannot be empty!"));
             return;
         }
 
-        // TODO: apply validateUser and and compare the input to the playerRole, if not should return a message that there is no user in the record
+        try {
+            PlayerModel authenticatedUser = validateUser(username, password);
+            if (authenticatedUser != null) {
+                currentUser = authenticatedUser;
+                logManager.appendLog("User logged in: " + currentUser.getUsername());
 
-        playerUsername = username;
-        playerPassword = password;
-        logManager.appendLog("\nPlayerLoginController: Username entered: " + playerUsername);
-        switchToMainMenu(event);
+                if ("ADMIN".equalsIgnoreCase(currentUser.getRole())) {
+                    logManager.appendLog("Admin " + currentUser.getUsername() + " logged in");
+                    switchToAdminDashboard(event);
+                } else {
+                    logger.info("Player " + currentUser.getUsername() +
+                            " logged in with scores - Classic: " +
+                            currentUser.getClassicScore() +
+                            ", Endless: " +
+                            currentUser.getEndlessScore());
+                    switchToMainMenu(event);
+                }
+            } else {
+                handleException(new InvalidCredentialsException("Invalid username or password!"));
+            }
+        } catch (IOException e) {
+            handleException(new InvalidCredentialsException("Login failed. Please try again later."));
+            logger.log(Level.SEVERE, "Error reading user data", e);
+        }
     }
 
-    private boolean validateUser(String username, String password) {
-        // TODO: VALIDATE CLIENT IF PLAYER OR ADMIN (use switchToAdminDashboard method if admin)
-        return false;
-    }
+    protected PlayerModel validateUser(String username, String password) throws IOException {
+        try (FileReader reader = new FileReader(USERS_JSON_PATH)) {
+            JSONTokener tokener = new JSONTokener(reader);
+            JSONArray playersArray = new JSONArray(tokener);
 
+            for (int i = 0; i < playersArray.length(); i++) {
+                JSONObject playerJson = playersArray.getJSONObject(i);
+                PlayerModel player = new PlayerModel(
+                        playerJson.getString("username"),
+                        playerJson.getString("password"),
+                        playerJson.getString("role"),
+                        playerJson.getInt("classicScore"),
+                        playerJson.getInt("endlessScore")
+                );
 
-    public static String getPlayerUsername() {
-        return playerUsername;
+                if (player.getUsername().equalsIgnoreCase(username) &&
+                        player.getPassword().equals(password)) {
+                    return player;
+                }
+            }
+            return null;
+        }
     }
-    public static String getPlayerPassword() {
-        return playerPassword;
-    }
-
 
     private void handleException(Exception e) {
         logManager.appendLog("ERROR: " + e.getMessage());
@@ -102,8 +137,6 @@ public class LoginController {
             errorLabel.setText(e.getMessage());
         });
     }
-
-
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {
         try {
@@ -117,6 +150,10 @@ public class LoginController {
             stage.show();
 
             logger.info("\nLoginController: Switched to " + title);
+
+            //clear data
+            usernameField.clear();
+            passwordField.clear();
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Failed to load " + title, e);
         }
@@ -134,7 +171,9 @@ public class LoginController {
         switchScene(event, "/views/admin/admin_dashboard.fxml", "Admin Dashboard");
     }
 
-
+    public static PlayerModel getCurrentUser() {
+        return currentUser;
+    }
 
     //    private void switchToMainMenu(ActionEvent event) {
 //        try {

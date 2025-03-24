@@ -20,9 +20,16 @@
 
 /* Labels */
 
-#comboLabel {
+#registerPane .label {
     -fx-font-family: "Roboto Mono";
     -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#comboLabel {
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 12px;
     -fx-background-color: transparent;
     -fx-text-fill: black;
 }

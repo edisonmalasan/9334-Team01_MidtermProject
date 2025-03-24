@@ -2,11 +2,10 @@ package Client.User.controller;
 /**
  * Contains main game logic
  */
-import App.App;
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
 import Client.User.model.ComboModel;
-import utility.PlayerModel;
+import common.model.PlayerModel;
 import Client.User.utils.BombUtility;
 import Client.User.utils.QTEUtility;
 import common.LoggerSetup;
@@ -200,8 +199,8 @@ public abstract class GameController {
 
         new Thread(() -> {
             try {
-                String playerUsername = LoginController.getPlayerUsername();
-                String playerPassword = LoginController.getPlayerPassword();
+                String playerUsername = LoginController.getCurrentUser().getUsername();
+                String playerPassword = LoginController.getCurrentUser().getPassword();
                 int classicScore = 0;
                 int endlessScore = 0;
 

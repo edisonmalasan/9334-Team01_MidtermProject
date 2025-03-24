@@ -6,7 +6,7 @@ import Client.User.controller.LoginController;
 import common.AnsiFormatter;
 import Client.connection.ClientConnection;
 import exception.ConnectionException;
-import exception.InvalidUsernameException;
+import exception.InvalidCredentialsException;
 import exception.ServerNotRunningException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -71,11 +71,11 @@ public class AdminLoginController {
         String username = usernameField.getText().trim().toLowerCase();
 
         if (username.isEmpty()) {
-            handleException(new InvalidUsernameException("Username cannot be empty!"));
+            handleException(new InvalidCredentialsException("Username cannot be empty!"));
             return;
         }
         if (!username.equals("admin")){
-            handleException(new InvalidUsernameException("Incorrect!"));
+            handleException(new InvalidCredentialsException("Incorrect!"));
             return;
         }
         adminPass = username;

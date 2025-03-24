@@ -3,7 +3,7 @@ package Redundant;
  * Controls input username view window
  */
 import common.AnsiFormatter;
-import exception.InvalidUsernameException;
+import exception.InvalidCredentialsException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -49,7 +49,7 @@ public class InputIPAddressController {
         ipAddress = inputField.getText().trim();
 
         if (ipAddress.isEmpty()) {
-            handleException(new InvalidUsernameException("IP Address cannot be empty!"));
+            handleException(new InvalidCredentialsException("IP Address cannot be empty!"));
             return;
         }
 

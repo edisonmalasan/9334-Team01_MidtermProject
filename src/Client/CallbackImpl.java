@@ -1,7 +1,7 @@
 package Client;
 
 import utility.Callback;
-import utility.PlayerModel;
+import common.model.PlayerModel;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;

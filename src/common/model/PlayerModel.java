@@ -1,4 +1,4 @@
-package utility;
+package common.model;
 
 public class PlayerModel {
     private String username;
