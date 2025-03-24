@@ -2,9 +2,12 @@ package Client.User.controller;
 /**
  * Controls input username view window
  */
+import Client.CallbackImpl;
+import Client.connection.ClientConnection;
 import common.model.PlayerModel;
 import common.LogManager;
 import common.AnsiFormatter;
+import exception.ConnectionException;
 import exception.InvalidCredentialsException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -18,6 +21,7 @@ import javafx.stage.Stage;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import utility.Callback;
 
 import java.io.File;
 import java.io.FileReader;
@@ -29,8 +33,7 @@ public class LoginController {
     private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
     private final LogManager logManager = LogManager.getInstance();
-
-    private static final String USERS_JSON_PATH = "data/players.json";
+    protected ClientConnection clientConnection;
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -52,6 +55,11 @@ public class LoginController {
     private Hyperlink registerLink;
 
     public LoginController() {
+        try {
+            this.clientConnection = ClientConnection.getInstance();
+        } catch (ConnectionException e) {
+            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+        }
     }
 
     @FXML
@@ -80,8 +88,10 @@ public class LoginController {
         }
 
         try {
-            PlayerModel authenticatedUser = validateUser(username, password);
+            PlayerModel authenticatedUser = ClientConnection.bombGameServer.getPlayer(username, password);
             if (authenticatedUser != null) {
+                Callback callback = new CallbackImpl(authenticatedUser);
+                ClientConnection.bombGameServer.login(callback);
                 currentUser = authenticatedUser;
                 logManager.appendLog("User logged in: " + currentUser.getUsername());
 
@@ -102,30 +112,6 @@ public class LoginController {
         } catch (IOException e) {
             handleException(new InvalidCredentialsException("Login failed. Please try again later."));
             logger.log(Level.SEVERE, "Error reading user data", e);
-        }
-    }
-
-    protected PlayerModel validateUser(String username, String password) throws IOException {
-        try (FileReader reader = new FileReader(USERS_JSON_PATH)) {
-            JSONTokener tokener = new JSONTokener(reader);
-            JSONArray playersArray = new JSONArray(tokener);
-
-            for (int i = 0; i < playersArray.length(); i++) {
-                JSONObject playerJson = playersArray.getJSONObject(i);
-                PlayerModel player = new PlayerModel(
-                        playerJson.getString("username"),
-                        playerJson.getString("password"),
-                        playerJson.getString("role"),
-                        playerJson.getInt("classicScore"),
-                        playerJson.getInt("endlessScore")
-                );
-
-                if (player.getUsername().equalsIgnoreCase(username) &&
-                        player.getPassword().equals(password)) {
-                    return player;
-                }
-            }
-            return null;
         }
     }
 
