@@ -8,7 +8,7 @@
         "16",
         "24"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -20,7 +20,7 @@
         "6",
         "7"
       ],
-      "answer": "3",
+      "correctAnswer": "3",
       "score": 1
     },
     {
@@ -32,7 +32,7 @@
         "-1",
         "-2"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -44,7 +44,7 @@
         "-3x - 6",
         "3x - 6"
       ],
-      "answer": "-3x + 6",
+      "correctAnswer": "-3x + 6",
       "score": 1
     },
     {
@@ -56,7 +56,7 @@
         "4",
         "1"
       ],
-      "answer": "3",
+      "correctAnswer": "3",
       "score": 1
     },
     {
@@ -68,7 +68,7 @@
         "x < 2",
         "x > 2"
       ],
-      "answer": "x < 4",
+      "correctAnswer": "x < 4",
       "score": 1
     },
     {
@@ -80,7 +80,7 @@
         "±4",
         "0"
       ],
-      "answer": "±4",
+      "correctAnswer": "±4",
       "score": 1
     },
     {
@@ -92,7 +92,7 @@
         "x² - 7x - 12",
         "x² + 7x - 12"
       ],
-      "answer": "x² - x - 12",
+      "correctAnswer": "x² - x - 12",
       "score": 1
     },
     {
@@ -104,7 +104,7 @@
         "4",
         "5"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -116,7 +116,7 @@
         "35",
         "1"
       ],
-      "answer": "5",
+      "correctAnswer": "5",
       "score": 1
     },
     {
@@ -128,7 +128,7 @@
         "3x - 1",
         "4x + 9"
       ],
-      "answer": "2x + 9",
+      "correctAnswer": "2x + 9",
       "score": 1
     },
     {
@@ -140,7 +140,7 @@
         "3",
         "2"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -152,7 +152,7 @@
         "1",
         "4"
       ],
-      "answer": "3",
+      "correctAnswer": "3",
       "score": 1
     },
     {
@@ -164,7 +164,7 @@
         "(x + 2)(x + 3)",
         "(x + 1)(x + 6)"
       ],
-      "answer": "(x + 3)(x + 2)",
+      "correctAnswer": "(x + 3)(x + 2)",
       "score": 1
     },
     {
@@ -176,7 +176,7 @@
         "±5",
         "25"
       ],
-      "answer": "±5",
+      "correctAnswer": "±5",
       "score": 1
     },
     {
@@ -188,7 +188,7 @@
         "3",
         "4"
       ],
-      "answer": "2",
+      "correctAnswer": "2",
       "score": 1
     },
     {
@@ -200,7 +200,7 @@
         "(1, 5)",
         "(4, 3)"
       ],
-      "answer": "(3, 2)",
+      "correctAnswer": "(3, 2)",
       "score": 1
     },
     {
@@ -212,7 +212,7 @@
         "-5",
         "5"
       ],
-      "answer": "-9",
+      "correctAnswer": "-9",
       "score": 1
     },
     {
@@ -224,7 +224,7 @@
         "3x + 17",
         "3x + 20"
       ],
-      "answer": "3x + 26",
+      "correctAnswer": "3x + 26",
       "score": 1
     },
     {
@@ -236,7 +236,7 @@
         "3",
         "6"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -248,7 +248,7 @@
         "5x² + 9x - 2",
         "x² + 9x - 2"
       ],
-      "answer": "x² + 9x",
+      "correctAnswer": "x² + 9x",
       "score": 1
     },
     {
@@ -260,7 +260,7 @@
         "8",
         "4"
       ],
-      "answer": "5",
+      "correctAnswer": "5",
       "score": 1
     },
     {
@@ -272,7 +272,7 @@
         "8",
         "5"
       ],
-      "answer": "7",
+      "correctAnswer": "7",
       "score": 1
     },
     {
@@ -284,7 +284,7 @@
         "x(x + 4)",
         "(x - 4)(x + 4)"
       ],
-      "answer": "x(x - 4)",
+      "correctAnswer": "x(x - 4)",
       "score": 1
     },
     {
@@ -296,7 +296,7 @@
         "Set",
         "Terms"
       ],
-      "answer": "Constant",
+      "correctAnswer": "Constant",
       "score": 1
     },
     {
@@ -308,7 +308,7 @@
         "5",
         "6"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -320,7 +320,7 @@
         "44/52",
         "154/183"
       ],
-      "answer": "11/13",
+      "correctAnswer": "11/13",
       "score": 1
     },
     {
@@ -332,7 +332,7 @@
         "D: {2, 3, 1, 3, 4, 7, -3} R: {-2, 3, 4, 5, -1, 6, 0}",
         "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}"
       ],
-      "answer": "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}",
+      "correctAnswer": "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}",
       "score": 1
     },
     {
@@ -344,7 +344,7 @@
         "16",
         "24"
       ],
-      "answer": "4",
+      "correctAnswer": "4",
       "score": 1
     },
     {
@@ -356,7 +356,7 @@
         "3/125",
         "1/125"
       ],
-      "answer": "-1/125",
+      "correctAnswer": "-1/125",
       "score": 1
     },
     {
@@ -368,7 +368,7 @@
         "4x^5",
         "2x^6"
       ],
-      "answer": "4x^6",
+      "correctAnswer": "4x^6",
       "score": 1
     },
     {
@@ -380,7 +380,7 @@
         "6m + 6",
         "6m - 4"
       ],
-      "answer": "6m + 4",
+      "correctAnswer": "6m + 4",
       "score": 1
     },
     {
@@ -392,7 +392,7 @@
         "x = −6 , y = 2",
         "x = −2 , y = 6"
       ],
-      "answer": "x = 6 , y = −2",
+      "correctAnswer": "x = 6 , y = −2",
       "score": 2
     },
     {
@@ -404,7 +404,7 @@
         "x = 6",
         "x = −1"
       ],
-      "answer": "x = 6",
+      "correctAnswer": "x = 6",
       "score": 2
     },
     {
@@ -416,7 +416,7 @@
         "6(2) + t",
         "6(0)t"
       ],
-      "answer": "6t",
+      "correctAnswer": "6t",
       "score": 2
     },
     {
@@ -428,7 +428,7 @@
         "13(9) + n",
         "9(13) + n"
       ],
-      "answer": "9n + 13",
+      "correctAnswer": "9n + 13",
       "score": 2
     },
     {
@@ -440,7 +440,7 @@
         "z = 2",
         "z = 6"
       ],
-      "answer": "z = 6",
+      "correctAnswer": "z = 6",
       "score": 2
     },
     {
@@ -452,7 +452,7 @@
         "-1",
         "2"
       ],
-      "answer": "-2",
+      "correctAnswer": "-2",
       "score": 2
     },
     {
@@ -464,7 +464,7 @@
         "k = -5",
         "k = -20"
       ],
-      "answer": "k = -5",
+      "correctAnswer": "k = -5",
       "score": 2
     },
     {
@@ -476,7 +476,7 @@
         "x = 4 , y = 8",
         "x = 8 , y = −4"
       ],
-      "answer": "x = 4 , y = 8",
+      "correctAnswer": "x = 4 , y = 8",
       "score": 3
     },
     {
@@ -488,7 +488,7 @@
         "x = 4",
         "x = -3"
       ],
-      "answer": "x = -4",
+      "correctAnswer": "x = -4",
       "score": 3
     },
     {
@@ -500,7 +500,7 @@
         "y = 2x / 3y - 3",
         "y = 3 / 2x - 9"
       ],
-      "answer": "y = 2 / 3x - 3",
+      "correctAnswer": "y = 2 / 3x - 3",
       "score": 3
     },
     {
@@ -512,7 +512,7 @@
         "x + y / 9",
         "9 / x + y"
       ],
-      "answer": "x + y - 9",
+      "correctAnswer": "x + y - 9",
       "score": 3
     },
     {
@@ -524,7 +524,7 @@
         "41, -2",
         "−26 , −56"
       ],
-      "answer": "26 , 56",
+      "correctAnswer": "26 , 56",
       "score": 3
     },
     {
@@ -536,7 +536,7 @@
         "8 cm²",
         "5 cm²"
       ],
-      "answer": "15 cm²",
+      "correctAnswer": "15 cm²",
       "score": 1
     },
     {
@@ -548,7 +548,7 @@
         "36 cm",
         "6 cm"
       ],
-      "answer": "24 cm",
+      "correctAnswer": "24 cm",
       "score": 1
     },
     {
@@ -560,7 +560,7 @@
         "24 cm³",
         "32 cm³"
       ],
-      "answer": "64 cm³",
+      "correctAnswer": "64 cm³",
       "score": 1
     },
     {
@@ -572,7 +572,7 @@
         "49 cm²",
         "14 cm²"
       ],
-      "answer": "49π cm²",
+      "correctAnswer": "49π cm²",
       "score": 1
     },
     {
@@ -584,7 +584,7 @@
         "18 cm",
         "14 cm"
       ],
-      "answer": "12 cm",
+      "correctAnswer": "12 cm",
       "score": 1
     },
     {
@@ -596,7 +596,7 @@
         "36 cm²",
         "18 cm²"
       ],
-      "answer": "24 cm²",
+      "correctAnswer": "24 cm²",
       "score": 1
     },
     {
@@ -608,7 +608,7 @@
         "75π cm²",
         "50π cm²"
       ],
-      "answer": "100π cm²",
+      "correctAnswer": "100π cm²",
       "score": 1
     },
     {
@@ -620,7 +620,7 @@
         "20 cm²",
         "36 cm²"
       ],
-      "answer": "24 cm²",
+      "correctAnswer": "24 cm²",
       "score": 1
     },
     {
@@ -632,7 +632,7 @@
         "5π cm",
         "25π cm"
       ],
-      "answer": "10π cm",
+      "correctAnswer": "10π cm",
       "score": 1
     },
     {
@@ -644,7 +644,7 @@
         "900°",
         "540°"
       ],
-      "answer": "720°",
+      "correctAnswer": "720°",
       "score": 1
     },
     {
@@ -656,7 +656,7 @@
         "60 cm²",
         "30 cm²"
       ],
-      "answer": "50 cm²",
+      "correctAnswer": "50 cm²",
       "score": 1
     },
     {
@@ -668,7 +668,7 @@
         "21π cm³",
         "45π cm³"
       ],
-      "answer": "63π cm³",
+      "correctAnswer": "63π cm³",
       "score": 1
     },
     {
@@ -680,7 +680,7 @@
         "20 cm²",
         "30 cm²"
       ],
-      "answer": "40 cm²",
+      "correctAnswer": "40 cm²",
       "score": 1
     },
     {
@@ -692,7 +692,7 @@
         "72π cm³",
         "54π cm³"
       ],
-      "answer": "48π cm³",
+      "correctAnswer": "48π cm³",
       "score": 1
     },
     {
@@ -704,7 +704,7 @@
         "56 cm²",
         "75 cm²"
       ],
-      "answer": "94 cm²",
+      "correctAnswer": "94 cm²",
       "score": 1
     },
     {
@@ -716,7 +716,7 @@
         "36 cm",
         "30 cm"
       ],
-      "answer": "42 cm",
+      "correctAnswer": "42 cm",
       "score": 1
     },
     {
@@ -728,7 +728,7 @@
         "128 cm³",
         "64 cm³"
       ],
-      "answer": "48 cm³",
+      "correctAnswer": "48 cm³",
       "score": 1
     },
     {
@@ -740,7 +740,7 @@
         "18.47 cm²",
         "19.39 cm²"
       ],
-      "answer": "15.59 cm²",
+      "correctAnswer": "15.59 cm²",
       "score": 1
     },
     {
@@ -752,7 +752,7 @@
         "line",
         "point"
       ],
-      "answer": "plane",
+      "correctAnswer": "plane",
       "score": 1
     },
     {
@@ -764,7 +764,7 @@
         "perimeter",
         "side"
       ],
-      "answer": "circumference",
+      "correctAnswer": "circumference",
       "score": 1
     },
     {
@@ -776,7 +776,7 @@
         "75",
         "180"
       ],
-      "answer": "180",
+      "correctAnswer": "180",
       "score": 1
     },
     {
@@ -788,7 +788,7 @@
         "rhombus",
         "trapezoid"
       ],
-      "answer": "rhombus",
+      "correctAnswer": "rhombus",
       "score": 1
     },
     {
@@ -800,7 +800,7 @@
         "heptagon",
         "octagon"
       ],
-      "answer": "hexagon",
+      "correctAnswer": "hexagon",
       "score": 1
     },
     {
@@ -812,7 +812,7 @@
         "180",
         "360"
       ],
-      "answer": "360",
+      "correctAnswer": "360",
       "score": 1
     },
     {
@@ -824,7 +824,7 @@
         "congruent",
         "parallel"
       ],
-      "answer": "congruent",
+      "correctAnswer": "congruent",
       "score": 1
     },
     {
@@ -836,7 +836,7 @@
         "perpendicular",
         "parallel"
       ],
-      "answer": "equilateral",
+      "correctAnswer": "equilateral",
       "score": 1
     },
     {
@@ -848,7 +848,7 @@
         "congruent",
         "parallel"
       ],
-      "answer": "parallel",
+      "correctAnswer": "parallel",
       "score": 2
     },
     {
@@ -860,7 +860,7 @@
         "sphere",
         "triangle"
       ],
-      "answer": "pyramid",
+      "correctAnswer": "pyramid",
       "score": 2
     },
     {
@@ -872,7 +872,7 @@
         "secant",
         "segment"
       ],
-      "answer": "secant",
+      "correctAnswer": "secant",
       "score": 2
     },
     {
@@ -884,7 +884,7 @@
         "secant",
         "segment"
       ],
-      "answer": "sector",
+      "correctAnswer": "sector",
       "score": 2
     },
     {
@@ -896,7 +896,7 @@
         "sphere",
         "triangle"
       ],
-      "answer": "sphere",
+      "correctAnswer": "sphere",
       "score": 2
     },
     {
@@ -908,7 +908,7 @@
         "chord",
         "arc"
       ],
-      "answer": "ray",
+      "correctAnswer": "ray",
       "score": 2
     },
     {
@@ -920,7 +920,7 @@
         "corresponding angles",
         "similar shape"
       ],
-      "answer": "measure of an arc",
+      "correctAnswer": "measure of an arc",
       "score": 2
     },
     {
@@ -932,7 +932,7 @@
         "right",
         "obtuse"
       ],
-      "answer": "obtuse",
+      "correctAnswer": "obtuse",
       "score": 3
     },
     {
@@ -944,7 +944,7 @@
         "5, 10, and 15",
         "5, 12, and 13"
       ],
-      "answer": "5, 12, and 13",
+      "correctAnswer": "5, 12, and 13",
       "score": 3
     },
     {
@@ -956,7 +956,7 @@
         "250pi",
         "10pi"
       ],
-      "answer": "225pi",
+      "correctAnswer": "225pi",
       "score": 3
     },
     {
@@ -968,7 +968,7 @@
         "sphere",
         "triangle"
       ],
-      "answer": "prism",
+      "correctAnswer": "prism",
       "score": 3
     },
     {
@@ -980,7 +980,7 @@
         "180",
         "360"
       ],
-      "answer": "720",
+      "correctAnswer": "720",
       "score": 3
     },
     {
@@ -992,7 +992,7 @@
         "1/4",
         "1"
       ],
-      "answer": "1/2",
+      "correctAnswer": "1/2",
       "score": 1
     },
     {
@@ -1004,7 +1004,7 @@
         "1/3",
         "1/4"
       ],
-      "answer": "1/6",
+      "correctAnswer": "1/6",
       "score": 1
     },
     {
@@ -1016,7 +1016,7 @@
         "1/4",
         "1/52"
       ],
-      "answer": "26/52",
+      "correctAnswer": "26/52",
       "score": 1
     },
 
@@ -1029,7 +1029,7 @@
         "1/3",
         "1/8"
       ],
-      "answer": "1/4",
+      "correctAnswer": "1/4",
       "score": 1
     },
     {
@@ -1041,7 +1041,7 @@
         "1/2",
         "2/3"
       ],
-      "answer": "1/3",
+      "correctAnswer": "1/3",
       "score": 1
     },
     {
@@ -1053,7 +1053,7 @@
         "3/5",
         "1/3"
       ],
-      "answer": "3/10",
+      "correctAnswer": "3/10",
       "score": 1
     },
     {
@@ -1065,7 +1065,7 @@
         "1/13",
         "4/13"
       ],
-      "answer": "4/52",
+      "correctAnswer": "4/52",
       "score": 1
     },
     {
@@ -1077,7 +1077,7 @@
         "1/13",
         "3/52"
       ],
-      "answer": "12/52",
+      "correctAnswer": "12/52",
       "score": 1
     },
     {
@@ -1089,7 +1089,7 @@
         "1/6",
         "1/4"
       ],
-      "answer": "1/2",
+      "correctAnswer": "1/2",
       "score": 1
     },
     {
@@ -1101,7 +1101,7 @@
         "1/9",
         "1/12"
       ],
-      "answer": "1/6",
+      "correctAnswer": "1/6",
       "score": 1
     },
     {
@@ -1113,7 +1113,7 @@
         "13/52",
         "4/52"
       ],
-      "answer": "13/52",
+      "correctAnswer": "13/52",
       "score": 1
     },
     {
@@ -1125,7 +1125,7 @@
         "1/6",
         "1/4"
       ],
-      "answer": "1/2",
+      "correctAnswer": "1/2",
       "score": 1
     },
     {
@@ -1137,7 +1137,7 @@
         "40/52",
         "12/52"
       ],
-      "answer": "40/52",
+      "correctAnswer": "40/52",
       "score": 1
     },
     {
@@ -1149,7 +1149,7 @@
         "1/9",
         "1/12"
       ],
-      "answer": "1/6",
+      "correctAnswer": "1/6",
       "score": 1
     },
     {
@@ -1161,7 +1161,7 @@
         "1/3",
         "1/2"
       ],
-      "answer": "1/3",
+      "correctAnswer": "1/3",
       "score": 1
     },
     {
@@ -1173,7 +1173,7 @@
         "1/2",
         "5/10"
       ],
-      "answer": "7/10",
+      "correctAnswer": "7/10",
       "score": 1
     },
     {
@@ -1185,7 +1185,7 @@
         "2/52",
         "12/52"
       ],
-      "answer": "8/52",
+      "correctAnswer": "8/52",
       "score": 1
     },
     {
@@ -1197,7 +1197,7 @@
         "1/4",
         "1/3"
       ],
-      "answer": "3/4",
+      "correctAnswer": "3/4",
       "score": 1
     },
     {
@@ -1209,7 +1209,7 @@
         "28/52",
         "24/52"
       ],
-      "answer": "36/52",
+      "correctAnswer": "36/52",
       "score": 1
     },
     {
@@ -1221,7 +1221,7 @@
         "13/52",
         "1/2"
       ],
-      "answer": "26/52",
+      "correctAnswer": "26/52",
       "score": 1
     },
     {
@@ -1233,7 +1233,7 @@
         "16",
         "17"
       ],
-      "answer": "15",
+      "correctAnswer": "15",
       "score": 1
     },
     {
@@ -1245,7 +1245,7 @@
         "Sometimes",
         "Not enough information"
       ],
-      "answer": "No",
+      "correctAnswer": "No",
       "score": 1
     },
     {
@@ -1257,7 +1257,7 @@
         "3, 6, 12, 24",
         "2, 4, 8, 16"
       ],
-      "answer": "4, 9, 16, 25",
+      "correctAnswer": "4, 9, 16, 25",
       "score": 1
     },
     {
@@ -1269,7 +1269,7 @@
         "Sometimes",
         "Depends on the penguin"
       ],
-      "answer": "No",
+      "correctAnswer": "No",
       "score": 1
     },
     {
@@ -1281,7 +1281,7 @@
         "G",
         "H"
       ],
-      "answer": "E",
+      "correctAnswer": "E",
       "score": 1
     },
     {
@@ -1293,7 +1293,7 @@
         "Circle",
         "Hexagon"
       ],
-      "answer": "Circle",
+      "correctAnswer": "Circle",
       "score": 1
     },
     {
@@ -1305,7 +1305,7 @@
         "25",
         "26"
       ],
-      "answer": "25",
+      "correctAnswer": "25",
       "score": 1
     },
     {
@@ -1317,7 +1317,7 @@
         "1.001",
         "1.10"
       ],
-      "answer": "1.10",
+      "correctAnswer": "1.10",
       "score": 1
     },
     {
@@ -1329,7 +1329,7 @@
         "9",
         "17"
       ],
-      "answer": "9",
+      "correctAnswer": "9",
       "score": 2
     },
     {
@@ -1341,7 +1341,7 @@
         "40",
         "45"
       ],
-      "answer": "36",
+      "correctAnswer": "36",
       "score": 2
     },
     {
@@ -1353,7 +1353,7 @@
         "25",
         "30"
       ],
-      "answer": "15",
+      "correctAnswer": "15",
       "score": 2
     },
     {
@@ -1365,7 +1365,7 @@
         "11",
         "12"
       ],
-      "answer": "10",
+      "correctAnswer": "10",
       "score": 2
     },
     {
@@ -1377,7 +1377,7 @@
         "14",
         "16"
       ],
-      "answer": "14",
+      "correctAnswer": "14",
       "score": 2
     },
     {
@@ -1389,7 +1389,7 @@
         "9",
         "8"
       ],
-      "answer": "5",
+      "correctAnswer": "5",
       "score": 2
     },
     {
@@ -1401,7 +1401,7 @@
         "40",
         "45"
       ],
-      "answer": "36",
+      "correctAnswer": "36",
       "score": 2
     },
     {
@@ -1413,7 +1413,7 @@
         "22.5°",
         "30°"
       ],
-      "answer": "22.5°",
+      "correctAnswer": "22.5°",
       "score": 3
     },
     {
@@ -1425,7 +1425,7 @@
         "Saturday",
         "Sunday"
       ],
-      "answer": "Friday",
+      "correctAnswer": "Friday",
       "score": 3
     },
     {
@@ -1437,7 +1437,7 @@
         "1 hour 45 minutes",
         "2 hours"
       ],
-      "answer": "1 hour 45 minutes",
+      "correctAnswer": "1 hour 45 minutes",
       "score": 3
     },
     {
@@ -1449,7 +1449,7 @@
         "A prime number can be divided by more than 2 numbers.",
         "All right angles are 90°."
       ],
-      "answer": "A prime number can be divided by more than 2 numbers.",
+      "correctAnswer": "A prime number can be divided by more than 2 numbers.",
       "score": 3
     },
     {
@@ -1461,7 +1461,7 @@
         "21",
         "24"
       ],
-      "answer": "21",
+      "correctAnswer": "21",
       "score": 3
     },
     {
@@ -1473,7 +1473,7 @@
         "Maybe",
         "Not enough information"
       ],
-      "answer": "Yes",
+      "correctAnswer": "Yes",
       "score": 1
     },
     {
@@ -1485,7 +1485,7 @@
         "Some humans are dogs",
         "None of the above"
       ],
-      "answer": "No",
+      "correctAnswer": "No",
       "score": 2
     },
     {
@@ -1497,7 +1497,7 @@
         "Sometimes",
         "Not enough information"
       ],
-      "answer": "Yes",
+      "correctAnswer": "Yes",
       "score": 2
     },
     {
@@ -1509,7 +1509,7 @@
         "Tim",
         "Not enough information"
       ],
-      "answer": "Tim",
+      "correctAnswer": "Tim",
       "score": 3
     },
     {
@@ -1521,7 +1521,7 @@
         "It is cloudy",
         "Not enough information"
       ],
-      "answer": "The sun is not shining",
+      "correctAnswer": "The sun is not shining",
       "score": 3
     },
     {
@@ -1533,7 +1533,7 @@
         "The sky is not blue",
         "The sky is yellow"
       ],
-      "answer": "The sky is not blue",
+      "correctAnswer": "The sky is not blue",
       "score": 3
     },
     {
@@ -1545,7 +1545,7 @@
         "Sometimes",
         "None of the above"
       ],
-      "answer": "No",
+      "correctAnswer": "No",
       "score": 4
     },
     {
@@ -1557,7 +1557,7 @@
         "72",
         "64"
       ],
-      "answer": "81",
+      "correctAnswer": "81",
       "score": 4
     },
     {
@@ -1569,7 +1569,7 @@
         "Sometimes",
         "Not enough information"
       ],
-      "answer": "Not enough information",
+      "correctAnswer": "Not enough information",
       "score": 4
     },
     {
@@ -1581,7 +1581,7 @@
         "1",
         "6"
       ],
-      "answer": "9",
+      "correctAnswer": "9",
       "score": 5
     },
 
@@ -1594,7 +1594,7 @@
         "161",
         "159"
       ],
-      "answer": "162",
+      "correctAnswer": "162",
       "score": 1
     },
     {
@@ -1606,7 +1606,7 @@
         "11",
         "13"
       ],
-      "answer": "13",
+      "correctAnswer": "13",
       "score": 1
     },
     {
@@ -1618,7 +1618,7 @@
         "4/15",
         "3/15"
       ],
-      "answer": "3/4",
+      "correctAnswer": "3/4",
       "score": 1
     },
     {
@@ -1630,7 +1630,7 @@
         "446",
         "546"
       ],
-      "answer": "446",
+      "correctAnswer": "446",
       "score": 1
     },
     {
@@ -1642,7 +1642,7 @@
         "8",
         "12"
       ],
-      "answer": "6",
+      "correctAnswer": "6",
       "score": 1
     },
     {
@@ -1654,7 +1654,7 @@
         "14",
         "12"
       ],
-      "answer": "11",
+      "correctAnswer": "11",
       "score": 1
     },
     {
@@ -1666,7 +1666,7 @@
         "75",
         "120"
       ],
-      "answer": "90",
+      "correctAnswer": "90",
       "score": 1
     },
     {
@@ -1678,7 +1678,7 @@
         "3",
         "2.5"
       ],
-      "answer": "2.23",
+      "correctAnswer": "2.23",
       "score": 1
     },
     {
@@ -1690,7 +1690,7 @@
         "5/8 is greater than 6/10",
         "4/5 is less than 2/9"
       ],
-      "answer": "5/8 > 6/10",
+      "correctAnswer": "5/8 > 6/10",
       "score": 2
     },
     {
@@ -1702,7 +1702,7 @@
         "3",
         "50"
       ],
-      "answer": "30",
+      "correctAnswer": "30",
       "score": 2
     },
     {
@@ -1714,7 +1714,7 @@
         "4.62",
         "0.00462"
       ],
-      "answer": "0.462",
+      "correctAnswer": "0.462",
       "score": 2
     },
     {
@@ -1726,7 +1726,7 @@
         "14/15",
         "1 1/1"
       ],
-      "answer": "14/15",
+      "correctAnswer": "14/15",
       "score": 2
     },
     {
@@ -1738,7 +1738,7 @@
         "174",
         "168"
       ],
-      "answer": "189",
+      "correctAnswer": "189",
       "score": 2
     },
     {
@@ -1750,7 +1750,7 @@
         "3.35",
         "0.858"
       ],
-      "answer": "0.35",
+      "correctAnswer": "0.35",
       "score": 2
     },
     {
@@ -1762,7 +1762,7 @@
         "-3",
         "-6"
       ],
-      "answer": "3",
+      "correctAnswer": "3",
       "score": 2
     },
     {
@@ -1774,7 +1774,7 @@
         "85, 95, 105",
         "95, 115, 125"
       ],
-      "answer": "90, 105, 120",
+      "correctAnswer": "90, 105, 120",
       "score": 3
     },
     {
@@ -1786,7 +1786,7 @@
         "4",
         "6"
       ],
-      "answer": "3",
+      "correctAnswer": "3",
       "score": 3
     },
     {
@@ -1798,7 +1798,7 @@
         "25%",
         "30%"
       ],
-      "answer": "25%",
+      "correctAnswer": "25%",
       "score": 3
     },
     {
@@ -1810,7 +1810,7 @@
         "24",
         "26"
       ],
-      "answer": "24",
+      "correctAnswer": "24",
       "score": 3
     },
     {
@@ -1822,7 +1822,7 @@
         "9 and 10",
         "10 and 11"
       ],
-      "answer": "8 and 9",
+      "correctAnswer": "8 and 9",
       "score": 3
     },
     {
@@ -1834,7 +1834,7 @@
         "15",
         "10"
       ],
-      "answer": "20",
+      "correctAnswer": "20",
       "score": 1
     },
     {
@@ -1846,7 +1846,7 @@
         "30",
         "31"
       ],
-      "answer": "32",
+      "correctAnswer": "32",
       "score": 1
     },
     {
@@ -1858,7 +1858,7 @@
         "70",
         "75"
       ],
-      "answer": "60",
+      "correctAnswer": "60",
       "score": 1
     },
     {
@@ -1870,7 +1870,7 @@
         "7",
         "10"
       ],
-      "answer": "9",
+      "correctAnswer": "9",
       "score": 1
     },
     {
@@ -1882,7 +1882,7 @@
         "24",
         "21"
       ],
-      "answer": "24",
+      "correctAnswer": "24",
       "score": 1
     },
     {
@@ -1894,7 +1894,7 @@
         "65",
         "68"
       ],
-      "answer": "63",
+      "correctAnswer": "63",
       "score": 1
     },
     {
@@ -1906,7 +1906,7 @@
         "72",
         "75"
       ],
-      "answer": "70",
+      "correctAnswer": "70",
       "score": 1
     },
     {
@@ -1918,7 +1918,7 @@
         "20",
         "21"
       ],
-      "answer": "20",
+      "correctAnswer": "20",
       "score": 1
     },
     {
@@ -1930,7 +1930,7 @@
         "105",
         "110"
       ],
-      "answer": "100",
+      "correctAnswer": "100",
       "score": 1
     },
     {
@@ -1942,7 +1942,7 @@
         "20",
         "15"
       ],
-      "answer": "25",
+      "correctAnswer": "25",
       "score": 1
     },
     {
@@ -1954,7 +1954,7 @@
         "Hypotenuse",
         "Base"
       ],
-      "answer": "Hypotenuse",
+      "correctAnswer": "Hypotenuse",
       "score": 1
     },
     {
@@ -1966,7 +1966,7 @@
         "Division",
         "Cosine"
       ],
-      "answer": "Cosine",
+      "correctAnswer": "Cosine",
       "score": 1
     },
     {
@@ -1978,7 +1978,7 @@
         "Tangent",
         "Secant"
       ],
-      "answer": "Sine",
+      "correctAnswer": "Sine",
       "score": 1
     },
     {
@@ -1990,7 +1990,7 @@
         "1 cm",
         "3 cm"
       ],
-      "answer": "5 cm",
+      "correctAnswer": "5 cm",
       "score": 1
     },
     {
@@ -2002,7 +2002,7 @@
         "0.5",
         "0.866"
       ],
-      "answer": "0.5",
+      "correctAnswer": "0.5",
       "score": 1
     },
     {
@@ -2014,7 +2014,7 @@
         "0.5",
         "0.866"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2026,7 +2026,7 @@
         "0.5",
         "0.866"
       ],
-      "answer": "0.5",
+      "correctAnswer": "0.5",
       "score": 1
     },
     {
@@ -2038,7 +2038,7 @@
         "a^2 + b^2 = c^2",
         "a^3 + b^3 = c^3"
       ],
-      "answer": "a^2 + b^2 = c^2",
+      "correctAnswer": "a^2 + b^2 = c^2",
       "score": 1
     },
     {
@@ -2050,7 +2050,7 @@
         "1",
         "0.2"
       ],
-      "answer": "0.8",
+      "correctAnswer": "0.8",
       "score": 2
     },
     {
@@ -2062,7 +2062,7 @@
         "sin^2x + cos^2x = 1",
         "tan(x) = cos(x)"
       ],
-      "answer": "sin^2x + cos^2x = 1",
+      "correctAnswer": "sin^2x + cos^2x = 1",
       "score": 2
     },
     {
@@ -2074,7 +2074,7 @@
         "0.5",
         "1.25"
       ],
-      "answer": "0.75",
+      "correctAnswer": "0.75",
       "score": 2
     },
     {
@@ -2086,7 +2086,7 @@
         "100°",
         "110°"
       ],
-      "answer": "90°",
+      "correctAnswer": "90°",
       "score": 2
     },
     {
@@ -2098,7 +2098,7 @@
         "90°",
         "180°"
       ],
-      "answer": "60°",
+      "correctAnswer": "60°",
       "score": 2
     },
     {
@@ -2110,7 +2110,7 @@
         "√3",
         "0.5"
       ],
-      "answer": "√3",
+      "correctAnswer": "√3",
       "score": 2
     },
     {
@@ -2122,7 +2122,7 @@
         "7 cm",
         "10 cm"
       ],
-      "answer": "9 cm",
+      "correctAnswer": "9 cm",
       "score": 2
     },
     {
@@ -2134,7 +2134,7 @@
         "52.34°",
         "32.34°"
       ],
-      "answer": "51.34°",
+      "correctAnswer": "51.34°",
       "score": 3
     },
     {
@@ -2146,7 +2146,7 @@
         "174.2 m",
         "173.2 m"
       ],
-      "answer": "173.2 m",
+      "correctAnswer": "173.2 m",
       "score": 3
     },
     {
@@ -2158,7 +2158,7 @@
         "22.62°",
         "23.62°"
       ],
-      "answer": "22.62°",
+      "correctAnswer": "22.62°",
       "score": 3
     },
     {
@@ -2170,7 +2170,7 @@
         "7 cm",
         "10 cm"
       ],
-      "answer": "12 cm",
+      "correctAnswer": "12 cm",
       "score": 3
     },
     {
@@ -2182,7 +2182,7 @@
         "0.5",
         "0.866"
       ],
-      "answer": "0.5",
+      "correctAnswer": "0.5",
       "score": 1
     },
     {
@@ -2194,7 +2194,7 @@
         "0.707",
         "0.866"
       ],
-      "answer": "0.707",
+      "correctAnswer": "0.707",
       "score": 1
     },
     {
@@ -2206,7 +2206,7 @@
         "0.577",
         "0.866"
       ],
-      "answer": "1.732",
+      "correctAnswer": "1.732",
       "score": 1
     },
     {
@@ -2218,7 +2218,7 @@
         "0.5",
         "2"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2230,7 +2230,7 @@
         "0.5",
         "2"
       ],
-      "answer": "0",
+      "correctAnswer": "0",
       "score": 1
     },
     {
@@ -2242,7 +2242,7 @@
         "0.5",
         "Undefined"
       ],
-      "answer": "0",
+      "correctAnswer": "0",
       "score": 1
     },
     {
@@ -2254,7 +2254,7 @@
         "0.5",
         "2"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2266,7 +2266,7 @@
         "0.5",
         "2"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2278,7 +2278,7 @@
         "0.5",
         "Undefined"
       ],
-      "answer": "0",
+      "correctAnswer": "0",
       "score": 1
     },
     {
@@ -2290,7 +2290,7 @@
         "0.5",
         "2"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2302,7 +2302,7 @@
         "0.5",
         "2"
       ],
-      "answer": "0",
+      "correctAnswer": "0",
       "score": 1
     },
     {
@@ -2314,7 +2314,7 @@
         "2",
         "0.707"
       ],
-      "answer": "1",
+      "correctAnswer": "1",
       "score": 1
     },
     {
@@ -2326,7 +2326,7 @@
         "1",
         "0.866"
       ],
-      "answer": "0.707",
+      "correctAnswer": "0.707",
       "score": 1
     },
     {
@@ -2338,7 +2338,7 @@
         "0.707",
         "0.866"
       ],
-      "answer": "0.5",
+      "correctAnswer": "0.5",
       "score": 1
     },
     {
@@ -2350,7 +2350,7 @@
         "1",
         "0.866"
       ],
-      "answer": "0.577",
+      "correctAnswer": "0.577",
       "score": 1
     },
     {
@@ -2362,7 +2362,7 @@
         "1",
         "0.866"
       ],
-      "answer": "0.866",
+      "correctAnswer": "0.866",
       "score": 1
     }
 ]
