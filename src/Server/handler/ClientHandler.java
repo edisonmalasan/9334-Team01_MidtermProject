@@ -9,7 +9,7 @@ import Client.User.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import utility.LeaderboardEntryModel;
-import Server.controller.XMLStorageController;
+import Redundant.XMLStorageController;
 import common.Response;
 import common.model.QuestionModel;
 
