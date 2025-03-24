@@ -3,6 +3,7 @@ package Server.controller;
  * Sends leaderboard files
  */
 
+import Redundant.XMLStorageController;
 import utility.LeaderboardEntryModel;
 
 import java.util.List;

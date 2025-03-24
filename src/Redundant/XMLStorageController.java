@@ -1,4 +1,4 @@
-package Server.controller;
+package Redundant;
 /**
  * Manages xml files
  */
