@@ -11,3 +11,24 @@ PlayerLoginController: Username entered: 123414
 [2025-03-24 22:52:34] User logged in: TRUMAN
 [2025-03-24 22:58:34] User logged in: SAMPLEUSER2
 [2025-03-24 22:58:34] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:00:52] User logged in: SAMPLEUSER2
+[2025-03-24 23:00:52] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:03:41] User logged in: SAMPLEUSER2
+[2025-03-24 23:03:41] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:37:07] User logged in: SAMPLEUSER2
+[2025-03-24 23:37:07] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:37:08] Admin dashboard loaded with 9 players
+[2025-03-24 23:37:28] Admin navigated to: Question Management
+[2025-03-24 23:38:44] User logged in: SAMPLEUSER2
+[2025-03-24 23:38:44] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:38:44] Admin dashboard loaded with 9 players
+[2025-03-24 23:39:24] User logged in: SAMPLEUSER2
+[2025-03-24 23:39:24] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:39:24] Admin dashboard loaded with 9 players
+[2025-03-24 23:40:57] User logged in: SAMPLEUSER2
+[2025-03-24 23:40:57] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:40:57] Admin dashboard loaded with 9 players
+[2025-03-24 23:42:18] User logged in: SAMPLEUSER2
+[2025-03-24 23:42:18] Admin SAMPLEUSER2 logged in
+[2025-03-24 23:42:18] Admin dashboard loaded with 9 players
+[2025-03-24 23:42:22] Admin navigated to: Login

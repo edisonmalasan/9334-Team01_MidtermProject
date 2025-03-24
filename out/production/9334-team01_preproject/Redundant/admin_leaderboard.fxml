@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.madeByDannievicForReference.AdminLeaderboardControllerClient">
+    <children>
+        <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
+
+        <HBox layoutX="89.0" layoutY="167.0" prefHeight="411.0" prefWidth="846.0">
+            <children>
+                <TableView fx:id="classicTable" prefHeight="530.0" prefWidth="430.0">
+                    <columns>
+                        <TableColumn fx:id="classicRank" prefWidth="75.0" text="Rank" />
+                        <TableColumn fx:id="classicUsername" prefWidth="176.0" text="Username" />
+                        <TableColumn fx:id="classicScore" minWidth="0.0" prefWidth="124.5" text="Score" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="endlessTable" prefHeight="530.0" prefWidth="430.0">
+                    <columns>
+                        <TableColumn fx:id="endlessRank" prefWidth="75.0" text="Rank" />
+                        <TableColumn fx:id="endlessUsername" prefWidth="176.0" text="Username" />
+                        <TableColumn fx:id="endlessScore" minWidth="0.0" prefWidth="124.5" text="Score" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+
+        <Button text="Delete Entry" layoutX="450.0" layoutY="600.0" fx:id="deleteButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightcoral; -fx-text-fill: black;"/>
+
+        <HBox layoutX="89.0" layoutY="93.0" prefHeight="74.0" prefWidth="846.0">
+            <children>
+                <Pane fx:id="leaderboardTopPaneClassic" prefHeight="100.0" prefWidth="423.0">
+                    <children>
+                        <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/CLASSIC (1).png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="classicSearchBox" layoutX="260.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
+                    </children>
+                </Pane>
+                <Pane fx:id="leaderboardTopPaneEndless" prefHeight="74.0" prefWidth="424.0">
+                    <children>
+                        <TextField fx:id="endlessSearchBox" layoutX="261.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
+                        <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../resources/images/ENDLESS (1).png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
