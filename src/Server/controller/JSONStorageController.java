@@ -47,10 +47,10 @@ public class JSONStorageController {
     /**
      * Saves the list of leaderboard entries to the JSON file
      */
-    public static void saveLeaderboardToJSON(String filename, List<LeaderboardEntryModel> leaderboard) {
-        try (Writer writer = new FileWriter(filename)) {
-            gson.toJson(leaderboard, writer);
-            logger.info("JSONStorageController: Leaderboard successfully saved to " + filename);
+    public static void saveLeaderboardToJSON(List<LeaderboardEntryModel> leaderboardList) {
+        try (Writer writer = new FileWriter(playerFileName)) {
+            gson.toJson(leaderboardList, writer);
+            logger.info("JSONStorageController: Leaderboard successfully saved to " + playerFileName);
         } catch (IOException e) {
             logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
         }

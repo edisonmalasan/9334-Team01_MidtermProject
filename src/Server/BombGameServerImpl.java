@@ -174,8 +174,6 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 return new Response(false, "Received null leaderboard entry data.", null);
             }
 
-
-            fileName = "data/classic_leaderboard.xml";
             List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
             for (LeaderboardEntryModel entry : leaderboard) {
@@ -185,7 +183,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                     break;
                 }
             }
-            JSONStorageController.saveLeaderboardToJSON(fileName, leaderboard);
+            JSONStorageController.saveLeaderboardToJSON(leaderboard);
             logger.info("Leaderboard updated successfully.");
             return new Response(true, "Leaderboard updated successfully.", null);
         } catch (Exception e) {
