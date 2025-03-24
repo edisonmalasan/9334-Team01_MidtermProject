@@ -56,12 +56,12 @@ public class JSONStorageController {
         }
     }
 
-    public static List<PlayerModel> loadPlayersFromJSON(String fileName) {
+    public static List<PlayerModel> loadPlayersFromJSON() {
         List<PlayerModel> playerList = new ArrayList<>();
-        try (Reader reader = new FileReader(fileName)) {
+        try (Reader reader = new FileReader(playerFileName)) {
             Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
             playerList = gson.fromJson(reader, playerListType);
-            logger.info("JSONStorageController: Players list loaded successfully from " + fileName);
+            logger.info("JSONStorageController: Players list loaded successfully from " + playerFileName);
         } catch (FileNotFoundException e) {
             logger.warning("JSONStorageController: Players file not found, returning empty list.");
         } catch (IOException e) {
@@ -69,12 +69,12 @@ public class JSONStorageController {
         }
         return playerList;
     }
-    public static void savePlayerToJSON(String fileName, PlayerModel player) {
-        List<PlayerModel> playerList = loadPlayersFromJSON(fileName);
-        try (Writer writer = new FileWriter(fileName)) {
+    public static void savePlayerToJSON(PlayerModel player) {
+        List<PlayerModel> playerList = loadPlayersFromJSON();
+        try (Writer writer = new FileWriter(playerFileName)) {
             playerList.add(player);
             gson.toJson(playerList, writer);
-            logger.info("JSONStorageController: Player successfully saved to " + fileName);
+            logger.info("JSONStorageController: Player successfully saved to " + playerFileName);
         } catch (IOException e) {
             logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
         }
@@ -103,15 +103,11 @@ public class JSONStorageController {
         }
     }
     public static void updatePlayerScore(PlayerModel newPlayer) {
-        List<PlayerModel> playerList = new ArrayList<>();
-        try (Reader reader = new FileReader(playerFileName);
-             Writer writer = new FileWriter(playerFileName)) {
-            Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
-            playerList = gson.fromJson(reader, playerListType);
-            reader.close();
+        List<PlayerModel> playerList = loadPlayersFromJSON();
+        try (Writer writer = new FileWriter(playerFileName)) {
 
             for (PlayerModel player : playerList) {
-                if (player.equals(newPlayer)) {
+                if (player.getUsername().equals(newPlayer.getUsername())) {
                     player.setClassicScore(newPlayer.getClassicScore());
                     player.setEndlessScore(newPlayer.getEndlessScore());
                 }
