@@ -203,14 +203,20 @@ public abstract class GameController {
                 String playerPassword = LoginController.getCurrentUser().getPassword();
                 int classicScore = 0;
                 int endlessScore = 0;
+                boolean hasPlayedClassic = false;
+                boolean hasPlayedEndless = false;
+                String gameMode = "Classic";
 
                 if (checkMode) {
+                    hasPlayedEndless = true;
                     endlessScore = score;
+                    gameMode = "Endless";
                 } else {
                     classicScore = score;
+                    hasPlayedClassic = true;
                 }
 
-                PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore, true);
+                PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore, hasPlayedClassic, hasPlayedEndless);
                 Response response = ClientConnection.bombGameServer.updatePlayerScore(player);
 
                 if (response.isSuccess()) {

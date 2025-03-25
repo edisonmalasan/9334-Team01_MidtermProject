@@ -71,7 +71,7 @@
 }
 
 .exitBttn:hover {
-    -fx-background-image: url("./images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: 133px 53px;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
@@ -79,7 +79,7 @@
     -fx-font-family: "Space Nova";
     -fx-background-color: transparent;
     -fx-font-size: 15px;
-    -fx-text-fill: white;
+    -fx-text-fill: gray;
 }
 
 .exitBttn:pressed {

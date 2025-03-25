@@ -12,15 +12,18 @@ public class PlayerModel implements Serializable {
     private String role;
     private int classicScore;
     private int endlessScore;
-    private boolean hasPlayed;
+    private boolean hasPlayedClassic;
+    private boolean hasPlayedEndless;
 
-    public PlayerModel(String username, String password, String role, int classicScore, int endlessScore, boolean hasPlayed) {
+    public PlayerModel(String username, String password, String role, int classicScore, int endlessScore,
+                       boolean hasPlayedClassic, boolean hasPlayedEndless) {
         this.username = username;
         this.password = password;
         this.role = role;
         this.classicScore = classicScore;
         this.endlessScore = endlessScore;
-        this.hasPlayed = hasPlayed;
+        this.hasPlayedClassic = hasPlayedClassic;
+        this.hasPlayedEndless = hasPlayedEndless;
     }
 
     public String getUsername() {
@@ -61,11 +64,17 @@ public class PlayerModel implements Serializable {
     public void setEndlessScore(int endlessScore) {
         this.endlessScore = endlessScore;
     }
-    public void setHasPlayed(boolean hasPlayed) {
-        this.hasPlayed = hasPlayed;
+    public void setHasPlayedClassic(boolean hasPlayedClassic) {
+        this.hasPlayedClassic = hasPlayedClassic;
     }
-    public boolean getHasPlayed() {
-        return hasPlayed;
+    public boolean getHasPlayedClassic() {
+        return hasPlayedClassic;
+    }
+    public void setHasPlayedEndless(boolean hasPlayedEndless) {
+        this.hasPlayedEndless = hasPlayedEndless;
+    }
+    public boolean getHasPlayedEndless() {
+        return hasPlayedEndless;
     }
 
     @Override
@@ -76,13 +85,15 @@ public class PlayerModel implements Serializable {
                 ", role='" + role + '\'' +
                 ", classicScore=" + classicScore +
                 ", endlessScore=" + endlessScore +
-                ", hasPlayed=" + hasPlayed +
+                ", hasPlayedClassic=" + hasPlayedClassic +
+                ", hasPlayedClassic=" + hasPlayedClassic +
                 '}';
     }
 
     public boolean equals(PlayerModel other) {
         return Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password)
                 && Objects.equals(this.role, other.role) && this.classicScore == other.classicScore
-                && this.endlessScore == other.endlessScore && this.hasPlayed == other.hasPlayed;
+                && this.endlessScore == other.endlessScore && this.hasPlayedClassic == other.hasPlayedClassic
+                && this.hasPlayedEndless == other.hasPlayedEndless;
     }
 }

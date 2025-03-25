@@ -5,7 +5,8 @@
     "role": "PLAYER",
     "classicScore": 15,
     "endlessScore": 5,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "SAMPLEUSER2",
@@ -13,7 +14,8 @@
     "role": "ADMIN",
     "classicScore": 30,
     "endlessScore": 10,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "SAMPLEUSER3",
@@ -21,7 +23,8 @@
     "role": "PLAYER",
     "classicScore": 25,
     "endlessScore": 12,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "SAMPLEUSER4",
@@ -29,7 +32,8 @@
     "role": "PLAYER",
     "classicScore": 50,
     "endlessScore": 20,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "SAMPLEUSER5",
@@ -37,7 +41,8 @@
     "role": "ADMIN",
     "classicScore": 75,
     "endlessScore": 30,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "Eds",
@@ -45,7 +50,8 @@
     "role": "ADMIN",
     "classicScore": 0,
     "endlessScore": 0,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": true
   },
   {
     "username": "Yuen",
@@ -53,7 +59,8 @@
     "role": "ADMIN",
     "classicScore": 0,
     "endlessScore": 0,
-    "hasPlayed": false
+    "hasPlayedClassic": false,
+    "hasPlayedEndless": true
   },
   {
     "username": "EDISON",
@@ -61,7 +68,8 @@
     "role": "PLAYER",
     "classicScore": 0,
     "endlessScore": 0,
-    "hasPlayed": false
+    "hasPlayedClassic": false,
+    "hasPlayedEndless": false
   },
   {
     "username": "IAMNEGA",
@@ -69,6 +77,7 @@
     "role": "PLAYER",
     "classicScore": 2,
     "endlessScore": 0,
-    "hasPlayed": true
+    "hasPlayedClassic": true,
+    "hasPlayedEndless": false
   }
 ]

@@ -104,9 +104,15 @@ public class JSONStorageController {
         try (Writer writer = new FileWriter(playerFileName)) {
             for (PlayerModel player : playerList) {
                 if (player.getUsername().equals(newPlayer.getUsername())) {
+                    if (!player.getHasPlayedClassic() && newPlayer.getHasPlayedClassic()) {
+                        player.setHasPlayedClassic(true);
+                    }
+                    if (!player.getHasPlayedEndless() && newPlayer.getHasPlayedEndless()) {
+                        player.setHasPlayedEndless(true);
+                    }
                     player.setClassicScore(newPlayer.getClassicScore());
                     player.setEndlessScore(newPlayer.getEndlessScore());
-                    player.setHasPlayed(true);
+                    break;
                 }
             }
 

@@ -54,7 +54,6 @@ public class MainMenuController {
             }
         }
 
-        // Clear local session
         ClientSession.clear();
 
         switchScene(event, "/views/client/login.fxml", "Login - Bomb Defusing Game");

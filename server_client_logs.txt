@@ -276,3 +276,71 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 17:48:05] Admin dashboard loaded with 9 players
 [2025-03-25 17:48:05] Admin dashboard loaded with 9 players
 [2025-03-25 17:48:08] Admin navigated to: Login
+[2025-03-25 17:50:18] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:50:29] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 17:50:29] Admin Eds logged in
+[2025-03-25 17:50:29] Admin dashboard loaded with 9 players
+[2025-03-25 17:50:29] Admin dashboard loaded with 9 players
+[2025-03-25 17:50:32] Admin navigated to: Player Management
+[2025-03-25 17:50:39] Admin dashboard loaded with 9 players
+[2025-03-25 17:50:39] Admin dashboard loaded with 9 players
+[2025-03-25 17:50:40] Admin navigated to: Question Management
+[2025-03-25 17:50:41] Admin dashboard loaded with 9 players
+[2025-03-25 17:50:41] Admin dashboard loaded with 9 players
+[2025-03-25 17:51:27] Admin navigated to: Player Management
+[2025-03-25 17:51:28] Admin dashboard loaded with 9 players
+[2025-03-25 17:51:28] Admin dashboard loaded with 9 players
+[2025-03-25 17:51:29] Admin navigated to: Question Management
+[2025-03-25 17:51:30] Admin dashboard loaded with 9 players
+[2025-03-25 17:51:30] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:20] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 18:01:24] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 18:01:24] Admin Eds logged in
+[2025-03-25 18:01:24] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:24] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:26] Admin navigated to: Question Management
+[2025-03-25 18:01:27] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:27] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:27] Admin navigated to: Question Management
+[2025-03-25 18:01:29] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:29] Admin dashboard loaded with 9 players
+[2025-03-25 18:01:29] Admin navigated to: Question Management
+[2025-03-25 18:02:57] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 18:03:05] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 18:03:05] Admin Eds logged in
+[2025-03-25 18:03:05] Admin dashboard loaded with 9 players
+[2025-03-25 18:03:05] Admin dashboard loaded with 9 players
+[2025-03-25 18:03:06] Admin navigated to: Question Management
+[2025-03-25 18:05:31] Admin dashboard loaded with 9 players
+[2025-03-25 18:05:31] Admin dashboard loaded with 9 players
+[2025-03-25 18:05:38] Admin navigated to: Player Management
+[2025-03-25 18:05:41] Admin dashboard loaded with 9 players
+[2025-03-25 18:05:41] Admin dashboard loaded with 9 players
+[2025-03-25 18:06:27] Admin navigated to: Player Management
+[2025-03-25 18:06:29] Admin dashboard loaded with 9 players
+[2025-03-25 18:06:29] Admin dashboard loaded with 9 players
+[2025-03-25 18:06:35] Admin navigated to: Player Management
+[2025-03-25 18:06:36] Admin dashboard loaded with 9 players
+[2025-03-25 18:06:36] Admin dashboard loaded with 9 players
+[2025-03-25 18:08:37] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 18:08:42] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 18:08:42] Admin Eds logged in
+[2025-03-25 18:08:42] Admin dashboard loaded with 9 players
+[2025-03-25 18:08:42] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:01] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 18:09:07] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 18:09:07] Admin Eds logged in
+[2025-03-25 18:09:07] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:07] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:11] Admin navigated to: Question Management
+[2025-03-25 18:09:14] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:14] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:14] Admin navigated to: Player Management
+[2025-03-25 18:09:16] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:16] Admin dashboard loaded with 9 players
+[2025-03-25 18:09:17] Admin navigated to: Question Management
