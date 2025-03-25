@@ -1,6 +1,7 @@
 package Client.common.connection;
 import common.Log.AnsiFormatter;
 import common.Log.LoggerSetup;
+import common.Protocol;
 import exception.ConnectionException;
 import utility.BombGameServer;
 
@@ -13,20 +14,9 @@ import java.util.logging.Logger;
 public class ClientConnection {
     private static ClientConnection instance;
     public static BombGameServer bombGameServer;
-    public static String fetchIPAddress;
+    public static String iPAddress = Protocol.IP_ADDRESS;
 
     private static final Logger logger = LoggerSetup.setupLogger("ClientLogger", System.getProperty("user.dir") + "/src/Client/Log/client.log");
-
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-        try {
-            fetchIPAddress = InetAddress.getLocalHost().getHostAddress();
-            logger.info("Detected IP Address: " + fetchIPAddress);
-        } catch (IOException e) {
-            logger.warning("Failed to detect local IP.");
-            fetchIPAddress = "127.0.0.1"; // make ip address default
-        }
-    }
 
     private ClientConnection() throws ConnectionException {
         try {
@@ -34,7 +24,7 @@ public class ClientConnection {
 
             while (true) {
                 try {
-                    Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
+                    Registry registry = LocateRegistry.getRegistry(iPAddress, 1099);
                     bombGameServer = (BombGameServer) registry.lookup("server");
                     break;
                 } catch (Exception e) {
@@ -66,7 +56,7 @@ public class ClientConnection {
     public void connect() {
         if (bombGameServer == null) {
             try {
-                Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
+                Registry registry = LocateRegistry.getRegistry(iPAddress, 1099);
                 bombGameServer = (BombGameServer) registry.lookup("server");
                 logger.info("✅ Client successfully connected to the server.");
             } catch (Exception e) {

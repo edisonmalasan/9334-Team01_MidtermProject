@@ -81,7 +81,7 @@ public class LoginController {
                 currentUser = authenticatedUser;
 
                 // send log to server
-                String logMessage = "Log In: " + currentUser.getUsername() + " | IP: " + App.fetchIPAddress;
+                String logMessage = "Log In: " + currentUser.getUsername() + " | IP: " + App.iPAddress;
                 ClientConnection.bombGameServer.logMessage(logMessage);
 
                 if ("ADMIN".equalsIgnoreCase(currentUser.getRole())) {
