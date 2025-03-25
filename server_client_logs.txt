@@ -172,9 +172,33 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 16:56:33] Admin dashboard loaded with 7 players
 [2025-03-25 16:56:33] Admin dashboard loaded with 7 players
 [2025-03-25 16:56:35] Admin navigated to: Question Management
-[2025-03-25 16:59:55] New RMI registry created on port 1099.
-[2025-03-25 16:59:55] Server started successfully on port 1099.
-[2025-03-25 16:59:59] Server stopped successfully.
-[2025-03-25 17:01:44] Admin dashboard loaded with 7 players
-[2025-03-25 17:02:31] Admin dashboard loaded with 7 players
-[2025-03-25 17:02:31] Warning: bombGameServer is null. Skipping logMessage.
+[2025-03-25 17:00:16] Admin dashboard loaded with 7 players
+[2025-03-25 17:00:16] Admin dashboard loaded with 7 players
+[2025-03-25 17:00:17] Admin navigated to: Player Management
+[2025-03-25 17:00:52] Admin dashboard loaded with 7 players
+[2025-03-25 17:00:52] Admin dashboard loaded with 7 players
+[2025-03-25 17:00:54] Admin navigated to: Player Management
+[2025-03-25 17:00:55] Admin dashboard loaded with 7 players
+[2025-03-25 17:00:55] Admin dashboard loaded with 7 players
+[2025-03-25 17:02:39] Admin navigated to: Player Management
+[2025-03-25 17:04:50] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:05:00] Log In: SAMPLEUSER5 | IP: 192.168.0.105
+[2025-03-25 17:05:00] Admin SAMPLEUSER5 logged in
+[2025-03-25 17:05:00] Admin dashboard loaded with 7 players
+[2025-03-25 17:05:00] Admin dashboard loaded with 7 players
+[2025-03-25 17:05:02] Admin navigated to: Player Management
+[2025-03-25 17:05:04] Admin dashboard loaded with 7 players
+[2025-03-25 17:05:04] Admin dashboard loaded with 7 players
+[2025-03-25 17:05:04] Admin navigated to: Question Management
+[2025-03-25 17:07:05] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:07:25] New RMI registry created on port 1099.
+[2025-03-25 17:07:25] Server started successfully on port 1099.
+[2025-03-25 17:07:30] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:07:36] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 17:07:36] Admin Eds logged in
+[2025-03-25 17:07:36] Admin dashboard loaded with 8 players
+[2025-03-25 17:07:36] Admin dashboard loaded with 8 players
+[2025-03-25 17:07:39] Admin navigated to: Player Management

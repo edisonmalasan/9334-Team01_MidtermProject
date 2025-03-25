@@ -70,14 +70,31 @@ public class AdminDashboardController {
         }
     }
 
+//    private JSONArray readPlayersFile() throws IOException {
+//        File file = new File(USERS_JSON_PATH);
+//        if (!file.exists()) {
+//            return new JSONArray();
+//        }
+//
+//        try (FileReader reader = new FileReader(file)) {
+//            return new JSONArray(new JSONTokener(reader));
+//        }
+//    }
+
     private JSONArray readPlayersFile() throws IOException {
         File file = new File(USERS_JSON_PATH);
+
         if (!file.exists()) {
             return new JSONArray();
         }
 
         try (FileReader reader = new FileReader(file)) {
-            return new JSONArray(new JSONTokener(reader));
+            JSONArray playersArray = new JSONArray(new JSONTokener(reader));
+            System.out.println("Loaded " + playersArray.length() + " players from JSON.");
+            return playersArray;
+        } catch (Exception e) {
+            System.out.println("Error reading players.json - " + e.getMessage());
+            return new JSONArray();
         }
     }
 
