@@ -18,12 +18,13 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import common.Protocol;
 
 public class App extends Application {
     private static final Logger logger = Logger.getLogger(App.class.getName());
     public static BombGameServer bombGameServer;
 
-    public static String fetchIPAddress;
+    public static String fetchIPAddress; // for logs
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -43,7 +44,7 @@ public class App extends Application {
 
                 while (true) {
                     try {
-                        Registry registry = LocateRegistry.getRegistry(fetchIPAddress, 1099);
+                        Registry registry = LocateRegistry.getRegistry(Protocol.IP_ADDRESS, Protocol.PORT_NUMBER);
                         bombGameServer = (BombGameServer) registry.lookup("server");
                         break;
                     } catch (Exception e) {
