@@ -16,7 +16,7 @@
             <Button fx:id="loginButton" layoutX="103.0" layoutY="248.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: transparent;" text="LOGIN" />
             <TextField fx:id="usernameField" layoutX="33.0" layoutY="68.0" prefHeight="50.0" prefWidth="306.0" promptText="Enter Username..." />
             <PasswordField fx:id="passwordField" layoutX="33.0" layoutY="156.0" prefHeight="50.0" prefWidth="306.0" promptText="Enter Password..." />
-            <Label fx:id="errorLabel" layoutX="33.0" layoutY="220.0" prefHeight="17.0" prefWidth="306.0" style="-fx-font-size: 12; -fx-font-family: 'Roboto Mono'; -fx-font-weight: bold;" />
+            <Label fx:id="errorLabel" layoutX="33.0" layoutY="220.0" prefHeight="17.0" prefWidth="306.0" style="-fx-font-size: 12; -fx-font-family: 'Roboto Mono'; -fx-font-weight: bold; -fx-text-fill: red;" />
             <Hyperlink fx:id="registerLink" layoutX="81.0" layoutY="307.0" text="Don't have an account? Register Here" />
          </children>
       </Pane>

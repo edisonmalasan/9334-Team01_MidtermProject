@@ -32,3 +32,9 @@ PlayerLoginController: Username entered: 123414
 [2025-03-24 23:42:18] Admin SAMPLEUSER2 logged in
 [2025-03-24 23:42:18] Admin dashboard loaded with 9 players
 [2025-03-24 23:42:22] Admin navigated to: Login
+[2025-03-25 07:42:48] ERROR: Invalid username or password!
+[2025-03-25 07:42:52] ERROR: Username or Password cannot be empty!
+[2025-03-25 07:51:59] ERROR: Invalid username or password!
+[2025-03-25 07:53:01] ERROR: Invalid username or password!
+[2025-03-25 07:54:03] ERROR: Invalid username or password!
+[2025-03-25 07:55:39] ERROR: Invalid username or password!

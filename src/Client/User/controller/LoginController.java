@@ -108,6 +108,7 @@ public class LoginController {
                 }
             } else {
                 handleException(new InvalidCredentialsException("Invalid username or password!"));
+                errorLabel.setText("\"Invalid username or password!\"");
             }
         } catch (IOException e) {
             handleException(new InvalidCredentialsException("Login failed. Please try again later."));
@@ -120,6 +121,7 @@ public class LoginController {
         Platform.runLater(() -> {
             usernameField.clear();
             usernameField.requestFocus();
+            passwordField.clear();
             errorLabel.setText(e.getMessage());
         });
     }
