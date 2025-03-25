@@ -84,8 +84,15 @@ public class AdminPlayersController {
         alert.setHeaderText("List Saved");
         alert.setContentText("The list has been successfully saved.");
         alert.showAndWait();
+        try {
+            Response response = ClientConnection.bombGameServer.updatePlayerList(playerTable.getItems().stream().toList());
+            if (response.isSuccess()) {
+                System.out.println(response.getMessage());
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-        // Add saving logic here (e.g., persist changes to a database or file)
     }
     private List<PlayerModel> getPlayerList() {
         List<PlayerModel> allPlayers = new ArrayList<>();
