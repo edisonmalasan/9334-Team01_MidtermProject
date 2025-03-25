@@ -1,5 +1,6 @@
 package Server.view;
 
+import common.Log.LogManager;
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,6 +14,10 @@ public class ServerView extends JFrame {
         setupTopPanel();
         setupLogArea();
         setupBottomPanel();
+
+        LogManager.getInstance().setLogArea(logArea);
+
+        clearLogButton.addActionListener(e -> clearLog());
     }
 
     private void setupFrame() {
@@ -52,15 +57,9 @@ public class ServerView extends JFrame {
         logArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         logArea.setFont(new Font("Monospaced", Font.BOLD, 14));
 
-        JPanel logPanel = new JPanel(new BorderLayout());
-        logPanel.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));
-        logPanel.add(logArea, BorderLayout.CENTER);
-
-        scrollPane = new JScrollPane(logPanel);
-
+        scrollPane = new JScrollPane(logArea);
         add(scrollPane, BorderLayout.CENTER);
     }
-
 
     private void setupBottomPanel() {
         JPanel bottomPanel = new JPanel();
@@ -96,19 +95,7 @@ public class ServerView extends JFrame {
         return logArea;
     }
 
-    // Log handling methods
-    public void appendToLog(String message) {
-        logArea.append(message);
-    }
-
     public void clearLog() {
-        logArea.setText("");
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            ServerView serverView = new ServerView();
-            serverView.setVisible(true);
-        });
+        SwingUtilities.invokeLater(() -> logArea.setText(""));
     }
 }

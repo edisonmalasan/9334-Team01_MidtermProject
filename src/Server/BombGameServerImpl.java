@@ -11,7 +11,8 @@ import common.Log.AnsiFormatter;
 import common.Response;
 import common.model.QuestionModel;
 import utility.BombGameServer;
-
+import common.Log.LogManager;
+import Server.view.ServerView;
 import java.io.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -20,7 +21,7 @@ import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
 
-    private String fileName;
+    private ServerView serverView;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
@@ -29,8 +30,10 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
-    public BombGameServerImpl() throws RemoteException {
+    public BombGameServerImpl(ServerView view) throws RemoteException {
+        this.serverView = view;
         playerList = JSONStorageController.loadPlayersFromJSON();
+
     }
 
     @Override
@@ -66,6 +69,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
         }
     }
+
     // Method for populating and arranging list for leaderboards
     private List<LeaderboardEntryModel> getLeaderboardEntries(String leaderboardType) {
         List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
@@ -239,5 +243,10 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error registering player: " + e.getMessage());
         }
+    }
+
+    @Override
+    public void logMessage(String message) throws RemoteException {
+        LogManager.getInstance().appendLog(message);
     }
 }
