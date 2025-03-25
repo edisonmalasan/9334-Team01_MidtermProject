@@ -17,6 +17,7 @@ import java.io.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
@@ -28,6 +29,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private List<PlayerModel> playerList = new ArrayList<>();
     private final Lock lock = new ReentrantLock();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
+    private final Set<String> activePlayers = ConcurrentHashMap.newKeySet();
     private Gson gson = new Gson();
 
     static {
@@ -300,6 +302,16 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             LogManager.getInstance().appendLog(message);
         } finally {
             lock.unlock();
+        }
+    }
+
+    @Override
+    public void logoutPlayer(String username) throws RemoteException {
+        if (activePlayers.contains(username)) {
+            activePlayers.remove(username);
+            logMessage("Player '" + username + "' has logged out.");
+        } else {
+            logMessage("Warning: Player '" + username + "' tried to log out but was not logged in.");
         }
     }
 }
