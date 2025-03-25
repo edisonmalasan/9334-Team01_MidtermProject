@@ -12,7 +12,7 @@ public class ServerController {
     private ServerView view;
     private Registry registry;
     private boolean isServerRunning = false;
-    private LogManager logger = LogManager.getInstance();
+    private LogManager logManager = LogManager.getInstance();
 
     public ServerController(ServerView view) {
         this.view = view;
@@ -28,7 +28,7 @@ public class ServerController {
 
     private void startServer() {
         if (isServerRunning) {
-            logger.appendLog("Server is already running.");
+            logManager.appendLog("Server is already running.");
             return;
         }
 
@@ -39,24 +39,24 @@ public class ServerController {
                 registry = LocateRegistry.createRegistry(1099);
                 registry.rebind("server", server);
                 isServerRunning = true;
-                logger.appendLog("New RMI registry created on port 1099.");
+                logManager.appendLog("New RMI registry created on port 1099.");
             } catch (Exception e) {
-                logger.appendLog("RMI registry already exists. Connecting...");
+                logManager.appendLog("RMI registry already exists. Connecting...");
                 registry = LocateRegistry.getRegistry(1099);
                 registry.rebind("server", server);
                 isServerRunning = true;
             }
 
-            logger.appendLog("Server started successfully on port 1099.");
+            logManager.appendLog("Server started successfully on port 1099.");
         } catch (Exception e) {
-            logger.appendLog("Failed to start server: " + e.getMessage());
+            logManager.appendLog("Failed to start server: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private void stopServer() {
         if (!isServerRunning) {
-            logger.appendLog("Server is not running.");
+            logManager.appendLog("Server is not running.");
             return;
         }
 
@@ -64,15 +64,15 @@ public class ServerController {
             registry.unbind("server");
             UnicastRemoteObject.unexportObject(registry, true);
             isServerRunning = false;
-            logger.appendLog("Server stopped successfully.");
+            logManager.appendLog("Server stopped successfully.");
         } catch (Exception e) {
-            logger.appendLog("Error stopping the server: " + e.getMessage());
+            logManager.appendLog("Error stopping the server: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private void restartServer() {
-        logger.appendLog("Restarting server...");
+        logManager.appendLog("Restarting server...");
         stopServer();
         startServer();
     }

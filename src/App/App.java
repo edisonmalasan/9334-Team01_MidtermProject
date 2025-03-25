@@ -1,7 +1,8 @@
 package App;
 
-import common.Log.AnsiFormatter;
+import Client.common.connection.ClientConnection;
 import Client.Player.utils.SoundUtility;
+import common.Log.LogManager;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -11,24 +12,16 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import utility.BombGameServer;
-
 import java.io.IOException;
 import java.net.InetAddress;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import common.Protocol;
 
 public class App extends Application {
-    private static final Logger logger = Logger.getLogger(App.class.getName());
     public static BombGameServer bombGameServer;
-
     public static String fetchIPAddress; // for logs
-
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-    }
+    private final LogManager logManager = LogManager.getInstance();
 
     public static void main(String[] args) {
         launch(args);
@@ -39,26 +32,25 @@ public class App extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
             Parent root = fxmlLoader.load();
-            //test
             SoundUtility.playBackgroundMusic();
 
-                while (true) {
-                    try {
-                        Registry registry = LocateRegistry.getRegistry(Protocol.IP_ADDRESS, Protocol.PORT_NUMBER);
-                        bombGameServer = (BombGameServer) registry.lookup("server");
-                        break;
-                    } catch (Exception e) {
-                        logger.warning("⚠ Server is not running. The client will continue in offline mode.");
-                        logger.warning("⚠ Connection failed. Retrying in 5 seconds...");
+            while (true) {
+                try {
+                    Registry registry = LocateRegistry.getRegistry(Protocol.IP_ADDRESS, Protocol.PORT_NUMBER);
+                    bombGameServer = (BombGameServer) registry.lookup("server");
+                    break;
+                } catch (Exception e) {
+                    logManager.appendLog("⚠ Server is not running. The client will continue in offline mode.");
+                    logManager.appendLog("⚠ Connection failed. Retrying in 5 seconds...");
 
-                        try {
-                            Thread.sleep(5000);  // Retry after 5 seconds
-                        } catch (InterruptedException interruptedException) {
-                            interruptedException.printStackTrace();
-                        }
+                    try {
+                        Thread.sleep(5000);  // Retry after 5 seconds
+                    } catch (InterruptedException interruptedException) {
+                        interruptedException.printStackTrace();
                     }
                 }
-            logger.info("\nClientConnection: Connected to server successfully!");
+            }
+            ClientConnection.bombGameServer.logMessage("\nClientConnection: Connected to server successfully!");
 
             primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/images/bomb_mad.png")));
 
@@ -71,10 +63,9 @@ public class App extends Application {
                 System.out.println("Closing application...");
                 Platform.exit();
                 System.exit(0);
-                });
-
+            });
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "❌ Failed to load FXML: login.fxml", e);
+            ClientConnection.bombGameServer.logMessage("❌ Failed to load FXML: login.fxml " + e.getMessage());
             throw new FXMLLoadingException("login.fxml", e);
         }
     }
@@ -82,10 +73,8 @@ public class App extends Application {
     static {
         try {
             fetchIPAddress = InetAddress.getLocalHost().getHostAddress();
-            logger.info("Detected IP Address: " + fetchIPAddress);
         } catch (IOException e) {
-            logger.warning("Failed to detect local IP.");
-            fetchIPAddress = "127.0.0.1"; // make ip address default
+            fetchIPAddress = "127.0.0.1"; // Default IP address
         }
     }
 }

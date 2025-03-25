@@ -1,26 +1,31 @@
 package Server.controller;
+/**
+ * Manages JSON files
+ */
 
-import Client.common.connection.ClientConnection;
-import common.Log.LogManager;
 import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import common.model.PlayerModel;
+
+
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Manipulates JSON files
  */
 public class JSONStorageController {
-    private static final LogManager logManager = LogManager.getInstance();
+    private static final Logger logger = Logger.getLogger(JSONStorageController.class.getName());
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static String playerFileName = "data/players.json";
     private static String questionFileName = "data/questions.json";
+
 
     /**
      * Returns a list containing leaderboard entries
@@ -30,11 +35,11 @@ public class JSONStorageController {
         try (Reader reader = new FileReader(filename)) {
             Type leaderboardListType = new TypeToken<List<LeaderboardEntryModel>>() {}.getType();
             leaderboard = gson.fromJson(reader, leaderboardListType);
-            ClientConnection.bombGameServer.logMessage("Leaderboard loaded successfully from " + filename);
+            logger.info("JSONStorageController: Leaderboard loaded successfully from " + filename);
         } catch (FileNotFoundException e) {
-            logManager.appendLog("Leaderboard file not found, returning empty list.");
+            logger.warning("JSONStorageController: Leaderboard file not found, returning empty list.");
         } catch (IOException e) {
-            logManager.appendLog("Error loading leaderboard from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error loading leaderboard from JSON: " + e.getMessage());
         }
         return leaderboard;
     }
@@ -45,9 +50,9 @@ public class JSONStorageController {
     public static void saveLeaderboardToJSON(List<LeaderboardEntryModel> leaderboardList) {
         try (Writer writer = new FileWriter(playerFileName)) {
             gson.toJson(leaderboardList, writer);
-            ClientConnection.bombGameServer.logMessage("Leaderboard successfully saved to " + playerFileName);
+            logger.info("JSONStorageController: Leaderboard successfully saved to " + playerFileName);
         } catch (IOException e) {
-            logManager.appendLog("Error saving leaderboard to JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error saving leaderboard to JSON: " + e.getMessage());
         }
     }
 
@@ -56,21 +61,20 @@ public class JSONStorageController {
         try (Reader reader = new FileReader(playerFileName)) {
             Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
             playerList = gson.fromJson(reader, playerListType);
-            ClientConnection.bombGameServer.logMessage("Players list loaded successfully from " + playerFileName);
+            logger.info("JSONStorageController: Players list loaded successfully from " + playerFileName);
         } catch (FileNotFoundException e) {
-            logManager.appendLog("Players file not found, returning empty list.");
+            logger.warning("JSONStorageController: Players file not found, returning empty list.");
         } catch (IOException e) {
-            logManager.appendLog("Error loading leaderboard from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error loading leaderboard from JSON: " + e.getMessage());
         }
         return playerList;
     }
-
     public static void savePlayerListToJSON(List<PlayerModel> playerList) {
         try (Writer writer = new FileWriter(playerFileName)) {
             gson.toJson(playerList, writer);
-            ClientConnection.bombGameServer.logMessage("Player successfully saved to " + playerFileName);
+            logger.info("JSONStorageController: Player successfully saved to " + playerFileName);
         } catch (IOException e) {
-            logManager.appendLog("Error saving player to JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
         }
     }
 
@@ -89,14 +93,13 @@ public class JSONStorageController {
                     player.setPassword(password);
                 }
             }
-            ClientConnection.bombGameServer.logMessage("Player " + "["+ username +"]" + "password successfully changed ");
+            logger.info("JSONStorageController: Player password successfully changed from " + originalPassword + " to " + password);
         } catch (FileNotFoundException e) {
-            logManager.appendLog("Players file not found.");
+            logger.warning("JSONStorageController: Players file not found.");
         } catch (IOException e) {
-            logManager.appendLog("Error loading file from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
         }
     }
-
     public static void updatePlayerScore(List<PlayerModel> playerList, PlayerModel newPlayer) {
         try (Writer writer = new FileWriter(playerFileName)) {
             for (PlayerModel player : playerList) {
@@ -108,11 +111,11 @@ public class JSONStorageController {
             }
 
             gson.toJson(playerList, writer);
-            ClientConnection.bombGameServer.logMessage("Player score successfully updated for " + newPlayer.getUsername());
+            logger.info("JSONStorageController: Player score successfully updated for " + newPlayer.getUsername());
         } catch (FileNotFoundException e) {
-            logManager.appendLog("Players file not found.");
+            logger.warning("JSONStorageController: Players file not found.");
         } catch (IOException e) {
-            logManager.appendLog("Error loading file from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
         }
     }
 
@@ -121,11 +124,12 @@ public class JSONStorageController {
         try (Reader reader = new FileReader(questionFileName)) {
             Type questionModelType = new TypeToken<List<QuestionModel>>() {}.getType();
             questions = gson.fromJson(reader, questionModelType);
-            ClientConnection.bombGameServer.logMessage("Questions loaded successfully from " + questionFileName);
+
+            logger.info("JSONStorageController: Questions loaded successfully from " + questionFileName);
         } catch (FileNotFoundException e) {
-            logManager.appendLog("Questions file not found, returning empty list.");
+            logger.warning("JSONStorageController: Questions file not found, returning empty list.");
         } catch (IOException e) {
-            logManager.appendLog("Error loading questions from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error loading questions from JSON: " + e.getMessage());
         }
         return questions;
     }
@@ -133,9 +137,12 @@ public class JSONStorageController {
     public static void saveQuestionToJSON(List<QuestionModel> questionsList){
         try (Writer writer = new FileWriter(questionFileName)) {
             gson.toJson(questionsList, writer);
-            ClientConnection.bombGameServer.logMessage("Questions successfully saved to " + questionFileName);
+            logger.info("JSONStorageModel: Questions successfully saved to " + questionFileName);
         } catch (IOException e) {
-            logManager.appendLog("Error saving Questions to JSON: " + e.getMessage());
+            logger.severe("JSONStorageModel: Error saving Questions to JSON: " + e.getMessage());
+            e.printStackTrace();
         }
     }
+
 }
+
