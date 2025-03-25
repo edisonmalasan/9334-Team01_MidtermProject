@@ -77,7 +77,7 @@ public class RegisterController {
             ClientConnection.bombGameServer.register(username, password);
 
             // log registration to server view
-            String logMessage = "New Player Registered: " + username + " | IP: " + App.iPAddress;
+            String logMessage = "New Player Registered: " + username + " | IP: " + App.fetchIPAddress;
             ClientConnection.bombGameServer.logMessage(logMessage);
             logManager.appendLog(logMessage);
 
