@@ -1,6 +1,6 @@
 @font-face {
     -fx-font-family: "Space Nova";
-    src: url("fonts/RobotoMono-Bold.ttf");
+    src: url("../fonts/RobotoMono-Bold.ttf");
 }
 
 @font-face {
@@ -10,6 +10,12 @@
 
 .parent{
     -fx-background-color: #313131 !important;
+}
+
+.label {
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
 }
 
 /* Sidebar */
@@ -52,36 +58,32 @@
 }
 
 /* Exit Button */
-.exit {
-    -fx-background-image: url("../images/exit_bttn.png");
-    -fx-background-size: 146px 50px;
+.exitBttn {
+    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
-.exit:hover {
-    -fx-background-image: url("../images/exit_bttn.png");
-    -fx-background-size: 146px 50px;
+.exitBttn:hover {
+    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
-.exit:pressed {
-    -fx-background-image: url("../images/exit_bttn.png");
-    -fx-background-size: 146px 50px;
+.exitBttn:pressed {
+    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: #FFCC00;
 }
 
@@ -165,7 +167,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -176,7 +177,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: #FFCC00;
 }
 
@@ -187,7 +187,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -198,7 +197,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -209,7 +207,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: #FF9E9E;
 }
 
@@ -220,7 +217,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -231,7 +227,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -242,7 +237,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: #FF9E9E;
 }
 
@@ -253,7 +247,6 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
@@ -293,68 +286,62 @@
 
 /* View Button */
 .view {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
 .view:hover {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
 .view:pressed {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: #FFCC00;
 }
 
 .view2:pressed {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
 .view2 {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
 .view2:hover {
-    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-image: url("../images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 

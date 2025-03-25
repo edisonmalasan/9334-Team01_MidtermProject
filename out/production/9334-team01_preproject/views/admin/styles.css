@@ -12,13 +12,6 @@
     -fx-background-color: #313131 !important;
 }
 
-#adminDashboard .label {
-    -fx-font-family: "Roboto Mono";
-    -fx-font-size: 36px;
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-}
-
 /* Sidebar */
 .sidebar{
     -fx-background-color: #545454;
@@ -136,6 +129,8 @@
 }
 
 .table-view .column-header .label {
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 12px;
     -fx-text-fill: white;
 }
 
@@ -156,10 +151,16 @@
     -fx-border-width: 0 0 1 0;
 }
 
+.comboBox {
+    -fx-font-family: "Roboto Mono";
+    -fx-font-size: 12px;
+    -fx-text-fill: #FFCC00;
+}
+
 /* Buttons sa baba */
 .deleteBttn {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -170,7 +171,7 @@
 
 .deleteBttn:hover {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -181,18 +182,18 @@
 
 .deleteBttn:pressed {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
     -fx-background-color: transparent;
-    -fx-text-fill: #FFCC00;
+    -fx-text-fill: white;
 }
 
 .addCatBttn {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -203,7 +204,7 @@
 
 .addCatBttn:hover {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -214,7 +215,40 @@
 
 .addCatBttn:pressed {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.returnBttn {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 112px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.returnBttn:hover {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 112px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF9E9E;
+}
+
+.returnBttn:pressed {
+    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-size: 112px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -290,3 +324,38 @@
     -fx-background-color: transparent;
     -fx-text-fill: #FFCC00;
 }
+
+.view2:pressed {
+    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-size:216px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.view2 {
+    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-size:216px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.view2:hover {
+    -fx-background-image: url("../images/exit_bttn.png");
+    -fx-background-size:216px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+
