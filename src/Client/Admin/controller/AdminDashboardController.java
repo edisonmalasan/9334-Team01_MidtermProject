@@ -50,8 +50,8 @@ public class AdminDashboardController {
             int endlessPlayers = 0;
 
             for (PlayerModel player : playerList) {
-                if (player.getClassicScore() > 0) classicPlayers++;
-                if (player.getEndlessScore() > 0) endlessPlayers++;
+                if (player.getHasPlayedClassic()) classicPlayers++;
+                if (player.getHasPlayedEndless()) endlessPlayers++;
             }
 
             totalPlayersLabel.setText(String.valueOf(totalPlayers));
