@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -59,6 +60,7 @@ public class CategoryControllerAdmin {
 
         // Initial state setup
         saveBttn.setVisible(false);
+        setupCategoryViewButtons();
 
         // Set up event handlers
         setupEventHandlers();
@@ -85,6 +87,57 @@ public class CategoryControllerAdmin {
             exitBttn.setOnAction(e -> exitToDashboard());
         }
     }
+    private void setupCategoryViewButtons() {
+        // Loop through all panes in the GridPane
+        categoriesGrid.getChildren().forEach(node -> {
+            if (node instanceof Pane) {
+                Pane categoryPane = (Pane) node;
+                // Find the View button in each pane
+                categoryPane.getChildren().stream()
+                        .filter(child -> child instanceof Button && ((Button) child).getText().equals("View"))
+                        .findFirst()
+                        .ifPresent(button -> {
+                            Button viewButton = (Button) button;
+                            // Get the category name from the label
+                            String categoryName = categoryPane.getChildren().stream()
+                                    .filter(child -> child instanceof Label && ((Label) child).getStyleClass().contains("catTitle"))
+                                    .findFirst()
+                                    .map(label -> ((Label) label).getText())
+                                    .orElse("");
+
+                            // Set action for the View button
+                            viewButton.setOnAction(event -> openQuestionsView(categoryName));
+                        });
+            }
+        });
+    }
+
+    private void openQuestionsView(String categoryName) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/admin/admin_questions.fxml"));
+            Parent root = loader.load();
+
+            // Pass the category name to the questions controller if needed
+            QuestionControllerAdmin questionsController = loader.getController();
+            questionsController.setCategory(categoryName);
+
+            Stage stage = (Stage) adminCategories.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to load questions view", Alert.AlertType.ERROR);
+        }
+    }
+
+    private void showAlert(String title, String content, Alert.AlertType type) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
 
     private void toggleEditMode() {
         isEditing = !isEditing;
