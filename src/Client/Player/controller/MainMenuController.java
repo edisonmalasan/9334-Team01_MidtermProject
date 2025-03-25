@@ -29,7 +29,7 @@ public class MainMenuController {
     private Button leaderboardButton;
 
     @FXML
-    private Button quitButton;
+    private Button logoutButton;
 
     @FXML
     public void initialize() {
@@ -43,11 +43,12 @@ public class MainMenuController {
             switchToLeaderboard(actionEvent);
         });
 
-        quitButton.setOnAction(actionEvent -> {
-            logger.info("\nMainMenuController: Exiting application.");
-            System.exit(0);
+        logoutButton.setOnAction(actionEvent -> {
+            logger.info("\nBack to Login.");
+            switchToLogin(actionEvent);
         });
     }
+
 
     private void switchToModeMenu(ActionEvent event) {
         switchScene(event, "/views/client/mode_menu.fxml", "Bomb Defusing Game");
@@ -55,6 +56,10 @@ public class MainMenuController {
 
     private void switchToLeaderboard(ActionEvent event) {
         switchScene(event, "/views/client/leaderboard.fxml", "Leaderboard");
+    }
+
+    private void switchToLogin(ActionEvent event) {
+        switchScene(event, "/views/client/login.fxml", "Login - Bomb Defusing Game");
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {
