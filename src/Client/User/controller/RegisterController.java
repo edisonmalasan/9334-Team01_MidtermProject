@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class RegisterController {
-    private final LogManager logger = LogManager.getInstance();
+    private final LogManager logManager = LogManager.getInstance();
     protected ClientConnection clientConnection;
 
 
@@ -43,7 +43,7 @@ public class RegisterController {
         try {
             this.clientConnection = ClientConnection.getInstance();
         } catch (ConnectionException e) {
-            logger.appendLog("Registration error: Failed to initialize connection");
+            logManager.appendLog("Registration error: Failed to initialize connection");
         }
     }
 
@@ -73,7 +73,7 @@ public class RegisterController {
             if (usernameExists((List<PlayerModel>) response.getData(), username)) {
                 showFieldError(usernameErrorLabel, "Username already taken!");
                 usernameField.requestFocus();
-                logger.appendLog("Registration failed: Username " + username + " already exists");
+                logManager.appendLog("Registration failed: Username " + username + " already exists");
                 return;
             }
 
@@ -83,13 +83,13 @@ public class RegisterController {
             // log registration to server view
             String logMessage = "New Player Registered: " + username + " | IP: " + App.fetchIPAddress;
             ClientConnection.bombGameServer.logMessage(logMessage);
-            logger.appendLog(logMessage);
+            logManager.appendLog(logMessage);
 
             showSuccessAndRedirect(event);
 
         } catch (Exception e) {
             showGeneralError("Registration failed: " + e.getMessage());
-            logger.appendLog("Registration error for " + username + ": " + e.getMessage());
+            logManager.appendLog("Registration error for " + username + ": " + e.getMessage());
         }
     }
 

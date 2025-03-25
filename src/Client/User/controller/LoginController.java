@@ -25,13 +25,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginController {
-    private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
     protected ClientConnection clientConnection;
 
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-    }
 
     protected static PlayerModel currentUser;
 
@@ -52,7 +48,7 @@ public class LoginController {
         try {
             this.clientConnection = ClientConnection.getInstance();
         } catch (ConnectionException e) {
-            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+           System.out.println("\nGameController: Error initializing ClientConnection." + e.getMessage());
         }
     }
 
@@ -107,7 +103,7 @@ public class LoginController {
             }
         } catch (IOException e) {
             handleException(new InvalidCredentialsException("Login failed. Please try again later."));
-            logger.log(Level.SEVERE, "Error reading user data", e);
+            System.out.println("Error reading user data" + e.getMessage());
         }
     }
 
@@ -147,13 +143,11 @@ public class LoginController {
             stage.setResizable(false);
             stage.show();
 
-            logger.info("\nLoginController: Switched to " + title);
-
             //clear data
             usernameField.clear();
             passwordField.clear();
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load " + title, e);
+            System.out.println("Failed to load " + fxmlPath + ": " + e.getMessage());
         }
     }
 }
