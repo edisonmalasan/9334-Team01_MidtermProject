@@ -1,7 +1,7 @@
 package Client.Admin.controller;
 
-import Client.Admin.model.CategoryModelAdmin;
-import Client.Admin.model.CategoryModelAdmin; 
+import Client.Admin.model.CategoryModelAdmin; // Ensure you have the correct import for the Category model
+import Client.Admin.model.CategoryModelAdmin; // Import your CategoryModelAdmin
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -126,8 +126,6 @@ public class CategoryControllerAdmin {
         logger.warning("Attempting to delete all categories");
         try {
             categoryModel.clearCategories(); // Clear the list of categories
-
-            categoriesGrid.getChildren().clear();
             // Optionally, delete from a database or file
             logger.info("All categories deleted successfully");
         } catch (Exception e) {
