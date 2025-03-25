@@ -40,6 +40,14 @@
     "hasPlayed": true
   },
   {
+    "username": "Eds",
+    "password": "eds",
+    "role": "ADMIN",
+    "classicScore": 0,
+    "endlessScore": 0,
+    "hasPlayed": true
+  },
+  {
     "username": "Yuen",
     "password": "Yuen",
     "role": "ADMIN",

@@ -448,3 +448,19 @@ ClientConnection: Attempting to connect to server...
 Mar 25, 2025 4:54:51 PM Client.common.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Connected to server successfully!
+Mar 25, 2025 4:56:10 PM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.105
+Mar 25, 2025 4:56:10 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 4:56:10 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 5:04:50 PM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.105
+Mar 25, 2025 5:04:50 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 5:04:50 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
