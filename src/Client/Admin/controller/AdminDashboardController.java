@@ -17,7 +17,6 @@ import org.json.JSONTokener;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Objects;
 
 public class AdminDashboardController {
@@ -57,8 +56,12 @@ public class AdminDashboardController {
             endlessPlayersLabel.setText(String.valueOf(endlessPlayers));
 
             logManager.appendLog("Admin dashboard loaded with " + totalPlayers + " players");
-            ClientConnection.bombGameServer.logMessage("Admin dashboard loaded with " + totalPlayers + " players");
 
+            if (ClientConnection.bombGameServer != null) {
+                ClientConnection.bombGameServer.logMessage("Admin dashboard loaded with " + totalPlayers + " players");
+            } else {
+                logManager.appendLog("Warning: bombGameServer is null. Skipping logMessage.");
+            }
         } catch (IOException e) {
             logManager.appendLog("Failed to load statistics: " + e.getMessage());
             totalPlayersLabel.setText("Error");
@@ -80,18 +83,13 @@ public class AdminDashboardController {
 
     private void setupButtonActions() {
         exitButton.setOnAction(event -> switchToScene("/views/client/login.fxml", "Login"));
-        playersButton.setOnAction(event -> switchToScene("/views/admin/admin_leaderboard.fxml", "Player Management"));
+        playersButton.setOnAction(event -> switchToScene("/views/admin_leaderboard.fxml", "Player Management"));
         questionsButton.setOnAction(event -> switchToScene("/views/admin/admin_categories.fxml", "Question Management"));
     }
 
     private void switchToScene(String fxmlPath, String title) {
         try {
-            URL resource = getClass().getResource(fxmlPath);
-            if (resource == null) {
-                throw new IOException("FXML file not found: " + fxmlPath);
-            }
-
-            Parent root = FXMLLoader.load(resource);
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlPath)));
             Stage stage = (Stage) adminDashboard.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle(title);
@@ -100,7 +98,6 @@ public class AdminDashboardController {
             logManager.appendLog("Admin navigated to: " + title);
         } catch (IOException e) {
             logManager.appendLog("Failed to load scene: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 }

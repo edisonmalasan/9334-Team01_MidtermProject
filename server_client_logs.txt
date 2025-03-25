@@ -172,3 +172,9 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 16:56:33] Admin dashboard loaded with 7 players
 [2025-03-25 16:56:33] Admin dashboard loaded with 7 players
 [2025-03-25 16:56:35] Admin navigated to: Question Management
+[2025-03-25 16:59:55] New RMI registry created on port 1099.
+[2025-03-25 16:59:55] Server started successfully on port 1099.
+[2025-03-25 16:59:59] Server stopped successfully.
+[2025-03-25 17:01:44] Admin dashboard loaded with 7 players
+[2025-03-25 17:02:31] Admin dashboard loaded with 7 players
+[2025-03-25 17:02:31] Warning: bombGameServer is null. Skipping logMessage.
