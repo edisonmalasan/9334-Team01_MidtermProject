@@ -251,18 +251,18 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             PlayerModel player = callback.getPlayer();
 
             if (playerCallbacks.containsValue(callback)) {
-                System.out.println("Player already logged in.");
+                logMessage("Player already logged in.");
             } else {
                 playerCallbacks.put(player.getUsername(), callback);
-                System.out.println("Log In: " + player.getUsername());
-                System.out.println("Online : [");
+                logMessage("Log In: " + player.getUsername());
+                logMessage("Online : [");
                 Set<String> usernames = playerCallbacks.keySet();
                 int counter = 1;
                 for (String playerUsername : usernames) {
                     System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
                     playerCallbacks.get(playerUsername).loginCall(player);
                 }
-                System.out.println("]");
+                logMessage("]");
             }
         } finally {
             lock.unlock();
