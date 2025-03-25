@@ -11,11 +11,18 @@ import java.io.IOException;
 public class AdminApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        //do not remove font
-        Font.loadFont(getClass().getResource("resources/fonts/SpaceNova-6Rpd1.otf").toExternalForm(), 14);
-        Font.loadFont(getClass().getResource("resources/fonts/RobotoMono-Bold.ttf").toExternalForm(), 12);
+        // Corrected font loading
+        Font.loadFont(getClass().getResource("/fonts/SpaceNova-6Rpd1.otf").toExternalForm(), 14);
+        Font.loadFont(getClass().getResource("/fonts/RobotoMono-Bold.ttf").toExternalForm(), 12);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Admin/view/AdminDashboard.fxml")); // temporary i2
+        // Corrected FXML loading
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/admin/admin_db.fxml"));
+
+
+        if (fxmlLoader.getLocation() == null) {
+            throw new RuntimeException("FXML file not found: /views/admin/admin_db.fxml");
+        }
+
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Client.Admin Dashboard");
         stage.setScene(scene);
