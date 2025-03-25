@@ -23,4 +23,8 @@ public class CategoryModelAdmin {
     public List<String> getCategories() {
         return categories;
     }
+
+    public void clearCategories() {
+        categories.clear();
+    }
 }

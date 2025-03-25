@@ -414,3 +414,75 @@ ClientConnection: Attempting to connect to server...
 Mar 25, 2025 8:26:39 AM Client.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:27:47 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:27:47 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:27:47 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:37:09 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:37:09 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:37:09 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:40:52 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:40:52 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:40:54 AM Client.connection.ClientConnection <init>
+WARNING: ⚠ Server is not running. The client will continue in offline mode.
+Mar 25, 2025 8:40:54 AM Client.connection.ClientConnection <init>
+WARNING: ⚠ Connection failed. Retrying in 5 seconds...
+Mar 25, 2025 8:40:59 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:55:01 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:55:01 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:55:01 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:57:59 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:57:59 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:57:59 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:59:38 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:59:38 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:59:38 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:07:48 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:07:48 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:07:50 AM Client.connection.ClientConnection <init>
+WARNING: ⚠ Server is not running. The client will continue in offline mode.
+Mar 25, 2025 9:07:50 AM Client.connection.ClientConnection <init>
+WARNING: ⚠ Connection failed. Retrying in 5 seconds...
+Mar 25, 2025 9:07:55 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:12:52 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:12:52 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:12:52 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!

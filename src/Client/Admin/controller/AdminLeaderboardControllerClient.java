@@ -1,4 +1,4 @@
-package Client.Admin.controller.madeByDannievicForReference;
+package Client.Admin.controller;
 /**
  * Controls leaderboard view for admin
  */
@@ -100,12 +100,12 @@ public class AdminLeaderboardControllerClient {
 
     public void returnToMainMenu() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Redundant/admin_menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/admin/admin_db.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) returnButton.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Bomb Defusing Game");
+            stage.setTitle("Admin Dashboard");
             stage.setResizable(false);
             stage.show();
 
@@ -213,14 +213,14 @@ public class AdminLeaderboardControllerClient {
             // Optionally show a confirmation or success alert
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Delete Confirmation");
-            alert.setHeaderText("Item Deleted");
+            alert.setHeaderText("Delete " + selectedItem.getPlayerName() + "?");
             alert.setContentText("The selected entry has been deleted successfully.");
             alert.showAndWait();
         } else {
             // If no item is selected, show an alert
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("No Selection");
-            alert.setHeaderText("No item selected");
+            alert.setHeaderText("No player selected");
             alert.setContentText("Please select an entry to delete.");
             alert.showAndWait();
         }

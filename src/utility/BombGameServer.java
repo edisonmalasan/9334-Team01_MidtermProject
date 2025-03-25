@@ -38,4 +38,7 @@ public interface BombGameServer extends Remote {
 
     //Register an account
     public void register(String username, String password) throws RemoteException;
+
+    // logMessage
+    void logMessage(String message) throws RemoteException;
 }
