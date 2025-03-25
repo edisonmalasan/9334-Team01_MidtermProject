@@ -12,13 +12,15 @@ public class PlayerModel implements Serializable {
     private String role;
     private int classicScore;
     private int endlessScore;
+    private boolean hasPlayed;
 
-    public PlayerModel(String username, String password, String role, int classicScore, int endlessScore) {
+    public PlayerModel(String username, String password, String role, int classicScore, int endlessScore, boolean hasPlayed) {
         this.username = username;
         this.password = password;
         this.role = role;
         this.classicScore = classicScore;
         this.endlessScore = endlessScore;
+        this.hasPlayed = hasPlayed;
     }
 
     public String getUsername() {
@@ -56,9 +58,14 @@ public class PlayerModel implements Serializable {
     public int getEndlessScore() {
         return endlessScore;
     }
-
     public void setEndlessScore(int endlessScore) {
         this.endlessScore = endlessScore;
+    }
+    public void setHasPlayed(boolean hasPlayed) {
+        this.hasPlayed = hasPlayed;
+    }
+    public boolean getHasPlayed() {
+        return hasPlayed;
     }
 
     @Override
@@ -69,12 +76,13 @@ public class PlayerModel implements Serializable {
                 ", role='" + role + '\'' +
                 ", classicScore=" + classicScore +
                 ", endlessScore=" + endlessScore +
+                ", hasPlayed=" + hasPlayed +
                 '}';
     }
 
     public boolean equals(PlayerModel other) {
         return Objects.equals(this.username, other.username) && Objects.equals(this.password, other.password)
                 && Objects.equals(this.role, other.role) && this.classicScore == other.classicScore
-                && this.endlessScore == other.endlessScore;
+                && this.endlessScore == other.endlessScore && this.hasPlayed == other.hasPlayed;
     }
 }
