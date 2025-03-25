@@ -6,6 +6,7 @@ import common.model.QuestionModel;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.List;
 
 public interface BombGameServer extends Remote {
 
@@ -30,6 +31,8 @@ public interface BombGameServer extends Remote {
     // Update leaderboards data
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException;
 
+    // Update player list
+    public Response updatePlayerList(List<PlayerModel> playerList) throws RemoteException;
     // Get player list
     public Response getPlayerList() throws RemoteException;
 

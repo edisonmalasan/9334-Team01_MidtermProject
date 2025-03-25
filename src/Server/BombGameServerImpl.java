@@ -264,6 +264,25 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             lock.unlock();
         }
     }
+
+    @Override
+    public Response updatePlayerList(List<PlayerModel> updatedList) {
+        lock.lock();
+        try {
+            if (updatedList == null) {
+                logger.severe("Received null player list.");
+                return new Response(false, "Received null player list.", null);
+            }
+            JSONStorageController.savePlayerListToJSON(updatedList);
+            logger.info("Updating player list data.");
+            return new Response(true, "Player list updated successfully.", playerList);
+        } catch (Exception e) {
+            logger.severe("Error retrieving player list: " + e.getMessage());
+            return new Response(false, "Error retrieving player list: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
+        }
+    }
     @Override
     public void login(Callback callback) throws RemoteException {
         lock.lock();
