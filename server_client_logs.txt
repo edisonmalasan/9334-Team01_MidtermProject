@@ -202,3 +202,68 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 17:07:36] Admin dashboard loaded with 8 players
 [2025-03-25 17:07:36] Admin dashboard loaded with 8 players
 [2025-03-25 17:07:39] Admin navigated to: Player Management
+[2025-03-25 17:12:29] Admin dashboard loaded with 8 players
+[2025-03-25 17:12:29] Admin dashboard loaded with 8 players
+[2025-03-25 17:12:30] Admin navigated to: Login
+[2025-03-25 17:13:23] New Player Registered: IAMNEGA | IP: 192.168.0.105
+[2025-03-25 17:13:23] New Player Registered: IAMNEGA | IP: 192.168.0.105
+[2025-03-25 17:13:31] Log In: IAMNEGA | IP: 192.168.0.105
+[2025-03-25 17:13:31] Player IAMNEGA logged in. Classic Score: 0, Endless Score: 0
+[2025-03-25 17:13:35] IAMNEGA requested PROBABILITY questions | IP: 192.168.0.105
+[2025-03-25 17:13:35] IAMNEGA successfully received 20 PROBABILITY questions | IP: 192.168.0.105
+[2025-03-25 17:13:35] IAMNEGA successfully received 20 PROBABILITY questions | IP: 192.168.0.105
+[2025-03-25 17:13:49] Score Report - Player: IAMNEGA | Mode: Classic | Score: 2 | IP: 192.168.0.105
+[2025-03-25 17:13:49] Score Report - Player: IAMNEGA | Mode: Classic | Score: 2 | IP: 192.168.0.105
+[2025-03-25 17:13:50] Returned to main menu from score screen
+[2025-03-25 17:14:02] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:17:09] New RMI registry created on port 1099.
+[2025-03-25 17:17:09] Server started successfully on port 1099.
+[2025-03-25 17:17:13] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:17:16] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:17:33] Log In: SAMPLEUSER5 | IP: 127.0.0.1
+[2025-03-25 17:17:33] Admin SAMPLEUSER5 logged in
+[2025-03-25 17:17:33] Admin dashboard loaded with 9 players
+[2025-03-25 17:17:33] Admin dashboard loaded with 9 players
+[2025-03-25 17:17:34] Admin navigated to: Player Management
+[2025-03-25 17:24:23] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:25:04] Log In: SAMPLEUSER5 | IP: localhost
+[2025-03-25 17:25:04] Admin SAMPLEUSER5 logged in
+[2025-03-25 17:25:04] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:04] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:06] Admin navigated to: Player Management
+[2025-03-25 17:25:08] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:08] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:09] Admin navigated to: Question Management
+[2025-03-25 17:25:12] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:12] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:13] Admin navigated to: Question Management
+[2025-03-25 17:25:16] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:16] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:19] Admin navigated to: Player Management
+[2025-03-25 17:25:20] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:20] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:21] Admin navigated to: Question Management
+[2025-03-25 17:25:27] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:27] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:28] Admin navigated to: Player Management
+[2025-03-25 17:25:29] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:29] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:30] Admin navigated to: Player Management
+[2025-03-25 17:25:32] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:32] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:34] Admin navigated to: Player Management
+[2025-03-25 17:25:35] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:35] Admin dashboard loaded with 9 players
+[2025-03-25 17:25:36] Admin navigated to: Login
+[2025-03-25 17:33:16] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:33:49] New RMI registry created on port 1099.
+[2025-03-25 17:33:49] Server started successfully on port 1099.
+[2025-03-25 17:33:50] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:34:02] Log In: SAMPLEUSER4 | IP: localhost
+[2025-03-25 17:34:02] Player SAMPLEUSER4 logged in. Classic Score: 50, Endless Score: 20
