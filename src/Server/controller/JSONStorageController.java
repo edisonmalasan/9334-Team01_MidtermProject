@@ -69,10 +69,8 @@ public class JSONStorageController {
         }
         return playerList;
     }
-    public static void savePlayerToJSON(PlayerModel player) {
-        List<PlayerModel> playerList = loadPlayersFromJSON();
+    public static void savePlayerListToJSON(List<PlayerModel> playerList) {
         try (Writer writer = new FileWriter(playerFileName)) {
-            playerList.add(player);
             gson.toJson(playerList, writer);
             logger.info("JSONStorageController: Player successfully saved to " + playerFileName);
         } catch (IOException e) {
@@ -102,10 +100,8 @@ public class JSONStorageController {
             logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
         }
     }
-    public static void updatePlayerScore(PlayerModel newPlayer) {
-        List<PlayerModel> playerList = loadPlayersFromJSON();
+    public static void updatePlayerScore(List<PlayerModel> playerList, PlayerModel newPlayer) {
         try (Writer writer = new FileWriter(playerFileName)) {
-
             for (PlayerModel player : playerList) {
                 if (player.getUsername().equals(newPlayer.getUsername())) {
                     player.setClassicScore(newPlayer.getClassicScore());

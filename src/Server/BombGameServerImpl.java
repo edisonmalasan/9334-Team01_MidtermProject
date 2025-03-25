@@ -31,10 +31,8 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     static {
         AnsiFormatter.enableColorLogging(logger);
     }
-    public BombGameServerImpl() throws RemoteException, FileNotFoundException {
-        Reader fileReader = new FileReader(System.getProperty("user.dir")+ "/data/players.json");
-        Type playerListType = new TypeToken<List<PlayerModel>>(){}.getType();
-        playerList = gson.fromJson(fileReader, playerListType);
+    public BombGameServerImpl() throws RemoteException {
+        playerList = JSONStorageController.loadPlayersFromJSON();
     }
 
     @Override
@@ -119,7 +117,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 return new Response(false, "Received null player data.", null);
             }
             logger.info("Updating player score: " + player.getUsername());
-            JSONStorageController.updatePlayerScore(player);
+            JSONStorageController.updatePlayerScore(playerList, player);
 
             logger.info("Player score updated successfully.");
             return new Response(true, "Player score updated successfully.", null);
@@ -137,7 +135,6 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 return new Response(false, "Received null question data.", null);
             }
 
-            fileName = "data/questions.json";
             List<QuestionModel> questionList = JSONStorageController.loadQuestionsFromJSON();
 
             boolean found = false;
@@ -198,7 +195,6 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 logger.severe("Received null player data.");
                 return new Response(false, "Received null player data.", null);
             }
-
             logger.info("Returning player list data.");
             return new Response(true, "Player list displayed successfully.", playerList);
         } catch (Exception e) {
@@ -218,14 +214,32 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             System.out.println("Online : [");
             Set<String> usernames = playerCallbacks.keySet();
             int counter = 1;
-            for (String username : usernames) {
-                System.out.println(username + (counter++ == usernames.size() ? "" : ", "));
-                playerCallbacks.get(username).loginCall(player);
+            for (String playerUsername : usernames) {
+                System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
+                playerCallbacks.get(playerUsername).loginCall(player);
             }
             System.out.println("]");
         }
     }
 
-    public void register() throws RemoteException {
+    @Override
+    public PlayerModel getPlayer(String username, String password) {
+        for (PlayerModel player : playerList) {
+            if (player.getUsername().equalsIgnoreCase(username) && player.getPassword().equalsIgnoreCase(password)) {
+                return player;
+            }
+        }
+        return null;
+    }
+    @Override
+    public void register(String username, String password) throws RemoteException {
+        try {
+            PlayerModel player = new PlayerModel(username, password, "PLAYER", 0, 0);
+            playerList.add(player);
+            JSONStorageController.savePlayerListToJSON(playerList);
+            logger.info("Registering player to database.");
+        } catch (Exception e) {
+            logger.severe("Error registering player: " + e.getMessage());
+        }
     }
 }
