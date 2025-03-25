@@ -2,12 +2,11 @@ package Client.Admin.controller;
 
 import Client.common.connection.ClientConnection;
 import common.Log.LogManager;
-import common.Response;
-import common.model.PlayerModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -19,7 +18,7 @@ import org.json.JSONTokener;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
+import java.net.URL;
 import java.util.Objects;
 
 public class AdminDashboardController {
@@ -42,17 +41,16 @@ public class AdminDashboardController {
 
     private void loadPlayerStatistics() {
         try {
-            Response response= ClientConnection.bombGameServer.getPlayerList();
-            List<PlayerModel> playerList = (List<PlayerModel>) response.getData();
-            int totalPlayers = playerList.size();
+            JSONArray players = readPlayersFile();
+            int totalPlayers = players.length();
             int classicPlayers = 0;
             int endlessPlayers = 0;
 
             //count players with scores >0 for each mode (ganyan ba or live tracking)
-            for (PlayerModel player : playerList) {
-
-                if (player.getClassicScore() > 0) classicPlayers++;
-                if (player.getEndlessScore() > 0) endlessPlayers++;
+            for (int i = 0; i < players.length(); i++) {
+                JSONObject player = players.getJSONObject(i);
+                if (player.getInt("classicScore") > 0) classicPlayers++;
+                if (player.getInt("endlessScore") > 0) endlessPlayers++;
             }
 
             totalPlayersLabel.setText(String.valueOf(totalPlayers));
@@ -104,13 +102,22 @@ public class AdminDashboardController {
 
     private void setupButtonActions() {
         exitButton.setOnAction(event -> switchToScene("/views/client/login.fxml", "Login"));
-        playersButton.setOnAction(event -> switchToScene("/views/admin/admin_leaderboard.fxml", "Player Management"));
+        playersButton.setOnAction(event -> switchToScene("/views/admin_leaderboard.fxml", "Player Management"));
         questionsButton.setOnAction(event -> switchToScene("/views/admin/admin_categories.fxml", "Question Management"));
     }
 
     private void switchToScene(String fxmlPath, String title) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlPath)));
+            URL resource = getClass().getResource(fxmlPath);
+            if (resource == null) {
+                logManager.appendLog("Error: FXML file not found at " + fxmlPath);
+                showErrorDialog("Scene Load Error", "FXML file not found: " + fxmlPath);
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(resource);
+            Parent root = loader.load();
+
             Stage stage = (Stage) adminDashboard.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle(title);
@@ -119,6 +126,16 @@ public class AdminDashboardController {
             logManager.appendLog("Admin navigated to: " + title);
         } catch (IOException e) {
             logManager.appendLog("Failed to load scene: " + e.getMessage());
+            showErrorDialog("Scene Load Error", "Failed to load scene: " + e.getMessage());
         }
+    }
+
+    // shows if fxml is not loaded
+    private void showErrorDialog(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

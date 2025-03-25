@@ -25,7 +25,7 @@ public class AdminApplication extends Application {
         }
 
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Client.Admin Dashboard");
+        stage.setTitle("Admin Dashboard");
         stage.setScene(scene);
         stage.show();
     }
