@@ -206,13 +206,16 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             for (PlayerModel player : playerList) {
                 if (leaderboardEntry.getPlayerName().equals(player.getUsername())) {
                     logger.info("Removed entry from player list: " + player.getUsername());
-                    playerList.remove(player);
+                    if (Objects.equals(leaderboardType, "classic")) {
+                        player.setHasPlayedClassic(false);
+                        player.setClassicScore(0);
+                    } else {
+                        player.setHasPlayedEndless(false);
+                        player.setEndlessScore(0);
+                    }
                     break;
                 }
             }
-
-            Writer writer = new FileWriter(System.getProperty("user.dir")+ "/data/players.json");
-            gson.toJson(playerList, writer);
 
             logger.info("Player list updated successfully.");
             return new Response(true, "Player list updated successfully.", null);
