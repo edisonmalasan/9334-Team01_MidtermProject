@@ -21,10 +21,14 @@ import java.util.logging.Logger;
  * Manipulates JSON files
  */
 public class JSONStorageController {
+    private static final Object PLAYER_FILE_LOCK = new Object(); // dedicated lock object for thread safe
+    private static final Object QUESTION_FILE_LOCK = new Object(); // dedicated lock  for thread safe
+
     private static final Logger logger = Logger.getLogger(JSONStorageController.class.getName());
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static String playerFileName = "data/players.json";
     private static String questionFileName = "data/questions.json";
+
 
 
     /**
@@ -47,7 +51,7 @@ public class JSONStorageController {
     /**
      * Saves the list of leaderboard entries to the JSON file
      */
-    public static void saveLeaderboardToJSON(List<LeaderboardEntryModel> leaderboardList) {
+    public static synchronized void saveLeaderboardToJSON(List<LeaderboardEntryModel> leaderboardList) {
         try (Writer writer = new FileWriter(playerFileName)) {
             gson.toJson(leaderboardList, writer);
             logger.info("JSONStorageController: Leaderboard successfully saved to " + playerFileName);
@@ -69,12 +73,15 @@ public class JSONStorageController {
         }
         return playerList;
     }
+
     public static void savePlayerListToJSON(List<PlayerModel> playerList) {
-        try (Writer writer = new FileWriter(playerFileName)) {
-            gson.toJson(playerList, writer);
-            logger.info("JSONStorageController: Player successfully saved to " + playerFileName);
-        } catch (IOException e) {
-            logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
+        synchronized (PLAYER_FILE_LOCK) {
+            try (Writer writer = new FileWriter(playerFileName)) {
+                gson.toJson(playerList, writer);
+                logger.info("JSONStorageController: Player successfully saved to " + playerFileName);
+            } catch (IOException e) {
+                logger.severe("JSONStorageController: Error saving player to JSON: " + e.getMessage());
+            }
         }
     }
 
@@ -100,9 +107,14 @@ public class JSONStorageController {
             logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
         }
     }
-    public static void updatePlayerScore(List<PlayerModel> playerList, PlayerModel newPlayer) {
-        try (Writer writer = new FileWriter(playerFileName)) {
-            for (PlayerModel player : playerList) {
+
+    public static synchronized void updatePlayerScore(List<PlayerModel> playerList, PlayerModel newPlayer) {
+        try {
+           // read current state
+            List<PlayerModel> currentPlayers = loadPlayersFromJSON();
+
+            // find and update the player
+            for (PlayerModel player : currentPlayers) {
                 if (player.getUsername().equals(newPlayer.getUsername())) {
                     if (!player.getHasPlayedClassic() && newPlayer.getHasPlayedClassic()) {
                         player.setHasPlayedClassic(true);
@@ -116,15 +128,17 @@ public class JSONStorageController {
                 }
             }
 
-            gson.toJson(playerList, writer);
-            logger.info("JSONStorageController: Player score successfully updated for " + newPlayer.getUsername());
+            // write back updated list
+            try (Writer writer = new FileWriter(playerFileName)) {
+                gson.toJson(currentPlayers, writer);
+                logger.info("JSONStorageController: Player score successfully updated for " + newPlayer.getUsername());
+            }
         } catch (FileNotFoundException e) {
             logger.warning("JSONStorageController: Players file not found.");
         } catch (IOException e) {
-            logger.severe("JSONStorageController: Error loading file from JSON: " + e.getMessage());
+            logger.severe("JSONStorageController: Error updating player score: " + e.getMessage());
         }
     }
-
     public static List<QuestionModel> loadQuestionsFromJSON() {
         List<QuestionModel> questions = new ArrayList<>();
         try (Reader reader = new FileReader(questionFileName)) {
@@ -140,13 +154,15 @@ public class JSONStorageController {
         return questions;
     }
 
-    public static void saveQuestionToJSON(List<QuestionModel> questionsList){
-        try (Writer writer = new FileWriter(questionFileName)) {
-            gson.toJson(questionsList, writer);
-            logger.info("JSONStorageModel: Questions successfully saved to " + questionFileName);
-        } catch (IOException e) {
-            logger.severe("JSONStorageModel: Error saving Questions to JSON: " + e.getMessage());
-            e.printStackTrace();
+    public static synchronized void saveQuestionToJSON(List<QuestionModel> questionsList){
+        synchronized (QUESTION_FILE_LOCK) {
+            try (Writer writer = new FileWriter(questionFileName)) {
+                gson.toJson(questionsList, writer);
+                logger.info("JSONStorageModel: Questions successfully saved to " + questionFileName);
+            } catch (IOException e) {
+                logger.severe("JSONStorageModel: Error saving Questions to JSON: " + e.getMessage());
+                e.printStackTrace();
+            }
         }
     }
 
