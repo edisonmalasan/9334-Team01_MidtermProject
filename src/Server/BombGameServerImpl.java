@@ -97,7 +97,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } else {
             for (PlayerModel player : playerList) {
                 if (player.getHasPlayed()) {
-                    LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
+                    LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getEndlessScore());
                     leaderboard.add(leaderboardEntry);
                 }
             }
