@@ -1,0 +1,2449 @@
+<questions>
+    <question category="ALGEBRA">
+        <text>Solve the following equation: 10 - 2(3)</text>
+        <choice>-13</choice>
+        <choice>4</choice>
+        <choice>16</choice>
+        <choice>24</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve the following equation: 3x + 7 = 16</text>
+        <choice>5</choice>
+        <choice>3</choice>
+        <choice>6</choice>
+        <choice>7</choice>
+        <answer>3</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve for y: 5y - 3 = 2</text>
+        <choice>1</choice>
+        <choice>2</choice>
+        <choice>-1</choice>
+        <choice>-2</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Simplify: 2(x + 3) - 5x</text>
+        <choice>-3x + 6</choice>
+        <choice>3x + 6</choice>
+        <choice>-3x - 6</choice>
+        <choice>3x - 6</choice>
+        <answer>-3x + 6</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the value of x if 4x + 2 = 14?</text>
+        <choice>3</choice>
+        <choice>2</choice>
+        <choice>4</choice>
+        <choice>1</choice>
+        <answer>3</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the solution to the inequality 2x - 5 &lt; 3?</text>
+        <choice>x &lt; 4</choice>
+        <choice>x &gt; 4</choice>
+        <choice>x &lt; 2</choice>
+        <choice>x &gt; 2</choice>
+        <answer>x &lt; 4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve the following equation: x² - 16 = 0</text>
+        <choice>4</choice>
+        <choice>-4</choice>
+        <choice>±4</choice>
+        <choice>0</choice>
+        <answer>±4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Expand the expression: (x + 3)(x - 4)</text>
+        <choice>x² - x - 12</choice>
+        <choice>x² - x + 12</choice>
+        <choice>x² - 7x - 12</choice>
+        <choice>x² + 7x - 12</choice>
+        <answer>x² - x - 12</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve for x: 5x - 7 = 2x + 5</text>
+        <choice>2</choice>
+        <choice>3</choice>
+        <choice>4</choice>
+        <choice>5</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the value of x in the equation: 7x = 35</text>
+        <choice>5</choice>
+        <choice>7</choice>
+        <choice>35</choice>
+        <choice>1</choice>
+        <answer>5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Simplify: (3x + 4) - (x - 5)</text>
+        <choice>2x + 9</choice>
+        <choice>2x - 1</choice>
+        <choice>3x - 1</choice>
+        <choice>4x + 9</choice>
+        <answer>2x + 9</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve for x: 4x + 5 = 2x + 13</text>
+        <choice>4</choice>
+        <choice>5</choice>
+        <choice>3</choice>
+        <choice>2</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the value of x if 3x = 9?</text>
+        <choice>3</choice>
+        <choice>2</choice>
+        <choice>1</choice>
+        <choice>4</choice>
+        <answer>3</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Factor the expression: x² + 5x + 6</text>
+        <choice>(x + 3)(x + 2)</choice>
+        <choice>(x + 6)(x + 1)</choice>
+        <choice>(x + 2)(x + 3)</choice>
+        <choice>(x + 1)(x + 6)</choice>
+        <answer>(x + 3)(x + 2)</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve for x: x² - 25 = 0</text>
+        <choice>5</choice>
+        <choice>-5</choice>
+        <choice>±5</choice>
+        <choice>25</choice>
+        <answer>±5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the slope of the line passing through the points (2,3) and (4,7)?</text>
+        <choice>2</choice>
+        <choice>1</choice>
+        <choice>3</choice>
+        <choice>4</choice>
+        <answer>2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve the system of equations: 2x + y = 8 and x - y = 1</text>
+        <choice>(3, 2)</choice>
+        <choice>(2, 4)</choice>
+        <choice>(1, 5)</choice>
+        <choice>(4, 3)</choice>
+        <answer>(3, 2)</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve for x: 2x - 4 = 3x + 5</text>
+        <choice>-9</choice>
+        <choice>9</choice>
+        <choice>-5</choice>
+        <choice>5</choice>
+        <answer>-9</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Simplify the expression: 5(x + 4) - 2(x - 3)</text>
+        <choice>3x + 26</choice>
+        <choice>3x + 23</choice>
+        <choice>3x + 17</choice>
+        <choice>3x + 20</choice>
+        <answer>3x + 26</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the value of x if 6x - 5 = 19?</text>
+        <choice>4</choice>
+        <choice>5</choice>
+        <choice>3</choice>
+        <choice>6</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Simplify: 3x² + 5x - 2x² + 4x</text>
+        <choice>x² + 9x</choice>
+        <choice>5x² + 9x</choice>
+        <choice>5x² + 9x - 2</choice>
+        <choice>x² + 9x - 2</choice>
+        <answer>x² + 9x</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>What is the value of x if 3x + 10 = 25?</text>
+        <choice>5</choice>
+        <choice>6</choice>
+        <choice>8</choice>
+        <choice>4</choice>
+        <answer>5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Solve the equation: x + 7 = 14</text>
+        <choice>7</choice>
+        <choice>6</choice>
+        <choice>8</choice>
+        <choice>5</choice>
+        <answer>7</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>Factor the expression: x² - 4x</text>
+        <choice>x(x - 4)</choice>
+        <choice>(x - 2)(x + 2)</choice>
+        <choice>x(x + 4)</choice>
+        <choice>(x - 4)(x + 4)</choice>
+        <answer>x(x - 4)</answer>
+        <score>1</score>
+    </question>
+    <question category="ALGEBRA">
+        <text>What is the proper term for this definition?
+            A term without a variable</text>
+        <choice>Constant</choice>
+        <choice>Exponent</choice>
+        <choice>Set</choice>
+        <choice>Terms</choice>
+        <answer>Constant</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x</text>
+        <choice>3</choice>
+        <choice>4</choice>
+        <choice>5</choice>
+        <choice>6</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Simplify the fraction to the lowest terms:
+            924/1092"</text>
+        <choice>308/364</choice>
+        <choice>11/13</choice>
+        <choice>44/52</choice>
+        <choice>154/183</choice>
+        <answer>11/13</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"</text>
+        <choice>"D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}"</choice>
+        <choice>"D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}"</choice>
+        <choice>"D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}"</choice>
+        <choice>"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"</choice>
+        <answer>"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the following equation:
+            10 - 2(3)"</text>
+        <choice>-13</choice>
+        <choice>4</choice>
+        <choice>16</choice>
+        <choice>24</choice>
+        <answer>4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Simplify the expression:
+            (-1/5)^3"</text>
+        <choice>-3/125</choice>
+        <choice>-1/125</choice>
+        <choice>3/125</choice>
+        <choice>1/125</choice>
+        <answer>-1/125</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Simplify the expression:
+            (2x^3)^2"</text>
+        <choice>2x^5</choice>
+        <choice>4x^6</choice>
+        <choice>4x^5</choice>
+        <choice>2x^6</choice>
+        <answer>4x^6</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Simplify the expression:
+            4m + 5 + 2m - 1"</text>
+        <choice>10m</choice>
+        <choice>6m + 4</choice>
+        <choice>6m + 6</choice>
+        <choice>6m - 4</choice>
+        <answer>6m + 4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"</text>
+        <choice>x = 2 , y = −6</choice>
+        <choice>x = 6 , y = −2</choice>
+        <choice>x = −6 , y = 2</choice>
+        <choice>x = −2 , y = 6</choice>
+        <answer>x = 6 , y = −2</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the following equation:
+            5(x − 5) = 5"</text>
+        <choice>x = −6</choice>
+        <choice>x = 1</choice>
+        <choice>x = 6</choice>
+        <choice>x = −1</choice>
+        <answer>x = 6</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"What is the algebraic expression for this phrase:
+            'A number t times 6'"</text>
+        <choice>6t</choice>
+        <choice>6(t) + 1</choice>
+        <choice>6(2) + t</choice>
+        <choice>6(0)t</choice>
+        <answer>6t</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"</text>
+        <choice>13 + 9 + n</choice>
+        <choice>9n + 13</choice>
+        <choice>13(9) + n</choice>
+        <choice>9(13) + n</choice>
+        <answer>9n + 13</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the following equation:
+            2(z + 3) = 18"</text>
+        <choice>z = 12</choice>
+        <choice>z = 7.5</choice>
+        <choice>z = 2</choice>
+        <choice>z = 6</choice>
+        <answer>z = 6</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the following equation:
+            6x − 2 = −14"</text>
+        <choice>1</choice>
+        <choice>-2</choice>
+        <choice>-1</choice>
+        <choice>2</choice>
+        <answer>-2</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the following equation:
+            4k - 5k = 10 + k"</text>
+        <choice>k = 5</choice>
+        <choice>k = 20</choice>
+        <choice>k = -5</choice>
+        <choice>k = -20</choice>
+        <answer>k = -5</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"</text>
+        <choice>x = 4 , y = −8</choice>
+        <choice>x = 8 , y = 4</choice>
+        <choice>x = 4 , y = 8</choice>
+        <choice>x = 8 , y = −4</choice>
+        <answer>x = 4 , y = 8</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Translate and solve:
+            '4 less than 3 times a number is -16'"</text>
+        <choice>x = -4</choice>
+        <choice>x = 3</choice>
+        <choice>x = 4</choice>
+        <choice>x = -3</choice>
+        <answer>x = -4</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"</text>
+        <choice>y = 9 / 2x - 3</choice>
+        <choice>y = 2 / 3x - 3</choice>
+        <choice>y = 2x / 3y - 3</choice>
+        <choice>y = 3 / 2x - 9</choice>
+        <answer>y = 2 / 3x - 3</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""</text>
+        <choice>x + y - 9</choice>
+        <choice>9 - (x + y)</choice>
+        <choice>x + y / 9</choice>
+        <choice>9 / x + y</choice>
+        <answer>x + y - 9</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ALGEBRA">
+        <text>The sum of two numbers is 82 and their product is 1456, find the two numbers.</text>
+        <choice>41, 2</choice>
+        <choice>26 , 56</choice>
+        <choice>41, -2</choice>
+        <choice>-26 , -56</choice>
+        <answer>26 , 56</answer>
+        <score>3</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a rectangle with length 5 cm and width 3 cm?</text>
+        <choice>15 cm²</choice>
+        <choice>10 cm²</choice>
+        <choice>8 cm²</choice>
+        <choice>5 cm²</choice>
+        <answer>15 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the perimeter of a square with a side length of 6 cm?</text>
+        <choice>24 cm</choice>
+        <choice>12 cm</choice>
+        <choice>36 cm</choice>
+        <choice>6 cm</choice>
+        <answer>24 cm</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the volume of a cube with side length 4 cm?</text>
+        <choice>64 cm³</choice>
+        <choice>16 cm³</choice>
+        <choice>24 cm³</choice>
+        <choice>32 cm³</choice>
+        <answer>64 cm³</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a circle with radius 7 cm?</text>
+        <choice>49π cm²</choice>
+        <choice>14π cm²</choice>
+        <choice>49 cm²</choice>
+        <choice>14 cm²</choice>
+        <answer>49π cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm?</text>
+        <choice>12 cm</choice>
+        <choice>15 cm</choice>
+        <choice>18 cm</choice>
+        <choice>14 cm</choice>
+        <answer>12 cm</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a right triangle with a base of 6 cm and height of 8 cm?</text>
+        <choice>24 cm²</choice>
+        <choice>48 cm²</choice>
+        <choice>36 cm²</choice>
+        <choice>18 cm²</choice>
+        <answer>24 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the surface area of a sphere with radius 5 cm?</text>
+        <choice>100π cm²</choice>
+        <choice>25π cm²</choice>
+        <choice>75π cm²</choice>
+        <choice>50π cm²</choice>
+        <answer>100π cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a parallelogram with base 6 cm and height 4 cm?</text>
+        <choice>24 cm²</choice>
+        <choice>18 cm²</choice>
+        <choice>20 cm²</choice>
+        <choice>36 cm²</choice>
+        <answer>24 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the circumference of a circle with diameter 10 cm?</text>
+        <choice>10π cm</choice>
+        <choice>20π cm</choice>
+        <choice>5π cm</choice>
+        <choice>25π cm</choice>
+        <answer>10π cm</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the sum of the interior angles of a hexagon?</text>
+        <choice>720°</choice>
+        <choice>1080°</choice>
+        <choice>900°</choice>
+        <choice>540°</choice>
+        <answer>720°</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a trapezoid with bases 8 cm and 12 cm, and height 5 cm?</text>
+        <choice>50 cm²</choice>
+        <choice>40 cm²</choice>
+        <choice>60 cm²</choice>
+        <choice>30 cm²</choice>
+        <answer>50 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the volume of a cylinder with radius 3 cm and height 7 cm?</text>
+        <choice>63π cm³</choice>
+        <choice>27π cm³</choice>
+        <choice>21π cm³</choice>
+        <choice>45π cm³</choice>
+        <answer>63π cm³</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of a rhombus with diagonals of lengths 8 cm and 10 cm?</text>
+        <choice>40 cm²</choice>
+        <choice>35 cm²</choice>
+        <choice>20 cm²</choice>
+        <choice>30 cm²</choice>
+        <answer>40 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the volume of a cone with radius 4 cm and height 9 cm?</text>
+        <choice>48π cm³</choice>
+        <choice>36π cm³</choice>
+        <choice>72π cm³</choice>
+        <choice>54π cm³</choice>
+        <answer>48π cm³</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the surface area of a rectangular prism with length 4 cm, width 3 cm, and height 5 cm?</text>
+        <choice>94 cm²</choice>
+        <choice>70 cm²</choice>
+        <choice>56 cm²</choice>
+        <choice>75 cm²</choice>
+        <answer>94 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the perimeter of a regular hexagon with a side length of 7 cm?</text>
+        <choice>42 cm</choice>
+        <choice>49 cm</choice>
+        <choice>36 cm</choice>
+        <choice>30 cm</choice>
+        <answer>42 cm</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the volume of a pyramid with base area 16 cm² and height 9 cm?</text>
+        <choice>144 cm³</choice>
+        <choice>72 cm³</choice>
+        <choice>128 cm³</choice>
+        <choice>64 cm³</choice>
+        <answer>48 cm³</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the area of an equilateral triangle with a side length of 6 cm?</text>
+        <choice>15.59 cm²</choice>
+        <choice>12.99 cm²</choice>
+        <choice>18.47 cm²</choice>
+        <choice>19.39 cm²</choice>
+        <answer>15.59 cm²</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>It is a two-dimensional surface.</text>
+        <choice>plane</choice>
+        <choice>coordinate</choice>
+        <choice>line</choice>
+        <choice>point</choice>
+        <answer>plane</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>The distance around a circle.</text>
+        <choice>circumference</choice>
+        <choice>radius</choice>
+        <choice>perimeter</choice>
+        <choice>side</choice>
+        <answer>circumference</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the degree of a straight line?</text>
+        <choice>360</choice>
+        <choice>90</choice>
+        <choice>75</choice>
+        <choice>180</choice>
+        <answer>180</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Quadrilaterals where all the sides are the same length.</text>
+        <choice>square</choice>
+        <choice>rectangle</choice>
+        <choice>rhombus</choice>
+        <choice>trapezoid</choice>
+        <answer>rhombus</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Any polygon with six sides.</text>
+        <choice>pentagon</choice>
+        <choice>hexagon</choice>
+        <choice>heptagon</choice>
+        <choice>octagon</choice>
+        <answer>hexagon</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>The sum of exterior angles of a polygon is equal to:</text>
+        <choice>280</choice>
+        <choice>150</choice>
+        <choice>180</choice>
+        <choice>360</choice>
+        <answer>360</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Identical in size and shape.</text>
+        <choice>perpendicular</choice>
+        <choice>equilateral</choice>
+        <choice>congruent</choice>
+        <choice>parallel</choice>
+        <answer>congruent</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Sides that are the same length.</text>
+        <choice>congruent</choice>
+        <choice>equilateral</choice>
+        <choice>perpendicular</choice>
+        <choice>parallel</choice>
+        <answer>equilateral</answer>
+        <score>1</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Two lines in a two-dimensional space that do not meet.</text>
+        <choice>perpendicular</choice>
+        <choice>equilateral</choice>
+        <choice>congruent</choice>
+        <choice>parallel</choice>
+        <answer>parallel</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text> A 3D figure on which the faces are triangular and converge to a single point at the top.</text>
+        <choice>prism</choice>
+        <choice>pyramid</choice>
+        <choice>sphere</choice>
+        <choice>triangle</choice>
+        <answer>pyramid</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>A straight line that intersects a curve at two or more points.</text>
+        <choice>side</choice>
+        <choice>sector</choice>
+        <choice>secant</choice>
+        <choice>segment</choice>
+        <answer>secant</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>A particular aspect of life or activity.</text>
+        <choice>side</choice>
+        <choice>sector</choice>
+        <choice>secant</choice>
+        <choice>segment</choice>
+        <answer>sector</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>A round body whose surface is at all points equidistant from the center.</text>
+        <choice>prism</choice>
+        <choice>pyramid</choice>
+        <choice>sphere</choice>
+        <choice>triangle</choice>
+        <answer>sphere</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>The endpoint on one side and keeps going forever on the other.</text>
+        <choice>ellipse</choice>
+        <choice>ray</choice>
+        <choice>chord</choice>
+        <choice>arc</choice>
+        <answer>ray</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>The measure of the arc's central angle.</text>
+        <choice>line segment</choice>
+        <choice>measure of an arc</choice>
+        <choice>corresponding angles</choice>
+        <choice>similar shape</choice>
+        <answer>measure of an arc</answer>
+        <score>2</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Triangle PQR has angles in the ratio of 2:3:5. Which type of triangle is PQR?</text>
+        <choice>acute</choice>
+        <choice>isosceles</choice>
+        <choice>right</choice>
+        <choice>obtuse</choice>
+        <answer>obtuse</answer>
+        <score>3</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>Which of the following could be the side lengths of a right triangle?</text>
+        <choice>3, 13, and 14</choice>
+        <choice>4, 5, and 6</choice>
+        <choice>5, 10, and 15</choice>
+        <choice>5, 12, and 13</choice>
+        <answer>5, 12, and 13</answer>
+        <score>3</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>The circumference of a circle is 30. What is its area?</text>
+        <choice>15pi</choice>
+        <choice>225pi</choice>
+        <choice>250pi</choice>
+        <choice>10pi</choice>
+        <answer>225pi</answer>
+        <score>3</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>A three-dimensional figure with identical ends</text>
+        <choice>prism</choice>
+        <choice>pyramid</choice>
+        <choice>sphere</choice>
+        <choice>triangle</choice>
+        <answer>prism</answer>
+        <score>3</score>
+    </question>
+
+    <question category="GEOMETRY">
+        <text>What is the sum of the measures of the interior angles of a hexagon?</text>
+        <choice>720</choice>
+        <choice>540</choice>
+        <choice>180</choice>
+        <choice>360</choice>
+        <answer>720</answer>
+        <score>3</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of getting a head when flipping a fair coin?</text>
+        <choice>1/2</choice>
+        <choice>1/3</choice>
+        <choice>1/4</choice>
+        <choice>1</choice>
+        <answer>1/2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of rolling a 3 on a standard six-sided die?</text>
+        <choice>1/6</choice>
+        <choice>1/2</choice>
+        <choice>1/3</choice>
+        <choice>1/4</choice>
+        <answer>1/6</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing a red card from a standard deck of 52 cards?</text>
+        <choice>26/52</choice>
+        <choice>1/2</choice>
+        <choice>1/4</choice>
+        <choice>1/52</choice>
+        <answer>26/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If you flip two coins, what is the probability of getting two tails?</text>
+        <choice>1/4</choice>
+        <choice>1/2</choice>
+        <choice>1/3</choice>
+        <choice>1/8</choice>
+        <answer>1/4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of rolling a number greater than 4 on a standard six-sided die?</text>
+        <choice>1/6</choice>
+        <choice>1/3</choice>
+        <choice>1/2</choice>
+        <choice>2/3</choice>
+        <answer>1/3</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>In a bag of 5 red marbles, 3 green marbles, and 2 blue marbles, what is the probability of drawing a green marble?</text>
+        <choice>3/10</choice>
+        <choice>1/2</choice>
+        <choice>3/5</choice>
+        <choice>1/3</choice>
+        <answer>3/10</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing an Ace from a standard deck of 52 cards?</text>
+        <choice>4/52</choice>
+        <choice>1/52</choice>
+        <choice>1/13</choice>
+        <choice>4/13</choice>
+        <answer>4/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If a card is drawn at random from a deck of 52 cards, what is the probability of drawing a face card (Jack, Queen, King)?</text>
+        <choice>12/52</choice>
+        <choice>4/52</choice>
+        <choice>1/13</choice>
+        <choice>3/52</choice>
+        <answer>12/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of rolling an even number on a standard six-sided die?</text>
+        <choice>1/2</choice>
+        <choice>1/3</choice>
+        <choice>1/6</choice>
+        <choice>1/4</choice>
+        <answer>1/2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If two dice are rolled, what is the probability of getting a sum of 7?</text>
+        <choice>1/36</choice>
+        <choice>1/6</choice>
+        <choice>1/9</choice>
+        <choice>1/12</choice>
+        <answer>1/6</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing a spade from a deck of 52 cards?</text>
+        <choice>1/4</choice>
+        <choice>1/2</choice>
+        <choice>13/52</choice>
+        <choice>4/52</choice>
+        <answer>13/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of getting a prime number when rolling a standard six-sided die?</text>
+        <choice>1/2</choice>
+        <choice>1/3</choice>
+        <choice>1/6</choice>
+        <choice>1/4</choice>
+        <answer>1/2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing a red card or a face card from a deck of 52 cards?</text>
+        <choice>26/52</choice>
+        <choice>18/52</choice>
+        <choice>40/52</choice>
+        <choice>12/52</choice>
+        <answer>40/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If you roll two dice, what is the probability of rolling a double (both dice show the same number)?</text>
+        <choice>1/36</choice>
+        <choice>1/6</choice>
+        <choice>1/9</choice>
+        <choice>1/12</choice>
+        <answer>1/6</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of rolling a number less than 3 on a standard six-sided die?</text>
+        <choice>1/6</choice>
+        <choice>2/6</choice>
+        <choice>1/3</choice>
+        <choice>1/2</choice>
+        <answer>1/3</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of picking a marble that is not green from a bag containing 5 red marbles, 3 green marbles, and 2 blue marbles?</text>
+        <choice>7/10</choice>
+        <choice>3/10</choice>
+        <choice>1/2</choice>
+        <choice>5/10</choice>
+        <answer>7/10</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If you draw a card from a deck of 52 cards, what is the probability that it is either a Queen or a King?</text>
+        <choice>8/52</choice>
+        <choice>4/52</choice>
+        <choice>2/52</choice>
+        <choice>12/52</choice>
+        <answer>8/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of flipping two coins and getting at least one head?</text>
+        <choice>1/2</choice>
+        <choice>3/4</choice>
+        <choice>1/4</choice>
+        <choice>1/3</choice>
+        <answer>3/4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing a card that is a number card (2 through 10) from a deck of 52 cards?</text>
+        <choice>36/52</choice>
+        <choice>40/52</choice>
+        <choice>28/52</choice>
+        <choice>24/52</choice>
+        <answer>36/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is the probability of drawing a black card from a deck of 52 cards?</text>
+        <choice>1/4</choice>
+        <choice>26/52</choice>
+        <choice>13/52</choice>
+        <choice>1/2</choice>
+        <answer>26/52</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A chocolate bar costs c pence and a drink costs d pence. What is the expression for the cost of 2 chocolate bars and 2 drinks?</text>
+        <choice>c + d</choice>
+        <choice>2c + d</choice>
+        <choice>2c * 2d</choice>
+        <choice>2c - 2d</choice>
+        <answer>2c + 2d</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If a book costs $5 and you buy 3 books, how much do you pay in total?</text>
+        <choice>$10</choice>
+        <choice>$15</choice>
+        <choice>$20</choice>
+        <choice>$25</choice>
+        <answer>$15</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A rectangle has a length of 8 cm and a width of 5 cm. What is its area?</text>
+        <choice>13 cm^2</choice>
+        <choice>25 cm^2</choice>
+        <choice>40 cm^2</choice>
+        <choice>30 cm^2</choice>
+        <answer>30 cm^2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>What is 25% of 80?</text>
+        <choice>20</choice>
+        <choice>10</choice>
+        <choice>25</choice>
+        <choice>15</choice>
+        <answer>30 cm^2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A shop sells apples for $1.50 each. If you buy 4 apples, how much do you spend?</text>
+        <choice>$4.50</choice>
+        <choice>$6.00</choice>
+        <choice>$6.50</choice>
+        <choice>$5.00</choice>
+        <answer>$6.00</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If 5 pencils cost $10, how much does 1 pencil cost?</text>
+        <choice>$5</choice>
+        <choice>$4</choice>
+        <choice>$3</choice>
+        <choice>$2</choice>
+        <answer>$2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>If today is Monday, what day will it be in 10 days?</text>
+        <choice>Thursday</choice>
+        <choice>Friday</choice>
+        <choice>Saturday</choice>
+        <choice>Sunday</choice>
+        <answer>Saturday</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>John has 12 marbles. He gives 4 marbles to his friend. How many marbles does he have left?</text>
+        <choice>4</choice>
+        <choice>8</choice>
+        <choice>12</choice>
+        <choice>16</choice>
+        <answer>12</answer>
+        <score>1</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>Cindy's Cotton Candy sells cotton candy by the bag.  Her monthly fixed costs are $150 . It costs $2.50 to make each bag and she sells them for $4.00. What is the monthly break-even point?</text>
+        <choice>100 bags</choice>
+        <choice>150 bags</choice>
+        <choice>225 bags</choice>
+        <choice>80 bags</choice>
+        <answer>100 bags</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>Cindy's Cotton Candy sells cotton candy by the bag.  Her monthly fixed costs are $150 . It costs $2.50 to make each bag and she sells them for $4.00. To make a profit of $150, how many bags of cotton candy must be sold?</text>
+        <choice>100 bags</choice>
+        <choice>150 bags</choice>
+        <choice>225 bags</choice>
+        <choice>80 bags</choice>
+        <answer>200 bags</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A train travels 60 km per hour. How far does it travel in 2.5 hours?</text>
+        <choice>100 km</choice>
+        <choice>120 km</choice>
+        <choice>150 km</choice>
+        <choice>180 km</choice>
+        <answer>150 km</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A store sells a shirt for $25 with a 20% discount. What is the final price?</text>
+        <choice>$15</choice>
+        <choice>$20</choice>
+        <choice>$22</choice>
+        <choice>$18</choice>
+        <answer>$20</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A pizza is cut into 8 equal slices. If you eat 3 slices, what fraction of the pizza is left?</text>
+        <choice>3/8</choice>
+        <choice>5/8</choice>
+        <choice>6/8</choice>
+        <choice>1/8</choice>
+        <answer>5/8</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A shop sells a book for $30. If sales tax is 10%, what is the total price?</text>
+        <choice>$33</choice>
+        <choice>$35</choice>
+        <choice>$40</choice>
+        <choice>$32</choice>
+        <answer>$33</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A car travels 300 km in 5 hours. What is its average speed?</text>
+        <choice>59 km/h</choice>
+        <choice>60 km/h</choice>
+        <choice>61 km/h</choice>
+        <choice>62 km/h</choice>
+        <answer>60 km/h</answer>
+        <score>2</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>Kevin saves 2 dollars during the month of January. Each month, he plans to save twice the amount saved during the previous month. With this plan, how much will he have saved after 18 months?</text>
+        <choice>$218,174</choice>
+        <choice>$262,144</choice>
+        <choice>$478,195</choice>
+        <choice>$524,286</choice>
+        <answer>$524,286</answer>
+        <score>3</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A cardboard packing box contains footballs and baseballs. The ratio by weight of baseballs to footballs is 7 to 9. How many kilograms of footballs will there be in the box if the total weight of the box is 48 kilograms?</text>
+        <choice>30</choice>
+        <choice>27</choice>
+        <choice>26</choice>
+        <choice>15</choice>
+        <answer>27</answer>
+        <score>3</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>A farmer has a field in the shape of a right triangle. The two shorter sides are 9 meters and 12 meters. What is the length of the longest side?</text>
+        <choice>13 meters</choice>
+        <choice>14 meters</choice>
+        <choice>15 meters</choice>
+        <choice>16 meters</choice>
+        <answer>13 meters</answer>
+        <score>3</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>The price of a phone increased by 10% in the first year and 20% in the second year. If the original price was $500, what is the final price after two years?</text>
+        <choice>$600</choice>
+        <choice>$680</choice>
+        <choice>$620</choice>
+        <choice>$660</choice>
+        <answer>$660</answer>
+        <score>3</score>
+    </question>
+
+    <question category="PROBABILITY">
+        <text>The sum of the ages of Alex and Ben is 44. Five years ago, Alex was twice as old as Ben. How old is Ben now?</text>
+        <choice>14</choice>
+        <choice>15</choice>
+        <choice>16</choice>
+        <choice>17</choice>
+        <answer>15</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What is the next number in the pattern?
+            3, 6, 9, 12, ?"</text>
+        <choice>14</choice>
+        <choice>15</choice>
+        <choice>16</choice>
+        <choice>17</choice>
+        <answer>15</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If all cats are animals and some animals are dogs, does it mean some cats are dogs?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>Not enough information</choice>
+        <answer>No</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Which of the following does not belong?</text>
+        <choice>4, 9, 16, 25</choice>
+        <choice>5, 10, 15, 20</choice>
+        <choice>3, 6, 12, 24</choice>
+        <choice>2, 4, 8, 16</choice>
+        <answer>4, 9, 16, 25</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If all birds can fly, and penguins are birds, can penguins fly?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>Depends on the penguin</choice>
+        <answer>No</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What comes next in the pattern?
+            A, B, C, D, ?"</text>
+        <choice>E</choice>
+        <choice>F</choice>
+        <choice>G</choice>
+        <choice>H</choice>
+        <answer>E</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Which word does not belong?</text>
+        <choice>Triangle</choice>
+        <choice>Square</choice>
+        <choice>Circle</choice>
+        <choice>Hexagon</choice>
+        <answer>Circle</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What number should replace the question mark?
+            5, 10, 15, 20, ?, 30"</text>
+        <choice>22</choice>
+        <choice>24</choice>
+        <choice>25</choice>
+        <choice>26</choice>
+        <answer>25</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Which is the biggest number?</text>
+        <choice>0.99</choice>
+        <choice>1.01</choice>
+        <choice>1.001</choice>
+        <choice>1.10</choice>
+        <answer>1.10</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>A farmer has 17 sheep. All but 9 run away. How many are left?</text>
+        <choice>0</choice>
+        <choice>8</choice>
+        <choice>9</choice>
+        <choice>17</choice>
+        <answer>9</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What number should replace the question mark?
+            1, 4, 9, 16, 25, ?, 49"</text>
+        <choice>30</choice>
+        <choice>36</choice>
+        <choice>40</choice>
+        <choice>45</choice>
+        <answer>36</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>A father is twice as old as his son. In 10 years, the father will be 50 years old. How old is the son now?</text>
+        <choice>15</choice>
+        <choice>20</choice>
+        <choice>25</choice>
+        <choice>30</choice>
+        <answer>15</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Tim is 10 years old. His brother is 4 years younger. How old will his brother be in 5 years?</text>
+        <choice>9</choice>
+        <choice>10</choice>
+        <choice>11</choice>
+        <choice>12</choice>
+        <answer>10</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>A farmer has 3 cows and 2 chickens. How many legs are there in total?</text>
+        <choice>10</choice>
+        <choice>12</choice>
+        <choice>14</choice>
+        <choice>16</choice>
+        <answer>14</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>A man has 4 daughters. Each daughter has a brother. How many children does he have?</text>
+        <choice>4</choice>
+        <choice>5</choice>
+        <choice>9</choice>
+        <choice>8</choice>
+        <answer>5</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What comes next?
+            1, 4, 9, 16, 25, ?"</text>
+        <choice>30</choice>
+        <choice>32</choice>
+        <choice>36</choice>
+        <choice>40</choice>
+        <answer>36</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>You see a clock showing 3:15. The hour hand is exactly between 3 and 4. What is the exact angle between the hour and minute hands?</text>
+        <choice>7.5°</choice>
+        <choice>15°</choice>
+        <choice>22.5°</choice>
+        <choice>30°</choice>
+        <answer>22.5°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If today is not Friday, then tomorrow is not Saturday. If that statement is false, what day is today?</text>
+        <choice>Thursday</choice>
+        <choice>Friday</choice>
+        <choice>Saturday</choice>
+        <choice>Sunday</choice>
+        <answer>Friday</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If a train leaves the station at 3:00 PM and arrives at 4:45 PM, how long was the journey?</text>
+        <choice>1 hour</choice>
+        <choice>1 hour 30 minutes</choice>
+        <choice>1 hour 45 minutes</choice>
+        <choice>2 hours</choice>
+        <answer>1 hour 45 minutes</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Which of the following is false?</text>
+        <choice>A square has 4 sides.</choice>
+        <choice>The sum of two even numbers is even.</choice>
+        <choice>A prime number can be divided by more than 2 numbers.</choice>
+        <choice>All right angles are 90°.</choice>
+        <answer>A prime number can be divided by more than 2 numbers</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>"What comes next in the pattern?
+            1, 3, 6, 10, 15, ?"</text>
+        <choice>18</choice>
+        <choice>20</choice>
+        <choice>21</choice>
+        <choice>24</choice>
+        <answer>21</answer>
+        <score>3</score>
+    </question>
+    <question category="LOGIC">
+        <text>If all dogs bark, and Rover is a dog, does Rover bark?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Maybe</choice>
+        <choice>Not enough information</choice>
+        <answer>Yes</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If all humans are mammals, and some mammals are dogs, are all humans dogs?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Some humans are dogs</choice>
+        <choice>None of the above</choice>
+        <answer>No</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All cars are vehicles. Is a bicycle a vehicle?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>Not enough information</choice>
+        <answer>Yes</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If Jane is older than Bob, and Bob is older than Tim, who is the youngest?</text>
+        <choice>Jane</choice>
+        <choice>Bob</choice>
+        <choice>Tim</choice>
+        <choice>Not enough information</choice>
+        <answer>Tim</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If the sun is shining, then it is not raining. It is raining. What can be concluded?</text>
+        <choice>The sun is shining</choice>
+        <choice>The sun is not shining</choice>
+        <choice>It is cloudy</choice>
+        <choice>Not enough information</choice>
+        <answer>The sun is not shining</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If a statement is false, then its opposite is true. If "The sky is blue" is false, what is the opposite?</text>
+        <choice>The sky is red</choice>
+        <choice>The sky is green</choice>
+        <choice>The sky is not blue</choice>
+        <choice>The sky is yellow</choice>
+        <answer>The sky is not blue</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If a number is divisible by 3, is it divisible by 6?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>None of the above</choice>
+        <answer>No</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>Which number is the missing term in the series: 3, 9, 27, ?</text>
+        <choice>54</choice>
+        <choice>81</choice>
+        <choice>72</choice>
+        <choice>64</choice>
+        <answer>81</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If all roses are red, and the flower in the vase is red, can it be concluded that it is a rose?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Maybe</choice>
+        <choice>Not enough information</choice>
+        <answer>Not enough information</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>It takes 3 workers 3 hours to complete a task. How many workers are needed to complete the task in 1 hour?</text>
+        <choice>3</choice>
+        <choice>9</choice>
+        <choice>1</choice>
+        <choice>6</choice>
+        <answer>9</answer>
+        <score>5</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All roses are flowers. Are roses plants?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <answer>Yes</answer>
+        <score>1</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All apples are fruits. Some fruits are red. Are some apples red?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>What</choice>
+        <choice>Correct Answer</choice>
+        <answer>Yes</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All cats are animals. Are some cats pets?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Maybe</choice>
+        <choice>I don't know</choice>
+        <answer>Yes</answer>
+        <score>2</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If today is Monday, what day is it 100 days from now?</text>
+        <choice>Wednesday</choice>
+        <choice>Friday</choice>
+        <choice>Sunday</choice>
+        <choice>Thursday</choice>
+        <answer>Friday</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>A man is taller than a boy, and the boy is taller than a dog. Who is taller?</text>
+        <choice>The man</choice>
+        <choice>The boy</choice>
+        <choice>The dog</choice>
+        <choice>None of the above</choice>
+        <answer>The man</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>The sky is blue. What is the opposite of this statement?</text>
+        <choice>The sky is cloudy</choice>
+        <choice>The sky is red</choice>
+        <choice>The sky is not blue</choice>
+        <choice>The sky is clear</choice>
+        <answer>The sky is not blue</answer>
+        <score>3</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All squares are rectangles. Are squares quadrilaterals?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>None of the above</choice>
+        <answer>Yes</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>What comes next in this sequence: 2, 4, 8, 16, ?</text>
+        <choice>20</choice>
+        <choice>24</choice>
+        <choice>32</choice>
+        <choice>28</choice>
+        <answer>32</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>All birds can fly. Can penguins fly?</text>
+        <choice>Yes</choice>
+        <choice>No</choice>
+        <choice>Sometimes</choice>
+        <choice>Only in water</choice>
+        <answer>No</answer>
+        <score>4</score>
+    </question>
+
+    <question category="LOGIC">
+        <text>If 5 machines make 5 cars in 5 minutes, how many machines are needed to make 100 cars in 100 minutes?</text>
+        <choice>1</choice>
+        <choice>5</choice>
+        <choice>10</choice>
+        <choice>100</choice>
+        <answer>5</answer>
+        <score>5</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Find the next term of the arithmetic sequence 177, 173, 169, 165,…</text>
+        <choice>160</choice>
+        <choice>162</choice>
+        <choice>161</choice>
+        <choice>159</choice>
+        <answer>162</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>65 is what percent of 500</text>
+        <choice>6</choice>
+        <choice>8</choice>
+        <choice>11</choice>
+        <choice>13</choice>
+        <answer>13</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>9/10 - 3/10</text>
+        <choice>3/4</choice>
+        <choice>4/5</choice>
+        <choice>4/15</choice>
+        <choice>3/15</choice>
+        <answer>3/4</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is the sum of 130 + 125 + 191?</text>
+        <choice>335</choice>
+        <choice>457</choice>
+        <choice>446</choice>
+        <choice>546</choice>
+        <answer>446</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Solve 24 ÷ 8 + 2.</text>
+        <choice>5</choice>
+        <choice>6</choice>
+        <choice>8</choice>
+        <choice>12</choice>
+        <answer>12</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Cube root of 1331 is:</text>
+        <choice>11</choice>
+        <choice>13</choice>
+        <choice>14</choice>
+        <choice>12</choice>
+        <answer>11</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>A square has all its angles equal to:</text>
+        <choice>180</choice>
+        <choice>90</choice>
+        <choice>75</choice>
+        <choice>120</choice>
+        <answer>90</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>The square root of 5 is:</text>
+        <choice>2.23</choice>
+        <choice>2.25</choice>
+        <choice>3</choice>
+        <choice>2.5</choice>
+        <answer>2.23</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Which of the following inequalities is true?</text>
+        <choice>3/4 is less than 5/7</choice>
+        <choice>2/3 is greater than 5/6</choice>
+        <choice>5/8 is greater than 6/10</choice>
+        <choice>4/5 is less than 2/9</choice>
+        <answer>5/8 > 6/10</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is the value of the expression 8x – 10 when x = 5?</text>
+        <choice>30</choice>
+        <choice>4</choice>
+        <choice>3</choice>
+        <choice>50</choice>
+        <answer>30</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>46.2 × 10-2 =</text>
+        <choice>0.0462</choice>
+        <choice>0.462</choice>
+        <choice>4.62</choice>
+        <choice>0.00462</choice>
+        <answer>0.462</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>3 1/3 – 2 2/5 =</text>
+        <choice>1 1/2</choice>
+        <choice>1/15</choice>
+        <choice>14/15</choice>
+        <choice>1 1/1</choice>
+        <answer>14/15</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>15 + 19 + 23 + 27 + 31 + 35 + 39</text>
+        <choice>150</choice>
+        <choice>189</choice>
+        <choice>174</choice>
+        <choice>168</choice>
+        <answer>189</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>7 / 20 =</text>
+        <choice>0.035</choice>
+        <choice>0.855</choice>
+        <choice>3.35</choice>
+        <choice>0.858</choice>
+        <answer>0.858</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Common ration of  4, 12, 36, 108, ...</text>
+        <choice>6</choice>
+        <choice>3</choice>
+        <choice>-3</choice>
+        <choice>-6</choice>
+        <answer>3</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>75, ?, ?, ?, 135</text>
+        <choice>90, 105, 120</choice>
+        <choice>120, 105, 90</choice>
+        <choice>85, 95, 105</choice>
+        <choice>95, 115, 125</choice>
+        <answer>90, 105, 120</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is the common ratio of the sequence: 4,12,36,108,...?</text>
+        <choice>2</choice>
+        <choice>3</choice>
+        <choice>4</choice>
+        <choice>6</choice>
+        <answer>3</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>A store increases the price of a phone from $500 to $625. What is the percentage increase?</text>
+        <choice>20%</choice>
+        <choice>22.50%</choice>
+        <choice>25%</choice>
+        <choice>30%</choice>
+        <answer>25%</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>"What is the average (mean) of these numbers?
+            8, 14, 20, 26, 32, 38"</text>
+        <choice>21</choice>
+        <choice>23</choice>
+        <choice>24</choice>
+        <choice>26</choice>
+        <answer>24</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>Which two consecutive whole numbers does √77 ​lie between?</text>
+        <choice>7 and 8</choice>
+        <choice>8 and 9</choice>
+        <choice>9 and 10</choice>
+        <choice>10 and 11</choice>
+        <answer>8 and 9</answer>
+        <score>3</score>
+    </question>
+    <question category="ARITHMETIC">
+        <text>What is 8 + 12?</text>
+        <choice>18</choice>
+        <choice>20</choice>
+        <choice>21</choice>
+        <choice>19</choice>
+        <answer>20</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 50 - 18?</text>
+        <choice>28</choice>
+        <choice>32</choice>
+        <choice>30</choice>
+        <choice>31</choice>
+        <answer>32</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 15 × 4?</text>
+        <choice>60</choice>
+        <choice>65</choice>
+        <choice>70</choice>
+        <choice>75</choice>
+        <answer>60</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 96 ÷ 8?</text>
+        <choice>10</choice>
+        <choice>11</choice>
+        <choice>12</choice>
+        <choice>13</choice>
+        <answer>12</answer>
+        <score>2</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 75 + 39?</text>
+        <choice>113</choice>
+        <choice>114</choice>
+        <choice>115</choice>
+        <choice>116</choice>
+        <answer>114</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 125 ÷ 25?</text>
+        <choice>5</choice>
+        <choice>4</choice>
+        <choice>6</choice>
+        <choice>7</choice>
+        <answer>5</answer>
+        <score>3</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 375 × 6?</text>
+        <choice>2200</choice>
+        <choice>2250</choice>
+        <choice>2300</choice>
+        <choice>2350</choice>
+        <answer>2250</answer>
+        <score>4</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 819 ÷ 27?</text>
+        <choice>30</choice>
+        <choice>31</choice>
+        <choice>32</choice>
+        <choice>33</choice>
+        <answer>30</answer>
+        <score>4</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 456 + 789?</text>
+        <choice>1135</choice>
+        <choice>1245</choice>
+        <choice>1235</choice>
+        <choice>1185</choice>
+        <answer>1245</answer>
+        <score>4</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 625 ÷ 25 × 12?</text>
+        <choice>300</choice>
+        <choice>315</choice>
+        <choice>320</choice>
+        <choice>325</choice>
+        <answer>300</answer>
+        <score>5</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 5 + 8?</text>
+        <choice>13</choice>
+        <choice>12</choice>
+        <choice>15</choice>
+        <choice>10</choice>
+        <answer>13</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 12 - 7?</text>
+        <choice>5</choice>
+        <choice>6</choice>
+        <choice>4</choice>
+        <choice>3</choice>
+        <answer>5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 6 × 9?</text>
+        <choice>54</choice>
+        <choice>56</choice>
+        <choice>60</choice>
+        <choice>52</choice>
+        <answer>54</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 36 ÷ 4?</text>
+        <choice>9</choice>
+        <choice>8</choice>
+        <choice>7</choice>
+        <choice>10</choice>
+        <answer>9</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 15 + 9?</text>
+        <choice>22</choice>
+        <choice>23</choice>
+        <choice>24</choice>
+        <choice>21</choice>
+        <answer>24</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 100 - 37?</text>
+        <choice>67</choice>
+        <choice>66</choice>
+        <choice>65</choice>
+        <choice>68</choice>
+        <answer>63</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 14 × 5?</text>
+        <choice>60</choice>
+        <choice>70</choice>
+        <choice>72</choice>
+        <choice>75</choice>
+        <answer>70</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 120 ÷ 6?</text>
+        <choice>18</choice>
+        <choice>19</choice>
+        <choice>20</choice>
+        <choice>21</choice>
+        <answer>20</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 45 + 55?</text>
+        <choice>95</choice>
+        <choice>100</choice>
+        <choice>105</choice>
+        <choice>110</choice>
+        <answer>100</answer>
+        <score>1</score>
+    </question>
+
+    <question category="ARITHMETIC">
+        <text>What is 50 ÷ 2?</text>
+        <choice>30</choice>
+        <choice>25</choice>
+        <choice>20</choice>
+        <choice>15</choice>
+        <answer>25</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Which side of a right triangle is always the longest?</text>
+        <choice>Adjacent side</choice>
+        <choice>Opposite side</choice>
+        <choice>Hypotenuse </choice>
+        <choice>Base</choice>
+        <answer>Hypotenuse </answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Which of the following is a trigonometric ratio?</text>
+        <choice>Addition</choice>
+        <choice>Square root</choice>
+        <choice>Division</choice>
+        <choice>Cosine </choice>
+        <answer>Cosine </answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>In a right triangle, what function relates the opposite side to the hypotenuse?</text>
+        <choice>Sine</choice>
+        <choice>Cosine</choice>
+        <choice>Tangent</choice>
+        <choice>Secant</choice>
+        <answer>Sine</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the hypotenuse of a right triangle with legs of 3 cm and 4 cm?</text>
+        <choice>7 cm</choice>
+        <choice>5 cm</choice>
+        <choice>1 cm</choice>
+        <choice>3 cm</choice>
+        <answer>5 cm</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the sine of a 30° angle?</text>
+        <choice>0.707</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.866</choice>
+        <answer>0.5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the tangent of a 45° angle?</text>
+        <choice>0.707</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.866</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the cosine of a 60° angle?</text>
+        <choice>0.707</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.866</choice>
+        <answer>0.866</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the Pythagorean Theorem?</text>
+        <choice>a^2 + b^2 = ab</choice>
+        <choice>a + b = c</choice>
+        <choice>a^2 + b^2 = c^2</choice>
+        <choice>a^3 + b^3 = c^3</choice>
+        <answer>a^2 + b^2 = c^2</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>If sin A = 0.6, what is cos A assuming a right triangle?</text>
+        <choice>0.4</choice>
+        <choice>0.8</choice>
+        <choice>1</choice>
+        <choice>0.2</choice>
+        <answer>0.8</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Which of the following is an identity in trigonometry?</text>
+        <choice>sin(x) = 1 - cos(x)</choice>
+        <choice>sin(x) = cos(x)</choice>
+        <choice>sin^2x + cos^2x = 1</choice>
+        <choice>tan(x) = cos(x)</choice>
+        <answer>sin^2x + cos^2x = 1</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A right triangle has an opposite side of 6 cm and an adjacent side of 8 cm. What is tan A?</text>
+        <choice>0.5</choice>
+        <choice>0.75</choice>
+        <choice>1</choice>
+        <choice>1.25</choice>
+        <answer>0.75</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the missing angle: A triangle has angles of 25° and 65°. What is the third angle?</text>
+        <choice>80°</choice>
+        <choice>90°</choice>
+        <choice>100°</choice>
+        <choice>110°</choice>
+        <answer>90°</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>If cos A = 0.5, what is A?</text>
+        <choice>30°</choice>
+        <choice>45°</choice>
+        <choice>90°</choice>
+        <choice>180°</choice>
+        <answer>30°</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Which of the following is equal to tan⁡60°?</text>
+        <choice>√2</choice>
+        <choice>1</choice>
+        <choice>√3</choice>
+        <choice>0.5</choice>
+        <answer>√3</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A right triangle has an angle of 53° and a hypotenuse of 15 cm. What is the length of the adjacent side?</text>
+        <choice>9 cm</choice>
+        <choice>12 cm</choice>
+        <choice>7 cm</choice>
+        <choice>10 cm</choice>
+        <answer>9 cm</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A 15 m flagpole casts a shadow of 25 m. Find the angle of elevation of the sun.</text>
+        <choice>36.87°</choice>
+        <choice>37.86°</choice>
+        <choice>37.87°</choice>
+        <choice>38.86°</choice>
+        <answer>36.87°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A boat is 100 m from a lighthouse. If the angle of elevation is 60°, how tall is the lighthouse?</text>
+        <choice>176.2 m</choice>
+        <choice>175.2 m</choice>
+        <choice>174.2 m</choice>
+        <choice>173.2 m</choice>
+        <answer>173.2 m</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A triangle has sides of 13 cm, 12 cm, and 5 cm. What is the smallest angle?</text>
+        <choice>20.62°</choice>
+        <choice>21.62°</choice>
+        <choice>22.62°</choice>
+        <choice>23.62°</choice>
+        <answer>22.62°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>A building 50 m tall casts a shadow of 40 m. What is the angle of elevation of the sun?</text>
+        <choice>51.34°</choice>
+        <choice>31.34°</choice>
+        <choice>52.34°</choice>
+        <choice>32.34°</choice>
+        <answer>51.34°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the missing side of a right triangle with a hypotenuse of 25 cm and one leg of 15 cm.</text>
+        <choice>10 cm</choice>
+        <choice>20 cm</choice>
+        <choice>30 cm</choice>
+        <choice>40 cm</choice>
+        <answer>20 cm</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the value of sin(30°).</text>
+        <choice>0.5</choice>
+        <choice>1</choice>
+        <choice>0.866</choice>
+        <choice>0.707</choice>
+        <answer>0.5</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of cos(45°)?</text>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.707</choice>
+        <choice>0.866</choice>
+        <answer>0.707</answer>
+        <score>2</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the value of tan(60°).</text>
+        <choice>1.732</choice>
+        <choice>1</choice>
+        <choice>0.577</choice>
+        <choice>0.707</choice>
+        <answer>1.732</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the value of sin(90°).</text>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.707</choice>
+        <choice>0.866</choice>
+        <answer>1</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>If tan(θ) = 1, what is the value of θ?</text>
+        <choice>45°</choice>
+        <choice>30°</choice>
+        <choice>60°</choice>
+        <choice>90°</choice>
+        <answer>45°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of cos(0°)?</text>
+        <choice>1</choice>
+        <choice>0</choice>
+        <choice>-1</choice>
+        <choice>0.5</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>If sin(θ) = 0.5, what is the value of θ?</text>
+        <choice>30°</choice>
+        <choice>45°</choice>
+        <choice>60°</choice>
+        <choice>90°</choice>
+        <answer>30°</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the Pythagorean identity for sine and cosine?</text>
+        <choice>sin²(θ) + cos²(θ) = 1</choice>
+        <choice>sin²(θ) + tan²(θ) = 1</choice>
+        <choice>sin²(θ) - cos²(θ) = 1</choice>
+        <choice>tan²(θ) + cos²(θ) = 1</choice>
+        <answer>sin²(θ) + cos²(θ) = 1</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>Find the value of cos(60°).</text>
+        <choice>0.5</choice>
+        <choice>1</choice>
+        <choice>0.707</choice>
+        <choice>0.866</choice>
+        <answer>0.5</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the cotangent of 45°?</text>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>0.707</choice>
+        <choice>2</choice>
+        <answer>1</answer>
+        <score>3</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of sin(0°)?</text>
+        <choice>0</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>2</choice>
+        <answer>0</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of cos(0°)?</text>
+        <choice>0</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>2</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of tan(0°)?</text>
+        <choice>0</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>Undefined</choice>
+        <answer>0</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of sin(90°)?</text>
+        <choice>0</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>2</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of cos(90°)?</text>
+        <choice>0</choice>
+        <choice>1</choice>
+        <choice>0.5</choice>
+        <choice>2</choice>
+        <answer>0</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of tan(45°)?</text>
+        <choice>0.5</choice>
+        <choice>1</choice>
+        <choice>2</choice>
+        <choice>0.707</choice>
+        <answer>1</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of sin(45°)?</text>
+        <choice>0.5</choice>
+        <choice>0.707</choice>
+        <choice>1</choice>
+        <choice>0.866</choice>
+        <answer>0.707</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of cos(60°)?</text>
+        <choice>0.5</choice>
+        <choice>1</choice>
+        <choice>0.707</choice>
+        <choice>0.866</choice>
+        <answer>0.5</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of tan(30°)?</text>
+        <choice>0.577</choice>
+        <choice>0.5</choice>
+        <choice>1</choice>
+        <choice>0.866</choice>
+        <answer>0.577</answer>
+        <score>1</score>
+    </question>
+
+    <question category="TRIGONOMETRY">
+        <text>What is the value of sin(60°)?</text>
+        <choice>0.5</choice>
+        <choice>0.707</choice>
+        <choice>1</choice>
+        <choice>0.866</choice>
+        <answer>0.866</answer>
+        <score>1</score>
+    </question>
+</questions>
