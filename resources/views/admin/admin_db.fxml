@@ -40,7 +40,7 @@
                                 </graphic>
                             </Button>
 
-                            <Button id="tabPlayers" fx:id="playersButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" styleClass="unclicked" text="PLAYERS" textFill="#545454">
+                            <Button id="tabPlayers" fx:id="playersButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" styleClass="unclicked" text="LEADERBOARD" textFill="#545454">
                                 <graphic>
                                     <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                                         <image>
