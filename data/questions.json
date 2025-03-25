@@ -1,2368 +1,2366 @@
 [
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 10 - 2(3)",
-      "choices": [
-        "-13",
-        "4",
-        "16",
-        "24"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 3x + 7 = 16",
-      "choices": [
-        "5",
-        "3",
-        "6",
-        "7"
-      ],
-      "correctAnswer": "3",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve for y: 5y - 3 = 2",
-      "choices": [
-        "1",
-        "2",
-        "-1",
-        "-2"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify: 2(x + 3) - 5x",
-      "choices": [
-        "-3x + 6",
-        "3x + 6",
-        "-3x - 6",
-        "3x - 6"
-      ],
-      "correctAnswer": "-3x + 6",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the value of x if 4x + 2 = 14?",
-      "choices": [
-        "3",
-        "2",
-        "4",
-        "1"
-      ],
-      "correctAnswer": "3",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the solution to the inequality 2x - 5 < 3?",
-      "choices": [
-        "x < 4",
-        "x > 4",
-        "x < 2",
-        "x > 2"
-      ],
-      "correctAnswer": "x < 4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: x² - 16 = 0",
-      "choices": [
-        "4",
-        "-4",
-        "±4",
-        "0"
-      ],
-      "correctAnswer": "±4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Expand the expression: (x + 3)(x - 4)",
-      "choices": [
-        "x² - x - 12",
-        "x² - x + 12",
-        "x² - 7x - 12",
-        "x² + 7x - 12"
-      ],
-      "correctAnswer": "x² - x - 12",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve for x: 5x - 7 = 2x + 5",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the value of x in the equation: 7x = 35",
-      "choices": [
-        "5",
-        "7",
-        "35",
-        "1"
-      ],
-      "correctAnswer": "5",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify: (3x + 4) - (x - 5)",
-      "choices": [
-        "2x + 9",
-        "2x - 1",
-        "3x - 1",
-        "4x + 9"
-      ],
-      "correctAnswer": "2x + 9",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve for x: 4x + 5 = 2x + 13",
-      "choices": [
-        "4",
-        "5",
-        "3",
-        "2"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the value of x if 3x = 9?",
-      "choices": [
-        "3",
-        "2",
-        "1",
-        "4"
-      ],
-      "correctAnswer": "3",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Factor the expression: x² + 5x + 6",
-      "choices": [
-        "(x + 3)(x + 2)",
-        "(x + 6)(x + 1)",
-        "(x + 2)(x + 3)",
-        "(x + 1)(x + 6)"
-      ],
-      "correctAnswer": "(x + 3)(x + 2)",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve for x: x² - 25 = 0",
-      "choices": [
-        "5",
-        "-5",
-        "±5",
-        "25"
-      ],
-      "correctAnswer": "±5",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the slope of the line passing through the points (2,3) and (4,7)?",
-      "choices": [
-        "2",
-        "1",
-        "3",
-        "4"
-      ],
-      "correctAnswer": "2",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the system of equations: 2x + y = 8 and x - y = 1",
-      "choices": [
-        "(3, 2)",
-        "(2, 4)",
-        "(1, 5)",
-        "(4, 3)"
-      ],
-      "correctAnswer": "(3, 2)",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve for x: 2x - 4 = 3x + 5",
-      "choices": [
-        "-9",
-        "9",
-        "-5",
-        "5"
-      ],
-      "correctAnswer": "-9",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify the expression: 5(x + 4) - 2(x - 3)",
-      "choices": [
-        "3x + 26",
-        "3x + 23",
-        "3x + 17",
-        "3x + 20"
-      ],
-      "correctAnswer": "3x + 26",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the value of x if 6x - 5 = 19?",
-      "choices": [
-        "4",
-        "5",
-        "3",
-        "6"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify: 3x² + 5x - 2x² + 4x",
-      "choices": [
-        "x² + 9x",
-        "5x² + 9x",
-        "5x² + 9x - 2",
-        "x² + 9x - 2"
-      ],
-      "correctAnswer": "x² + 9x",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the value of x if 3x + 10 = 25?",
-      "choices": [
-        "5",
-        "6",
-        "8",
-        "4"
-      ],
-      "correctAnswer": "5",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the equation: x + 7 = 14",
-      "choices": [
-        "7",
-        "6",
-        "8",
-        "5"
-      ],
-      "correctAnswer": "7",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Factor the expression: x² - 4x",
-      "choices": [
-        "x(x - 4)",
-        "(x - 2)(x + 2)",
-        "x(x + 4)",
-        "(x - 4)(x + 4)"
-      ],
-      "correctAnswer": "x(x - 4)",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the proper term for this definition? A term without a variable",
-      "choices": [
-        "Constant",
-        "Exponent",
-        "Set",
-        "Terms"
-      ],
-      "correctAnswer": "Constant",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "How many terms are included in this expression? 2x^2 + 12x - 8 + 10x",
-      "choices": [
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify the fraction to the lowest terms: 924/1092",
-      "choices": [
-        "308/364",
-        "11/13",
-        "44/52",
-        "154/183"
-      ],
-      "correctAnswer": "11/13",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Identify the domain and range: (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)",
-      "choices": [
-        "D: {0, 1, 2, 3, 4, 5, 6, 7} R: {-1, -2, -3}",
-        "D: {0, 3, 5, 6, 7} R: {-3, -2, -1, 1, 2, 4}",
-        "D: {2, 3, 1, 3, 4, 7, -3} R: {-2, 3, 4, 5, -1, 6, 0}",
-        "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}"
-      ],
-      "correctAnswer": "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 10 - 2(3)",
-      "choices": [
-        "-13",
-        "4",
-        "16",
-        "24"
-      ],
-      "correctAnswer": "4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify the expression: (-1/5)^3",
-      "choices": [
-        "-3/125",
-        "-1/125",
-        "3/125",
-        "1/125"
-      ],
-      "correctAnswer": "-1/125",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify the expression: (2x^3)^2",
-      "choices": [
-        "2x^5",
-        "4x^6",
-        "4x^5",
-        "2x^6"
-      ],
-      "correctAnswer": "4x^6",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Simplify the expression: 4m + 5 + 2m - 1",
-      "choices": [
-        "10m",
-        "6m + 4",
-        "6m + 6",
-        "6m - 4"
-      ],
-      "correctAnswer": "6m + 4",
-      "score": 1
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the pair of equations for x and y: x + y = 4, x − y = 8",
-      "choices": [
-        "x = 2 , y = −6",
-        "x = 6 , y = −2",
-        "x = −6 , y = 2",
-        "x = −2 , y = 6"
-      ],
-      "correctAnswer": "x = 6 , y = −2",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 5(x − 5) = 5",
-      "choices": [
-        "x = −6",
-        "x = 1",
-        "x = 6",
-        "x = −1"
-      ],
-      "correctAnswer": "x = 6",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the algebraic expression for this phrase? A term without a variable",
-      "choices": [
-        "6t",
-        "6(t) + 1",
-        "6(2) + t",
-        "6(0)t"
-      ],
-      "correctAnswer": "6t",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the algebraic expression for this phrase? 13 more than the product of 9 and n",
-      "choices": [
-        "13 + 9 + n",
-        "9n + 13",
-        "13(9) + n",
-        "9(13) + n"
-      ],
-      "correctAnswer": "9n + 13",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 2(z + 3) = 18",
-      "choices": [
-        "z = 12",
-        "z = 7.5",
-        "z = 2",
-        "z = 6"
-      ],
-      "correctAnswer": "z = 6",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 6x − 2 = −14",
-      "choices": [
-        "1",
-        "-2",
-        "-1",
-        "2"
-      ],
-      "correctAnswer": "-2",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the following equation: 4k - 5k = 10 + k",
-      "choices": [
-        "k = 5",
-        "k = 20",
-        "k = -5",
-        "k = -20"
-      ],
-      "correctAnswer": "k = -5",
-      "score": 2
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Solve the pair of equations for x and y: 2x + y = 16, y − 2x = 0",
-      "choices": [
-        "x = 4 , y = −8",
-        "x = 8 , y = 4",
-        "x = 4 , y = 8",
-        "x = 8 , y = −4"
-      ],
-      "correctAnswer": "x = 4 , y = 8",
-      "score": 3
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Translate and solve: '4 less than 3 times a number is -16'",
-      "choices": [
-        "x = -4",
-        "x = 3",
-        "x = 4",
-        "x = -3"
-      ],
-      "correctAnswer": "x = -4",
-      "score": 3
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "Rearrange the equation into slope-intercept form: 2x - 3y = 9",
-      "choices": [
-        "y = 9 / 2x - 3",
-        "y = 2 / 3x - 3",
-        "y = 2x / 3y - 3",
-        "y = 3 / 2x - 9"
-      ],
-      "correctAnswer": "y = 2 / 3x - 3",
-      "score": 3
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "What is the algebraic expression for this phrase? '9 taken away from the sum of x and y'",
-      "choices": [
-        "x + y - 9",
-        "9 - (x + y)",
-        "x + y / 9",
-        "9 / x + y"
-      ],
-      "correctAnswer": "x + y - 9",
-      "score": 3
-    },
-    {
-      "category": "ALGEBRA",
-      "questionText": "The sum of two numbers is 82 and their product is 1456, find the two numbers.",
-      "choices": [
-        "41, 2",
-        "26 , 56",
-        "41, -2",
-        "−26 , −56"
-      ],
-      "correctAnswer": "26 , 56",
-      "score": 3
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a rectangle with length 5 cm and width 3 cm?",
-      "choices": [
-        "15 cm²",
-        "10 cm²",
-        "8 cm²",
-        "5 cm²"
-      ],
-      "correctAnswer": "15 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the perimeter of a square with a side length of 6 cm?",
-      "choices": [
-        "24 cm",
-        "12 cm",
-        "36 cm",
-        "6 cm"
-      ],
-      "correctAnswer": "24 cm",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the volume of a cube with side length 4 cm?",
-      "choices": [
-        "64 cm³",
-        "16 cm³",
-        "24 cm³",
-        "32 cm³"
-      ],
-      "correctAnswer": "64 cm³",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a circle with radius 7 cm?",
-      "choices": [
-        "49π cm²",
-        "14π cm²",
-        "49 cm²",
-        "14 cm²"
-      ],
-      "correctAnswer": "49π cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm?",
-      "choices": [
-        "12 cm",
-        "15 cm",
-        "18 cm",
-        "14 cm"
-      ],
-      "correctAnswer": "12 cm",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a right triangle with a base of 6 cm and height of 8 cm?",
-      "choices": [
-        "24 cm²",
-        "48 cm²",
-        "36 cm²",
-        "18 cm²"
-      ],
-      "correctAnswer": "24 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the surface area of a sphere with radius 5 cm?",
-      "choices": [
-        "100π cm²",
-        "25π cm²",
-        "75π cm²",
-        "50π cm²"
-      ],
-      "correctAnswer": "100π cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a parallelogram with base 6 cm and height 4 cm?",
-      "choices": [
-        "24 cm²",
-        "18 cm²",
-        "20 cm²",
-        "36 cm²"
-      ],
-      "correctAnswer": "24 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the circumference of a circle with diameter 10 cm?",
-      "choices": [
-        "10π cm",
-        "20π cm",
-        "5π cm",
-        "25π cm"
-      ],
-      "correctAnswer": "10π cm",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the sum of the interior angles of a hexagon?",
-      "choices": [
-        "720°",
-        "1080°",
-        "900°",
-        "540°"
-      ],
-      "correctAnswer": "720°",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a trapezoid with bases 8 cm and 12 cm, and height 5 cm?",
-      "choices": [
-        "50 cm²",
-        "40 cm²",
-        "60 cm²",
-        "30 cm²"
-      ],
-      "correctAnswer": "50 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the volume of a cylinder with radius 3 cm and height 7 cm?",
-      "choices": [
-        "63π cm³",
-        "27π cm³",
-        "21π cm³",
-        "45π cm³"
-      ],
-      "correctAnswer": "63π cm³",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of a rhombus with diagonals of lengths 8 cm and 10 cm?",
-      "choices": [
-        "40 cm²",
-        "35 cm²",
-        "20 cm²",
-        "30 cm²"
-      ],
-      "correctAnswer": "40 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the volume of a cone with radius 4 cm and height 9 cm?",
-      "choices": [
-        "48π cm³",
-        "36π cm³",
-        "72π cm³",
-        "54π cm³"
-      ],
-      "correctAnswer": "48π cm³",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the surface area of a rectangular prism with length 4 cm, width 3 cm, and height 5 cm?",
-      "choices": [
-        "94 cm²",
-        "70 cm²",
-        "56 cm²",
-        "75 cm²"
-      ],
-      "correctAnswer": "94 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the perimeter of a regular hexagon with a side length of 7 cm?",
-      "choices": [
-        "42 cm",
-        "49 cm",
-        "36 cm",
-        "30 cm"
-      ],
-      "correctAnswer": "42 cm",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the volume of a pyramid with base area 16 cm² and height 9 cm?",
-      "choices": [
-        "144 cm³",
-        "72 cm³",
-        "128 cm³",
-        "64 cm³"
-      ],
-      "correctAnswer": "48 cm³",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the area of an equilateral triangle with a side length of 6 cm?",
-      "choices": [
-        "15.59 cm²",
-        "12.99 cm²",
-        "18.47 cm²",
-        "19.39 cm²"
-      ],
-      "correctAnswer": "15.59 cm²",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "It is a two-dimensional surface.",
-      "choices": [
-        "plane",
-        "coordinate",
-        "line",
-        "point"
-      ],
-      "correctAnswer": "plane",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "The distance around a circle.",
-      "choices": [
-        "circumference",
-        "radius",
-        "perimeter",
-        "side"
-      ],
-      "correctAnswer": "circumference",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the degree of a straight line?",
-      "choices": [
-        "360",
-        "90",
-        "75",
-        "180"
-      ],
-      "correctAnswer": "180",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Quadrilaterals where all the sides are the same length.",
-      "choices": [
-        "square",
-        "rectangle",
-        "rhombus",
-        "trapezoid"
-      ],
-      "correctAnswer": "rhombus",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Any polygon with six sides.",
-      "choices": [
-        "pentagon",
-        "hexagon",
-        "heptagon",
-        "octagon"
-      ],
-      "correctAnswer": "hexagon",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "The sum of exterior angles of a polygon is equal to:",
-      "choices": [
-        "280",
-        "150",
-        "180",
-        "360"
-      ],
-      "correctAnswer": "360",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Identical in size and shape.",
-      "choices": [
-        "perpendicular",
-        "equilateral",
-        "congruent",
-        "parallel"
-      ],
-      "correctAnswer": "congruent",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Sides that are the same length.",
-      "choices": [
-        "congruent",
-        "equilateral",
-        "perpendicular",
-        "parallel"
-      ],
-      "correctAnswer": "equilateral",
-      "score": 1
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Two lines in a two-dimensional space that do not meet.",
-      "choices": [
-        "perpendicular",
-        "equilateral",
-        "congruent",
-        "parallel"
-      ],
-      "correctAnswer": "parallel",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "A 3D figure on which the faces are triangular and converge to a single point at the top.",
-      "choices": [
-        "prism",
-        "pyramid",
-        "sphere",
-        "triangle"
-      ],
-      "correctAnswer": "pyramid",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "A straight line that intersects a curve at two or more points.",
-      "choices": [
-        "side",
-        "sector",
-        "secant",
-        "segment"
-      ],
-      "correctAnswer": "secant",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "A particular aspect of life or activity.",
-      "choices": [
-        "side",
-        "sector",
-        "secant",
-        "segment"
-      ],
-      "correctAnswer": "sector",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "A round body whose surface is at all points equidistant from the center.",
-      "choices": [
-        "prism",
-        "pyramid",
-        "sphere",
-        "triangle"
-      ],
-      "correctAnswer": "sphere",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "The endpoint on one side and keeps going forever on the other.",
-      "choices": [
-        "ellipse",
-        "ray",
-        "chord",
-        "arc"
-      ],
-      "correctAnswer": "ray",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "The measure of the arc's central angle.",
-      "choices": [
-        "line segment",
-        "measure of an arc",
-        "corresponding angles",
-        "similar shape"
-      ],
-      "correctAnswer": "measure of an arc",
-      "score": 2
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Triangle PQR has angles in the ratio of 2:3:5. Which type of triangle is PQR?",
-      "choices": [
-        "acute",
-        "isosceles",
-        "right",
-        "obtuse"
-      ],
-      "correctAnswer": "obtuse",
-      "score": 3
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "Which of the following could be the side lengths of a right triangle?",
-      "choices": [
-        "3, 13, and 14",
-        "4, 5, and 6",
-        "5, 10, and 15",
-        "5, 12, and 13"
-      ],
-      "correctAnswer": "5, 12, and 13",
-      "score": 3
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "The circumference of a circle is 30. What is its area?",
-      "choices": [
-        "15pi",
-        "225pi",
-        "250pi",
-        "10pi"
-      ],
-      "correctAnswer": "225pi",
-      "score": 3
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "A three-dimensional figure with identical ends",
-      "choices": [
-        "prism",
-        "pyramid",
-        "sphere",
-        "triangle"
-      ],
-      "correctAnswer": "prism",
-      "score": 3
-    },
-    {
-      "category": "GEOMETRY",
-      "questionText": "What is the sum of the measures of the interior angles of a hexagon?",
-      "choices": [
-        "720",
-        "540",
-        "180",
-        "360"
-      ],
-      "correctAnswer": "720",
-      "score": 3
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of getting a head when flipping a fair coin?",
-      "choices": [
-        "1/2",
-        "1/3",
-        "1/4",
-        "1"
-      ],
-      "correctAnswer": "1/2",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of rolling a 3 on a standard six-sided die?",
-      "choices": [
-        "1/6",
-        "1/2",
-        "1/3",
-        "1/4"
-      ],
-      "correctAnswer": "1/6",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing a red card from a standard deck of 52 cards?",
-      "choices": [
-        "26/52",
-        "1/2",
-        "1/4",
-        "1/52"
-      ],
-      "correctAnswer": "26/52",
-      "score": 1
-    },
-
-    {
-      "category": "PROBABILITY",
-      "questionText": "If you flip two coins, what is the probability of getting two tails?",
-      "choices": [
-        "1/4",
-        "1/2",
-        "1/3",
-        "1/8"
-      ],
-      "correctAnswer": "1/4",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of rolling a number greater than 4 on a standard six-sided die?",
-      "choices": [
-        "1/6",
-        "1/3",
-        "1/2",
-        "2/3"
-      ],
-      "correctAnswer": "1/3",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "In a bag of 5 red marbles, 3 green marbles, and 2 blue marbles, what is the probability of drawing a green marble?",
-      "choices": [
-        "3/10",
-        "1/2",
-        "3/5",
-        "1/3"
-      ],
-      "correctAnswer": "3/10",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing an Ace from a standard deck of 52 cards?",
-      "choices": [
-        "4/52",
-        "1/52",
-        "1/13",
-        "4/13"
-      ],
-      "correctAnswer": "4/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "If a card is drawn at random from a deck of 52 cards, what is the probability of drawing a face card (Jack, Queen, King)?",
-      "choices": [
-        "12/52",
-        "4/52",
-        "1/13",
-        "3/52"
-      ],
-      "correctAnswer": "12/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of rolling an even number on a standard six-sided die?",
-      "choices": [
-        "1/2",
-        "1/3",
-        "1/6",
-        "1/4"
-      ],
-      "correctAnswer": "1/2",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "If two dice are rolled, what is the probability of getting a sum of 7?",
-      "choices": [
-        "1/36",
-        "1/6",
-        "1/9",
-        "1/12"
-      ],
-      "correctAnswer": "1/6",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing a spade from a deck of 52 cards?",
-      "choices": [
-        "1/4",
-        "1/2",
-        "13/52",
-        "4/52"
-      ],
-      "correctAnswer": "13/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of getting a prime number when rolling a standard six-sided die?",
-      "choices": [
-        "1/2",
-        "1/3",
-        "1/6",
-        "1/4"
-      ],
-      "correctAnswer": "1/2",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing a red card or a face card from a deck of 52 cards?",
-      "choices": [
-        "26/52",
-        "18/52",
-        "40/52",
-        "12/52"
-      ],
-      "correctAnswer": "40/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "If you roll two dice, what is the probability of rolling a double (both dice show the same number)?",
-      "choices": [
-        "1/36",
-        "1/6",
-        "1/9",
-        "1/12"
-      ],
-      "correctAnswer": "1/6",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of rolling a number less than 3 on a standard six-sided die?",
-      "choices": [
-        "1/6",
-        "2/6",
-        "1/3",
-        "1/2"
-      ],
-      "correctAnswer": "1/3",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of picking a marble that is not green from a bag containing 5 red marbles, 3 green marbles, and 2 blue marbles?",
-      "choices": [
-        "7/10",
-        "3/10",
-        "1/2",
-        "5/10"
-      ],
-      "correctAnswer": "7/10",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "If you draw a card from a deck of 52 cards, what is the probability that it is either a Queen or a King?",
-      "choices": [
-        "8/52",
-        "4/52",
-        "2/52",
-        "12/52"
-      ],
-      "correctAnswer": "8/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of flipping two coins and getting at least one head?",
-      "choices": [
-        "1/2",
-        "3/4",
-        "1/4",
-        "1/3"
-      ],
-      "correctAnswer": "3/4",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing a card that is a number card (2 through 10) from a deck of 52 cards?",
-      "choices": [
-        "36/52",
-        "40/52",
-        "28/52",
-        "24/52"
-      ],
-      "correctAnswer": "36/52",
-      "score": 1
-    },
-    {
-      "category": "PROBABILITY",
-      "questionText": "What is the probability of drawing a black card from a deck of 52 cards?",
-      "choices": [
-        "1/4",
-        "26/52",
-        "13/52",
-        "1/2"
-      ],
-      "correctAnswer": "26/52",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What is the next number in the pattern? 3, 6, 9, 12, ?",
-      "choices": [
-        "14",
-        "15",
-        "16",
-        "17"
-      ],
-      "correctAnswer": "15",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If all cats are animals and some animals are dogs, does it mean some cats are dogs?",
-      "choices": [
-        "Yes",
-        "No",
-        "Sometimes",
-        "Not enough information"
-      ],
-      "correctAnswer": "No",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Which of the following does not belong?",
-      "choices": [
-        "4, 9, 16, 25",
-        "5, 10, 15, 20",
-        "3, 6, 12, 24",
-        "2, 4, 8, 16"
-      ],
-      "correctAnswer": "4, 9, 16, 25",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If all birds can fly, and penguins are birds, can penguins fly?",
-      "choices": [
-        "Yes",
-        "No",
-        "Sometimes",
-        "Depends on the penguin"
-      ],
-      "correctAnswer": "No",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What comes next in the pattern? A, B, C, D, ?",
-      "choices": [
-        "E",
-        "F",
-        "G",
-        "H"
-      ],
-      "correctAnswer": "E",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Which word does not belong?",
-      "choices": [
-        "Triangle",
-        "Square",
-        "Circle",
-        "Hexagon"
-      ],
-      "correctAnswer": "Circle",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What number should replace the question mark? 5, 10, 15, 20, ?",
-      "choices": [
-        "22",
-        "24",
-        "25",
-        "26"
-      ],
-      "correctAnswer": "25",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Which is the biggest number?",
-      "choices": [
-        "0.99",
-        "1.01",
-        "1.001",
-        "1.10"
-      ],
-      "correctAnswer": "1.10",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "A farmer has 17 sheep. All but 9 run away. How many are left?",
-      "choices": [
-        "0",
-        "8",
-        "9",
-        "17"
-      ],
-      "correctAnswer": "9",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What number should replace the question mark? 1, 4, 9, 16, 25, ?",
-      "choices": [
-        "30",
-        "36",
-        "40",
-        "45"
-      ],
-      "correctAnswer": "36",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "A father is twice as old as his son. In 10 years, the father will be 50 years old. How old is the son now?",
-      "choices": [
-        "15",
-        "20",
-        "25",
-        "30"
-      ],
-      "correctAnswer": "15",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Tim is 10 years old. His brother is 4 years younger. How old will his brother be in 5 years?",
-      "choices": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "correctAnswer": "10",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "A farmer has 3 cows and 2 chickens. How many legs are there in total?",
-      "choices": [
-        "10",
-        "12",
-        "14",
-        "16"
-      ],
-      "correctAnswer": "14",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "A man has 4 daughters. Each daughter has a brother. How many children does he have?",
-      "choices": [
-        "4",
-        "5",
-        "9",
-        "8"
-      ],
-      "correctAnswer": "5",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What comes next? 1, 4, 9, 16, 25, ?",
-      "choices": [
-        "30",
-        "36",
-        "40",
-        "45"
-      ],
-      "correctAnswer": "36",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "You see a clock showing 3:15. The hour hand is exactly between 3 and 4. What is the exact angle between the hour and minute hands?",
-      "choices": [
-        "7.5°",
-        "15°",
-        "22.5°",
-        "30°"
-      ],
-      "correctAnswer": "22.5°",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If today is not Friday, then tomorrow is not Saturday. If that statement is false, what day is today?",
-      "choices": [
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "correctAnswer": "Friday",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If a train leaves the station at 3:00 PM and arrives at 4:45 PM, how long was the journey?",
-      "choices": [
-        "1 hour",
-        "1 hour 30 minutes",
-        "1 hour 45 minutes",
-        "2 hours"
-      ],
-      "correctAnswer": "1 hour 45 minutes",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Which of the following is false?",
-      "choices": [
-        "A square has 4 sides.",
-        "The sum of two even numbers is even.",
-        "A prime number can be divided by more than 2 numbers.",
-        "All right angles are 90°."
-      ],
-      "correctAnswer": "A prime number can be divided by more than 2 numbers.",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "What comes next in the pattern? 1, 3, 6, 10, 15, ?",
-      "choices": [
-        "18",
-        "20",
-        "21",
-        "24"
-      ],
-      "correctAnswer": "21",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If all dogs bark, and Rover is a dog, does Rover bark?",
-      "choices": [
-        "Yes",
-        "No",
-        "Maybe",
-        "Not enough information"
-      ],
-      "correctAnswer": "Yes",
-      "score": 1
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If all humans are mammals, and some mammals are dogs, are all humans dogs?",
-      "choices": [
-        "Yes",
-        "No",
-        "Some humans are dogs",
-        "None of the above"
-      ],
-      "correctAnswer": "No",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "All cars are vehicles. Is a bicycle a vehicle?",
-      "choices": [
-        "Yes",
-        "No",
-        "Sometimes",
-        "Not enough information"
-      ],
-      "correctAnswer": "Yes",
-      "score": 2
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If Jane is older than Bob, and Bob is older than Tim, who is the youngest?",
-      "choices": [
-        "Jane",
-        "Bob",
-        "Tim",
-        "Not enough information"
-      ],
-      "correctAnswer": "Tim",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If the sun is shining, then it is not raining. It is raining. What can be concluded?",
-      "choices": [
-        "The sun is shining",
-        "The sun is not shining",
-        "It is cloudy",
-        "Not enough information"
-      ],
-      "correctAnswer": "The sun is not shining",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If a statement is false, then its opposite is true. If 'The sky is blue' is false, what is the opposite?",
-      "choices": [
-        "The sky is red",
-        "The sky is green",
-        "The sky is not blue",
-        "The sky is yellow"
-      ],
-      "correctAnswer": "The sky is not blue",
-      "score": 3
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If a number is divisible by 3, is it divisible by 6?",
-      "choices": [
-        "Yes",
-        "No",
-        "Sometimes",
-        "None of the above"
-      ],
-      "correctAnswer": "No",
-      "score": 4
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "Which number is the missing term in the series: 3, 9, 27, ?",
-      "choices": [
-        "54",
-        "81",
-        "72",
-        "64"
-      ],
-      "correctAnswer": "81",
-      "score": 4
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "If all roses are red, and the flower in the vase is red, can it be concluded that it is a rose?",
-      "choices": [
-        "Yes",
-        "No",
-        "Sometimes",
-        "Not enough information"
-      ],
-      "correctAnswer": "Not enough information",
-      "score": 4
-    },
-    {
-      "category": "LOGIC",
-      "questionText": "It takes 3 workers 3 hours to complete a task. How many workers are needed to complete the task in 1 hour?",
-      "choices": [
-        "3",
-        "9",
-        "1",
-        "6"
-      ],
-      "correctAnswer": "9",
-      "score": 5
-    },
-
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Find the next term of the arithmetic sequence 177, 173, 169, 165,…",
-      "choices": [
-        "160",
-        "162",
-        "161",
-        "159"
-      ],
-      "correctAnswer": "162",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "65 is what percent of 500?",
-      "choices": [
-        "6",
-        "8",
-        "11",
-        "13"
-      ],
-      "correctAnswer": "13",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "9/10 - 3/10",
-      "choices": [
-        "3/4",
-        "4/5",
-        "4/15",
-        "3/15"
-      ],
-      "correctAnswer": "3/4",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is the sum of 130 + 125 + 191?",
-      "choices": [
-        "335",
-        "457",
-        "446",
-        "546"
-      ],
-      "correctAnswer": "446",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Solve 24 ÷ 8 + 2.",
-      "choices": [
-        "5",
-        "6",
-        "8",
-        "12"
-      ],
-      "correctAnswer": "6",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Cube root of 1331 is:",
-      "choices": [
-        "11",
-        "13",
-        "14",
-        "12"
-      ],
-      "correctAnswer": "11",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "A square has all its angles equal to:",
-      "choices": [
-        "180",
-        "90",
-        "75",
-        "120"
-      ],
-      "correctAnswer": "90",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "The square root of 5 is:",
-      "choices": [
-        "2.23",
-        "2.25",
-        "3",
-        "2.5"
-      ],
-      "correctAnswer": "2.23",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Which of the following inequalities is true?",
-      "choices": [
-        "3/4 is less than 5/7",
-        "2/3 is greater than 5/6",
-        "5/8 is greater than 6/10",
-        "4/5 is less than 2/9"
-      ],
-      "correctAnswer": "5/8 > 6/10",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is the value of the expression 8x – 10 when x = 5?",
-      "choices": [
-        "30",
-        "4",
-        "3",
-        "50"
-      ],
-      "correctAnswer": "30",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "46.2 × 10-2 =",
-      "choices": [
-        "0.0462",
-        "0.462",
-        "4.62",
-        "0.00462"
-      ],
-      "correctAnswer": "0.462",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "3 1/3 – 2 2/5 =",
-      "choices": [
-        "1 1/2",
-        "1/15",
-        "14/15",
-        "1 1/1"
-      ],
-      "correctAnswer": "14/15",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "15 + 19 + 23 + 27 + 31 + 35 + 39",
-      "choices": [
-        "150",
-        "189",
-        "174",
-        "168"
-      ],
-      "correctAnswer": "189",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "7 / 20 =",
-      "choices": [
-        "0.035",
-        "0.855",
-        "3.35",
-        "0.858"
-      ],
-      "correctAnswer": "0.35",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Common ratio of 4, 12, 36, 108, ...",
-      "choices": [
-        "6",
-        "3",
-        "-3",
-        "-6"
-      ],
-      "correctAnswer": "3",
-      "score": 2
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "75, ?, ?, ?, 135",
-      "choices": [
-        "90, 105, 120",
-        "120, 105, 90",
-        "85, 95, 105",
-        "95, 115, 125"
-      ],
-      "correctAnswer": "90, 105, 120",
-      "score": 3
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is the common ratio of the sequence: 4,12,36,108,...?",
-      "choices": [
-        "2",
-        "3",
-        "4",
-        "6"
-      ],
-      "correctAnswer": "3",
-      "score": 3
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "A store increases the price of a phone from $500 to $625. What is the percentage increase?",
-      "choices": [
-        "20%",
-        "22.50%",
-        "25%",
-        "30%"
-      ],
-      "correctAnswer": "25%",
-      "score": 3
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is the average (mean) of these numbers? 8, 14, 20, 26, 32, 38",
-      "choices": [
-        "21",
-        "23",
-        "24",
-        "26"
-      ],
-      "correctAnswer": "24",
-      "score": 3
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "Which two consecutive whole numbers does √77 lie between?",
-      "choices": [
-        "7 and 8",
-        "8 and 9",
-        "9 and 10",
-        "10 and 11"
-      ],
-      "correctAnswer": "8 and 9",
-      "score": 3
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 8 + 12?",
-      "choices": [
-        "13",
-        "12",
-        "15",
-        "10"
-      ],
-      "correctAnswer": "20",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 50 - 18?",
-      "choices": [
-        "28",
-        "32",
-        "30",
-        "31"
-      ],
-      "correctAnswer": "32",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 15 × 4?",
-      "choices": [
-        "60",
-        "65",
-        "70",
-        "75"
-      ],
-      "correctAnswer": "60",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 36 ÷ 4?",
-      "choices": [
-        "9",
-        "8",
-        "7",
-        "10"
-      ],
-      "correctAnswer": "9",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 15 + 9?",
-      "choices": [
-        "22",
-        "23",
-        "24",
-        "21"
-      ],
-      "correctAnswer": "24",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 100 - 37?",
-      "choices": [
-        "67",
-        "66",
-        "65",
-        "68"
-      ],
-      "correctAnswer": "63",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 14 × 5?",
-      "choices": [
-        "60",
-        "70",
-        "72",
-        "75"
-      ],
-      "correctAnswer": "70",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 120 ÷ 6?",
-      "choices": [
-        "9",
-        "19",
-        "20",
-        "21"
-      ],
-      "correctAnswer": "20",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 15 + 19?",
-      "choices": [
-        "150",
-        "100",
-        "105",
-        "110"
-      ],
-      "correctAnswer": "100",
-      "score": 1
-    },
-    {
-      "category": "ARITHMETIC",
-      "questionText": "What is 50 ÷ 2?",
-      "choices": [
-        "30",
-        "25",
-        "20",
-        "15"
-      ],
-      "correctAnswer": "25",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Which side of a right triangle is always the longest?",
-      "choices": [
-        "Adjacent side",
-        "Opposite side",
-        "Hypotenuse",
-        "Base"
-      ],
-      "correctAnswer": "Hypotenuse",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Which of the following is a trigonometric ratio?",
-      "choices": [
-        "Addition",
-        "Square root",
-        "Division",
-        "Cosine"
-      ],
-      "correctAnswer": "Cosine",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "In a right triangle, what function relates the opposite side to the hypotenuse?",
-      "choices": [
-        "Sine",
-        "Cosine",
-        "Tangent",
-        "Secant"
-      ],
-      "correctAnswer": "Sine",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the hypotenuse of a right triangle with legs of 3 cm and 4 cm?",
-      "choices": [
-        "7 cm",
-        "5 cm",
-        "1 cm",
-        "3 cm"
-      ],
-      "correctAnswer": "5 cm",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the sine of a 30° angle?",
-      "choices": [
-        "0.707",
-        "1",
-        "0.5",
-        "0.866"
-      ],
-      "correctAnswer": "0.5",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the tangent of a 45° angle?",
-      "choices": [
-        "0.707",
-        "1",
-        "0.5",
-        "0.866"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the cosine of a 60° angle?",
-      "choices": [
-        "0.707",
-        "1",
-        "0.5",
-        "0.866"
-      ],
-      "correctAnswer": "0.5",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the Pythagorean Theorem?",
-      "choices": [
-        "a^2 + b^2 = ab",
-        "a + b = c",
-        "a^2 + b^2 = c^2",
-        "a^3 + b^3 = c^3"
-      ],
-      "correctAnswer": "a^2 + b^2 = c^2",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "If sin A = 0.6, what is cos A assuming a right triangle?",
-      "choices": [
-        "0.4",
-        "0.8",
-        "1",
-        "0.2"
-      ],
-      "correctAnswer": "0.8",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Which of the following is an identity in trigonometry?",
-      "choices": [
-        "sin(x) = 1 - cos(x)",
-        "sin(x) = cos(x)",
-        "sin^2x + cos^2x = 1",
-        "tan(x) = cos(x)"
-      ],
-      "correctAnswer": "sin^2x + cos^2x = 1",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A right triangle has an opposite side of 6 cm and an adjacent side of 8 cm. What is tan A?",
-      "choices": [
-        "1",
-        "0.75",
-        "0.5",
-        "1.25"
-      ],
-      "correctAnswer": "0.75",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Find the missing angle: A triangle has angles of 25° and 65°. What is the third angle?",
-      "choices": [
-        "80°",
-        "90°",
-        "100°",
-        "110°"
-      ],
-      "correctAnswer": "90°",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "If cos A = 0.5, what is A?",
-      "choices": [
-        "30°",
-        "45°",
-        "90°",
-        "180°"
-      ],
-      "correctAnswer": "60°",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Which of the following is equal to tan⁡60°?",
-      "choices": [
-        "√2",
-        "1",
-        "√3",
-        "0.5"
-      ],
-      "correctAnswer": "√3",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A right triangle has an angle of 53° and a hypotenuse of 15 cm. What is the length of the adjacent side?",
-      "choices": [
-        "9 cm",
-        "12 cm",
-        "7 cm",
-        "10 cm"
-      ],
-      "correctAnswer": "9 cm",
-      "score": 2
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A building 50 m tall casts a shadow of 40 m. What is the angle of elevation of the sun?",
-      "choices": [
-        "51.34°",
-        "31.34°",
-        "52.34°",
-        "32.34°"
-      ],
-      "correctAnswer": "51.34°",
-      "score": 3
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A boat is 100 m from a lighthouse. If the angle of elevation is 60°, how tall is the lighthouse?",
-      "choices": [
-        "176.2 m",
-        "175.2 m",
-        "174.2 m",
-        "173.2 m"
-      ],
-      "correctAnswer": "173.2 m",
-      "score": 3
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A triangle has sides of 13 cm, 12 cm, and 5 cm. What is the smallest angle?",
-      "choices": [
-        "20.62°",
-        "21.62°",
-        "22.62°",
-        "23.62°"
-      ],
-      "correctAnswer": "22.62°",
-      "score": 3
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "A right triangle has an angle of 53° and a hypotenuse of 15 cm. What is the length of the opposite side?",
-      "choices": [
-        "9 cm",
-        "12 cm",
-        "7 cm",
-        "10 cm"
-      ],
-      "correctAnswer": "12 cm",
-      "score": 3
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Find the value of sin(30°).",
-      "choices": [
-        "0.707",
-        "1",
-        "0.5",
-        "0.866"
-      ],
-      "correctAnswer": "0.5",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of cos(45°)?",
-      "choices": [
-        "1",
-        "0.5",
-        "0.707",
-        "0.866"
-      ],
-      "correctAnswer": "0.707",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Find the value of tan(60°).",
-      "choices": [
-        "1.732",
-        "1",
-        "0.577",
-        "0.866"
-      ],
-      "correctAnswer": "1.732",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "Find the value of sin(90°).",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of cos(90°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "0",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of tan(0°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "Undefined"
-      ],
-      "correctAnswer": "0",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of sin(90°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of cos(0°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of tan(0°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "Undefined"
-      ],
-      "correctAnswer": "0",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of sin(90°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of cos(90°)?",
-      "choices": [
-        "0",
-        "1",
-        "0.5",
-        "2"
-      ],
-      "correctAnswer": "0",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of tan(45°)?",
-      "choices": [
-        "0.5",
-        "1",
-        "2",
-        "0.707"
-      ],
-      "correctAnswer": "1",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of sin(45°)?",
-      "choices": [
-        "0.5",
-        "0.707",
-        "1",
-        "0.866"
-      ],
-      "correctAnswer": "0.707",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of cos(60°)?",
-      "choices": [
-        "0.5",
-        "1",
-        "0.707",
-        "0.866"
-      ],
-      "correctAnswer": "0.5",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of tan(30°)?",
-      "choices": [
-        "0.577",
-        "0.5",
-        "1",
-        "0.866"
-      ],
-      "correctAnswer": "0.577",
-      "score": 1
-    },
-    {
-      "category": "TRIGONOMETRY",
-      "questionText": "What is the value of sin(60°)?",
-      "choices": [
-        "0.5",
-        "0.707",
-        "1",
-        "0.866"
-      ],
-      "correctAnswer": "0.866",
-      "score": 1
-    }
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 10 - 2(3)",
+    "choices": [
+      "-13",
+      "4",
+      "16",
+      "24"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 3x + 7 \u003d 16",
+    "choices": [
+      "5",
+      "3",
+      "6",
+      "7"
+    ],
+    "correctAnswer": "3",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve for y: 5y - 3 \u003d 2",
+    "choices": [
+      "1",
+      "2",
+      "-1",
+      "-2"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify: 2(x + 3) - 5x",
+    "choices": [
+      "-3x + 6",
+      "3x + 6",
+      "-3x - 6",
+      "3x - 6"
+    ],
+    "correctAnswer": "-3x + 6",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the value of x if 4x + 2 \u003d 14?",
+    "choices": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "correctAnswer": "3",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the solution to the inequality 2x - 5 \u003c 3?",
+    "choices": [
+      "x \u003c 4",
+      "x \u003e 4",
+      "x \u003c 2",
+      "x \u003e 2"
+    ],
+    "correctAnswer": "x \u003c 4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: x² - 16 \u003d 0",
+    "choices": [
+      "4",
+      "-4",
+      "±4",
+      "0"
+    ],
+    "correctAnswer": "±4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Expand the expression: (x + 3)(x - 4)",
+    "choices": [
+      "x² - x - 12",
+      "x² - x + 12",
+      "x² - 7x - 12",
+      "x² + 7x - 12"
+    ],
+    "correctAnswer": "x² - x - 12",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve for x: 5x - 7 \u003d 2x + 5",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the value of x in the equation: 7x \u003d 35",
+    "choices": [
+      "5",
+      "7",
+      "35",
+      "1"
+    ],
+    "correctAnswer": "5",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify: (3x + 4) - (x - 5)",
+    "choices": [
+      "2x + 9",
+      "2x - 1",
+      "3x - 1",
+      "4x + 9"
+    ],
+    "correctAnswer": "2x + 9",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve for x: 4x + 5 \u003d 2x + 13",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "2"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the value of x if 3x \u003d 9?",
+    "choices": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "correctAnswer": "3",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Factor the expression: x² + 5x + 6",
+    "choices": [
+      "(x + 3)(x + 2)",
+      "(x + 6)(x + 1)",
+      "(x + 2)(x + 3)",
+      "(x + 1)(x + 6)"
+    ],
+    "correctAnswer": "(x + 3)(x + 2)",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve for x: x² - 25 \u003d 0",
+    "choices": [
+      "5",
+      "-5",
+      "±5",
+      "25"
+    ],
+    "correctAnswer": "±5",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the slope of the line passing through the points (2,3) and (4,7)?",
+    "choices": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "2",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the system of equations: 2x + y \u003d 8 and x - y \u003d 1",
+    "choices": [
+      "(3, 2)",
+      "(2, 4)",
+      "(1, 5)",
+      "(4, 3)"
+    ],
+    "correctAnswer": "(3, 2)",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve for x: 2x - 4 \u003d 3x + 5",
+    "choices": [
+      "-9",
+      "9",
+      "-5",
+      "5"
+    ],
+    "correctAnswer": "-9",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify the expression: 5(x + 4) - 2(x - 3)",
+    "choices": [
+      "3x + 26",
+      "3x + 23",
+      "3x + 17",
+      "3x + 20"
+    ],
+    "correctAnswer": "3x + 26",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the value of x if 6x - 5 \u003d 19?",
+    "choices": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify: 3x² + 5x - 2x² + 4x",
+    "choices": [
+      "x² + 9x",
+      "5x² + 9x",
+      "5x² + 9x - 2",
+      "x² + 9x - 2"
+    ],
+    "correctAnswer": "x² + 9x",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the value of x if 3x + 10 \u003d 25?",
+    "choices": [
+      "5",
+      "6",
+      "8",
+      "4"
+    ],
+    "correctAnswer": "5",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the equation: x + 7 \u003d 14",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "correctAnswer": "7",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Factor the expression: x² - 4x",
+    "choices": [
+      "x(x - 4)",
+      "(x - 2)(x + 2)",
+      "x(x + 4)",
+      "(x - 4)(x + 4)"
+    ],
+    "correctAnswer": "x(x - 4)",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the proper term for this definition? A term without a variable",
+    "choices": [
+      "Constant",
+      "Exponent",
+      "Set",
+      "Terms"
+    ],
+    "correctAnswer": "Constant",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "How many terms are included in this expression? 2x^2 + 12x - 8 + 10x",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify the fraction to the lowest terms: 924/1092",
+    "choices": [
+      "308/364",
+      "11/13",
+      "44/52",
+      "154/183"
+    ],
+    "correctAnswer": "11/13",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Identify the domain and range: (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)",
+    "choices": [
+      "D: {0, 1, 2, 3, 4, 5, 6, 7} R: {-1, -2, -3}",
+      "D: {0, 3, 5, 6, 7} R: {-3, -2, -1, 1, 2, 4}",
+      "D: {2, 3, 1, 3, 4, 7, -3} R: {-2, 3, 4, 5, -1, 6, 0}",
+      "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}"
+    ],
+    "correctAnswer": "D: {-3, -2, -1, 1, 2, 4} R: {0, 3, 5, 6, 7}",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 10 - 2(3)",
+    "choices": [
+      "-13",
+      "4",
+      "16",
+      "24"
+    ],
+    "correctAnswer": "4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify the expression: (-1/5)^3",
+    "choices": [
+      "-3/125",
+      "-1/125",
+      "3/125",
+      "1/125"
+    ],
+    "correctAnswer": "-1/125",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify the expression: (2x^3)^2",
+    "choices": [
+      "2x^5",
+      "4x^6",
+      "4x^5",
+      "2x^6"
+    ],
+    "correctAnswer": "4x^6",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Simplify the expression: 4m + 5 + 2m - 1",
+    "choices": [
+      "10m",
+      "6m + 4",
+      "6m + 6",
+      "6m - 4"
+    ],
+    "correctAnswer": "6m + 4",
+    "score": 1
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the pair of equations for x and y: x + y \u003d 4, x − y \u003d 8",
+    "choices": [
+      "x \u003d 2 , y \u003d −6",
+      "x \u003d 6 , y \u003d −2",
+      "x \u003d −6 , y \u003d 2",
+      "x \u003d −2 , y \u003d 6"
+    ],
+    "correctAnswer": "x \u003d 6 , y \u003d −2",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 5(x − 5) \u003d 5",
+    "choices": [
+      "x \u003d −6",
+      "x \u003d 1",
+      "x \u003d 6",
+      "x \u003d −1"
+    ],
+    "correctAnswer": "x \u003d 6",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the algebraic expression for this phrase? A term without a variable",
+    "choices": [
+      "6t",
+      "6(t) + 1",
+      "6(2) + t",
+      "6(0)t"
+    ],
+    "correctAnswer": "6t",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the algebraic expression for this phrase? 13 more than the product of 9 and n",
+    "choices": [
+      "13 + 9 + n",
+      "9n + 13",
+      "13(9) + n",
+      "9(13) + n"
+    ],
+    "correctAnswer": "9n + 13",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 2(z + 3) \u003d 18",
+    "choices": [
+      "z \u003d 12",
+      "z \u003d 7.5",
+      "z \u003d 2",
+      "z \u003d 6"
+    ],
+    "correctAnswer": "z \u003d 6",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 6x − 2 \u003d −14",
+    "choices": [
+      "1",
+      "-2",
+      "-1",
+      "2"
+    ],
+    "correctAnswer": "-2",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the following equation: 4k - 5k \u003d 10 + k",
+    "choices": [
+      "k \u003d 5",
+      "k \u003d 20",
+      "k \u003d -5",
+      "k \u003d -20"
+    ],
+    "correctAnswer": "k \u003d -5",
+    "score": 2
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Solve the pair of equations for x and y: 2x + y \u003d 16, y − 2x \u003d 0",
+    "choices": [
+      "x \u003d 4 , y \u003d −8",
+      "x \u003d 8 , y \u003d 4",
+      "x \u003d 4 , y \u003d 8",
+      "x \u003d 8 , y \u003d −4"
+    ],
+    "correctAnswer": "x \u003d 4 , y \u003d 8",
+    "score": 3
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Translate and solve: \u00274 less than 3 times a number is -16\u0027",
+    "choices": [
+      "x \u003d -4",
+      "x \u003d 3",
+      "x \u003d 4",
+      "x \u003d -3"
+    ],
+    "correctAnswer": "x \u003d -4",
+    "score": 3
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "Rearrange the equation into slope-intercept form: 2x - 3y \u003d 9",
+    "choices": [
+      "y \u003d 9 / 2x - 3",
+      "y \u003d 2 / 3x - 3",
+      "y \u003d 2x / 3y - 3",
+      "y \u003d 3 / 2x - 9"
+    ],
+    "correctAnswer": "y \u003d 2 / 3x - 3",
+    "score": 3
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "What is the algebraic expression for this phrase? \u00279 taken away from the sum of x and y\u0027",
+    "choices": [
+      "x + y - 9",
+      "9 - (x + y)",
+      "x + y / 9",
+      "9 / x + y"
+    ],
+    "correctAnswer": "x + y - 9",
+    "score": 3
+  },
+  {
+    "category": "ALGEBRA",
+    "questionText": "The sum of two numbers is 82 and their product is 1456, find the two numbers.",
+    "choices": [
+      "41, 2",
+      "26 , 56",
+      "41, -2",
+      "−26 , −56"
+    ],
+    "correctAnswer": "26 , 56",
+    "score": 3
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a rectangle with length 5 cm and width 3 cm?",
+    "choices": [
+      "15 cm²",
+      "10 cm²",
+      "8 cm²",
+      "5 cm²"
+    ],
+    "correctAnswer": "15 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the perimeter of a square with a side length of 6 cm?",
+    "choices": [
+      "24 cm",
+      "12 cm",
+      "36 cm",
+      "6 cm"
+    ],
+    "correctAnswer": "24 cm",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the volume of a cube with side length 4 cm?",
+    "choices": [
+      "64 cm³",
+      "16 cm³",
+      "24 cm³",
+      "32 cm³"
+    ],
+    "correctAnswer": "64 cm³",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a circle with radius 7 cm?",
+    "choices": [
+      "49π cm²",
+      "14π cm²",
+      "49 cm²",
+      "14 cm²"
+    ],
+    "correctAnswer": "49π cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm?",
+    "choices": [
+      "12 cm",
+      "15 cm",
+      "18 cm",
+      "14 cm"
+    ],
+    "correctAnswer": "12 cm",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a right triangle with a base of 6 cm and height of 8 cm?",
+    "choices": [
+      "24 cm²",
+      "48 cm²",
+      "36 cm²",
+      "18 cm²"
+    ],
+    "correctAnswer": "24 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the surface area of a sphere with radius 5 cm?",
+    "choices": [
+      "100π cm²",
+      "25π cm²",
+      "75π cm²",
+      "50π cm²"
+    ],
+    "correctAnswer": "100π cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a parallelogram with base 6 cm and height 4 cm?",
+    "choices": [
+      "24 cm²",
+      "18 cm²",
+      "20 cm²",
+      "36 cm²"
+    ],
+    "correctAnswer": "24 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the circumference of a circle with diameter 10 cm?",
+    "choices": [
+      "10π cm",
+      "20π cm",
+      "5π cm",
+      "25π cm"
+    ],
+    "correctAnswer": "10π cm",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the sum of the interior angles of a hexagon?",
+    "choices": [
+      "720°",
+      "1080°",
+      "900°",
+      "540°"
+    ],
+    "correctAnswer": "720°",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a trapezoid with bases 8 cm and 12 cm, and height 5 cm?",
+    "choices": [
+      "50 cm²",
+      "40 cm²",
+      "60 cm²",
+      "30 cm²"
+    ],
+    "correctAnswer": "50 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the volume of a cylinder with radius 3 cm and height 7 cm?",
+    "choices": [
+      "63π cm³",
+      "27π cm³",
+      "21π cm³",
+      "45π cm³"
+    ],
+    "correctAnswer": "63π cm³",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of a rhombus with diagonals of lengths 8 cm and 10 cm?",
+    "choices": [
+      "40 cm²",
+      "35 cm²",
+      "20 cm²",
+      "30 cm²"
+    ],
+    "correctAnswer": "40 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the volume of a cone with radius 4 cm and height 9 cm?",
+    "choices": [
+      "48π cm³",
+      "36π cm³",
+      "72π cm³",
+      "54π cm³"
+    ],
+    "correctAnswer": "48π cm³",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the surface area of a rectangular prism with length 4 cm, width 3 cm, and height 5 cm?",
+    "choices": [
+      "94 cm²",
+      "70 cm²",
+      "56 cm²",
+      "75 cm²"
+    ],
+    "correctAnswer": "94 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the perimeter of a regular hexagon with a side length of 7 cm?",
+    "choices": [
+      "42 cm",
+      "49 cm",
+      "36 cm",
+      "30 cm"
+    ],
+    "correctAnswer": "42 cm",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the volume of a pyramid with base area 16 cm² and height 9 cm?",
+    "choices": [
+      "144 cm³",
+      "72 cm³",
+      "128 cm³",
+      "64 cm³"
+    ],
+    "correctAnswer": "48 cm³",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the area of an equilateral triangle with a side length of 6 cm?",
+    "choices": [
+      "15.59 cm²",
+      "12.99 cm²",
+      "18.47 cm²",
+      "19.39 cm²"
+    ],
+    "correctAnswer": "15.59 cm²",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "It is a two-dimensional surface.",
+    "choices": [
+      "plane",
+      "coordinate",
+      "line",
+      "point"
+    ],
+    "correctAnswer": "plane",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "The distance around a circle.",
+    "choices": [
+      "circumference",
+      "radius",
+      "perimeter",
+      "side"
+    ],
+    "correctAnswer": "circumference",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the degree of a straight line?",
+    "choices": [
+      "360",
+      "90",
+      "75",
+      "180"
+    ],
+    "correctAnswer": "180",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Quadrilaterals where all the sides are the same length.",
+    "choices": [
+      "square",
+      "rectangle",
+      "rhombus",
+      "trapezoid"
+    ],
+    "correctAnswer": "rhombus",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Any polygon with six sides.",
+    "choices": [
+      "pentagon",
+      "hexagon",
+      "heptagon",
+      "octagon"
+    ],
+    "correctAnswer": "hexagon",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "The sum of exterior angles of a polygon is equal to:",
+    "choices": [
+      "280",
+      "150",
+      "180",
+      "360"
+    ],
+    "correctAnswer": "360",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Identical in size and shape.",
+    "choices": [
+      "perpendicular",
+      "equilateral",
+      "congruent",
+      "parallel"
+    ],
+    "correctAnswer": "congruent",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Sides that are the same length.",
+    "choices": [
+      "congruent",
+      "equilateral",
+      "perpendicular",
+      "parallel"
+    ],
+    "correctAnswer": "equilateral",
+    "score": 1
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Two lines in a two-dimensional space that do not meet.",
+    "choices": [
+      "perpendicular",
+      "equilateral",
+      "congruent",
+      "parallel"
+    ],
+    "correctAnswer": "parallel",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "A 3D figure on which the faces are triangular and converge to a single point at the top.",
+    "choices": [
+      "prism",
+      "pyramid",
+      "sphere",
+      "triangle"
+    ],
+    "correctAnswer": "pyramid",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "A straight line that intersects a curve at two or more points.",
+    "choices": [
+      "side",
+      "sector",
+      "secant",
+      "segment"
+    ],
+    "correctAnswer": "secant",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "A particular aspect of life or activity.",
+    "choices": [
+      "side",
+      "sector",
+      "secant",
+      "segment"
+    ],
+    "correctAnswer": "sector",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "A round body whose surface is at all points equidistant from the center.",
+    "choices": [
+      "prism",
+      "pyramid",
+      "sphere",
+      "triangle"
+    ],
+    "correctAnswer": "sphere",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "The endpoint on one side and keeps going forever on the other.",
+    "choices": [
+      "ellipse",
+      "ray",
+      "chord",
+      "arc"
+    ],
+    "correctAnswer": "ray",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "The measure of the arc\u0027s central angle.",
+    "choices": [
+      "line segment",
+      "measure of an arc",
+      "corresponding angles",
+      "similar shape"
+    ],
+    "correctAnswer": "measure of an arc",
+    "score": 2
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Triangle PQR has angles in the ratio of 2:3:5. Which type of triangle is PQR?",
+    "choices": [
+      "acute",
+      "isosceles",
+      "right",
+      "obtuse"
+    ],
+    "correctAnswer": "obtuse",
+    "score": 3
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "Which of the following could be the side lengths of a right triangle?",
+    "choices": [
+      "3, 13, and 14",
+      "4, 5, and 6",
+      "5, 10, and 15",
+      "5, 12, and 13"
+    ],
+    "correctAnswer": "5, 12, and 13",
+    "score": 3
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "The circumference of a circle is 30. What is its area?",
+    "choices": [
+      "15pi",
+      "225pi",
+      "250pi",
+      "10pi"
+    ],
+    "correctAnswer": "225pi",
+    "score": 3
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "A three-dimensional figure with identical ends",
+    "choices": [
+      "prism",
+      "pyramid",
+      "sphere",
+      "triangle"
+    ],
+    "correctAnswer": "prism",
+    "score": 3
+  },
+  {
+    "category": "GEOMETRY",
+    "questionText": "What is the sum of the measures of the interior angles of a hexagon?",
+    "choices": [
+      "720",
+      "540",
+      "180",
+      "360"
+    ],
+    "correctAnswer": "720",
+    "score": 3
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of getting a head when flipping a fair coin?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "1"
+    ],
+    "correctAnswer": "1/2",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of rolling a 3 on a standard six-sided die?",
+    "choices": [
+      "1/6",
+      "1/2",
+      "1/3",
+      "1/4"
+    ],
+    "correctAnswer": "1/6",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing a red card from a standard deck of 52 cards?",
+    "choices": [
+      "26/52",
+      "1/2",
+      "1/4",
+      "1/52"
+    ],
+    "correctAnswer": "26/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "If you flip two coins, what is the probability of getting two tails?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "1/3",
+      "1/8"
+    ],
+    "correctAnswer": "1/4",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of rolling a number greater than 4 on a standard six-sided die?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "correctAnswer": "1/3",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "In a bag of 5 red marbles, 3 green marbles, and 2 blue marbles, what is the probability of drawing a green marble?",
+    "choices": [
+      "3/10",
+      "1/2",
+      "3/5",
+      "1/3"
+    ],
+    "correctAnswer": "3/10",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing an Ace from a standard deck of 52 cards?",
+    "choices": [
+      "4/52",
+      "1/52",
+      "1/13",
+      "4/13"
+    ],
+    "correctAnswer": "4/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "If a card is drawn at random from a deck of 52 cards, what is the probability of drawing a face card (Jack, Queen, King)?",
+    "choices": [
+      "12/52",
+      "4/52",
+      "1/13",
+      "3/52"
+    ],
+    "correctAnswer": "12/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of rolling an even number on a standard six-sided die?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "1/4"
+    ],
+    "correctAnswer": "1/2",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "If two dice are rolled, what is the probability of getting a sum of 7?",
+    "choices": [
+      "1/36",
+      "1/6",
+      "1/9",
+      "1/12"
+    ],
+    "correctAnswer": "1/6",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing a spade from a deck of 52 cards?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "13/52",
+      "4/52"
+    ],
+    "correctAnswer": "13/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of getting a prime number when rolling a standard six-sided die?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "1/4"
+    ],
+    "correctAnswer": "1/2",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing a red card or a face card from a deck of 52 cards?",
+    "choices": [
+      "26/52",
+      "18/52",
+      "40/52",
+      "12/52"
+    ],
+    "correctAnswer": "40/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "If you roll two dice, what is the probability of rolling a double (both dice show the same number)?",
+    "choices": [
+      "1/36",
+      "1/6",
+      "1/9",
+      "1/12"
+    ],
+    "correctAnswer": "1/6",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of rolling a number less than 3 on a standard six-sided die?",
+    "choices": [
+      "1/6",
+      "2/6",
+      "1/3",
+      "1/2"
+    ],
+    "correctAnswer": "1/3",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of picking a marble that is not green from a bag containing 5 red marbles, 3 green marbles, and 2 blue marbles?",
+    "choices": [
+      "7/10",
+      "3/10",
+      "1/2",
+      "5/10"
+    ],
+    "correctAnswer": "7/10",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "If you draw a card from a deck of 52 cards, what is the probability that it is either a Queen or a King?",
+    "choices": [
+      "8/52",
+      "4/52",
+      "2/52",
+      "12/52"
+    ],
+    "correctAnswer": "8/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of flipping two coins and getting at least one head?",
+    "choices": [
+      "1/2",
+      "3/4",
+      "1/4",
+      "1/3"
+    ],
+    "correctAnswer": "3/4",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing a card that is a number card (2 through 10) from a deck of 52 cards?",
+    "choices": [
+      "36/52",
+      "40/52",
+      "28/52",
+      "24/52"
+    ],
+    "correctAnswer": "36/52",
+    "score": 1
+  },
+  {
+    "category": "PROBABILITY",
+    "questionText": "What is the probability of drawing a black card from a deck of 52 cards?",
+    "choices": [
+      "1/4",
+      "26/52",
+      "13/52",
+      "1/2"
+    ],
+    "correctAnswer": "26/52",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What is the next number in the pattern? 3, 6, 9, 12, ?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correctAnswer": "15",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If all cats are animals and some animals are dogs, does it mean some cats are dogs?",
+    "choices": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "Not enough information"
+    ],
+    "correctAnswer": "No",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Which of the following does not belong?",
+    "choices": [
+      "4, 9, 16, 25",
+      "5, 10, 15, 20",
+      "3, 6, 12, 24",
+      "2, 4, 8, 16"
+    ],
+    "correctAnswer": "4, 9, 16, 25",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If all birds can fly, and penguins are birds, can penguins fly?",
+    "choices": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "Depends on the penguin"
+    ],
+    "correctAnswer": "No",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What comes next in the pattern? A, B, C, D, ?",
+    "choices": [
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "correctAnswer": "E",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Which word does not belong?",
+    "choices": [
+      "Triangle",
+      "Square",
+      "Circle",
+      "Hexagon"
+    ],
+    "correctAnswer": "Circle",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What number should replace the question mark? 5, 10, 15, 20, ?",
+    "choices": [
+      "22",
+      "24",
+      "25",
+      "26"
+    ],
+    "correctAnswer": "25",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Which is the biggest number?",
+    "choices": [
+      "0.99",
+      "1.01",
+      "1.001",
+      "1.10"
+    ],
+    "correctAnswer": "1.10",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "A farmer has 17 sheep. All but 9 run away. How many are left?",
+    "choices": [
+      "0",
+      "8",
+      "9",
+      "17"
+    ],
+    "correctAnswer": "9",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What number should replace the question mark? 1, 4, 9, 16, 25, ?",
+    "choices": [
+      "30",
+      "36",
+      "40",
+      "45"
+    ],
+    "correctAnswer": "36",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "A father is twice as old as his son. In 10 years, the father will be 50 years old. How old is the son now?",
+    "choices": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correctAnswer": "15",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Tim is 10 years old. His brother is 4 years younger. How old will his brother be in 5 years?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correctAnswer": "10",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "A farmer has 3 cows and 2 chickens. How many legs are there in total?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "correctAnswer": "14",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "A man has 4 daughters. Each daughter has a brother. How many children does he have?",
+    "choices": [
+      "4",
+      "5",
+      "9",
+      "8"
+    ],
+    "correctAnswer": "5",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What comes next? 1, 4, 9, 16, 25, ?",
+    "choices": [
+      "30",
+      "36",
+      "40",
+      "45"
+    ],
+    "correctAnswer": "36",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "You see a clock showing 3:15. The hour hand is exactly between 3 and 4. What is the exact angle between the hour and minute hands?",
+    "choices": [
+      "7.5°",
+      "15°",
+      "22.5°",
+      "30°"
+    ],
+    "correctAnswer": "22.5°",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If today is not Friday, then tomorrow is not Saturday. If that statement is false, what day is today?",
+    "choices": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "correctAnswer": "Friday",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If a train leaves the station at 3:00 PM and arrives at 4:45 PM, how long was the journey?",
+    "choices": [
+      "1 hour",
+      "1 hour 30 minutes",
+      "1 hour 45 minutes",
+      "2 hours"
+    ],
+    "correctAnswer": "1 hour 45 minutes",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Which of the following is false?",
+    "choices": [
+      "A square has 4 sides.",
+      "The sum of two even numbers is even.",
+      "A prime number can be divided by more than 2 numbers.",
+      "All right angles are 90°."
+    ],
+    "correctAnswer": "A prime number can be divided by more than 2 numbers.",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "What comes next in the pattern? 1, 3, 6, 10, 15, ?",
+    "choices": [
+      "18",
+      "20",
+      "21",
+      "24"
+    ],
+    "correctAnswer": "21",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If all dogs bark, and Rover is a dog, does Rover bark?",
+    "choices": [
+      "Yes",
+      "No",
+      "Maybe",
+      "Not enough information"
+    ],
+    "correctAnswer": "Yes",
+    "score": 1
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If all humans are mammals, and some mammals are dogs, are all humans dogs?",
+    "choices": [
+      "Yes",
+      "No",
+      "Some humans are dogs",
+      "None of the above"
+    ],
+    "correctAnswer": "No",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "All cars are vehicles. Is a bicycle a vehicle?",
+    "choices": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "Not enough information"
+    ],
+    "correctAnswer": "Yes",
+    "score": 2
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If Jane is older than Bob, and Bob is older than Tim, who is the youngest?",
+    "choices": [
+      "Jane",
+      "Bob",
+      "Tim",
+      "Not enough information"
+    ],
+    "correctAnswer": "Tim",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If the sun is shining, then it is not raining. It is raining. What can be concluded?",
+    "choices": [
+      "The sun is shining",
+      "The sun is not shining",
+      "It is cloudy",
+      "Not enough information"
+    ],
+    "correctAnswer": "The sun is not shining",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If a statement is false, then its opposite is true. If \u0027The sky is blue\u0027 is false, what is the opposite?",
+    "choices": [
+      "The sky is red",
+      "The sky is green",
+      "The sky is not blue",
+      "The sky is yellow"
+    ],
+    "correctAnswer": "The sky is not blue",
+    "score": 3
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If a number is divisible by 3, is it divisible by 6?",
+    "choices": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "None of the above"
+    ],
+    "correctAnswer": "No",
+    "score": 4
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "Which number is the missing term in the series: 3, 9, 27, ?",
+    "choices": [
+      "54",
+      "81",
+      "72",
+      "64"
+    ],
+    "correctAnswer": "81",
+    "score": 4
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "If all roses are red, and the flower in the vase is red, can it be concluded that it is a rose?",
+    "choices": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "Not enough information"
+    ],
+    "correctAnswer": "Not enough information",
+    "score": 4
+  },
+  {
+    "category": "LOGIC",
+    "questionText": "It takes 3 workers 3 hours to complete a task. How many workers are needed to complete the task in 1 hour?",
+    "choices": [
+      "3",
+      "9",
+      "1",
+      "6"
+    ],
+    "correctAnswer": "9",
+    "score": 5
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Find the next term of the arithmetic sequence 177, 173, 169, 165,…",
+    "choices": [
+      "160",
+      "162",
+      "161",
+      "159"
+    ],
+    "correctAnswer": "162",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "65 is what percent of 500?",
+    "choices": [
+      "6",
+      "8",
+      "11",
+      "13"
+    ],
+    "correctAnswer": "13",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "9/10 - 3/10",
+    "choices": [
+      "3/4",
+      "4/5",
+      "4/15",
+      "3/15"
+    ],
+    "correctAnswer": "3/4",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is the sum of 130 + 125 + 191?",
+    "choices": [
+      "335",
+      "457",
+      "446",
+      "546"
+    ],
+    "correctAnswer": "446",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Solve 24 ÷ 8 + 2.",
+    "choices": [
+      "5",
+      "6",
+      "8",
+      "12"
+    ],
+    "correctAnswer": "6",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Cube root of 1331 is:",
+    "choices": [
+      "11",
+      "13",
+      "14",
+      "12"
+    ],
+    "correctAnswer": "11",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "A square has all its angles equal to:",
+    "choices": [
+      "180",
+      "90",
+      "75",
+      "120"
+    ],
+    "correctAnswer": "90",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "The square root of 5 is:",
+    "choices": [
+      "2.23",
+      "2.25",
+      "3",
+      "2.5"
+    ],
+    "correctAnswer": "2.23",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Which of the following inequalities is true?",
+    "choices": [
+      "3/4 is less than 5/7",
+      "2/3 is greater than 5/6",
+      "5/8 is greater than 6/10",
+      "4/5 is less than 2/9"
+    ],
+    "correctAnswer": "5/8 \u003e 6/10",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is the value of the expression 8x – 10 when x \u003d 5?",
+    "choices": [
+      "30",
+      "4",
+      "3",
+      "50"
+    ],
+    "correctAnswer": "30",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "46.2 × 10-2 \u003d",
+    "choices": [
+      "0.0462",
+      "0.462",
+      "4.62",
+      "0.00462"
+    ],
+    "correctAnswer": "0.462",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "3 1/3 – 2 2/5 \u003d",
+    "choices": [
+      "1 1/2",
+      "1/15",
+      "14/15",
+      "1 1/1"
+    ],
+    "correctAnswer": "14/15",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "15 + 19 + 23 + 27 + 31 + 35 + 39",
+    "choices": [
+      "150",
+      "189",
+      "174",
+      "168"
+    ],
+    "correctAnswer": "189",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "7 / 20 \u003d",
+    "choices": [
+      "0.035",
+      "0.855",
+      "3.35",
+      "0.858"
+    ],
+    "correctAnswer": "0.35",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Common ratio of 4, 12, 36, 108, ...",
+    "choices": [
+      "6",
+      "3",
+      "-3",
+      "-6"
+    ],
+    "correctAnswer": "3",
+    "score": 2
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "75, ?, ?, ?, 135",
+    "choices": [
+      "90, 105, 120",
+      "120, 105, 90",
+      "85, 95, 105",
+      "95, 115, 125"
+    ],
+    "correctAnswer": "90, 105, 120",
+    "score": 3
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is the common ratio of the sequence: 4,12,36,108,...?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "correctAnswer": "3",
+    "score": 3
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "A store increases the price of a phone from $500 to $625. What is the percentage increase?",
+    "choices": [
+      "20%",
+      "22.50%",
+      "25%",
+      "30%"
+    ],
+    "correctAnswer": "25%",
+    "score": 3
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is the average (mean) of these numbers? 8, 14, 20, 26, 32, 38",
+    "choices": [
+      "21",
+      "23",
+      "24",
+      "26"
+    ],
+    "correctAnswer": "24",
+    "score": 3
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "Which two consecutive whole numbers does √77 lie between?",
+    "choices": [
+      "7 and 8",
+      "8 and 9",
+      "9 and 10",
+      "10 and 11"
+    ],
+    "correctAnswer": "8 and 9",
+    "score": 3
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 8 + 12?",
+    "choices": [
+      "13",
+      "12",
+      "15",
+      "10"
+    ],
+    "correctAnswer": "20",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 50 - 18?",
+    "choices": [
+      "28",
+      "32",
+      "30",
+      "31"
+    ],
+    "correctAnswer": "32",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 15 × 4?",
+    "choices": [
+      "60",
+      "65",
+      "70",
+      "75"
+    ],
+    "correctAnswer": "60",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 36 ÷ 4?",
+    "choices": [
+      "9",
+      "8",
+      "7",
+      "10"
+    ],
+    "correctAnswer": "9",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 15 + 9?",
+    "choices": [
+      "22",
+      "23",
+      "24",
+      "21"
+    ],
+    "correctAnswer": "24",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 100 - 37?",
+    "choices": [
+      "67",
+      "66",
+      "65",
+      "68"
+    ],
+    "correctAnswer": "63",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 14 × 5?",
+    "choices": [
+      "60",
+      "70",
+      "72",
+      "75"
+    ],
+    "correctAnswer": "70",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 120 ÷ 6?",
+    "choices": [
+      "9",
+      "19",
+      "20",
+      "21"
+    ],
+    "correctAnswer": "20",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 15 + 19?",
+    "choices": [
+      "150",
+      "100",
+      "105",
+      "110"
+    ],
+    "correctAnswer": "100",
+    "score": 1
+  },
+  {
+    "category": "ARITHMETIC",
+    "questionText": "What is 50 ÷ 2?",
+    "choices": [
+      "30",
+      "25",
+      "20",
+      "15"
+    ],
+    "correctAnswer": "25",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Which side of a right triangle is always the longest?",
+    "choices": [
+      "Adjacent side",
+      "Opposite side",
+      "Hypotenuse",
+      "Base"
+    ],
+    "correctAnswer": "Hypotenuse",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Which of the following is a trigonometric ratio?",
+    "choices": [
+      "Addition",
+      "Square root",
+      "Division",
+      "Cosine"
+    ],
+    "correctAnswer": "Cosine",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "In a right triangle, what function relates the opposite side to the hypotenuse?",
+    "choices": [
+      "Sine",
+      "Cosine",
+      "Tangent",
+      "Secant"
+    ],
+    "correctAnswer": "Sine",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the hypotenuse of a right triangle with legs of 3 cm and 4 cm?",
+    "choices": [
+      "7 cm",
+      "5 cm",
+      "1 cm",
+      "3 cm"
+    ],
+    "correctAnswer": "5 cm",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the sine of a 30° angle?",
+    "choices": [
+      "0.707",
+      "1",
+      "0.5",
+      "0.866"
+    ],
+    "correctAnswer": "0.5",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the tangent of a 45° angle?",
+    "choices": [
+      "0.707",
+      "1",
+      "0.5",
+      "0.866"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the cosine of a 60° angle?",
+    "choices": [
+      "0.707",
+      "1",
+      "0.5",
+      "0.866"
+    ],
+    "correctAnswer": "0.5",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the Pythagorean Theorem?",
+    "choices": [
+      "a^2 + b^2 \u003d ab",
+      "a + b \u003d c",
+      "a^2 + b^2 \u003d c^2",
+      "a^3 + b^3 \u003d c^3"
+    ],
+    "correctAnswer": "a^2 + b^2 \u003d c^2",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "If sin A \u003d 0.6, what is cos A assuming a right triangle?",
+    "choices": [
+      "0.4",
+      "0.8",
+      "1",
+      "0.2"
+    ],
+    "correctAnswer": "0.8",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Which of the following is an identity in trigonometry?",
+    "choices": [
+      "sin(x) \u003d 1 - cos(x)",
+      "sin(x) \u003d cos(x)",
+      "sin^2x + cos^2x \u003d 1",
+      "tan(x) \u003d cos(x)"
+    ],
+    "correctAnswer": "sin^2x + cos^2x \u003d 1",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A right triangle has an opposite side of 6 cm and an adjacent side of 8 cm. What is tan A?",
+    "choices": [
+      "1",
+      "0.75",
+      "0.5",
+      "1.25"
+    ],
+    "correctAnswer": "0.75",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Find the missing angle: A triangle has angles of 25° and 65°. What is the third angle?",
+    "choices": [
+      "80°",
+      "90°",
+      "100°",
+      "110°"
+    ],
+    "correctAnswer": "90°",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "If cos A \u003d 0.5, what is A?",
+    "choices": [
+      "30°",
+      "45°",
+      "90°",
+      "180°"
+    ],
+    "correctAnswer": "60°",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Which of the following is equal to tan⁡60°?",
+    "choices": [
+      "√2",
+      "1",
+      "√3",
+      "0.5"
+    ],
+    "correctAnswer": "√3",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A right triangle has an angle of 53° and a hypotenuse of 15 cm. What is the length of the adjacent side?",
+    "choices": [
+      "9 cm",
+      "12 cm",
+      "7 cm",
+      "10 cm"
+    ],
+    "correctAnswer": "9 cm",
+    "score": 2
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A building 50 m tall casts a shadow of 40 m. What is the angle of elevation of the sun?",
+    "choices": [
+      "51.34°",
+      "31.34°",
+      "52.34°",
+      "32.34°"
+    ],
+    "correctAnswer": "51.34°",
+    "score": 3
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A boat is 100 m from a lighthouse. If the angle of elevation is 60°, how tall is the lighthouse?",
+    "choices": [
+      "176.2 m",
+      "175.2 m",
+      "174.2 m",
+      "173.2 m"
+    ],
+    "correctAnswer": "173.2 m",
+    "score": 3
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A triangle has sides of 13 cm, 12 cm, and 5 cm. What is the smallest angle?",
+    "choices": [
+      "20.62°",
+      "21.62°",
+      "22.62°",
+      "23.62°"
+    ],
+    "correctAnswer": "22.62°",
+    "score": 3
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "A right triangle has an angle of 53° and a hypotenuse of 15 cm. What is the length of the opposite side?",
+    "choices": [
+      "9 cm",
+      "12 cm",
+      "7 cm",
+      "10 cm"
+    ],
+    "correctAnswer": "12 cm",
+    "score": 3
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Find the value of sin(30°).",
+    "choices": [
+      "0.707",
+      "1",
+      "0.5",
+      "0.866"
+    ],
+    "correctAnswer": "0.5",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of cos(45°)?",
+    "choices": [
+      "1",
+      "0.5",
+      "0.707",
+      "0.866"
+    ],
+    "correctAnswer": "0.707",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Find the value of tan(60°).",
+    "choices": [
+      "1.732",
+      "1",
+      "0.577",
+      "0.866"
+    ],
+    "correctAnswer": "1.732",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "Find the value of sin(90°).",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of cos(90°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "0",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of tan(0°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "Undefined"
+    ],
+    "correctAnswer": "0",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of sin(90°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of cos(0°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of tan(0°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "Undefined"
+    ],
+    "correctAnswer": "0",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of sin(90°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of cos(90°)?",
+    "choices": [
+      "0",
+      "1",
+      "0.5",
+      "2"
+    ],
+    "correctAnswer": "0",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of tan(45°)?",
+    "choices": [
+      "0.5",
+      "1",
+      "2",
+      "0.707"
+    ],
+    "correctAnswer": "1",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of sin(45°)?",
+    "choices": [
+      "0.5",
+      "0.707",
+      "1",
+      "0.866"
+    ],
+    "correctAnswer": "0.707",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of cos(60°)?",
+    "choices": [
+      "0.5",
+      "1",
+      "0.707",
+      "0.866"
+    ],
+    "correctAnswer": "0.5",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of tan(30°)?",
+    "choices": [
+      "0.577",
+      "0.5",
+      "1",
+      "0.866"
+    ],
+    "correctAnswer": "0.577",
+    "score": 1
+  },
+  {
+    "category": "TRIGONOMETRY",
+    "questionText": "What is the value of sin(60°)?",
+    "choices": [
+      "0.5",
+      "0.707",
+      "1",
+      "0.866"
+    ],
+    "correctAnswer": "0.866",
+    "score": 1
+  }
 ]
