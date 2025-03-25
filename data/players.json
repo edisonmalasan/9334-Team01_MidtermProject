@@ -62,5 +62,13 @@
     "classicScore": 0,
     "endlessScore": 0,
     "hasPlayed": false
+  },
+  {
+    "username": "IAMNEGA",
+    "password": "nega123",
+    "role": "PLAYER",
+    "classicScore": 2,
+    "endlessScore": 0,
+    "hasPlayed": true
   }
 ]

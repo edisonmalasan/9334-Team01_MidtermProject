@@ -40,7 +40,7 @@ public class ScoreController {
                     playerName,
                     gameMode,
                     finalScore,
-                    App.iPAddress
+                    App.fetchIPAddress
             );
 
             // send to both local log and server log

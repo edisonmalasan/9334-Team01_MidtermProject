@@ -41,6 +41,6 @@ public class CategoryControllerAdmin {
 
     @FXML
     private void handleViewQuestions(ActionEvent event) {
-        loadScene(event, "/views/admin/questions.fxml");
+        loadScene(event, "/views/admin/admin_questions.fxml");
     }
 }

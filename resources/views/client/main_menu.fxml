@@ -17,7 +17,7 @@
          <children>
             <Button fx:id="playButton" prefHeight="50.0" prefWidth="200.0" text="PLAY" />
             <Button fx:id="leaderboardButton" prefHeight="50.0" prefWidth="200.0" text="LEADERBOARD" />
-            <Button fx:id="quitButton" prefHeight="50.0" prefWidth="200.0" text="EXIT" />
+            <Button fx:id="logoutButton" prefHeight="50.0" prefWidth="200.0" text="LOGOUT" />
          </children>
       </VBox>
    </children>
