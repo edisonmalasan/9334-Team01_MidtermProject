@@ -8,11 +8,11 @@
 <AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminQuestionsController">
     <children>
         <!-- Return Button -->
-        <Button fx:id="returnButton" layoutX="10.0" layoutY="10.0" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;" text="Return" />
-        <Button fx:id="deleteButton" layoutX="800.0" layoutY="600.0" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightcoral; -fx-text-fill: black;" text="Delete Entry" />
+        <Button fx:id="returnButton" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="99.0" styleClass="addCatBttn" text="Return" />
+        <Button fx:id="deleteButton" layoutX="800.0" layoutY="600.0" prefHeight="40.0" prefWidth="197.0" styleClass="deleteBttn" text="Delete Entry" />
 
         <!-- Search Bar -->
-        <HBox layoutX="89.0" layoutY="50.0" prefHeight="50.0" prefWidth="946.0">
+        <HBox layoutX="89.0" layoutY="72.0" prefHeight="31.0" prefWidth="946.0">
             <children>
                 <!-- Search TextField -->
                 <TextField fx:id="searchField" layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0" promptText="Search for a question..." />
@@ -20,10 +20,10 @@
         </HBox>
 
         <!-- Category Search Dropdown -->
-        <HBox layoutX="89.0" layoutY="93.0" prefHeight="74.0" prefWidth="946.0">
+        <HBox layoutX="89.0" layoutY="118.0" prefHeight="31.0" prefWidth="946.0">
             <children>
                 <!-- ComboBox for Category Selection -->
-                <ComboBox fx:id="categoryComboBox" layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0">
+                <ComboBox fx:id="categoryComboBox" layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0" styleClass="comboBox">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="ALGEBRA" />
@@ -45,13 +45,13 @@
                 <!-- TableView with 8 Columns -->
                 <TableView fx:id="questionTable" prefHeight="350.0" prefWidth="850.0">
                     <columns>
-                        <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="Category" />
-                        <TableColumn fx:id="questionColumn" prefWidth="250.0" text="Question" />
-                        <TableColumn fx:id="choice1Column" prefWidth="100.0" text="Choice 1" />
-                        <TableColumn fx:id="choice2Column" prefWidth="100.0" text="Choice 2" />
-                        <TableColumn fx:id="choice3Column" prefWidth="100.0" text="Choice 3" />
-                        <TableColumn fx:id="choice4Column" prefWidth="100.0" text="Choice 4" />
-                        <TableColumn fx:id="correctAnswerColumn" prefWidth="100.0" text="Correct Answer" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="CATEGORY" />
+                        <TableColumn fx:id="questionColumn" prefWidth="250.0" text="QUESTION" />
+                        <TableColumn fx:id="choice1Column" prefWidth="100.0" text="CHOICE 1" />
+                        <TableColumn fx:id="choice2Column" prefWidth="90.0" text="CHOICE 2" />
+                        <TableColumn fx:id="choice3Column" prefWidth="102.0" text="CHOICE 3" />
+                        <TableColumn fx:id="choice4Column" prefWidth="87.0" text="CHOICE 4" />
+                        <TableColumn fx:id="correctAnswerColumn" prefWidth="121.0" text="ANSWER" />
                         <TableColumn fx:id="scoreColumn" prefWidth="100.0" text="Score" />
                     </columns>
                 </TableView>
@@ -62,7 +62,7 @@
         <VBox layoutX="89.0" layoutY="593.0" spacing="10">
             <GridPane alignment="center" hgap="10" vgap="10">
                 <!-- Category ComboBox -->
-                <ComboBox fx:id="categoryField" promptText="Select Category" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <ComboBox fx:id="categoryField" promptText="Select Category" styleClass="comboBox" GridPane.columnIndex="0" GridPane.rowIndex="0">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="ALGEBRA" />
@@ -88,21 +88,21 @@
                 <!-- Correct Answer and Score -->
                 <TextField fx:id="correctAnswerField" prefWidth="150" promptText="Correct Answer" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                 <TextField fx:id="scoreField" prefWidth="150" promptText="Score" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
             </GridPane>
 
             <!-- Add New Question Button -->
-            <Button fx:id="addQuestionButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightgreen; -fx-text-fill: black;" text="Add New Question" />
+            <Button fx:id="addQuestionButton" prefHeight="31.0" prefWidth="216.0" styleClass="view2" text="Add New Question" />
         </VBox>
     </children>
 </AnchorPane>

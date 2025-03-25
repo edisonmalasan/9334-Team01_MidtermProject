@@ -62,7 +62,7 @@ public class CategoryController {
         String playerName = LoginController.getCurrentUser() != null ?
                 LoginController.getCurrentUser().getUsername() : "Unknown Player";
 
-        logManager.appendLog(playerName + " requested " + category + " questions | IP: " + App.iPAddress);
+        logManager.appendLog(playerName + " requested " + category + " questions | IP: " + App.fetchIPAddress);
 
         new Thread(() -> {
             try {
@@ -72,7 +72,7 @@ public class CategoryController {
                     List<QuestionModel> questions = (List<QuestionModel>) response.getData();
 
                     String logMessage = playerName + " successfully received " + questions.size() +
-                            " " + category + " questions | IP: " + App.iPAddress;
+                            " " + category + " questions | IP: " + App.fetchIPAddress;
                     logManager.appendLog(logMessage);
                     ClientConnection.bombGameServer.logMessage(logMessage);
 
