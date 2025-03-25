@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.madeByDannievicForReference.AdminLeaderboardControllerClient">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminLeaderboardControllerClient">
     <children>
         <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
 
@@ -41,7 +41,7 @@
                     <children>
                         <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../resources/images/CLASSIC (1).png" />
+                                <Image url="@../../images/CLASSIC (1).png" />
                             </image>
                         </ImageView>
                         <TextField fx:id="classicSearchBox" layoutX="260.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
@@ -52,7 +52,7 @@
                         <TextField fx:id="endlessSearchBox" layoutX="261.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
                         <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../resources/images/ENDLESS (1).png" />
+                                <Image url="@../../images/ENDLESS (1).png" />
                             </image>
                         </ImageView>
                     </children>

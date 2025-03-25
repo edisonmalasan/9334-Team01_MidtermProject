@@ -1,4 +1,4 @@
-package Client.Admin.controller;
+package Redundant;
 
 import Client.Admin.model.PlayerModelAdmin;
 import org.json.JSONArray;
@@ -16,7 +16,7 @@ import java.util.Optional;
 /**
  * Manipulates the admin GUI with JSON data instead of XML
  */
-public class PlayerControllerAdmin {
+public class PlayerControllerAdmin_kezpk {
 
     @FXML
     private TableView<PlayerModelAdmin> userTable;

@@ -1,228 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminQuestionsController">
+    <children>
+        <!-- Return Button -->
+        <Button text="Return" layoutX="10.0" layoutY="10.0" fx:id="returnButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightblue; -fx-text-fill: black;"/>
+        <Button text="Delete Entry" layoutX="800.0" layoutY="600.0" fx:id="deleteButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightcoral; -fx-text-fill: black;"/>
 
-<HBox fx:id="adminQuestions" prefHeight="733.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.QuestionControllerAdmin">
-    <VBox prefHeight="200.0" prefWidth="100.0">
-        <children>
-            <AnchorPane id="sdbar" prefHeight="767.0" prefWidth="258.0" styleClass="sidebar">
-                <children>
-                    <Pane id="sdbarLogo" prefHeight="111.0" prefWidth="258.0">
-                        <children>
-                            <ImageView id="logo" fitHeight="80.0" fitWidth="82.0" layoutX="89.0" layoutY="8.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../../images/TITLE.png" />
-                                </image>
-                            </ImageView>
-                            <Separator layoutX="11.0" layoutY="83.0" prefHeight="11.0" prefWidth="236.0">
-                                <padding>
-                                    <Insets top="5.0" />
-                                </padding>
-                            </Separator>
-                        </children>
-                    </Pane>
-
-                    <VBox id="sdbarTabs" layoutX="21.0" layoutY="107.0" prefHeight="150.0" prefWidth="216.0" AnchorPane.bottomAnchor="516.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="107.0">
-                        <children>
-                            <Button id="tabDB" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" styleClass="unclicked" text="DASHBOARD" textFill="#545454">
-                                <VBox.margin>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                </VBox.margin>
-                                <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@../../images/dashboard.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                            </Button>
-
-                            <Button id="tabPlayers" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" styleClass="unclicked" text="PLAYERS" textFill="#545454">
-                                <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@../../images/players.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <VBox.margin>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                </VBox.margin>
-                            </Button>
-
-                            <Button id="tabQuestions" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="196.0" styleClass="clicked" text="QUESTIONS" textFill="#545454">
-                                <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                                        <image>
-                                            <Image url="@../../images/questions_clicked.png" />
-                                        </image>
-                                    </ImageView>
-                                </graphic>
-                                <VBox.margin>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                </VBox.margin>
-                            </Button>
-
-                        </children>
-                    </VBox>
-
-                    <Button id="exit" fx:id="exitBttn" layoutX="29.0" layoutY="708.0" prefHeight="50.0" prefWidth="200.0" text="EXIT" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0">
-                        <styleClass>
-                            <String fx:value="buttonExit" />
-                            <String fx:value="exit" />
-                        </styleClass></Button>
-
-                </children>
-                <VBox.margin>
-                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                </VBox.margin>
-
-            </AnchorPane>
-        </children>
-    </VBox>
-
-   <VBox prefHeight="885.0" prefWidth="741.0">
-      <children>
-
-         <AnchorPane id="title" prefHeight="114.0" prefWidth="244.0" styleClass="title">
-            <VBox.margin>
-               <Insets left="30.0" right="30.0" top="20.0" />
-            </VBox.margin>
-
+        <!-- Search Bar -->
+        <HBox layoutX="89.0" layoutY="50.0" prefHeight="50.0" prefWidth="946.0">
             <children>
-                <Pane id="titlePane" prefHeight="95.0" prefWidth="677.0" styleClass="title">
-                    <children>
-                        <Label id="titleText" prefHeight="57.0" prefWidth="641.0" styleClass="titleText" text="BRAIN BLAST QUESTIONS">
-                            <padding>
-                                <Insets bottom="20.0" left="30.0" top="20.0" />
-                            </padding>
-                        </Label>
-      
-                           <Button id="editBttn" fx:id="editButton" layoutX="580.0" layoutY="25.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="88.0" styleClass="titleOption" text="Edit">
-                        <graphic>
-                            <ImageView id="edit" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../../images/edit_op.png" />
-                                </image>
-                            </ImageView>
-                        </graphic>
-                     </Button>
-                        <Button id="saveBttn" fx:id="saveButton" layoutX="576.0" layoutY="68.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" styleClass="titleOption" text="Save">
-                            <graphic>
-                                <ImageView id="edit" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../../images/save-icon.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                    </children>
-                </Pane>
-
-               <Pane id="titleSubhead" layoutX="14.0" layoutY="57.0" prefHeight="42.0" prefWidth="517.0">
-                  <children>
-                     <Label id="titleSubheadText" layoutX="14.0" layoutY="8.0" styleClass="titleSubheadText" text="TOTAL QUESTIONS:">
-                        <graphic>
-                            <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-                                <image>
-                                    <Image url="@../../images/list_icon.png" />
-                                </image>
-                            </ImageView>
-                        </graphic></Label>
-                     <Label id="titleSubheadText1" fx:id="totalQuestionNumberLabel" layoutX="237.0" layoutY="8.0" styleClass="titleSubheadText" text="00" />
-                  </children>
-               </Pane>
+                <!-- Search TextField -->
+                <TextField fx:id="searchField" promptText="Search for a question..." layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0"/>
             </children>
-         </AnchorPane>
+        </HBox>
 
-          <!-- change headings depending sa use -->
-          <AnchorPane id="divider" prefHeight="51.0" prefWidth="726.0">
-              <children>
-
-                  <ImageView id="headings" fitHeight="38.0" fitWidth="677.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
-                      <!--algebra-->
-                      <image>
-                          <Image url="@../../images/headings-algebra.png" />
-                      </image>
-                      <!--angles-->
-                      <image>
-                          <Image url="@../../images/headings-angles.png" />
-                      </image>
-                      <!--geometry-->
-                      <image>
-                          <Image url="@../../images/headings-geometry.png" />
-                      </image>
-                      <!--logic-->
-                      <image>
-                          <Image url="@../../images/headings-logic.png" />
-                      </image>
-                      <!--probability-->
-                      <image>
-                          <Image url="@../../images/headings-probability.png" />
-                      </image>
-                      <!--trigo-->
-                      <image>
-                          <Image url="@../../images/headings-trigo.png" />
-                      </image>
-                  </ImageView>
-
-                  <TextField fx:id="searchBox" layoutX="528.0" layoutY="14.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
-              </children>
-              <VBox.margin>
-                  <Insets left="30.0" />
-              </VBox.margin>
-          </AnchorPane>
-
-         <HBox prefHeight="100.0" prefWidth="200.0">
+        <!-- Category Search Dropdown -->
+        <HBox layoutX="89.0" layoutY="93.0" prefHeight="74.0" prefWidth="946.0">
             <children>
-                <TableView fx:id="questionsTable" prefHeight="449.0" prefWidth="712.0">
+                <!-- ComboBox for Category Selection -->
+                <ComboBox fx:id="categoryComboBox" layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="ALGEBRA"/>
+                            <String fx:value="GEOMETRY"/>
+                            <String fx:value="PROBABILITY"/>
+                            <String fx:value="TRIGONOMETRY"/>
+                            <String fx:value="ANGLES"/>
+                            <String fx:value="LOGIC"/>
+                        </FXCollections>
+                    </items>
+                    <promptText>Search by Category</promptText>
+                </ComboBox>
+            </children>
+        </HBox>
+
+        <!-- TableView Container -->
+        <HBox layoutX="89.0" layoutY="167.0" prefHeight="400.0" prefWidth="946.0" alignment="CENTER">
+            <children>
+                <!-- TableView with 8 Columns -->
+                <TableView fx:id="questionTable" prefHeight="350.0" prefWidth="850.0">
                     <columns>
-                        <TableColumn id="question" editable="true" prefWidth="210.0" text="QUESTION" />
-
-                        <TableColumn id="choices" prefWidth="342.0" text="CHOICES">
-                            <columns>
-                                <TableColumn id="A" editable="true" prefWidth="85.0" text="A" />
-                                <TableColumn id="B" editable="true" prefWidth="85.0" text="B" />
-                           <TableColumn id="C" prefWidth="85.0" text="C" />
-                                <TableColumn id="D" prefWidth="85.0" text="D" />
-                            </columns>
-                        </TableColumn>
-
-                        <TableColumn id="endlessStats" editable="true" prefWidth="64.0" text="ANSWER" />
-                          <TableColumn id="points" prefWidth="61.0" text="POINTS" />
+                        <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="Category"/>
+                        <TableColumn fx:id="questionColumn" prefWidth="250.0" text="Question"/>
+                        <TableColumn fx:id="choice1Column" prefWidth="100.0" text="Choice 1"/>
+                        <TableColumn fx:id="choice2Column" prefWidth="100.0" text="Choice 2"/>
+                        <TableColumn fx:id="choice3Column" prefWidth="100.0" text="Choice 3"/>
+                        <TableColumn fx:id="choice4Column" prefWidth="100.0" text="Choice 4"/>
+                        <TableColumn fx:id="correctAnswerColumn" prefWidth="100.0" text="Correct Answer"/>
+                        <TableColumn fx:id="scoreColumn" prefWidth="100.0" text="Score"/>
                     </columns>
                 </TableView>
             </children>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-            <VBox.margin>
-               <Insets left="30.0" />
-            </VBox.margin>
-            <padding>
-               <Insets right="30.0" />
-            </padding>
-         </HBox>
+        </HBox>
 
-          <AnchorPane id="lowerBttns">
-              <children>
-                  <Button id="delBttn" fx:id="deleteAllButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" styleClass="deleteBttn" text="DELETE ALL" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
-                  <Button id="addBttn" fx:id="returnButton" layoutX="591.0" layoutY="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="112.0" styleClass="returnBttn" text="RETURN" />
-              </children>
-          </AnchorPane>
-      </children>
-   </VBox>
-</HBox>
+        <!-- Input Fields and Add Button (Below the Table) -->
+        <VBox layoutX="89.0" layoutY="593.0" spacing="10">
+            <GridPane hgap="10" vgap="10" alignment="center">
+                <!-- Category ComboBox -->
+                <ComboBox fx:id="categoryField" promptText="Select Category" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="ALGEBRA"/>
+                            <String fx:value="GEOMETRY"/>
+                            <String fx:value="PROBABILITY"/>
+                            <String fx:value="TRIGONOMETRY"/>
+                            <String fx:value="ANGLES"/>
+                            <String fx:value="LOGIC"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <!-- Question Field -->
+                <TextField fx:id="questionField" promptText="Question" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <!-- Choice Fields -->
+                <TextField fx:id="choice1Field" promptText="Choice 1" GridPane.rowIndex="1" GridPane.columnIndex="0" prefWidth="150"/>
+                <TextField fx:id="choice2Field" promptText="Choice 2" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="150"/>
+
+                <TextField fx:id="choice3Field" promptText="Choice 3" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="150"/>
+                <TextField fx:id="choice4Field" promptText="Choice 4" GridPane.rowIndex="1" GridPane.columnIndex="3" prefWidth="150"/>
+
+                <!-- Correct Answer and Score -->
+                <TextField fx:id="correctAnswerField" promptText="Correct Answer" GridPane.rowIndex="2" GridPane.columnIndex="0" prefWidth="150"/>
+                <TextField fx:id="scoreField" promptText="Score" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="150"/>
+            </GridPane>
+
+            <!-- Add New Question Button -->
+            <Button text="Add New Question" fx:id="addQuestionButton" style="-fx-font-size: 14; -fx-padding: 10; -fx-background-color: lightgreen; -fx-text-fill: black;"/>
+        </VBox>
+    </children>
+</AnchorPane>

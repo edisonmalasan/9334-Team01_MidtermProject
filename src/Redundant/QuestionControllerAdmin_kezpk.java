@@ -1,11 +1,10 @@
-package Client.Admin.controller;
+package Redundant;
 
 import Client.Admin.model.QuestionModelAdmin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -13,7 +12,7 @@ import java.io.*;
 import java.util.List;
 
 // TODO still to be revised
-public class QuestionControllerAdmin {
+public class QuestionControllerAdmin_kezpk {
 
     @FXML
     private TableView<QuestionModelAdmin> questionsTable; 

@@ -41,11 +41,11 @@ public class AdminMenuController {
     }
 
     private void switchToQuestions(ActionEvent event) {
-        switchScene(event, "/Redundant/admin_questions.fxml", "Questions List");
+        switchScene(event, "/views/admin/admin_questions.fxml", "Questions List");
     }
 
     private void switchToAdminLeaderboard(ActionEvent event) {
-        switchScene(event, "/Redundant/admin_leaderboard.fxml", "Leaderboards");
+        switchScene(event, "/views/admin/admin_leaderboard.fxml", "Leaderboards");
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {
