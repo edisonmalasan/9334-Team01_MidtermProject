@@ -112,7 +112,7 @@
                                 </padding>
                             </Label>
 
-                            <Button id="editBttn" layoutX="579.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="88.0" styleClass="titleOption" text="Edit">
+                            <Button id="editBttn" fx:id="editBttn" layoutX="579.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="88.0" styleClass="titleOption" text="Edit">
                                 <graphic>
                                     <ImageView id="edit" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                         <image>
@@ -121,7 +121,7 @@
                                     </ImageView>
                                 </graphic>
                             </Button>
-                            <Button id="saveBttn" layoutX="560.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" styleClass="titleOption" text="Save">
+                            <Button id="saveBttn" fx:id="saveBttn" layoutX="560.0" layoutY="15.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" styleClass="titleOption" text="Save">
                                 <graphic>
                                     <ImageView id="edit" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                         <image>
@@ -269,8 +269,8 @@
             </AnchorPane>
             <AnchorPane id="lowerBttns">
                 <children>
-                    <Button id="delBttn" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" styleClass="deleteBttn" text="DELETE ALL" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
-                    <Button id="addBttn" layoutX="503.0" layoutY="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="addCatBttn" text="ADD CATEGORY" />
+                    <Button id="delBttn" fx:id="delBttn" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" styleClass="deleteBttn" text="DELETE ALL" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
+                    <Button id="addBttn" fx:id="addBttn" layoutX="503.0" layoutY="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" styleClass="addCatBttn" text="ADD CATEGORY" />
                 </children>
             </AnchorPane>
         </children>
