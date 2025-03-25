@@ -217,6 +217,9 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 }
             }
 
+            Writer writer = new FileWriter(System.getProperty("user.dir")+ "/data/players.json");
+            gson.toJson(playerList, writer);
+
             logger.info("Player list updated successfully.");
             return new Response(true, "Player list updated successfully.", null);
         } catch (Exception e) {
@@ -254,12 +257,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 logMessage("Player already logged in.");
             } else {
                 playerCallbacks.put(player.getUsername(), callback);
-                logMessage("Log In: " + player.getUsername());
+                System.out.println("Log In: " + player.getUsername());
                 logMessage("Online : [");
                 Set<String> usernames = playerCallbacks.keySet();
                 int counter = 1;
                 for (String playerUsername : usernames) {
-                    System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
+                    logMessage(playerUsername + (counter++ == usernames.size() ? "" : ", "));
                     playerCallbacks.get(playerUsername).loginCall(player);
                 }
                 logMessage("]");
