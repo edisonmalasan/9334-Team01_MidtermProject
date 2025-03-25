@@ -99,3 +99,20 @@ PlayerLoginController: Username entered: 123414
 [2025-03-25 11:00:20] EDISON requested ALGEBRA questions | IP: 192.168.0.102
 [2025-03-25 11:00:20] EDISON successfully received 44 ALGEBRA questions | IP: 192.168.0.102
 [2025-03-25 11:00:20] EDISON successfully received 44 ALGEBRA questions | IP: 192.168.0.102
+[2025-03-25 15:42:20] New RMI registry created on port 1099.
+[2025-03-25 15:42:20] Server started successfully on port 1099.
+[2025-03-25 15:42:28] Log In: Yuen | IP: 172.26.224.1
+[2025-03-25 15:42:28] Admin Yuen logged in
+[2025-03-25 15:42:28] Admin dashboard loaded with 7 players
+[2025-03-25 15:42:28] Admin dashboard loaded with 7 players
+[2025-03-25 15:42:48] Admin navigated to: Question Management
+[2025-03-25 15:46:38] New RMI registry created on port 1099.
+[2025-03-25 15:46:38] Server started successfully on port 1099.
+[2025-03-25 15:46:49] Log In: Yuen | IP: 172.26.224.1
+[2025-03-25 15:46:49] Admin Yuen logged in
+[2025-03-25 15:46:49] Admin dashboard loaded with 7 players
+[2025-03-25 15:46:49] Admin dashboard loaded with 7 players
+[2025-03-25 15:50:39] Log In: Yuen | IP: 172.26.224.1
+[2025-03-25 15:50:39] Admin Yuen logged in
+[2025-03-25 15:50:39] Admin dashboard loaded with 7 players
+[2025-03-25 15:50:39] Admin dashboard loaded with 7 players
