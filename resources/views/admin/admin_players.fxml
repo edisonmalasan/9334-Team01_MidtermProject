@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminPlayersController">
+    <children>
+        <!-- Return Button -->
+        <Button fx:id="returnButton" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="99.0" styleClass="addCatBttn" text="Return" />
+
+        <!-- Search Bar -->
+        <HBox layoutX="89.0" layoutY="72.0" prefHeight="31.0" prefWidth="946.0">
+            <children>
+                <!-- Search TextField -->
+                <TextField fx:id="searchField" layoutX="10.0" layoutY="22.0" prefHeight="31.0" prefWidth="200.0" promptText="Search for a player..." />
+            </children>
+        </HBox>
+
+        <!-- TableView Container -->
+        <HBox alignment="CENTER" layoutX="89.0" layoutY="167.0" prefHeight="400.0" prefWidth="946.0">
+            <children>
+                <!-- TableView with 8 Columns -->
+                <TableView fx:id="playerTable" prefHeight="350.0" prefWidth="850.0" editable="true">
+                    <columns>
+                        <TableColumn fx:id="usernameColumn" prefWidth="100.0" text="USERNAME" />
+                        <TableColumn fx:id="passwordColumn" prefWidth="100.0" text="PASSWORD" />
+                        <TableColumn fx:id="roleColumn" prefWidth="100.0" text="ROLE" />
+                        <TableColumn fx:id="classicScoreColumn" prefWidth="200.0" text="CLASSIC SCORE" />
+                        <TableColumn fx:id="endlessScoreColumn" prefWidth="200.0" text="ENDLESS SCORE" />
+                        <TableColumn fx:id="hasPlayedClassicColumn" prefWidth="90.0" text="PLAYED CLASSIC" />
+                        <TableColumn fx:id="hasPlayedEndlessColumn" prefWidth="90.0" text="PLAYED ENDLESS" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+
+        <!-- Buttons: Save and Delete buttons in a horizontal layout -->
+        <HBox layoutX="800.0" layoutY="600.0" spacing="10.0">
+            <children>
+                <Button fx:id="saveListButton" prefHeight="31.0" prefWidth="216.0" styleClass="view2" text="Save List" />
+                <Button fx:id="deleteButton" prefHeight="40.0" prefWidth="197.0" styleClass="deleteBttn" text="Delete Entry" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
