@@ -16,7 +16,8 @@ public class AdminApplication extends Application {
         Font.loadFont(getClass().getResource("/fonts/RobotoMono-Bold.ttf").toExternalForm(), 12);
 
         // Corrected FXML loading
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/admin/admin_db.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/admin/admin_db.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("views/admin/admin_db.fxml"));
 
 
         if (fxmlLoader.getLocation() == null) {
