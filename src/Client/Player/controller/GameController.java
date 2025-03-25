@@ -1,13 +1,13 @@
-package Client.User.controller;
+package Client.Player.controller;
 /**
  * Contains main game logic
  */
 import common.Log.AnsiFormatter;
 import Client.connection.ClientConnection;
-import Client.User.model.ComboModel;
+import Client.Player.model.ComboModel;
 import common.model.PlayerModel;
-import Client.User.utils.BombUtility;
-import Client.User.utils.QTEUtility;
+import Client.Player.utils.BombUtility;
+import Client.Player.utils.QTEUtility;
 import common.Log.LoggerSetup;
 import common.Response;
 import common.model.QuestionModel;

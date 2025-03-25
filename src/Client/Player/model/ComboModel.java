@@ -1,4 +1,4 @@
-package Client.User.model;
+package Client.Player.model;
 /**
  * Represents a combo (correct answer streak)
  */

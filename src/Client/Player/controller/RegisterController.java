@@ -1,10 +1,9 @@
-package Client.User.controller;
+package Client.Player.controller;
 
 import Client.connection.ClientConnection;
 import common.Response;
 import common.model.PlayerModel;
 import common.Log.LogManager;
-import common.Log.AnsiFormatter;
 import exception.ConnectionException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -19,9 +18,6 @@ import App.App;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class RegisterController {
     private final LogManager logManager = LogManager.getInstance();

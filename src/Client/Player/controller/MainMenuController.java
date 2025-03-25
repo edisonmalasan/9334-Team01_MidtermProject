@@ -1,4 +1,4 @@
-package Client.User.controller;
+package Client.Player.controller;
 /**
  * Controls main menu view window
  */

@@ -5,7 +5,7 @@ package Server.handler;
 
 import Server.controller.JSONStorageController;
 import common.Log.AnsiFormatter;
-import Client.User.model.PlayerModel;
+import Client.Player.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;
 import utility.LeaderboardEntryModel;

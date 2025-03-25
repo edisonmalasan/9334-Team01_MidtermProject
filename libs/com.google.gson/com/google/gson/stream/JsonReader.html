@@ -238,7 +238,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base
  public Message readMessage(JsonReader reader) throws IOException {
    long id = -1;
    String text = null;
-   Client.User user = null;
+   Client.Player user = null;
    List&lt;Double&gt; geo = null;
 
    reader.beginObject();
@@ -271,7 +271,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base
    return doubles;
  }
 
- public Client.User readUser(JsonReader reader) throws IOException {
+ public Client.Player readUser(JsonReader reader) throws IOException {
    String username = null;
    int followersCount = -1;
 

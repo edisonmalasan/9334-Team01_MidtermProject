@@ -1,6 +1,6 @@
 package Client;
 
-import Client.User.controller.LoginController;
+import Client.Player.controller.LoginController;
 import common.Log.AnsiFormatter;
 import common.Log.LogManager;
 import utility.Callback;

@@ -3,7 +3,7 @@ package Client.Admin.controller;
  * Controls leaderboard view for admin
  */
 import App.App;
-import Client.User.model.LeaderboardEntryModelClient;
+import Client.Player.model.LeaderboardEntryModelClient;
 import utility.LeaderboardEntryModel;
 import common.Response;
 import javafx.beans.property.SimpleStringProperty;

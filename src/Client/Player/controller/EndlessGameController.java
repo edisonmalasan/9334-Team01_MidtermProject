@@ -1,30 +1,25 @@
-package Client.User.controller;
+package Client.Player.controller;
 /**
- * Controls classic game mode
+ * Controls endless game mode
  */
 import common.model.QuestionModel;
-import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
-import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-public class ClassicGameController extends GameController {
+public class EndlessGameController extends GameController {
     @Override
     protected void showNextQuestion() {
-        if (currentQuestionIndex >= questions.size()) {
-            questionLabel.setText("🎉 Game Over! All Questions Have Been Exhausted");
-            choicesBox.getChildren().clear();
-            bombImage.setVisible(false);
-            bombUtility.stopBombAnimation();
-
-            PauseTransition delay = new PauseTransition(Duration.seconds(2));
-            delay.setOnFinished(e -> switchToScoreView());
-            delay.play();
-
+        if (bombUtility.hasExploded()) {
+            logger.info("\nEndlessGameController: Bomb exploded! Ending game...");
+            switchToScoreView();
             return;
+        }
+
+        if (currentQuestionIndex >= questions.size()) {
+            Collections.shuffle(questions);
+            currentQuestionIndex = 0;
         }
 
         QuestionModel question = questions.get(currentQuestionIndex);
@@ -45,10 +40,11 @@ public class ClassicGameController extends GameController {
         }
 
         if (!bombUtility.isRunning()) {
-            Platform.runLater(() -> bombUtility.startBombAnimation(false)); // classic mode
+            Platform.runLater(() -> bombUtility.startBombAnimation(true)); // endless mode
         }
 
-        qteUtility.triggerQuickTimeEvent(currentQuestionIndex);
         currentQuestionIndex++;
+        checkMode = true;
     }
+
 }

@@ -1,4 +1,4 @@
-package Client.User.controller;
+package Client.Player.controller;
 
 import Client.connection.ClientConnection;
 import common.Log.LogManager;

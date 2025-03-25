@@ -1,4 +1,4 @@
-package Client.User.utils;
+package Client.Player.utils;
 /**
  * Manages music for the game
  */

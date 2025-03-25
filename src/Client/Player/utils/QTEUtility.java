@@ -1,4 +1,4 @@
-package Client.User.utils;
+package Client.Player.utils;
 /**
  * Manages Quick Time Events in the game
  */

@@ -1,12 +1,10 @@
-package Client.User.controller;
+package Client.Player.controller;
 /**
  * Controls input username view window
  */
 import Client.CallbackImpl;
 import Client.connection.ClientConnection;
 import common.model.PlayerModel;
-import common.Log.LogManager;
-import common.Log.AnsiFormatter;
 import exception.ConnectionException;
 import exception.InvalidCredentialsException;
 import javafx.application.Platform;
@@ -21,8 +19,6 @@ import javafx.stage.Stage;
 import utility.Callback;
 import App.App;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class LoginController {
 

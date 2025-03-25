@@ -1,7 +1,7 @@
 package App;
 
 import common.Log.AnsiFormatter;
-import Client.User.utils.SoundUtility;
+import Client.Player.utils.SoundUtility;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;

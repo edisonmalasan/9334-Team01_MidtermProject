@@ -1,14 +1,11 @@
-package Client.User;
+package Client.Player;
 
 import common.Response;
-import common.model.PlayerModel;
-import common.model.QuestionModel;
 import utility.BombGameServer;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 //Client class for testing
