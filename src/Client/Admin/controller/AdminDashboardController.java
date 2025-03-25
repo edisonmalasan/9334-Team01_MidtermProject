@@ -2,6 +2,8 @@ package Client.Admin.controller;
 
 import Client.common.connection.ClientConnection;
 import common.Log.LogManager;
+import common.Response;
+import common.model.PlayerModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +19,7 @@ import org.json.JSONTokener;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 public class AdminDashboardController {
@@ -39,16 +42,17 @@ public class AdminDashboardController {
 
     private void loadPlayerStatistics() {
         try {
-            JSONArray players = readPlayersFile();
-            int totalPlayers = players.length();
+            Response response= ClientConnection.bombGameServer.getPlayerList();
+            List<PlayerModel> playerList = (List<PlayerModel>) response.getData();
+            int totalPlayers = playerList.size();
             int classicPlayers = 0;
             int endlessPlayers = 0;
 
             //count players with scores >0 for each mode (ganyan ba or live tracking)
-            for (int i = 0; i < players.length(); i++) {
-                JSONObject player = players.getJSONObject(i);
-                if (player.getInt("classicScore") > 0) classicPlayers++;
-                if (player.getInt("endlessScore") > 0) endlessPlayers++;
+            for (PlayerModel player : playerList) {
+
+                if (player.getClassicScore() > 0) classicPlayers++;
+                if (player.getEndlessScore() > 0) endlessPlayers++;
             }
 
             totalPlayersLabel.setText(String.valueOf(totalPlayers));
