@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="parent" stylesheets="@/views/admin/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminLeaderboardControllerClient">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="parent" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Admin.controller.AdminLeaderboardControllerClient">
     <children>
         <Button fx:id="returnButton" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="99.0" styleClass="addCatBttn" text="Return" />
 
@@ -27,7 +27,7 @@
             </children>
         </HBox>
 
-        <Button fx:id="deleteButton" layoutX="450.0" layoutY="600.0" prefHeight="40.0" prefWidth="124.0" styleClass="deleteBttn" text="Delete Entry" />
+        <Button fx:id="deleteButton" layoutX="414.0" layoutY="602.0" prefHeight="40.0" prefWidth="197.0" styleClass="deleteBttn" text="Delete Entry" />
 
         <HBox layoutX="89.0" layoutY="93.0" prefHeight="74.0" prefWidth="846.0">
             <children>
