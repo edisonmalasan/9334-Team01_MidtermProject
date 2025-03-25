@@ -1,11 +1,11 @@
 @font-face {
     -fx-font-family: "Space Nova";
-    src: url("../fonts/RobotoMono-Bold.ttf");
+    src: url("/fonts/RobotoMono-Bold.ttf");
 }
 
 @font-face {
     -fx-font-family: "Roboto Mono";
-    src: url("fonts/RobotoMono-Bold.ttf");
+    src: url("/fonts/RobotoMono-Bold.ttf");
 }
 
 .parent{
@@ -59,7 +59,7 @@
 
 /* Exit Button */
 .exitBttn {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-font-family: "Space Nova";
@@ -68,7 +68,7 @@
 }
 
 .exitBttn:hover {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("./images/exit_Button.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -78,7 +78,7 @@
 }
 
 .exitBttn:pressed {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -161,7 +161,7 @@
 
 /* Buttons sa baba */
 .deleteBttn {
-    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-image: url("/images/delete-bttn.png");
     -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -171,7 +171,7 @@
 }
 
 .deleteBttn:hover {
-    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-image: url("/images/delete-bttn.png");
     -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -181,7 +181,7 @@
 }
 
 .deleteBttn:pressed {
-    -fx-background-image: url("../images/delete-bttn.png");
+    -fx-background-image: url("/images/delete-bttn.png");
     -fx-background-size: 197px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -191,7 +191,7 @@
 }
 
 .addCatBttn {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -201,7 +201,7 @@
 }
 
 .addCatBttn:hover {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -211,7 +211,7 @@
 }
 
 .addCatBttn:pressed {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -221,7 +221,7 @@
 }
 
 .returnBttn {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 112px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -231,7 +231,7 @@
 }
 
 .returnBttn:hover {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 112px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -241,7 +241,7 @@
 }
 
 .returnBttn:pressed {
-    -fx-background-image: url("../images/return_bttn.png");
+    -fx-background-image: url("/images/return_bttn.png");
     -fx-background-size: 112px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -286,7 +286,7 @@
 
 /* View Button */
 .view {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -296,7 +296,7 @@
 }
 
 .view:hover {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -306,7 +306,7 @@
 }
 
 .view:pressed {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size: 77px 25px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -316,7 +316,7 @@
 }
 
 .view2:pressed {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -326,7 +326,7 @@
 }
 
 .view2 {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -336,7 +336,7 @@
 }
 
 .view2:hover {
-    -fx-background-image: url("../images/exit_Button.png");
+    -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size:216px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
