@@ -104,7 +104,7 @@ public class AdminDashboardController {
 
     private void setupButtonActions() {
         exitButton.setOnAction(event -> switchToScene("/views/client/login.fxml", "Login"));
-        playersButton.setOnAction(event -> switchToScene("/views/admin_leaderboard.fxml", "Player Management"));
+        playersButton.setOnAction(event -> switchToScene("/views/admin/admin_leaderboard.fxml", "Player Management"));
         questionsButton.setOnAction(event -> switchToScene("/views/admin/admin_categories.fxml", "Question Management"));
     }
 
