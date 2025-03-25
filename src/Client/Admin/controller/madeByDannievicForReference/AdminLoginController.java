@@ -2,9 +2,9 @@ package Client.Admin.controller.madeByDannievicForReference;
 /**
  * Controls input username view window
  */
-import Client.User.controller.LoginController;
+import Client.Player.controller.LoginController;
 import common.Log.AnsiFormatter;
-import Client.connection.ClientConnection;
+import Client.common.connection.ClientConnection;
 import exception.ConnectionException;
 import exception.InvalidCredentialsException;
 import exception.ServerNotRunningException;

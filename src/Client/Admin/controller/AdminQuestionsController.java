@@ -1,7 +1,7 @@
 package Client.Admin.controller;
 
 import App.App;
-import Client.connection.ClientConnection;
+import Client.common.connection.ClientConnection;
 import common.Response;
 import common.model.QuestionModel;
 import javafx.beans.property.SimpleIntegerProperty;

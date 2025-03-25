@@ -75,13 +75,17 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         List<LeaderboardEntryModel> leaderboard = new ArrayList<>();
         if (Objects.equals(leaderboardType, "classic")) {
             for (PlayerModel player : playerList) {
-                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
-                leaderboard.add(leaderboardEntry);
+                if (player.getHasPlayed()) {
+                    LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
+                    leaderboard.add(leaderboardEntry);
+                }
             }
         } else {
             for (PlayerModel player : playerList) {
-                LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getEndlessScore());
-                leaderboard.add(leaderboardEntry);
+                if (player.getHasPlayed()) {
+                    LeaderboardEntryModel leaderboardEntry = new LeaderboardEntryModel(player.getUsername(), player.getClassicScore());
+                    leaderboard.add(leaderboardEntry);
+                }
             }
         }
         leaderboard.sort((entry1, entry2) -> {
@@ -236,7 +240,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     @Override
     public void register(String username, String password) throws RemoteException {
         try {
-            PlayerModel player = new PlayerModel(username, password, "PLAYER", 0, 0);
+            PlayerModel player = new PlayerModel(username, password, "PLAYER", 0, 0, false);
             playerList.add(player);
             JSONStorageController.savePlayerListToJSON(playerList);
             logger.info("Registering player to database.");

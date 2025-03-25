@@ -1,0 +1,534 @@
+Mar 23, 2025 1:39:00 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 1:39:00 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 3:47:10 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 3:47:10 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 3:51:43 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 3:51:43 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 3:54:17 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 3:54:17 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 3:58:25 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 3:58:25 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:03:09 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:03:09 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:11:17 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:11:17 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:13:32 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:13:32 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:15:12 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:15:12 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:17:02 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:17:02 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:17:03 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:17:03 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:17:03 PM Client.Player.controller.GameController <init>
+SEVERE: 
+GameController: Error initializing ClientConnection.
+exception.ConnectionException: Error connecting to the server.
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:37)
+	at Client.Player.connection.ClientConnection.getInstance(ClientConnection.java:43)
+	at Client.Player.controller.GameController.<init>(GameController.java:78)
+	at Client.Player.controller.ClassicGameController.<init>(ClassicGameController.java:14)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2858)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2654)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2568)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2536)
+	at Client.Player.controller.CategoryController.switchToGameplay(CategoryController.java:113)
+	at Client.Player.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
+	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at java.base/java.net.Socket.connect(Socket.java:695)
+	at java.base/java.net.Socket.<init>(Socket.java:564)
+	at java.base/java.net.Socket.<init>(Socket.java:328)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:29)
+	... 23 more
+
+Mar 23, 2025 4:17:03 PM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 1 shuffled questions for category: LOGIC
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController lambda$sendScoreToServer$3
+SEVERE: 
+GameController: Error sending score to the server
+java.rmi.MarshalException: error marshalling arguments; nested exception is: 
+	java.io.NotSerializableException: common.model.PlayerModel
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
+	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
+	... 5 more
+
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Mar 23, 2025 4:29:45 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:29:45 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:29:46 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 23, 2025 4:29:46 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 23, 2025 4:29:46 PM Client.Player.controller.GameController <init>
+SEVERE: 
+GameController: Error initializing ClientConnection.
+exception.ConnectionException: Error connecting to the server.
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:37)
+	at Client.Player.connection.ClientConnection.getInstance(ClientConnection.java:43)
+	at Client.Player.controller.GameController.<init>(GameController.java:78)
+	at Client.Player.controller.ClassicGameController.<init>(ClassicGameController.java:14)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2858)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2654)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2568)
+	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2536)
+	at Client.Player.controller.CategoryController.switchToGameplay(CategoryController.java:113)
+	at Client.Player.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
+	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@23.0.2/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at java.base/java.net.Socket.connect(Socket.java:695)
+	at java.base/java.net.Socket.<init>(Socket.java:564)
+	at java.base/java.net.Socket.<init>(Socket.java:328)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:29)
+	... 23 more
+
+Mar 23, 2025 4:29:46 PM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 1 shuffled questions for category: LOGIC
+Mar 23, 2025 4:29:49 PM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the next number in the pattern? 3, 6, 9, 12, ?
+Mar 23, 2025 4:29:49 PM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 23, 2025 4:29:51 PM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 23, 2025 4:29:51 PM Client.Player.controller.GameController lambda$sendScoreToServer$3
+SEVERE: 
+GameController: Error sending score to the server
+java.rmi.MarshalException: error marshalling arguments; nested exception is: 
+	java.io.NotSerializableException: common.model.PlayerModel
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
+	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
+	... 5 more
+
+Mar 23, 2025 4:29:52 PM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Mar 24, 2025 1:25:22 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:25:22 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:28:38 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:28:38 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:29:04 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:29:04 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:29:48 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:29:48 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:32:49 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:32:49 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:11 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:11 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:16 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:16 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:22 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:22 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:26 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:26 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:30 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:30 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:33:34 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:33:34 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:34:23 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:34:23 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:34:27 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:34:27 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:34:23 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:34:23 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:34:27 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:34:27 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:45:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:45:52 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:51:15 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:51:15 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 1:58:56 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 1:58:56 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 2:00:08 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 2:00:08 AM Client.common.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 24, 2025 11:32:56 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.103
+Mar 24, 2025 11:32:56 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 24, 2025 11:32:57 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 24, 2025 11:32:58 AM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 24, 2025 11:32:58 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+SEVERE: 
+GameController: Error sending score to the server
+java.rmi.MarshalException: error marshalling arguments; nested exception is: 
+	java.io.NotSerializableException: common.model.PlayerModel
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
+	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
+	at jdk.proxy2/jdk.proxy2.$Proxy6.updatePlayerScore(Unknown Source)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.io.NotSerializableException: common.model.PlayerModel
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:359)
+	at java.rmi/sun.rmi.server.UnicastRef.marshalValue(UnicastRef.java:295)
+	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
+	... 5 more
+
+Mar 24, 2025 11:32:59 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Mar 25, 2025 8:21:52 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:21:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:21:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:22:40 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:22:40 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:22:40 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:23:09 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Simplify: 2(x + 3) - 5x
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Mar 25, 2025 8:23:55 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:23:55 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:23:55 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:26:39 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:26:39 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:26:39 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:27:47 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:27:47 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:27:47 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:37:09 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:37:09 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:37:09 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:40:52 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:40:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:40:54 AM Client.common.connection.ClientConnection <init>
+WARNING: ⚠ Server is not running. The client will continue in offline mode.
+Mar 25, 2025 8:40:54 AM Client.common.connection.ClientConnection <init>
+WARNING: ⚠ Connection failed. Retrying in 5 seconds...
+Mar 25, 2025 8:40:59 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:55:01 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:55:01 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:55:01 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:57:59 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:57:59 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:57:59 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:59:38 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:59:38 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:59:38 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:07:48 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:07:48 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:07:50 AM Client.common.connection.ClientConnection <init>
+WARNING: ⚠ Server is not running. The client will continue in offline mode.
+Mar 25, 2025 9:07:50 AM Client.common.connection.ClientConnection <init>
+WARNING: ⚠ Connection failed. Retrying in 5 seconds...
+Mar 25, 2025 9:07:55 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:12:52 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:12:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:12:52 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:19:12 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:19:12 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:19:12 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 11:00:05 AM Client.common.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 11:00:05 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 11:00:05 AM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 11:00:20 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 25, 2025 11:00:25 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the algebraic expression for this phrase? 13 more than the product of 9 and n
+Mar 25, 2025 11:00:25 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:26 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: (-1/5)^3
+Mar 25, 2025 11:00:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:27 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Mar 25, 2025 11:00:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:28 AM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 25, 2025 11:00:28 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Mar 25, 2025 11:00:28 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.

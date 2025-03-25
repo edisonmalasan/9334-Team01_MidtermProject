@@ -1,0 +1,2328 @@
+Feb 20, 2025 1:52:03 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:52:03 AM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Feb 20, 2025 1:52:04 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:52:04 AM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Feb 20, 2025 1:52:12 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:52:12 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Feb 20, 2025 1:52:21 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 1:52:21 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:52:21 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 1:52:21 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 1:52:24 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 1:52:24 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:52:26 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"
+Feb 20, 2025 1:52:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:52:27 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x if 6x - 5 = 19?
+Feb 20, 2025 1:52:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 3
+Feb 20, 2025 1:52:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 1:52:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:30 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 1:52:30 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:52:32 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 1:52:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:52:38 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 1:52:38 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:40 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 1:52:40 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:52:42 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 1:52:42 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:43 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 1:52:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:44 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 1:52:44 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:46 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 1:52:46 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:48 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Feb 20, 2025 1:52:48 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:49 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the system of equations: 2x + y = 8 and x - y = 1
+Feb 20, 2025 1:52:49 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:52 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 1:52:52 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:53 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Translate and solve:
+            '4 less than 3 times a number is -16'"
+Feb 20, 2025 1:52:53 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:54 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 1:52:54 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:55 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            5(x − 5) = 5"
+Feb 20, 2025 1:52:55 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:52:56 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 1:52:56 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:52:58 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 1:52:58 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:52:59 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 4x + 5 = 2x + 13
+Feb 20, 2025 1:52:59 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:00 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the proper term for this definition?
+            A term without a variable
+Feb 20, 2025 1:53:00 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:01 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 1:53:01 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:03 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 1:53:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:53:04 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 1:53:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:05 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 1:53:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:06 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 1:53:06 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:09 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='12412', score=15}
+Feb 20, 2025 1:53:09 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:09 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 1:53:09 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 1:53:09 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15]}
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:11 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150]}
+Feb 20, 2025 1:53:17 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 1:53:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 1:53:17 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 1:53:18 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the equation: x + 7 = 14
+Feb 20, 2025 1:53:18 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:20 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 1:53:20 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:21 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 1:53:21 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:53:22 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 1:53:22 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:23 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 1:53:23 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:25 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 1:53:25 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:26 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 1:53:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:27 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 2(x + 3) - 5x
+Feb 20, 2025 1:53:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:28 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 3x² + 5x - 2x² + 4x
+Feb 20, 2025 1:53:28 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 1:53:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:31 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 1:53:31 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:32 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 1:53:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:53:34 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 1:53:34 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:36 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 1:53:36 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:37 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x in the equation: 7x = 35
+Feb 20, 2025 1:53:37 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:38 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 5x - 7 = 2x + 5
+Feb 20, 2025 1:53:38 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:39 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 1:53:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:41 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 1:53:41 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:53:42 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 1:53:42 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:43 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 1:53:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:44 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 2x - 4 = 3x + 5
+Feb 20, 2025 1:53:44 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:45 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 1:53:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:53:46 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 1:53:46 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:48 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 4x + 5 = 2x + 13
+Feb 20, 2025 1:53:48 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:49 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 6x - 5 = 19?
+Feb 20, 2025 1:53:49 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:50 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 1:53:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:51 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 1:53:51 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:52 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 1:53:52 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:53:54 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='12412  ', score=5}
+Feb 20, 2025 1:53:54 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:54 AM Client.Player.controller.EndlessGameController showNextQuestion
+INFO: 
+EndlessGameController: Bomb exploded! Ending game...
+Feb 20, 2025 1:53:54 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 1:53:54 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 1:53:54 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15]}
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:53:56 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 5]}
+Feb 20, 2025 1:54:02 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 1:54:02 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:54:02 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 1:54:02 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 1:54:03 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"
+Feb 20, 2025 1:54:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:04 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 1:54:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:05 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 1:54:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:07 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 1:54:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:08 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 1:54:08 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:09 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 1:54:09 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:12 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 1:54:12 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:22 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 1:54:22 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:24 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (-1/5)^3"
+Feb 20, 2025 1:54:24 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:54:26 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 2x - 4 = 3x + 5
+Feb 20, 2025 1:54:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:28 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 1:54:28 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            5(x − 5) = 5"
+Feb 20, 2025 1:54:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:31 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: 5(x + 4) - 2(x - 3)
+Feb 20, 2025 1:54:31 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:32 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 1:54:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:34 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 1:54:34 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:35 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 1:54:35 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:37 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 6x - 5 = 19?
+Feb 20, 2025 1:54:37 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:38 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the system of equations: 2x + y = 8 and x - y = 1
+Feb 20, 2025 1:54:38 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:39 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 1:54:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:41 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x in the equation: 7x = 35
+Feb 20, 2025 1:54:41 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:42 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x
+Feb 20, 2025 1:54:42 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:44 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 1:54:44 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:54:45 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the proper term for this definition?
+            A term without a variable
+Feb 20, 2025 1:54:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:46 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 1:54:46 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:47 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 1:54:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:49 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 1:54:49 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:50 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 1:54:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:52 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 1:54:52 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:54 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the equation: x + 7 = 14
+Feb 20, 2025 1:54:54 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:54:55 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 1:54:55 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:54:57 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 1:54:57 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:54:58 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 1:54:58 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:55:01 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='12412', score=13}
+Feb 20, 2025 1:55:01 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:55:01 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 1:55:01 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 1:55:01 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15]}
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:55:03 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 5]}
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15]}
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:56:24 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 5]}
+Feb 20, 2025 1:56:29 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 1:56:29 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:56:29 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 1:56:29 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 1:56:31 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 1:56:31 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:32 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Simplify: 3x² + 5x - 2x² + 4x
+Feb 20, 2025 1:56:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:56:33 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 1:56:33 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:56:35 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (-1/5)^3"
+Feb 20, 2025 1:56:35 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 3
+Feb 20, 2025 1:56:39 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 1:56:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:42 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 1:56:42 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:43 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 1:56:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:56:45 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 1:56:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:47 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 1:56:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:48 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 2(x + 3) - 5x
+Feb 20, 2025 1:56:48 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:50 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 1:56:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:56:51 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Feb 20, 2025 1:56:51 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:53 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Translate and solve:
+            '4 less than 3 times a number is -16'"
+Feb 20, 2025 1:56:53 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:55 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 1:56:55 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:57 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: 5(x + 4) - 2(x - 3)
+Feb 20, 2025 1:56:57 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:58 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 1:56:58 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:56:59 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 1:56:59 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:57:00 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x
+Feb 20, 2025 1:57:00 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:57:03 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 1:57:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:04 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the system of equations: 2x + y = 8 and x - y = 1
+Feb 20, 2025 1:57:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:05 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"
+Feb 20, 2025 1:57:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:57:06 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 1:57:06 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 1:57:07 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 1:57:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:09 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 1:57:09 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:10 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x in the equation: 7x = 35
+Feb 20, 2025 1:57:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:11 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 1:57:11 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:12 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 1:57:12 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:14 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 1:57:14 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:15 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 4x + 5 = 2x + 13
+Feb 20, 2025 1:57:15 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:17 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 1:57:17 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:19 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 1:57:19 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:21 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 1:57:21 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:23 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 1:57:23 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 1:57:26 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 1:57:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 1:57:28 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='12412  ', score=15}
+Feb 20, 2025 1:57:28 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:57:28 AM Client.Player.controller.EndlessGameController showNextQuestion
+INFO: 
+EndlessGameController: Bomb exploded! Ending game...
+Feb 20, 2025 1:57:28 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 1:57:28 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 1:57:28 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15]}
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:57:30 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15]}
+Feb 20, 2025 1:59:33 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:59:33 AM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Feb 20, 2025 1:59:33 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:59:33 AM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Feb 20, 2025 1:59:50 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Feb 20, 2025 1:59:50 AM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Feb 20, 2025 1:59:58 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 1:59:58 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 1:59:58 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 1:59:58 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 1:59:58 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 1:59:58 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:00 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 2:00:00 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:03 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 2x - 4 = 3x + 5
+Feb 20, 2025 2:00:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:04 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"
+Feb 20, 2025 2:00:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:00:06 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 2:00:06 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:00:07 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 2:00:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 3
+Feb 20, 2025 2:00:08 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 2:00:08 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:10 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 2:00:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:12 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 2:00:12 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:00:14 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 2:00:14 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:16 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 2:00:16 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:17 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 2:00:17 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:19 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 2:00:19 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:21 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 2:00:21 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:25 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 2:00:25 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:27 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the equation: x + 7 = 14
+Feb 20, 2025 2:00:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:00:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 6x - 5 = 19?
+Feb 20, 2025 2:00:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:31 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve for x: 5x - 7 = 2x + 5
+Feb 20, 2025 2:00:31 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:00:32 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 2:00:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:34 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Feb 20, 2025 2:00:34 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:37 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 2:00:37 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:39 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 2:00:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:43 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 2:00:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:47 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 2:00:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:00:49 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='eruki', score=9}
+Feb 20, 2025 2:00:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:00:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 2:00:49 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 2:00:49 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15, eruki: 9]}
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:00:53 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15]}
+Feb 20, 2025 2:01:04 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 2:01:04 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:01:04 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 2:01:04 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 2:01:07 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 2:01:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:09 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 2:01:09 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:12 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 2:01:12 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:14 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x in the equation: 7x = 35
+Feb 20, 2025 2:01:14 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:16 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 2:01:16 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:01:19 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 2:01:19 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:21 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 2:01:21 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:24 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 2:01:24 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:27 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 2:01:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 2:01:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:35 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 2:01:35 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:38 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: 5(x + 4) - 2(x - 3)
+Feb 20, 2025 2:01:38 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:41 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 2:01:41 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:43 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 2:01:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:01:45 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Translate and solve:
+            '4 less than 3 times a number is -16'"
+Feb 20, 2025 2:01:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 3
+Feb 20, 2025 2:01:47 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 2:01:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 4
+Feb 20, 2025 2:01:50 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the proper term for this definition?
+            A term without a variable
+Feb 20, 2025 2:01:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 5
+Feb 20, 2025 2:01:51 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 2:01:51 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:54 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (-1/5)^3"
+Feb 20, 2025 2:01:54 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:01:56 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 2:01:56 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:57 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 2:01:57 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:01:59 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 2:01:59 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:02 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 2:02:02 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:02:04 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 2:02:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:05 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 2:02:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:06 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 2:02:06 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:02:08 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            5(x − 5) = 5"
+Feb 20, 2025 2:02:08 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:10 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 3x² + 5x - 2x² + 4x
+Feb 20, 2025 2:02:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:12 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='eruki', score=27}
+Feb 20, 2025 2:02:12 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:02:12 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 2:02:12 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 2:02:12 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15, eruki: 27]}
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:02:14 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15]}
+Feb 20, 2025 2:02:28 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 2:02:28 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:02:28 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 2:02:28 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 2:02:30 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 2:02:30 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:02:32 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (-1/5)^3"
+Feb 20, 2025 2:02:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:02:33 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 2:02:33 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:36 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            5(x − 5) = 5"
+Feb 20, 2025 2:02:36 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:02:37 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 5x - 7 = 2x + 5
+Feb 20, 2025 2:02:37 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:39 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 2:02:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:41 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 2:02:41 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:43 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 2:02:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:45 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 2:02:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:47 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 2:02:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:48 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 2:02:48 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:50 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 2:02:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:52 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: x² - 16 = 0
+Feb 20, 2025 2:02:52 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:54 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the slope of the line passing through the points (2,3) and (4,7)?
+Feb 20, 2025 2:02:54 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:55 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 2:02:55 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:57 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 2:02:57 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:02:59 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"
+Feb 20, 2025 2:02:59 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:00 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the system of equations: 2x + y = 8 and x - y = 1
+Feb 20, 2025 2:03:00 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:01 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 2:03:01 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:03:03 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 3x² + 5x - 2x² + 4x
+Feb 20, 2025 2:03:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:04 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 2:03:04 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:05 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Translate and solve:
+            '4 less than 3 times a number is -16'"
+Feb 20, 2025 2:03:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:07 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            4k - 5k = 10 + k"
+Feb 20, 2025 2:03:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:08 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x
+Feb 20, 2025 2:03:08 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:09 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Simplify: 2(x + 3) - 5x
+Feb 20, 2025 2:03:09 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:03:10 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 2:03:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:11 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x in the equation: 7x = 35
+Feb 20, 2025 2:03:11 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:13 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 2:03:13 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:14 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 2:03:14 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:16 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='eruki  ', score=8}
+Feb 20, 2025 2:03:16 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:16 AM Client.Player.controller.EndlessGameController showNextQuestion
+INFO: 
+EndlessGameController: Bomb exploded! Ending game...
+Feb 20, 2025 2:03:16 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 2:03:16 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 2:03:16 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15, eruki: 27]}
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:17 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15, eruki  : 8]}
+Feb 20, 2025 2:03:21 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 2:03:21 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:21 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 2:03:21 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 2:03:23 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 2:03:23 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:24 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 2:03:24 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:25 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 2(x + 3) - 5x
+Feb 20, 2025 2:03:25 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:27 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 4x + 5 = 2x + 13
+Feb 20, 2025 2:03:27 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the proper term for this definition?
+            A term without a variable
+Feb 20, 2025 2:03:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:30 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 2:03:30 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:33 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 2:03:33 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:35 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Simplify: 3x² + 5x - 2x² + 4x
+Feb 20, 2025 2:03:35 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:03:36 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 2:03:36 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:03:39 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 2:03:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 3
+Feb 20, 2025 2:03:39 AM Client.Player.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Feb 20, 2025 2:03:39 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='eruki  ', score=0}
+Feb 20, 2025 2:03:39 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:39 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 2:03:39 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 2:03:39 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15, eruki: 27]}
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:40 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15, eruki  : 8]}
+Feb 20, 2025 2:03:44 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_QUESTION:ALGEBRA
+Feb 20, 2025 2:03:44 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:03:44 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Question retrieved successfully.', data=[QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 10 - 2(3)', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: 3x + 7 = 16', choices=[5, 3, 6, 7], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for y: 5y - 3 = 2', choices=[1, 2, -1, -2], correctAnswer='1', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 2(x + 3) - 5x', choices=[-3x + 6, 3x + 6, -3x - 6, 3x - 6], correctAnswer='-3x + 6', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 4x + 2 = 14?', choices=[3, 2, 4, 1], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the solution to the inequality 2x - 5 < 3?', choices=[x < 4, x > 4, x < 2, x > 2], correctAnswer='x < 4', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the following equation: x² - 16 = 0', choices=[4, -4, ±4, 0], correctAnswer='±4', score=1}, QuestionModel{category='ALGEBRA', questionText='Expand the expression: (x + 3)(x - 4)', choices=[x² - x - 12, x² - x + 12, x² - 7x - 12, x² + 7x - 12], correctAnswer='x² - x - 12', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 5x - 7 = 2x + 5', choices=[2, 3, 4, 5], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x in the equation: 7x = 35', choices=[5, 7, 35, 1], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: (3x + 4) - (x - 5)', choices=[2x + 9, 2x - 1, 3x - 1, 4x + 9], correctAnswer='2x + 9', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 4x + 5 = 2x + 13', choices=[4, 5, 3, 2], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x = 9?', choices=[3, 2, 1, 4], correctAnswer='3', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² + 5x + 6', choices=[(x + 3)(x + 2), (x + 6)(x + 1), (x + 2)(x + 3), (x + 1)(x + 6)], correctAnswer='(x + 3)(x + 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: x² - 25 = 0', choices=[5, -5, ±5, 25], correctAnswer='±5', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the slope of the line passing through the points (2,3) and (4,7)?', choices=[2, 1, 3, 4], correctAnswer='2', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the system of equations: 2x + y = 8 and x - y = 1', choices=[(3, 2), (2, 4), (1, 5), (4, 3)], correctAnswer='(3, 2)', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve for x: 2x - 4 = 3x + 5', choices=[-9, 9, -5, 5], correctAnswer='-9', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify the expression: 5(x + 4) - 2(x - 3)', choices=[3x + 26, 3x + 23, 3x + 17, 3x + 20], correctAnswer='3x + 26', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 6x - 5 = 19?', choices=[4, 5, 3, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='Simplify: 3x² + 5x - 2x² + 4x', choices=[x² + 9x, 5x² + 9x, 5x² + 9x - 2, x² + 9x - 2], correctAnswer='x² + 9x', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the value of x if 3x + 10 = 25?', choices=[5, 6, 8, 4], correctAnswer='5', score=1}, QuestionModel{category='ALGEBRA', questionText='Solve the equation: x + 7 = 14', choices=[7, 6, 8, 5], correctAnswer='7', score=1}, QuestionModel{category='ALGEBRA', questionText='Factor the expression: x² - 4x', choices=[x(x - 4), (x - 2)(x + 2), x(x + 4), (x - 4)(x + 4)], correctAnswer='x(x - 4)', score=1}, QuestionModel{category='ALGEBRA', questionText='What is the proper term for this definition?
+            A term without a variable', choices=[Constant, Exponent, Set, Terms], correctAnswer='Constant', score=1}, QuestionModel{category='ALGEBRA', questionText='How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x', choices=[3, 4, 5, 6], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the fraction to the lowest terms:
+            924/1092"', choices=[308/364, 11/13, 44/52, 154/183], correctAnswer='11/13', score=1}, QuestionModel{category='ALGEBRA', questionText='"Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"', choices=["D: {0, 1, 2, 3, 4, 5, 6, 7}
+            R: {-1, -2, -3}", "D: {0, 3, 5, 6, 7}
+            R: {-3, -2, -1, 1, 2, 4}", "D: {2, 3, 1, 3, 4, 7, -3}
+            R: {-2, 3, 4, 5, -1, 6, 0}", "D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"], correctAnswer='"D: {-3, -2, -1, 1, 2, 4}
+            R: {0, 3, 5, 6, 7}"', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            10 - 2(3)"', choices=[-13, 4, 16, 24], correctAnswer='4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (-1/5)^3"', choices=[-3/125, -1/125, 3/125, 1/125], correctAnswer='-1/125', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            (2x^3)^2"', choices=[2x^5, 4x^6, 4x^5, 2x^6], correctAnswer='4x^6', score=1}, QuestionModel{category='ALGEBRA', questionText='"Simplify the expression:
+            4m + 5 + 2m - 1"', choices=[10m, 6m + 4, 6m + 6, 6m - 4], correctAnswer='6m + 4', score=1}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"', choices=[x = 2 , y = −6, x = 6 , y = −2, x = −6 , y = 2, x = −2 , y = 6], correctAnswer='x = 6 , y = −2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            5(x − 5) = 5"', choices=[x = −6, x = 1, x = 6, x = −1], correctAnswer='x = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            'A number t times 6'"', choices=[6t, 6(t) + 1, 6(2) + t, 6(0)t], correctAnswer='6t', score=2}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"', choices=[13 + 9 + n, 9n + 13, 13(9) + n, 9(13) + n], correctAnswer='9n + 13', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            2(z + 3) = 18"', choices=[z = 12, z = 7.5, z = 2, z = 6], correctAnswer='z = 6', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            6x − 2 = −14"', choices=[1, -2, -1, 2], correctAnswer='-2', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the following equation:
+            4k - 5k = 10 + k"', choices=[k = 5, k = 20, k = -5, k = -20], correctAnswer='k = -5', score=2}, QuestionModel{category='ALGEBRA', questionText='"Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"', choices=[x = 4 , y = −8, x = 8 , y = 4, x = 4 , y = 8, x = 8 , y = −4], correctAnswer='x = 4 , y = 8', score=3}, QuestionModel{category='ALGEBRA', questionText='"Translate and solve:
+            '4 less than 3 times a number is -16'"', choices=[x = -4, x = 3, x = 4, x = -3], correctAnswer='x = -4', score=3}, QuestionModel{category='ALGEBRA', questionText='"Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"', choices=[y = 9 / 2x - 3, y = 2 / 3x - 3, y = 2x / 3y - 3, y = 3 / 2x - 9], correctAnswer='y = 2 / 3x - 3', score=3}, QuestionModel{category='ALGEBRA', questionText='"What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""', choices=[x + y - 9, 9 - (x + y), x + y / 9, 9 / x + y], correctAnswer='x + y - 9', score=3}, QuestionModel{category='ALGEBRA', questionText='The sum of two numbers is 82 and their product is 1456, find the two numbers.', choices=[41, 2, 26 , 56, 41, -2, -26 , -56], correctAnswer='26 , 56', score=3}]}
+Feb 20, 2025 2:03:45 AM Client.Player.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Feb 20, 2025 2:03:47 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            ""9 taken away from the sum of x and y"""
+Feb 20, 2025 2:03:47 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:49 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the pair of equations for x and y:
+            2x + y = 16
+            y − 2x = 0"
+Feb 20, 2025 2:03:49 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:50 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Expand the expression: (x + 3)(x - 4)
+Feb 20, 2025 2:03:50 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:51 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: 5(x + 4) - 2(x - 3)
+Feb 20, 2025 2:03:51 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:52 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the system of equations: 2x + y = 8 and x - y = 1
+Feb 20, 2025 2:03:52 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:53 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 2x - 4 = 3x + 5
+Feb 20, 2025 2:03:53 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:55 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            10 - 2(3)"
+Feb 20, 2025 2:03:55 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:03:57 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Feb 20, 2025 2:03:57 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:03:58 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the pair of equations for x and y:
+            x + y = 4
+            x − y = 8"
+Feb 20, 2025 2:03:58 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:01 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Rearrange the equation into slope-intercept form:
+            2x - 3y = 9"
+Feb 20, 2025 2:04:01 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:03 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the fraction to the lowest terms:
+            924/1092"
+Feb 20, 2025 2:04:03 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:05 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Solve the following equation:
+            6x − 2 = −14"
+Feb 20, 2025 2:04:05 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:04:07 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: How many terms are included in this expression?
+            2x^2 + 12x - 8 + 10x
+Feb 20, 2025 2:04:07 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:10 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "What is the algebraic expression for this phrase:
+            '13 more than the product of 9 and n'"
+Feb 20, 2025 2:04:10 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:12 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for y: 5y - 3 = 2
+Feb 20, 2025 2:04:12 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:14 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 4x + 2 = 14?
+Feb 20, 2025 2:04:14 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:15 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Solve the following equation: 3x + 7 = 16
+Feb 20, 2025 2:04:15 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:17 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: x² - 25 = 0
+Feb 20, 2025 2:04:17 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:20 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Solve the following equation:
+            2(z + 3) = 18"
+Feb 20, 2025 2:04:20 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:24 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the value of x if 3x = 9?
+Feb 20, 2025 2:04:24 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:26 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (2x^3)^2"
+Feb 20, 2025 2:04:26 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:04:28 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the value of x if 3x + 10 = 25?
+Feb 20, 2025 2:04:28 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:29 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the equation: x + 7 = 14
+Feb 20, 2025 2:04:29 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:31 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: What is the proper term for this definition?
+            A term without a variable
+Feb 20, 2025 2:04:31 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:32 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 4x + 5 = 2x + 13
+Feb 20, 2025 2:04:32 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:33 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            (-1/5)^3"
+Feb 20, 2025 2:04:33 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:35 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: The sum of two numbers is 82 and their product is 1456, find the two numbers.
+Feb 20, 2025 2:04:35 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 2
+Feb 20, 2025 2:04:36 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: 2(x + 3) - 5x
+Feb 20, 2025 2:04:36 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:37 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve for x: 5x - 7 = 2x + 5
+Feb 20, 2025 2:04:37 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:38 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² - 4x
+Feb 20, 2025 2:04:38 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:39 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the solution to the inequality 2x - 5 < 3?
+Feb 20, 2025 2:04:39 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:40 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Solve the following equation: 10 - 2(3)
+Feb 20, 2025 2:04:40 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:42 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "What is the algebraic expression for this phrase:
+            'A number t times 6'"
+Feb 20, 2025 2:04:42 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:43 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: "Identify the domain and range:
+            (-2, 3), (4, 5), (-1, 6), (2, 3), (1, 3), (4, 7), (-3, 0)"
+Feb 20, 2025 2:04:43 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:44 AM Client.Player.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: "Simplify the expression:
+            4m + 5 + 2m - 1"
+Feb 20, 2025 2:04:44 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Feb 20, 2025 2:04:45 AM Client.Player.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Factor the expression: x² + 5x + 6
+Feb 20, 2025 2:04:45 AM Client.Player.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Feb 20, 2025 2:04:47 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: PlayerModel{name='eruki  ', score=17}
+Feb 20, 2025 2:04:47 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:04:47 AM Client.Player.controller.EndlessGameController showNextQuestion
+INFO: 
+EndlessGameController: Bomb exploded! Ending game...
+Feb 20, 2025 2:04:47 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Player score updated successfully.', data=null}
+Feb 20, 2025 2:04:47 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Feb 20, 2025 2:04:47 AM Client.Player.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 10, 12412: 15, eruki: 27]}
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection sendObject
+INFO: 
+ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Waiting to receive object from server...
+Feb 20, 2025 2:04:49 AM Client.Player.connection.ClientConnection receiveObject
+INFO: 
+ClientConnection: Received object: Response{success=true, message='Leaderboard displayed successfully.', data=[sample: 150, 12412  : 15, eruki  : 17]}
+Mar 07, 2025 10:04:23 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 07, 2025 10:04:23 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
+Mar 07, 2025 10:04:24 PM Client.Player.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 07, 2025 10:04:24 PM Client.Player.connection.ClientConnection <init>
+SEVERE: 
+ClientConnection: Connection to server failed!
