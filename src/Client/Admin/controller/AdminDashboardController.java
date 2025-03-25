@@ -25,7 +25,7 @@ import java.util.Objects;
 
 public class AdminDashboardController {
     private final LogManager logManager = LogManager.getInstance();
-    private static final String USERS_JSON_PATH = "data/players.json";
+
 
     @FXML private HBox adminDashboard;
     @FXML private Label totalPlayersLabel;
@@ -34,7 +34,7 @@ public class AdminDashboardController {
     @FXML private Button logoutButton;
     @FXML private Button playersButton;
     @FXML private Button questionsButton;
-
+    @FXML public Button playerDetailsButton;
     @FXML
     public void initialize() {
         loadPlayerStatistics();
@@ -77,6 +77,7 @@ public class AdminDashboardController {
         logoutButton.setOnAction(event -> logoutAdmin(event));
         playersButton.setOnAction(event -> switchToScene("/views/admin/admin_leaderboard.fxml", "Player Management"));
         questionsButton.setOnAction(event -> switchToScene("/views/admin/admin_categories.fxml", "Question Management"));
+        playerDetailsButton.setOnAction(event -> switchToScene("/views/admin/admin_players.fxml", "Player Details"));
     }
 
     private void logoutAdmin(ActionEvent event) {
