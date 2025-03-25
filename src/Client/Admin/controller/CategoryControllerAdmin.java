@@ -126,6 +126,8 @@ public class CategoryControllerAdmin {
         logger.warning("Attempting to delete all categories");
         try {
             categoryModel.clearCategories(); // Clear the list of categories
+
+            categoriesGrid.getChildren().clear();
             // Optionally, delete from a database or file
             logger.info("All categories deleted successfully");
         } catch (Exception e) {
