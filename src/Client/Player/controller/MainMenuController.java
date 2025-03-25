@@ -2,6 +2,8 @@ package Client.Player.controller;
 /**
  * Controls main menu view window
  */
+import Client.Player.utils.ClientSession;
+import Client.common.connection.ClientConnection;
 import common.Log.AnsiFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,15 +14,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.rmi.RemoteException;
 
 public class MainMenuController {
-    private static final Logger logger = Logger.getLogger(MainMenuController.class.getName());
-
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-    }
 
     @FXML
     private Button playButton;
@@ -33,22 +29,10 @@ public class MainMenuController {
 
     @FXML
     public void initialize() {
-        playButton.setOnAction(actionEvent -> {
-            logger.info("\nMainMenuController: Play button clicked.");
-            switchToModeMenu(actionEvent);
-        });
-
-        leaderboardButton.setOnAction(actionEvent -> {
-            logger.info("\nMainMenuController: Leaderboard button clicked.");
-            switchToLeaderboard(actionEvent);
-        });
-
-        logoutButton.setOnAction(actionEvent -> {
-            logger.info("\nBack to Login.");
-            switchToLogin(actionEvent);
-        });
+        playButton.setOnAction(event -> switchToModeMenu(event));
+        leaderboardButton.setOnAction(event -> switchToLeaderboard(event));
+        logoutButton.setOnAction(event -> logoutPlayer(event));
     }
-
 
     private void switchToModeMenu(ActionEvent event) {
         switchScene(event, "/views/client/mode_menu.fxml", "Bomb Defusing Game");
@@ -58,7 +42,21 @@ public class MainMenuController {
         switchScene(event, "/views/client/leaderboard.fxml", "Leaderboard");
     }
 
-    private void switchToLogin(ActionEvent event) {
+    private void logoutPlayer(ActionEvent event) {
+        String username = ClientSession.getPlayerUsername(); // retrieve the logged-in player's username
+
+        if (ClientConnection.bombGameServer != null && username != null) {
+            try {
+                ClientConnection.bombGameServer.logoutPlayer(username); // pass username in server if logout
+                ClientConnection.bombGameServer.logMessage("Player " + username + " logged out.");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Clear local session
+        ClientSession.clear();
+
         switchScene(event, "/views/client/login.fxml", "Login - Bomb Defusing Game");
     }
 
@@ -73,9 +71,13 @@ public class MainMenuController {
             stage.setResizable(false);
             stage.show();
 
-            logger.info("Switched to " + title);
+            ClientConnection.bombGameServer.logMessage("Switched to " + title);
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load " + title, e);
+            try {
+                ClientConnection.bombGameServer.logMessage("❌ Failed to load " + title);
+            } catch (RemoteException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 }

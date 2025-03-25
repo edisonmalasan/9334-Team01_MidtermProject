@@ -584,3 +584,9 @@ ClientConnection: Attempting to connect to server...
 Mar 25, 2025 5:33:16 PM Client.common.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Connected to server successfully!
+Mar 25, 2025 5:33:50 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 5:33:50 PM Client.common.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!

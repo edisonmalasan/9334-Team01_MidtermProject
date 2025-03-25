@@ -267,3 +267,12 @@ ClientConnection: Connected to server successfully!
 ClientConnection: Connected to server successfully!
 [2025-03-25 17:34:02] Log In: SAMPLEUSER4 | IP: localhost
 [2025-03-25 17:34:02] Player SAMPLEUSER4 logged in. Classic Score: 50, Endless Score: 20
+[2025-03-25 17:47:53] New RMI registry created on port 1099.
+[2025-03-25 17:47:53] Server started successfully on port 1099.
+[2025-03-25 17:47:56] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 17:48:05] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 17:48:05] Admin Eds logged in
+[2025-03-25 17:48:05] Admin dashboard loaded with 9 players
+[2025-03-25 17:48:05] Admin dashboard loaded with 9 players
+[2025-03-25 17:48:08] Admin navigated to: Login

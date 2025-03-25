@@ -41,4 +41,6 @@ public interface BombGameServer extends Remote {
 
     // logMessage
     void logMessage(String message) throws RemoteException;
+
+    void logoutPlayer(String username) throws RemoteException;
 }
