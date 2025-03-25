@@ -31,7 +31,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: left center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
     -fx-text-fill: white;
 }
 
@@ -42,7 +42,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: left center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
     -fx-text-fill: #545454;
 }
 
@@ -53,7 +53,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: left center;
     -fx-font-family: "Space Nova";
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
     -fx-text-fill: #545454;
 }
 
