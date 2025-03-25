@@ -1,6 +1,13 @@
 package Client.Admin.controller;
 
-import Client.Admin.model.QuestionModelAdmin;
+import Client.User.controller.RegisterController;
+import Client.connection.ClientConnection;
+import common.Response;
+import common.model.QuestionModel;
+import exception.ConnectionException;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,20 +18,22 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 // TODO still to be revised
 public class QuestionControllerAdmin {
 
     @FXML
-    private TableView<QuestionModelAdmin> questionsTable; 
+    private TableView<QuestionModel> questionsTable; 
     @FXML
-    private TableColumn<QuestionModelAdmin, String> questionColumn; 
+    private TableColumn<QuestionModel, String> questionColumn; 
     @FXML
-    private TableColumn<QuestionModelAdmin, String> choicesColumn; 
+    private TableColumn<QuestionModel, String> choicesColumn; 
     @FXML
-    private TableColumn<QuestionModelAdmin, String> answerColumn; 
+    private TableColumn<QuestionModel, String> answerColumn; 
     @FXML
-    private TableColumn<QuestionModelAdmin, Integer> pointsColumn; 
+    private TableColumn<QuestionModel, Integer> pointsColumn; 
     @FXML
     private Button deleteAllButton;
     @FXML
@@ -32,14 +41,30 @@ public class QuestionControllerAdmin {
     @FXML
     private Button saveButton; 
     @FXML
-    private TextField searchBox; 
+    private TextField searchBox;
+    protected ClientConnection clientConnection;
+    private static final Logger logger = Logger.getLogger(RegisterController.class.getName());
 
-    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); 
+    private ObservableList<QuestionModel> questionData = FXCollections.observableArrayList();
+
+    public QuestionControllerAdmin () {
+        try {
+            this.clientConnection = ClientConnection.getInstance();
+        } catch (ConnectionException e) {
+            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+        }
+    }
 
     @FXML
     public void initialize() {
         setupTable();
-        loadQuestions();
+
+        try {
+            Response response = ClientConnection.bombGameServer.getQuestionsList();
+            questionData = FXCollections.observableArrayList((QuestionModel) response.getData());
+        } catch (Exception e) {
+
+        }
         editButton.setOnAction(e -> toggleEditMode());
         saveButton.setOnAction(e -> saveChanges());
         deleteAllButton.setOnAction(e -> deleteAllQuestions());
@@ -48,10 +73,10 @@ public class QuestionControllerAdmin {
 
     private void setupTable() {
         // Set up the table columns
-        questionColumn.setCellValueFactory(cellData -> cellData.getValue().textProperty());
-        choicesColumn.setCellValueFactory(cellData -> cellData.getValue().choicesProperty().asString());
-        answerColumn.setCellValueFactory(cellData -> cellData.getValue().answerProperty());
-        pointsColumn.setCellValueFactory(cellData -> cellData.getValue().scoreProperty().asObject());
+        questionColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getQuestionText()));
+        choicesColumn.setCellValueFactory(cellData -> new SimpleListProperty<>((ObservableList<String>) cellData.getValue().getChoices()).asString());
+        answerColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCorrectAnswer()));
+        pointsColumn.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getScore()).asObject());
 
         questionsTable.setItems(questionData);
     }
@@ -80,7 +105,7 @@ public class QuestionControllerAdmin {
                 String answer = questionObject.getString("answer");
                 int score = questionObject.getInt("score");
 
-                questionData.add(new QuestionModelAdmin(category, text, choices, answer, score));
+                questionData.add(new QuestionModel(category, text, choices, answer, score));
             }
         } catch (Exception e) {
             System.out.println("Error loading questions: " + e.getMessage());
@@ -107,12 +132,12 @@ public class QuestionControllerAdmin {
             JSONArray jsonArray = new JSONArray();
 
             // Iterate over question data and create a JSON object for each question
-            for (QuestionModelAdmin question : questionData) {
+            for (QuestionModel question : questionData) {
                 JSONObject questionObject = new JSONObject();
                 questionObject.put("category", question.getCategory());
-                questionObject.put("text", question.getText());
+                questionObject.put("text", question.getQuestionText());
                 questionObject.put("choices", question.getChoices());
-                questionObject.put("answer", question.getAnswer());
+                questionObject.put("answer", question.getCorrectAnswer());
                 questionObject.put("score", question.getScore());
 
                 jsonArray.put(questionObject);
@@ -146,11 +171,11 @@ public class QuestionControllerAdmin {
     private void searchQuestions() {
      
         String searchText = searchBox.getText().toLowerCase();
-        for (QuestionModelAdmin question : questionData) {
-            if (question.getText().toLowerCase().contains(searchText)) {
-                question.setVisible(true);
+        for (QuestionModel question : questionData) {
+            if (question.getQuestionText().toLowerCase().contains(searchText)) {
+                //question.setVisible(true);
             } else {
-                question.setVisible(false);
+                //question.setVisible(false);
             }
         }
     }
