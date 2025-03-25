@@ -159,7 +159,7 @@
 /* Buttons sa baba */
 .deleteBttn {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 124px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -170,7 +170,7 @@
 
 .deleteBttn:hover {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 124px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -181,7 +181,7 @@
 
 .deleteBttn:pressed {
     -fx-background-image: url("../images/delete-bttn.png");
-    -fx-background-size: 171px 31px;
+    -fx-background-size: 124px 40px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -192,7 +192,7 @@
 
 .addCatBttn {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -203,7 +203,7 @@
 
 .addCatBttn:hover {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -214,7 +214,7 @@
 
 .addCatBttn:pressed {
     -fx-background-image: url("../images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
