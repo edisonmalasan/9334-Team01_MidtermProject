@@ -38,3 +38,16 @@ PlayerLoginController: Username entered: 123414
 [2025-03-25 07:53:01] ERROR: Invalid username or password!
 [2025-03-25 07:54:03] ERROR: Invalid username or password!
 [2025-03-25 07:55:39] ERROR: Invalid username or password!
+[2025-03-25 08:23:05] User logged in: EDISON | IP: 192.168.0.102
+[2025-03-25 08:23:05] Player EDISON logged in. Classic Score: 0, Endless Score: 0
+[2025-03-25 08:24:25] ERROR: Login failed. Please try again later.
+[2025-03-25 08:24:44] ERROR: Login failed. Please try again later.
+[2025-03-25 08:25:06] ERROR: Login failed. Please try again later.
+[2025-03-25 08:25:42] ERROR: Login failed. Please try again later.
+[2025-03-25 08:26:10] ERROR: Login failed. Please try again later.
+[2025-03-25 08:26:47] ERROR: Invalid username or password!
+[2025-03-25 08:26:54] ERROR: Invalid username or password!
+[2025-03-25 08:27:19] ERROR: Invalid username or password!
+[2025-03-25 08:27:31] User logged in: EDISON | IP: 192.168.0.102
+[2025-03-25 08:27:31] Player EDISON logged in. Classic Score: 0, Endless Score: 0
+[2025-03-25 08:28:16] ERROR: Login failed. Please try again later.

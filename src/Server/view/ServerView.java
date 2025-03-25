@@ -50,6 +50,7 @@ public class ServerView extends JFrame {
         logArea.setForeground(Color.WHITE);
         logArea.setEditable(false);
         logArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        logArea.setFont(new Font("Monospaced", Font.BOLD, 14));
 
         JPanel logPanel = new JPanel(new BorderLayout());
         logPanel.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));

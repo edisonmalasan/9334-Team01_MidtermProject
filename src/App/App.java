@@ -1,8 +1,7 @@
 package App;
 
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import Client.User.utils.SoundUtility;
-import exception.ConnectionException;
 import exception.FXMLLoadingException;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -15,7 +14,6 @@ import utility.BombGameServer;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Level;

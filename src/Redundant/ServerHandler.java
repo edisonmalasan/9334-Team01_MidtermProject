@@ -3,10 +3,10 @@ package Redundant;
  * Handles the server
  */
 
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import Server.controller.LeaderboardControllerServer;
 import Server.handler.ClientHandler;
-import common.LoggerSetup;
+import common.Log.LoggerSetup;
 
 import static common.Protocol.PORT_NUMBER;
 

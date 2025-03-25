@@ -1,4 +1,4 @@
-package common;
+package common.Log;
 
 import javax.swing.JTextArea;
 import java.io.FileWriter;

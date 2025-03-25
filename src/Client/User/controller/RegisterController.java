@@ -3,7 +3,7 @@ package Client.User.controller;
 import Client.connection.ClientConnection;
 import common.Response;
 import common.model.PlayerModel;
-import common.LogManager;
+import common.Log.LogManager;
 import exception.ConnectionException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -21,7 +21,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-import java.awt.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;

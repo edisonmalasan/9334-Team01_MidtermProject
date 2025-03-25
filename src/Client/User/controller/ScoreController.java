@@ -2,7 +2,7 @@ package Client.User.controller;
 /**
  * Controls score view window
  */
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

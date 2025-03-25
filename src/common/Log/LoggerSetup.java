@@ -1,4 +1,4 @@
-package common;
+package common.Log;
 /**
  * Logs for the server
  */

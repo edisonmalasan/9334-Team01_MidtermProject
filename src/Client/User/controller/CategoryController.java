@@ -2,8 +2,7 @@ package Client.User.controller;
 /**
  * Controls category view
  */
-import App.App;
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import Client.connection.ClientConnection;
 import common.Response;
 import common.model.QuestionModel;
@@ -15,7 +14,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import utility.BombGameServer;
 
 import java.io.IOException;
 import java.util.List;

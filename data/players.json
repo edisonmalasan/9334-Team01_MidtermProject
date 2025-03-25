@@ -42,31 +42,10 @@
     "endlessScore": 0
   },
   {
-    "username": "PLEASEPLEASEPLAESE",
-    "password": "truman",
+    "username": "EDISON",
+    "password": "edison234",
     "role": "PLAYER",
     "classicScore": 0,
     "endlessScore": 0
-  },
-  {
-    "username": "TRUMAN",
-    "password": "givengod",
-    "role": "PLAYER",
-    "classicScore": 0,
-    "endlessScore": 0
-  },
-  {
-    "username": "PLEASE",
-    "password": "workss",
-    "role": "PLAYER",
-    "classicScore": 0,
-    "endlessScore": 0
-  },
-  {
-    "username": "Hello",
-    "password": "123",
-    "role": "PLAYER",
-    "classicScore": 10,
-    "endlessScore": 10
   }
 ]

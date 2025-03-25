@@ -364,3 +364,53 @@ Caused by: java.io.NotSerializableException: common.model.PlayerModel
 Mar 24, 2025 11:32:59 AM Client.User.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
+Mar 25, 2025 8:21:52 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:21:52 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:21:52 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:22:40 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:22:40 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:22:40 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:23:09 AM Client.User.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 25, 2025 8:23:10 AM Client.User.controller.GameController checkAnswer
+INFO: 
+GameController: Correct answer for question: Simplify: 2(x + 3) - 5x
+Mar 25, 2025 8:23:10 AM Client.User.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 1
+Mar 25, 2025 8:23:10 AM Client.User.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 25, 2025 8:23:10 AM Client.User.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Mar 25, 2025 8:23:10 AM Client.User.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.
+Mar 25, 2025 8:23:55 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:23:55 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:23:55 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 8:26:39 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 8:26:39 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 8:26:39 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
