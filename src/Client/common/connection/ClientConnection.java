@@ -1,4 +1,4 @@
-package Client.connection;
+package Client.common.connection;
 import common.Log.AnsiFormatter;
 import common.Log.LoggerSetup;
 import exception.ConnectionException;

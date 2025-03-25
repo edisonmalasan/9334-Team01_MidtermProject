@@ -168,37 +168,37 @@ GameController: Correct answer for question: If 5 machines make 5 cars in 5 minu
 Mar 12, 2025 3:33:25 PM Client.controller.GameController updateComboUI
 INFO: 
 GameController: Updating combo display: 2
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: PlayerModel{name='yuen', score=80}
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
 Mar 12, 2025 3:33:28 PM Client.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Error updating player score: Cannot invoke "java.util.List.iterator()" because "leaderboard" is null', data=null}
 Mar 12, 2025 3:33:28 PM Client.controller.GameController lambda$sendScoreToServer$3
 WARNING: 
 GameController: Failed to send score to the server: Error updating player score: Cannot invoke "java.util.List.iterator()" because "leaderboard" is null
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Received null player data.', data=null}
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Received null player data.', data=null}
 Mar 23, 2025 4:17:03 PM Client.Player.connection.ClientConnection <init>

@@ -1,4 +1,4 @@
-package Client.Admin.connection;
+package Redundant.connection;
 
 import common.Log.AnsiFormatter;
 import common.Log.LoggerSetup;

@@ -1,8 +1,7 @@
 package Client.Admin.controller;
 
-import Client.connection.ClientConnection;
+import Client.common.connection.ClientConnection;
 import common.Log.LogManager;
-import common.Log.AnsiFormatter;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,8 +18,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class AdminDashboardController {
     private final LogManager logManager = LogManager.getInstance();

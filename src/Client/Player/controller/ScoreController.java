@@ -1,6 +1,6 @@
 package Client.Player.controller;
 
-import Client.connection.ClientConnection;
+import Client.common.connection.ClientConnection;
 import common.Log.LogManager;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

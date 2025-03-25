@@ -3,7 +3,7 @@ package Client.Player.controller;
  * Controls input username view window
  */
 import Client.CallbackImpl;
-import Client.connection.ClientConnection;
+import Client.common.connection.ClientConnection;
 import common.model.PlayerModel;
 import exception.ConnectionException;
 import exception.InvalidCredentialsException;
