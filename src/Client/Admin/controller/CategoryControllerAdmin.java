@@ -43,4 +43,8 @@ public class CategoryControllerAdmin {
     private void handleViewQuestions(ActionEvent event) {
         loadScene(event, "/views/admin/admin_questions.fxml");
     }
+
+    public void handlePlayerDetails(ActionEvent event) {
+        loadScene(event,"/views/admin/admin_players.fxml");
+    }
 }
