@@ -9,6 +9,9 @@ import java.rmi.RemoteException;
 
 public interface BombGameServer extends Remote {
 
+    // Remove player from data
+    public Response removePlayer(PlayerModel player) throws RemoteException;
+
     // Load questions for given category
     public Response getQuestionsPerCategory(String category) throws RemoteException;
 

@@ -30,7 +30,6 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private final Lock lock = new ReentrantLock();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
     private final Set<String> activePlayers = ConcurrentHashMap.newKeySet();
-    private Gson gson = new Gson();
 
     static {
         AnsiFormatter.enableColorLogging(logger);
@@ -41,6 +40,26 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     }
 
+    @Override
+    public Response removePlayer(PlayerModel removingPlayer) {
+        lock.lock();
+        try {
+            logger.info("Server received request for updating player list.");
+            for (PlayerModel player : playerList) {
+                if (player.equals(removingPlayer)){
+                    playerList.remove(player);
+                    break;
+                }
+            }
+            JSONStorageController.savePlayerListToJSON(playerList);
+            return new Response(true, "Player removed successfully.", null);
+        } catch (Exception e) {
+            logger.severe("Error removing player: " + e.getMessage());
+            return new Response(false, "Error removing player: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
+        }
+    }
     @Override
     public Response getQuestionsPerCategory(String category) throws RemoteException {
         lock.lock();
