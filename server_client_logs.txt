@@ -359,3 +359,37 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 21:42:21] Admin dashboard loaded with 9 players
 [2025-03-25 21:42:21] Admin dashboard loaded with 9 players
 [2025-03-25 21:42:23] Admin navigated to: Question Management
+[2025-03-25 22:43:06] New RMI registry created on port 1099.
+[2025-03-25 22:43:06] Server started successfully on port 1099.
+[2025-03-25 22:43:15] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 22:43:19] Online : [
+[2025-03-25 22:43:19] Eds
+[2025-03-25 22:43:19] ]
+[2025-03-25 22:43:19] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 22:43:19] Admin Eds logged in
+[2025-03-25 22:43:20] Admin dashboard loaded with 9 players
+[2025-03-25 22:43:20] Admin dashboard loaded with 9 players
+[2025-03-25 22:43:24] Admin navigated to: Player Management
+[2025-03-25 22:43:26] Admin dashboard loaded with 9 players
+[2025-03-25 22:43:26] Admin dashboard loaded with 9 players
+[2025-03-25 22:43:27] Admin navigated to: Question Management
+[2025-03-25 22:43:53] Admin dashboard loaded with 9 players
+[2025-03-25 22:43:53] Admin dashboard loaded with 9 players
+[2025-03-25 22:44:03] Admin navigated to: Question Management
+[2025-03-25 22:47:44] Admin dashboard loaded with 9 players
+[2025-03-25 22:47:44] Admin dashboard loaded with 9 players
+[2025-03-25 22:47:45] Admin navigated to: Player Management
+[2025-03-25 22:47:52] Admin dashboard loaded with 9 players
+[2025-03-25 22:47:52] Admin dashboard loaded with 9 players
+[2025-03-25 22:47:56] Admin navigated to: Player Details
+[2025-03-25 22:48:09] Admin dashboard loaded with 9 players
+[2025-03-25 22:48:09] Admin dashboard loaded with 9 players
+[2025-03-25 22:48:11] Admin navigated to: Login
+[2025-03-25 22:48:21] Online : [
+[2025-03-25 22:48:21] Eds, 
+[2025-03-25 22:48:21] SAMPLEUSER3
+[2025-03-25 22:48:21] ]
+[2025-03-25 22:48:21] Log In: SAMPLEUSER3 | IP: 192.168.0.105
+[2025-03-25 22:48:21] Player SAMPLEUSER3 logged in. Classic Score: 25, Endless Score: 12
+[2025-03-25 22:48:22] Switched to Bomb Defusing Game

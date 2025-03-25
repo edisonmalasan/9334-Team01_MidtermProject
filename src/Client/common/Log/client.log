@@ -532,3 +532,9 @@ GameController: Score successfully sent to the server.
 Mar 25, 2025 11:00:28 AM Client.Player.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
+Mar 25, 2025 10:43:14 PM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 10:43:14 PM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!

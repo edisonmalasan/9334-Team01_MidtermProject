@@ -4,7 +4,6 @@ import Server.controller.JSONStorageController;
 import utility.Callback;
 import common.model.PlayerModel;
 import Server.controller.QuestionController;
-import Server.handler.ClientHandler;
 import utility.LeaderboardEntryModel;
 import com.google.gson.Gson;
 import common.Log.AnsiFormatter;
@@ -25,7 +24,7 @@ import java.util.logging.Logger;
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
 
     private ServerView serverView;
-    private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
+    private static final Logger logger = Logger.getLogger(BombGameServerImpl.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
     private final Lock lock = new ReentrantLock();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
