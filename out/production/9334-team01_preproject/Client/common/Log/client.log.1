@@ -168,53 +168,53 @@ GameController: Correct answer for question: If 5 machines make 5 cars in 5 minu
 Mar 12, 2025 3:33:25 PM Client.controller.GameController updateComboUI
 INFO: 
 GameController: Updating combo display: 2
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: PlayerModel{name='yuen', score=80}
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
 Mar 12, 2025 3:33:28 PM Client.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
-Mar 12, 2025 3:33:28 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:28 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Error updating player score: Cannot invoke "java.util.List.iterator()" because "leaderboard" is null', data=null}
 Mar 12, 2025 3:33:28 PM Client.controller.GameController lambda$sendScoreToServer$3
 WARNING: 
 GameController: Failed to send score to the server: Error updating player score: Cannot invoke "java.util.List.iterator()" because "leaderboard" is null
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: GET_LEADERBOARD_CLASSIC
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Received null player data.', data=null}
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection sendObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection sendObject
 INFO: 
 ClientConnection: Sending object: GET_LEADERBOARD_ENDLESS
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Waiting to receive object from server...
-Mar 12, 2025 3:33:30 PM Client.connection.ClientConnection receiveObject
+Mar 12, 2025 3:33:30 PM Client.common.connection.ClientConnection receiveObject
 INFO: 
 ClientConnection: Received object: Response{success=false, message='Received null player data.', data=null}
-Mar 23, 2025 4:17:03 PM Client.User.connection.ClientConnection <init>
+Mar 23, 2025 4:17:03 PM Client.Player.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Attempting to connect to server...
-Mar 23, 2025 4:17:03 PM Client.User.connection.ClientConnection <init>
+Mar 23, 2025 4:17:03 PM Client.Player.connection.ClientConnection <init>
 SEVERE: 
 ClientConnection: Connection to server failed!
-Mar 23, 2025 4:17:03 PM Client.User.controller.GameController <init>
+Mar 23, 2025 4:17:03 PM Client.Player.controller.GameController <init>
 SEVERE: 
 GameController: Error initializing ClientConnection.
 exception.ConnectionException: Error connecting to the server.
-	at Client.User.connection.ClientConnection.<init>(ClientConnection.java:37)
-	at Client.User.connection.ClientConnection.getInstance(ClientConnection.java:43)
-	at Client.User.controller.GameController.<init>(GameController.java:78)
-	at Client.User.controller.ClassicGameController.<init>(ClassicGameController.java:14)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:37)
+	at Client.Player.connection.ClientConnection.getInstance(ClientConnection.java:43)
+	at Client.Player.controller.GameController.<init>(GameController.java:78)
+	at Client.Player.controller.ClassicGameController.<init>(ClassicGameController.java:14)
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -226,8 +226,8 @@ exception.ConnectionException: Error connecting to the server.
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2654)
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2568)
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2536)
-	at Client.User.controller.CategoryController.switchToGameplay(CategoryController.java:113)
-	at Client.User.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
+	at Client.Player.controller.CategoryController.switchToGameplay(CategoryController.java:113)
+	at Client.Player.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
 	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
 	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
@@ -245,16 +245,16 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.Socket.connect(Socket.java:695)
 	at java.base/java.net.Socket.<init>(Socket.java:564)
 	at java.base/java.net.Socket.<init>(Socket.java:328)
-	at Client.User.connection.ClientConnection.<init>(ClientConnection.java:29)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:29)
 	... 23 more
 
-Mar 23, 2025 4:17:03 PM Client.User.controller.GameController setQuestions
+Mar 23, 2025 4:17:03 PM Client.Player.controller.GameController setQuestions
 INFO: 
 GameController: Loaded 1 shuffled questions for category: LOGIC
-Mar 23, 2025 4:17:28 PM Client.User.controller.GameController handleForfeit
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController handleForfeit
 INFO: 
 GameController: Player forfeited. Stopping game...
-Mar 23, 2025 4:17:28 PM Client.User.controller.GameController lambda$sendScoreToServer$3
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController lambda$sendScoreToServer$3
 SEVERE: 
 GameController: Error sending score to the server
 java.rmi.MarshalException: error marshalling arguments; nested exception is: 
@@ -263,7 +263,7 @@ java.rmi.MarshalException: error marshalling arguments; nested exception is:
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
 	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
-	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
 Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
@@ -272,23 +272,23 @@ Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
 	... 5 more
 
-Mar 23, 2025 4:17:28 PM Client.User.controller.GameController lambda$switchToScoreView$2
+Mar 23, 2025 4:17:28 PM Client.Player.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
-Mar 23, 2025 4:29:46 PM Client.User.connection.ClientConnection <init>
+Mar 23, 2025 4:29:46 PM Client.Player.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Attempting to connect to server...
-Mar 23, 2025 4:29:46 PM Client.User.connection.ClientConnection <init>
+Mar 23, 2025 4:29:46 PM Client.Player.connection.ClientConnection <init>
 SEVERE: 
 ClientConnection: Connection to server failed!
-Mar 23, 2025 4:29:46 PM Client.User.controller.GameController <init>
+Mar 23, 2025 4:29:46 PM Client.Player.controller.GameController <init>
 SEVERE: 
 GameController: Error initializing ClientConnection.
 exception.ConnectionException: Error connecting to the server.
-	at Client.User.connection.ClientConnection.<init>(ClientConnection.java:37)
-	at Client.User.connection.ClientConnection.getInstance(ClientConnection.java:43)
-	at Client.User.controller.GameController.<init>(GameController.java:78)
-	at Client.User.controller.ClassicGameController.<init>(ClassicGameController.java:14)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:37)
+	at Client.Player.connection.ClientConnection.getInstance(ClientConnection.java:43)
+	at Client.Player.controller.GameController.<init>(GameController.java:78)
+	at Client.Player.controller.ClassicGameController.<init>(ClassicGameController.java:14)
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -300,8 +300,8 @@ exception.ConnectionException: Error connecting to the server.
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2654)
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2568)
 	at javafx.fxml@23.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2536)
-	at Client.User.controller.CategoryController.switchToGameplay(CategoryController.java:113)
-	at Client.User.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
+	at Client.Player.controller.CategoryController.switchToGameplay(CategoryController.java:113)
+	at Client.Player.controller.CategoryController.lambda$requestQuestionFromServer$7(CategoryController.java:99)
 	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
 	at javafx.graphics@23.0.2/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
@@ -319,22 +319,22 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.Socket.connect(Socket.java:695)
 	at java.base/java.net.Socket.<init>(Socket.java:564)
 	at java.base/java.net.Socket.<init>(Socket.java:328)
-	at Client.User.connection.ClientConnection.<init>(ClientConnection.java:29)
+	at Client.Player.connection.ClientConnection.<init>(ClientConnection.java:29)
 	... 23 more
 
-Mar 23, 2025 4:29:46 PM Client.User.controller.GameController setQuestions
+Mar 23, 2025 4:29:46 PM Client.Player.controller.GameController setQuestions
 INFO: 
 GameController: Loaded 1 shuffled questions for category: LOGIC
-Mar 23, 2025 4:29:49 PM Client.User.controller.GameController checkAnswer
+Mar 23, 2025 4:29:49 PM Client.Player.controller.GameController checkAnswer
 WARNING: 
 GameController: Wrong answer for question: What is the next number in the pattern? 3, 6, 9, 12, ?
-Mar 23, 2025 4:29:49 PM Client.User.controller.GameController updateComboUI
+Mar 23, 2025 4:29:49 PM Client.Player.controller.GameController updateComboUI
 INFO: 
 GameController: Updating combo display: 0
-Mar 23, 2025 4:29:51 PM Client.User.controller.GameController handleForfeit
+Mar 23, 2025 4:29:51 PM Client.Player.controller.GameController handleForfeit
 INFO: 
 GameController: Player forfeited. Stopping game...
-Mar 23, 2025 4:29:51 PM Client.User.controller.GameController lambda$sendScoreToServer$3
+Mar 23, 2025 4:29:51 PM Client.Player.controller.GameController lambda$sendScoreToServer$3
 SEVERE: 
 GameController: Error sending score to the server
 java.rmi.MarshalException: error marshalling arguments; nested exception is: 
@@ -343,7 +343,7 @@ java.rmi.MarshalException: error marshalling arguments; nested exception is:
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
 	at jdk.proxy2/jdk.proxy2.$Proxy5.updatePlayerScore(Unknown Source)
-	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
 Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
@@ -352,16 +352,16 @@ Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
 	... 5 more
 
-Mar 23, 2025 4:29:52 PM Client.User.controller.GameController lambda$switchToScoreView$2
+Mar 23, 2025 4:29:52 PM Client.Player.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
-Mar 24, 2025 11:32:57 AM Client.User.controller.GameController setQuestions
+Mar 24, 2025 11:32:57 AM Client.Player.controller.GameController setQuestions
 INFO: 
 GameController: Loaded 44 shuffled questions for category: ALGEBRA
-Mar 24, 2025 11:32:58 AM Client.User.controller.GameController handleForfeit
+Mar 24, 2025 11:32:58 AM Client.Player.controller.GameController handleForfeit
 INFO: 
 GameController: Player forfeited. Stopping game...
-Mar 24, 2025 11:32:58 AM Client.User.controller.GameController lambda$sendScoreToServer$3
+Mar 24, 2025 11:32:58 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
 SEVERE: 
 GameController: Error sending score to the server
 java.rmi.MarshalException: error marshalling arguments; nested exception is: 
@@ -370,7 +370,7 @@ java.rmi.MarshalException: error marshalling arguments; nested exception is:
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:215)
 	at java.rmi/java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:160)
 	at jdk.proxy2/jdk.proxy2.$Proxy6.updatePlayerScore(Unknown Source)
-	at Client.User.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
+	at Client.Player.controller.GameController.lambda$sendScoreToServer$3(GameController.java:215)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
 Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1201)
@@ -379,24 +379,24 @@ Caused by: java.io.NotSerializableException: common.model.PlayerModel
 	at java.rmi/sun.rmi.server.UnicastRef.invoke(UnicastRef.java:157)
 	... 5 more
 
-Mar 24, 2025 11:32:59 AM Client.User.controller.GameController lambda$switchToScoreView$2
+Mar 24, 2025 11:32:59 AM Client.Player.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.
-Mar 25, 2025 8:23:09 AM Client.User.controller.GameController setQuestions
+Mar 25, 2025 8:23:09 AM Client.Player.controller.GameController setQuestions
 INFO: 
 GameController: Loaded 44 shuffled questions for category: ALGEBRA
-Mar 25, 2025 8:23:10 AM Client.User.controller.GameController checkAnswer
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController checkAnswer
 INFO: 
 GameController: Correct answer for question: Simplify: 2(x + 3) - 5x
-Mar 25, 2025 8:23:10 AM Client.User.controller.GameController updateComboUI
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController updateComboUI
 INFO: 
 GameController: Updating combo display: 1
-Mar 25, 2025 8:23:10 AM Client.User.controller.GameController handleForfeit
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController handleForfeit
 INFO: 
 GameController: Player forfeited. Stopping game...
-Mar 25, 2025 8:23:10 AM Client.User.controller.GameController lambda$sendScoreToServer$3
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController lambda$sendScoreToServer$3
 INFO: 
 GameController: Score successfully sent to the server.
-Mar 25, 2025 8:23:10 AM Client.User.controller.GameController lambda$switchToScoreView$2
+Mar 25, 2025 8:23:10 AM Client.Player.controller.GameController lambda$switchToScoreView$2
 INFO: 
 GameController: Successfully switched to the Score view.

@@ -99,3 +99,5 @@ PlayerLoginController: Username entered: 123414
 [2025-03-25 11:00:20] EDISON requested ALGEBRA questions | IP: 192.168.0.102
 [2025-03-25 11:00:20] EDISON successfully received 44 ALGEBRA questions | IP: 192.168.0.102
 [2025-03-25 11:00:20] EDISON successfully received 44 ALGEBRA questions | IP: 192.168.0.102
+[2025-03-25 15:53:45] New RMI registry created on port 1099.
+[2025-03-25 15:53:45] Server started successfully on port 1099.
