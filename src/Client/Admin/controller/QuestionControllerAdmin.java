@@ -1,157 +1,143 @@
 package Client.Admin.controller;
 
-import Client.Admin.model.QuestionModelAdmin;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.collections.*;
 import javafx.scene.layout.AnchorPane;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
-import java.io.*;
-import java.util.List;
-
-// TODO still to be revised
 public class QuestionControllerAdmin {
 
-    @FXML
-    private TableView<QuestionModelAdmin> questionsTable; 
-    @FXML
-    private TableColumn<QuestionModelAdmin, String> questionColumn; 
-    @FXML
-    private TableColumn<QuestionModelAdmin, String> choicesColumn; 
-    @FXML
-    private TableColumn<QuestionModelAdmin, String> answerColumn; 
-    @FXML
-    private TableColumn<QuestionModelAdmin, Integer> pointsColumn; 
-    @FXML
-    private Button deleteAllButton;
-    @FXML
-    private Button editButton; 
-    @FXML
-    private Button saveButton; 
-    @FXML
-    private TextField searchBox; 
+    // FXML Injections
+    @FXML private AnchorPane rootPane;
+    @FXML private Label categoryTitleLabel;
+    @FXML private Button returnButton;
+    @FXML private Button deleteButton;
+    @FXML private TextField searchField;
+    @FXML private ComboBox<String> categoryComboBox;
+    @FXML private TableView<?> questionTable;
+    @FXML private ComboBox<String> categoryField;
+    @FXML private TextField questionField;
+    @FXML private TextField choice1Field;
+    @FXML private TextField choice2Field;
+    @FXML private TextField choice3Field;
+    @FXML private TextField choice4Field;
+    @FXML private TextField correctAnswerField;
+    @FXML private TextField scoreField;
+    @FXML private Button addQuestionButton;
 
-    private ObservableList<QuestionModelAdmin> questionData = FXCollections.observableArrayList(); 
+    private String currentCategory;
 
     @FXML
     public void initialize() {
-        setupTable();
-        loadQuestions();
-        editButton.setOnAction(e -> toggleEditMode());
-        saveButton.setOnAction(e -> saveChanges());
-        deleteAllButton.setOnAction(e -> deleteAllQuestions());
-        searchBox.setOnKeyReleased(e -> searchQuestions());
+        // Initialize category dropdowns
+        ObservableList<String> categories = FXCollections.observableArrayList(
+                "ALGEBRA", "GEOMETRY", "PROBABILITY", "TRIGONOMETRY", "ANGLES", "LOGIC"
+        );
+        categoryComboBox.setItems(categories);
+        categoryField.setItems(categories);
+
+        // Set up event handlers
+        returnButton.setOnAction(this::handleReturn);
+        addQuestionButton.setOnAction(this::handleAddQuestion);
+        deleteButton.setOnAction(this::handleDeleteQuestion);
+
+        // Update the title if category was set before initialization
+        updateCategoryTitle();
     }
 
-    private void setupTable() {
-        // Set up the table columns
-        questionColumn.setCellValueFactory(cellData -> cellData.getValue().textProperty());
-        choicesColumn.setCellValueFactory(cellData -> cellData.getValue().choicesProperty().asString());
-        answerColumn.setCellValueFactory(cellData -> cellData.getValue().answerProperty());
-        pointsColumn.setCellValueFactory(cellData -> cellData.getValue().scoreProperty().asObject());
+    public void setCategory(String category) {
+        this.currentCategory = category;
 
-        questionsTable.setItems(questionData);
+        // Set the category in the filter dropdown
+        if (category != null && categoryComboBox != null) {
+            categoryComboBox.setValue(category);
+        }
+
+        updateCategoryTitle();
+
+        // TODO: Load questions for this category
+        loadQuestionsForCategory(category);
     }
 
-    private void loadQuestions() {
-        // Load questions from JSON file
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Client/Admin/data/questions.json")));
-            StringBuilder content = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                content.append(line);
-            }
-            reader.close();
-
-            // Parse the content as a JSON array
-            JSONArray jsonArray = new JSONArray(content.toString());
-
-            // Loop through each question in the JSON array
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject questionObject = jsonArray.getJSONObject(i);
-                String category = questionObject.getString("category");
-                String text = questionObject.getString("text");
-                JSONArray choicesArray = questionObject.getJSONArray("choices");
-                List<String> choices = choicesArray.toList().stream().map(Object::toString).toList();
-                String answer = questionObject.getString("answer");
-                int score = questionObject.getInt("score");
-
-                questionData.add(new QuestionModelAdmin(category, text, choices, answer, score));
-            }
-        } catch (Exception e) {
-            System.out.println("Error loading questions: " + e.getMessage());
+    private void updateCategoryTitle() {
+        if (categoryTitleLabel != null) {
+            String title = currentCategory != null ?
+                    "Questions for: " + currentCategory :
+                    "All Questions";
+            categoryTitleLabel.setText(title);
         }
     }
 
-    private void toggleEditMode() {
-       
-        if (editButton.getText().equals("Edit")) {
-            editButton.setText("Cancel");
-            saveButton.setVisible(true);
-            questionsTable.setEditable(true);
-        } else {
-            editButton.setText("Edit");
-            saveButton.setVisible(false);
-            questionsTable.setEditable(false);
-        }
+    private void loadQuestionsForCategory(String category) {
+        // TODO: Implement actual data loading
+        System.out.println("Loading questions for category: " + category);
     }
 
-    private void saveChanges() {
-        // Save changes to questions
+    private void handleReturn(ActionEvent event) {
         try {
-            // Create a JSON array to hold all question objects
-            JSONArray jsonArray = new JSONArray();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/admin/admin_categories.fxml"));
+            Parent root = loader.load();
 
-            // Iterate over question data and create a JSON object for each question
-            for (QuestionModelAdmin question : questionData) {
-                JSONObject questionObject = new JSONObject();
-                questionObject.put("category", question.getCategory());
-                questionObject.put("text", question.getText());
-                questionObject.put("choices", question.getChoices());
-                questionObject.put("answer", question.getAnswer());
-                questionObject.put("score", question.getScore());
-
-                jsonArray.put(questionObject);
-            }
-
-            // Write the JSON array to the file
-            BufferedWriter writer = new BufferedWriter(new FileWriter("questions.json"));
-            writer.write(jsonArray.toString(4));  // Format the output with 4 spaces for indentation
-            writer.close();
-
-            System.out.println("Changes saved successfully!");
+            Stage stage = (Stage) rootPane.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
         } catch (IOException e) {
-            System.out.println("Error saving changes: " + e.getMessage());
+            showAlert("Navigation Error", "Could not return to categories", Alert.AlertType.ERROR);
         }
     }
 
-    private void deleteAllQuestions() {
-       
-        questionData.clear();
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("questions.json"));
-            writer.write("[]");  // Write an empty JSON array to the file
-            writer.close();
-
-            System.out.println("All questions deleted successfully!");
-        } catch (IOException e) {
-            System.out.println("Error deleting questions: " + e.getMessage());
+    private void handleAddQuestion(ActionEvent event) {
+        // Validate inputs
+        if (categoryField.getValue() == null || questionField.getText().isEmpty()) {
+            showAlert("Input Error", "Category and Question are required", Alert.AlertType.WARNING);
+            return;
         }
+
+        // TODO: Save the new question
+        System.out.println("Adding new question:");
+        System.out.println("Category: " + categoryField.getValue());
+        System.out.println("Question: " + questionField.getText());
+        System.out.println("Choices: " + choice1Field.getText() + ", " + choice2Field.getText() +
+                ", " + choice3Field.getText() + ", " + choice4Field.getText());
+        System.out.println("Correct Answer: " + correctAnswerField.getText());
+        System.out.println("Score: " + scoreField.getText());
+
+        // Clear the form
+        clearQuestionForm();
     }
 
-    private void searchQuestions() {
-     
-        String searchText = searchBox.getText().toLowerCase();
-        for (QuestionModelAdmin question : questionData) {
-            if (question.getText().toLowerCase().contains(searchText)) {
-                question.setVisible(true);
-            } else {
-                question.setVisible(false);
-            }
+    private void handleDeleteQuestion(ActionEvent event) {
+        // TODO: Implement question deletion
+        Object selectedItem = questionTable.getSelectionModel().getSelectedItem();
+        if (selectedItem == null) {
+            showAlert("Selection Error", "Please select a question to delete", Alert.AlertType.WARNING);
+            return;
         }
+
+        System.out.println("Deleting selected question");
+    }
+
+    private void clearQuestionForm() {
+        questionField.clear();
+        choice1Field.clear();
+        choice2Field.clear();
+        choice3Field.clear();
+        choice4Field.clear();
+        correctAnswerField.clear();
+        scoreField.clear();
+    }
+
+    private void showAlert(String title, String content, Alert.AlertType type) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }
