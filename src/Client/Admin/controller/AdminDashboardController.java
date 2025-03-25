@@ -1,9 +1,11 @@
 package Client.Admin.controller;
 
 import Client.common.connection.ClientConnection;
+import Client.Player.utils.ClientSession;
 import common.Log.LogManager;
 import common.Response;
 import common.model.PlayerModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +15,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.File;
@@ -30,7 +31,7 @@ public class AdminDashboardController {
     @FXML private Label totalPlayersLabel;
     @FXML private Label classicPlayersLabel;
     @FXML private Label endlessPlayersLabel;
-    @FXML private Button exitButton;
+    @FXML private Button logoutButton;
     @FXML private Button playersButton;
     @FXML private Button questionsButton;
 
@@ -42,15 +43,13 @@ public class AdminDashboardController {
 
     private void loadPlayerStatistics() {
         try {
-            Response response= ClientConnection.bombGameServer.getPlayerList();
+            Response response = ClientConnection.bombGameServer.getPlayerList();
             List<PlayerModel> playerList = (List<PlayerModel>) response.getData();
             int totalPlayers = playerList.size();
             int classicPlayers = 0;
             int endlessPlayers = 0;
 
-            //count players with scores >0 for each mode (ganyan ba or live tracking)
             for (PlayerModel player : playerList) {
-
                 if (player.getClassicScore() > 0) classicPlayers++;
                 if (player.getEndlessScore() > 0) endlessPlayers++;
             }
@@ -74,38 +73,27 @@ public class AdminDashboardController {
         }
     }
 
-//    private JSONArray readPlayersFile() throws IOException {
-//        File file = new File(USERS_JSON_PATH);
-//        if (!file.exists()) {
-//            return new JSONArray();
-//        }
-//
-//        try (FileReader reader = new FileReader(file)) {
-//            return new JSONArray(new JSONTokener(reader));
-//        }
-//    }
-
-    private JSONArray readPlayersFile() throws IOException {
-        File file = new File(USERS_JSON_PATH);
-
-        if (!file.exists()) {
-            return new JSONArray();
-        }
-
-        try (FileReader reader = new FileReader(file)) {
-            JSONArray playersArray = new JSONArray(new JSONTokener(reader));
-            System.out.println("Loaded " + playersArray.length() + " players from JSON.");
-            return playersArray;
-        } catch (Exception e) {
-            System.out.println("Error reading players.json - " + e.getMessage());
-            return new JSONArray();
-        }
-    }
-
     private void setupButtonActions() {
-        exitButton.setOnAction(event -> switchToScene("/views/client/login.fxml", "Login"));
+        logoutButton.setOnAction(event -> logoutAdmin(event));
         playersButton.setOnAction(event -> switchToScene("/views/admin/admin_leaderboard.fxml", "Player Management"));
         questionsButton.setOnAction(event -> switchToScene("/views/admin/admin_categories.fxml", "Question Management"));
+    }
+
+    private void logoutAdmin(ActionEvent event) {
+        String adminUsername = ClientSession.getPlayerUsername();
+
+        if (ClientConnection.bombGameServer != null && adminUsername != null) {
+            try {
+                ClientConnection.bombGameServer.logoutPlayer(adminUsername);
+                ClientConnection.bombGameServer.logMessage("Admin " + adminUsername + " logged out.");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        ClientSession.clear();
+
+        switchToScene("/views/client/login.fxml", "Login");
     }
 
     private void switchToScene(String fxmlPath, String title) {
