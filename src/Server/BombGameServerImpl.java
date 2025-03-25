@@ -217,9 +217,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 }
             }
 
-            Writer writer = new FileWriter(System.getProperty("user.dir")+ "/data/players.json");
-            gson.toJson(playerList, writer);
-
+            JSONStorageController.savePlayerListToJSON(playerList);
             logger.info("Player list updated successfully.");
             return new Response(true, "Player list updated successfully.", null);
         } catch (Exception e) {
