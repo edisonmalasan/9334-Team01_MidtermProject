@@ -1,8 +1,7 @@
 package Client.User.controller;
-/**
- * Controls score view window
- */
-import common.Log.AnsiFormatter;
+
+import Client.connection.ClientConnection;
+import common.Log.LogManager;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,33 +9,52 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import App.App;
 
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ScoreController {
-
     @FXML
     private Label scoreLabel;
     @FXML
     private Button backToMenuButton;
 
     private int finalScore;
-    private static final Logger logger = Logger.getLogger(ScoreController.class.getName());
+    private final LogManager logManager = LogManager.getInstance();
 
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-    }
     public void setScore(int score) {
         this.finalScore = score;
         scoreLabel.setText(String.valueOf(finalScore));
+
+        logScore();
+    }
+
+    private void logScore() {
+        try {
+            String playerName = LoginController.getCurrentUser() != null ?
+                    LoginController.getCurrentUser().getUsername() : "Unknown Player";
+            String gameMode = CategoryController.isEndlessMode ? "Endless" : "Classic";
+
+            String scoreMessage = String.format(
+                    "Score Report - Player: %s | Mode: %s | Score: %d | IP: %s",
+                    playerName,
+                    gameMode,
+                    finalScore,
+                    App.fetchIPAddress
+            );
+
+            // send to both local log and server log
+            logManager.appendLog(scoreMessage);
+            ClientConnection.bombGameServer.logMessage(scoreMessage);
+
+        } catch (Exception e) {
+            logManager.appendLog("Failed to log score: " + e.getMessage());
+        }
     }
 
     @FXML
     public void initialize() {
         backToMenuButton.setOnAction(event -> switchToMainMenu());
-
     }
 
     private void switchToMainMenu() {
@@ -50,9 +68,9 @@ public class ScoreController {
             stage.setResizable(false);
             stage.show();
 
-            logger.info("ScoreController: Successfully switched to the Main Menu.");
+            logManager.appendLog("Returned to main menu from score screen");
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "ScoreController: Failed to load Main Menu", e);
+            logManager.appendLog("Failed to load main menu: " + e.getMessage());
         }
     }
 }

@@ -102,7 +102,7 @@ public class CategoryController {
             stage.show();
 
         } catch (IOException e) {
-            System.out.println("Failed to load " + gameMode + " screen" + e.getMessage());
+            logManager.appendLog("Failed to fetch " + category + " questions: " + e.getMessage());
         }
     }
 
@@ -118,7 +118,7 @@ public class CategoryController {
             stage.show();
 
         } catch (IOException e) {
-            System.out.println("Failed to load main menu screen" + e.getMessage());
+            logManager.appendLog("Failed to fetch main menu screen" + e.getMessage());
         }
     }
 

@@ -486,3 +486,11 @@ ClientConnection: Attempting to connect to server...
 Mar 25, 2025 9:12:52 AM Client.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Connected to server successfully!
+Mar 25, 2025 9:19:12 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 9:19:12 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 9:19:12 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!

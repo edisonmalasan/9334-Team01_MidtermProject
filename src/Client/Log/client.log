@@ -494,3 +494,41 @@ ClientConnection: Attempting to connect to server...
 Mar 25, 2025 9:19:12 AM Client.connection.ClientConnection <init>
 INFO: 
 ClientConnection: Connected to server successfully!
+Mar 25, 2025 11:00:05 AM Client.connection.ClientConnection <clinit>
+INFO: Detected IP Address: 192.168.0.102
+Mar 25, 2025 11:00:05 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Attempting to connect to server...
+Mar 25, 2025 11:00:05 AM Client.connection.ClientConnection <init>
+INFO: 
+ClientConnection: Connected to server successfully!
+Mar 25, 2025 11:00:20 AM Client.User.controller.GameController setQuestions
+INFO: 
+GameController: Loaded 44 shuffled questions for category: ALGEBRA
+Mar 25, 2025 11:00:25 AM Client.User.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: What is the algebraic expression for this phrase? 13 more than the product of 9 and n
+Mar 25, 2025 11:00:25 AM Client.User.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:26 AM Client.User.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify the expression: (-1/5)^3
+Mar 25, 2025 11:00:26 AM Client.User.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:27 AM Client.User.controller.GameController checkAnswer
+WARNING: 
+GameController: Wrong answer for question: Simplify: (3x + 4) - (x - 5)
+Mar 25, 2025 11:00:27 AM Client.User.controller.GameController updateComboUI
+INFO: 
+GameController: Updating combo display: 0
+Mar 25, 2025 11:00:28 AM Client.User.controller.GameController handleForfeit
+INFO: 
+GameController: Player forfeited. Stopping game...
+Mar 25, 2025 11:00:28 AM Client.User.controller.GameController lambda$sendScoreToServer$3
+INFO: 
+GameController: Score successfully sent to the server.
+Mar 25, 2025 11:00:28 AM Client.User.controller.GameController lambda$switchToScoreView$2
+INFO: 
+GameController: Successfully switched to the Score view.

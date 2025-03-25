@@ -1,5 +1,6 @@
 package Client.Admin.controller;
 
+import Client.connection.ClientConnection;
 import common.Log.LogManager;
 import common.Log.AnsiFormatter;
 import javafx.fxml.FXML;
@@ -22,7 +23,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AdminDashboardController {
-    private static final Logger logger = Logger.getLogger(AdminDashboardController.class.getName());
     private final LogManager logManager = LogManager.getInstance();
     private static final String USERS_JSON_PATH = "data/players.json";
 
@@ -33,10 +33,6 @@ public class AdminDashboardController {
     @FXML private Button exitButton;
     @FXML private Button playersButton;
     @FXML private Button questionsButton;
-
-    static {
-        AnsiFormatter.enableColorLogging(logger);
-    }
 
     @FXML
     public void initialize() {
@@ -63,9 +59,10 @@ public class AdminDashboardController {
             endlessPlayersLabel.setText(String.valueOf(endlessPlayers));
 
             logManager.appendLog("Admin dashboard loaded with " + totalPlayers + " players");
+            ClientConnection.bombGameServer.logMessage("Admin dashboard loaded with " + totalPlayers + " players");
 
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load player statistics", e);
+            logManager.appendLog("Failed to load statistics: " + e.getMessage());
             totalPlayersLabel.setText("Error");
             classicPlayersLabel.setText("Error");
             endlessPlayersLabel.setText("Error");
@@ -99,7 +96,7 @@ public class AdminDashboardController {
 
             logManager.appendLog("Admin navigated to: " + title);
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to load scene: " + title, e);
+            logManager.appendLog("Failed to load scene: " + e.getMessage());
         }
     }
 }
