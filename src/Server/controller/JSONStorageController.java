@@ -106,6 +106,7 @@ public class JSONStorageController {
                 if (player.getUsername().equals(newPlayer.getUsername())) {
                     player.setClassicScore(newPlayer.getClassicScore());
                     player.setEndlessScore(newPlayer.getEndlessScore());
+                    player.setHasPlayed(true);
                 }
             }
 

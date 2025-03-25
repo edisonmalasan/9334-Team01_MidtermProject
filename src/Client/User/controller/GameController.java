@@ -151,7 +151,7 @@ public abstract class GameController {
     protected void handleForfeit(ActionEvent event) {
         logger.info("\nGameController: Player forfeited. Stopping game...");
         bombUtility.stopBombAnimation();
-        finalScore = 0;
+        sendScoreToServer(finalScore);
         switchToScoreView();
     }
 
