@@ -2,21 +2,17 @@ package Server.controller;
 
 import Server.BombGameServerImpl;
 import Server.view.ServerView;
+import common.Log.LogManager;
 import utility.BombGameServer;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.logging.Logger;
-import static common.Protocol.PORT_NUMBER;
 
 public class ServerController {
     private ServerView view;
     private Registry registry;
     private boolean isServerRunning = false;
-    private static final Logger logger = Logger.getLogger(ServerController.class.getName());
-    private static final DateTimeFormatter TIMESTAMP_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private LogManager logger = LogManager.getInstance();
 
     public ServerController(ServerView view) {
         this.view = view;
@@ -32,34 +28,35 @@ public class ServerController {
 
     private void startServer() {
         if (isServerRunning) {
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server is already running.\n");
+            logger.appendLog("Server is already running.");
             return;
         }
 
         try {
-            BombGameServer server = new BombGameServerImpl();
+            BombGameServer server = new BombGameServerImpl(view);
 
             try {
                 registry = LocateRegistry.createRegistry(1099);
                 registry.rebind("server", server);
                 isServerRunning = true;
-                view.appendToLog("[ "+getTimestamp() + " ]"+ " --- New RMI registry created on port 1099.\n");
+                logger.appendLog("New RMI registry created on port 1099.");
             } catch (Exception e) {
-                view.appendToLog("[ "+getTimestamp() + " ]"+ " --- RMI registry already exists. Connecting...\n");
+                logger.appendLog("RMI registry already exists. Connecting...");
+                registry = LocateRegistry.getRegistry(1099);
+                registry.rebind("server", server);
+                isServerRunning = true;
             }
 
-
-
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server started successfully on port " + 1099 + ".\n");
+            logger.appendLog("Server started successfully on port 1099.");
         } catch (Exception e) {
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Failed to start server: " + e.getMessage() + "\n");
+            logger.appendLog("Failed to start server: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private void stopServer() {
         if (!isServerRunning) {
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server is not running.\n");
+            logger.appendLog("Server is not running.");
             return;
         }
 
@@ -67,25 +64,20 @@ public class ServerController {
             registry.unbind("server");
             UnicastRemoteObject.unexportObject(registry, true);
             isServerRunning = false;
-
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Server stopped successfully.\n");
+            logger.appendLog("Server stopped successfully.");
         } catch (Exception e) {
-            view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Error stopping the server: " + e.getMessage() + "\n");
+            logger.appendLog("Error stopping the server: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private void restartServer() {
-        view.appendToLog("[ "+getTimestamp() + " ]"+ " --- Restarting server...\n");
+        logger.appendLog("Restarting server...");
         stopServer();
         startServer();
     }
 
     private void clearLog() {
         view.clearLog();
-    }
-
-    private String getTimestamp() {
-        return LocalDateTime.now().format(TIMESTAMP_FORMAT);
     }
 }

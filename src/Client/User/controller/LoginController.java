@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 public class LoginController {
     private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
-    private final LogManager logManager = LogManager.getInstance();
     protected ClientConnection clientConnection;
 
     static {
@@ -89,15 +88,15 @@ public class LoginController {
                 ClientConnection.bombGameServer.login(callback);
                 currentUser = authenticatedUser;
 
-                // Log login event with IP
-                String ipAddress = App.fetchIPAddress;
-                logManager.appendLog("User logged in: " + currentUser.getUsername() + " | IP: " + ipAddress);
+                // send log to server
+                String logMessage = "Log In: " + currentUser.getUsername() + " | IP: " + App.fetchIPAddress;
+                ClientConnection.bombGameServer.logMessage(logMessage);
 
                 if ("ADMIN".equalsIgnoreCase(currentUser.getRole())) {
-                    logManager.appendLog("Admin " + currentUser.getUsername() + " logged in");
+                    ClientConnection.bombGameServer.logMessage("Admin " + currentUser.getUsername() + " logged in");
                     switchToAdminDashboard(event);
                 } else {
-                    logManager.appendLog("Player " + currentUser.getUsername() +
+                    ClientConnection.bombGameServer.logMessage("Player " + currentUser.getUsername() +
                             " logged in. Classic Score: " + currentUser.getClassicScore() +
                             ", Endless Score: " + currentUser.getEndlessScore());
                     switchToMainMenu(event);
@@ -113,13 +112,28 @@ public class LoginController {
     }
 
     private void handleException(Exception e) {
-        logManager.appendLog("ERROR: " + e.getMessage());
         Platform.runLater(() -> {
             usernameField.clear();
             usernameField.requestFocus();
             passwordField.clear();
             errorLabel.setText(e.getMessage());
         });
+    }
+
+    private void switchToRegister(ActionEvent event) {
+        switchScene(event, "/views/client/register.fxml", "Register - Bomb Defusing Game");
+    }
+
+    private void switchToMainMenu(ActionEvent event) {
+        switchScene(event, "/views/client/main_menu.fxml", "Bomb Defusing Game");
+    }
+
+    private void switchToAdminDashboard(ActionEvent event) {
+        switchScene(event, "/views/admin/admin_db.fxml", "Admin Dashboard");
+    }
+
+    public static PlayerModel getCurrentUser() {
+        return currentUser;
     }
 
     private void switchScene(ActionEvent event, String fxmlPath, String title) {
@@ -142,37 +156,4 @@ public class LoginController {
             logger.log(Level.SEVERE, "Failed to load " + title, e);
         }
     }
-
-    private void switchToRegister(ActionEvent event) {
-        switchScene(event, "/views/client/register.fxml", "Register - Bomb Defusing Game");
-    }
-
-    private void switchToMainMenu(ActionEvent event) {
-        switchScene(event, "/views/client/main_menu.fxml", "Bomb Defusing Game");
-    }
-
-    private void switchToAdminDashboard(ActionEvent event) {
-        switchScene(event, "/views/admin/admin_db.fxml", "Admin Dashboard");
-    }
-
-    public static PlayerModel getCurrentUser() {
-        return currentUser;
-    }
-
-    //    private void switchToMainMenu(ActionEvent event) {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/main_menu.fxml"));
-//            Parent root = loader.load();
-//
-//            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-//            stage.setScene(new Scene(root));
-//            stage.setTitle("Bomb Defusing Game");
-//            stage.setResizable(false);
-//            stage.show();
-//
-//            logger.info("\nLoginController: Switched to Main Menu.");
-//        } catch (IOException e) {
-//            logger.log(Level.SEVERE, "Failed to load Main Menu.", e);
-//        }
-//    }
 }

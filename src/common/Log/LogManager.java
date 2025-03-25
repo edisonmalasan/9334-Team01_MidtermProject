@@ -1,13 +1,13 @@
 package common.Log;
 
-import javax.swing.JTextArea;
+import javax.swing.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * a common logger to be used for response by appending logs to the GUI and a file.
+ * A common logger to be used for response by appending logs to the GUI and a file.
  */
 public class LogManager {
     private static LogManager instance;
@@ -15,7 +15,7 @@ public class LogManager {
     private static final String LOG_FILE = "server_client_logs.txt";
     private static final DateTimeFormatter TIMESTAMP_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    private LogManager() {}
+    public LogManager() {}
 
     public static LogManager getInstance() {
         if (instance == null) {
@@ -32,7 +32,12 @@ public class LogManager {
         String timestampedMessage = "[" + LocalDateTime.now().format(TIMESTAMP_FORMAT) + "] " + message;
 
         if (logArea != null) {
-            logArea.append(timestampedMessage + "\n");
+            SwingUtilities.invokeLater(() -> {
+                logArea.append(timestampedMessage + "\n");
+                logArea.setCaretPosition(logArea.getDocument().getLength());
+            });
+        } else {
+            System.err.println("LogArea is not set in LogManager!");
         }
 
         writeToFile(timestampedMessage);
