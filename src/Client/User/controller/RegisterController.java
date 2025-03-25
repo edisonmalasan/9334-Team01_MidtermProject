@@ -4,6 +4,7 @@ import Client.connection.ClientConnection;
 import common.Response;
 import common.model.PlayerModel;
 import common.Log.LogManager;
+import common.Log.AnsiFormatter;
 import exception.ConnectionException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -12,18 +13,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
+import App.App;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
@@ -31,10 +24,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class RegisterController {
-    private static final Logger logger = Logger.getLogger(RegisterController.class.getName());
-    private final LogManager logManager = LogManager.getInstance();
+    private final LogManager logger = LogManager.getInstance();
     protected ClientConnection clientConnection;
-    private static final String USERS_JSON_PATH = "data/players.json";
+
 
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
@@ -51,9 +43,10 @@ public class RegisterController {
         try {
             this.clientConnection = ClientConnection.getInstance();
         } catch (ConnectionException e) {
-            logger.log(Level.SEVERE, "\nGameController: Error initializing ClientConnection.", e);
+            logger.appendLog("Registration error: Failed to initialize connection");
         }
     }
+
     @FXML
     public void initialize() {
         registerButton.setOnAction(this::handleRegister);
@@ -80,15 +73,23 @@ public class RegisterController {
             if (usernameExists((List<PlayerModel>) response.getData(), username)) {
                 showFieldError(usernameErrorLabel, "Username already taken!");
                 usernameField.requestFocus();
+                logger.appendLog("Registration failed: Username " + username + " already exists");
                 return;
             }
 
+            // register new player
             ClientConnection.bombGameServer.register(username, password);
+
+            // log registration to server view
+            String logMessage = "New Player Registered: " + username + " | IP: " + App.fetchIPAddress;
+            ClientConnection.bombGameServer.logMessage(logMessage);
+            logger.appendLog(logMessage);
+
             showSuccessAndRedirect(event);
 
         } catch (Exception e) {
             showGeneralError("Registration failed: " + e.getMessage());
-            logger.log(Level.SEVERE, "Registration error", e);
+            logger.appendLog("Registration error for " + username + ": " + e.getMessage());
         }
     }
 
@@ -165,14 +166,18 @@ public class RegisterController {
     }
 
     private void showFieldError(Label errorLabel, String message) {
-        errorLabel.setText(message);
-        errorLabel.setTextFill(Color.RED);
-        errorLabel.setVisible(true);
+        Platform.runLater(() -> {
+            errorLabel.setText(message);
+            errorLabel.setTextFill(Color.RED);
+            errorLabel.setVisible(true);
+        });
     }
 
     private void clearFieldError(Label errorLabel) {
-        errorLabel.setText("");
-        errorLabel.setVisible(false);
+        Platform.runLater(() -> {
+            errorLabel.setText("");
+            errorLabel.setVisible(false);
+        });
     }
 
     private void clearAllErrors() {
@@ -183,65 +188,11 @@ public class RegisterController {
     }
 
     private void showGeneralError(String message) {
-        generalErrorLabel.setText(message);
-        generalErrorLabel.setTextFill(Color.RED);
-        generalErrorLabel.setVisible(true);
-    }
-
-    private void validateRegistration(String username, String password, String confirmPassword) {
-        if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            throw new IllegalArgumentException("All fields are required!");
-        }
-
-        if (!username.matches("^[a-zA-Z0-9]}$")) {
-            throw new IllegalArgumentException("Username must be alphanumeric characters");
-        }
-
-        if (password.length() < 6) {
-            throw new IllegalArgumentException("Password must be at least 6 characters");
-        }
-
-        if (!password.equals(confirmPassword)) {
-            throw new IllegalArgumentException("Passwords do not match!");
-        }
-    }
-
-    private JSONArray readOrCreateUserArray() throws IOException {
-        File file = new File(USERS_JSON_PATH);
-        if (!file.exists()) {
-            try (FileWriter writer = new FileWriter(file)) {
-                writer.write("[]");
-            }
-            return new JSONArray();
-        }
-
-        try (FileReader reader = new FileReader(file)) {
-            return new JSONArray(new JSONTokener(reader));
-        }
-    }
-
-    private void checkUsernameAvailability(JSONArray usersArray, String username) {
-        for (int i = 0; i < usersArray.length(); i++) {
-            JSONObject user = usersArray.getJSONObject(i);
-            if (user.getString("username").equalsIgnoreCase(username)) {
-                throw new IllegalArgumentException("Username already taken!");
-            }
-        }
-    }
-
-    private void addNewUserToJson(JSONArray usersArray, String username, String password) throws IOException {
-        JSONObject newUser = new JSONObject();
-        newUser.put("username", username);
-        newUser.put("password", password);
-        newUser.put("role", "PLAYER"); //default role
-        newUser.put("classicScore", 0); //default scores
-        newUser.put("endlessScore", 0);
-
-        usersArray.put(newUser);
-
-        try (FileWriter writer = new FileWriter(USERS_JSON_PATH)) {
-            writer.write(usersArray.toString(4));
-        }
+        Platform.runLater(() -> {
+            generalErrorLabel.setText(message);
+            generalErrorLabel.setTextFill(Color.RED);
+            generalErrorLabel.setVisible(true);
+        });
     }
 
     private void showSuccessAndRedirect(ActionEvent event) {
@@ -257,23 +208,15 @@ public class RegisterController {
 
     private void switchToLogin(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/views/client/login.fxml")));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/client/login.fxml"));
+            Parent root = loader.load();
+
             Stage stage = (Stage) registerButton.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Login - Bomb Defusing Game");
             stage.show();
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Failed to switch to login", e);
+            System.out.println("Failed to load login fxml" + e.getMessage());
         }
-    }
-
-    private void handleRegistrationError(Exception e) {
-        Platform.runLater(() -> {
-            errorLabel.setText(e.getMessage());
-            passwordField.clear();
-            confirmPasswordField.clear();
-            usernameField.requestFocus();
-        });
-        logger.warning("Registration error: " + e.getMessage());
     }
 }
