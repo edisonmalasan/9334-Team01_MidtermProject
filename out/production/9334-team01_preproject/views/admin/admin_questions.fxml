@@ -9,7 +9,7 @@
     <children>
         <!-- Return Button -->
         <Button fx:id="returnButton" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="99.0" styleClass="addCatBttn" text="Return" />
-        <Button fx:id="deleteButton" layoutX="800.0" layoutY="600.0" prefHeight="40.0" prefWidth="197.0" styleClass="deleteBttn" text="Delete Entry" />
+        <Button fx:id="deleteButton" layoutX="819.0" layoutY="599.0" prefHeight="40.0" prefWidth="170.0" styleClass="deleteBttn" text="Delete Entry" />
 
         <!-- Search Bar -->
         <HBox layoutX="89.0" layoutY="72.0" prefHeight="31.0" prefWidth="946.0">

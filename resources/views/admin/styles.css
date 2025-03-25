@@ -14,7 +14,7 @@
 
 .label {
     -fx-font-family: "Roboto Mono";
-    -fx-font-size: 15px;
+    -fx-font-size: 25px;
     -fx-text-fill: white;
 }
 
@@ -60,7 +60,7 @@
 /* Exit Button */
 .exitBttn {
     -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 133px 53px;
+    -fx-background-size: 148px 50px;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-font-family: "Space Nova";
@@ -72,7 +72,7 @@
 
 .exitBttn:hover {
     -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 133px 53px;
+    -fx-background-size: 148px 50px;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -84,7 +84,7 @@
 
 .exitBttn:pressed {
     -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 133px 53px;
+    -fx-background-size: 148px 50px;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -169,7 +169,7 @@
 /* Buttons sa baba */
 .deleteBttn {
     -fx-background-image: url("/images/delete-bttn.png");
-    -fx-background-size: 250px 31px;
+    -fx-background-size: 170px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -180,7 +180,7 @@
 
 .deleteBttn:hover {
     -fx-background-image: url("/images/delete-bttn.png");
-    -fx-background-size: 250px 31px;
+    -fx-background-size: 170px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -191,7 +191,7 @@
 
 .deleteBttn:pressed {
     -fx-background-image: url("/images/delete-bttn.png");
-    -fx-background-size: 250px 31px;
+    -fx-background-size: 170px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -202,7 +202,7 @@
 
 .addCatBttn {
     -fx-background-image: url("/images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -213,7 +213,7 @@
 
 .addCatBttn:hover {
     -fx-background-image: url("/images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -224,7 +224,7 @@
 
 .addCatBttn:pressed {
     -fx-background-image: url("/images/return_bttn.png");
-    -fx-background-size: 200px 31px;
+    -fx-background-size: 99px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
@@ -302,33 +302,36 @@
 
 /* View Button */
 .view {
-    -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 77px 25px;
+    -fx-background-image: url("/images/return_bttn.png");
+    -fx-background-size: 250px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-text-fill: black;
-}
-
-.view:hover {
-    -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 77px 25px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-    -fx-font-family: "Space Nova";
-    -fx-font-size: 15px;
+    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 
-.view:pressed {
-    -fx-background-image: url("/images/exit_Button.png");
-    -fx-background-size: 77px 25px;
+.view:hover {
+    -fx-background-image: url("/images/return_bttn.png");
+    -fx-background-size: 250px 31px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
-    -fx-text-fill: #FFCC00;
+    -fx-background-color: transparent;
+    -fx-text-fill: #FF9E9E;
+}
+
+.view:pressed {
+    -fx-background-image: url("/images/return_bttn.png");
+    -fx-background-size: 250px 31px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Space Nova";
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
 }
 
 .view2:pressed {
@@ -338,6 +341,7 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
+    -fx-background-color: transparent;
     -fx-text-fill: black;
 }
 
@@ -349,6 +353,7 @@
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
     -fx-text-fill: black;
+    -fx-background-color: transparent;
 }
 
 
@@ -359,6 +364,7 @@
     -fx-background-position: center;
     -fx-font-family: "Space Nova";
     -fx-font-size: 15px;
+    -fx-background-color: transparent;
     -fx-text-fill: white;
 }
 

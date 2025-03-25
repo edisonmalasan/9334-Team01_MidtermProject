@@ -27,11 +27,11 @@
             </children>
         </HBox>
 
-        <Button fx:id="deleteButton" layoutX="414.0" layoutY="602.0" prefHeight="40.0" prefWidth="197.0" styleClass="deleteBttn" text="Delete Entry" />
+        <Button fx:id="deleteButton" layoutX="427.0" layoutY="601.0" prefHeight="40.0" prefWidth="170.0" styleClass="deleteBttn" text="Delete Entry" />
 
         <HBox layoutX="89.0" layoutY="93.0" prefHeight="74.0" prefWidth="846.0">
             <children>
-                <Pane fx:id="leaderboardTopPaneClassic" prefHeight="100.0" prefWidth="423.0">
+                <Pane fx:id="leaderboardTopPaneClassic" prefHeight="100.0" prefWidth="423.0" styleClass="sidebar">
                     <children>
                         <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -41,7 +41,7 @@
                         <TextField fx:id="classicSearchBox" layoutX="260.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
                     </children>
                 </Pane>
-                <Pane fx:id="leaderboardTopPaneEndless" prefHeight="74.0" prefWidth="424.0">
+                <Pane fx:id="leaderboardTopPaneEndless" prefHeight="74.0" prefWidth="424.0" styleClass="sidebar">
                     <children>
                         <TextField fx:id="endlessSearchBox" layoutX="261.0" layoutY="22.0" prefHeight="31.0" prefWidth="149.0" promptText="Search..." />
                         <ImageView fitHeight="38.0" fitWidth="179.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
