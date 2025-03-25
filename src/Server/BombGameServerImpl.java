@@ -17,8 +17,8 @@ import java.io.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
@@ -26,7 +26,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private ServerView serverView;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
-    private final ReadWriteLock rwLock = new ReentrantReadWriteLock();
+    private final Lock lock = new ReentrantLock();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
     private Gson gson = new Gson();
 
@@ -41,7 +41,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     @Override
     public Response getQuestionsPerCategory(String category) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             logger.info("Server received question request for category: " + category);
 
@@ -59,13 +59,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error retrieving questions: " + e.getMessage());
             return new Response(false, "Error retrieving questions: " + e.getMessage(), null);
         } finally {
-            rwLock.writeLock().unlock();
+            lock.unlock();
         }
     }
 
     @Override
     public Response getLeaderboards(String leaderboardType) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
@@ -80,7 +80,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error retrieving leaderboard: " + e.getMessage());
             return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
@@ -115,7 +115,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     @Override
     public Response getQuestionsList() throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             logger.info("Server received request for question list");
 
@@ -130,13 +130,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.info("Question list retrieved successfully");
             return new Response(true, "Question list retrieved successfully.", allQuestions);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     @Override
     public Response updatePlayerScore(PlayerModel player) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             if (player == null) {
                 logger.severe("Received null player data.");
@@ -151,12 +151,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error updating player score: " + e.getMessage());
             return new Response(false, "Error updating player score: " + e.getMessage(), null);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     public Response updateQuestion(QuestionModel question) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             logger.info("Server received request for removing question in database");
             if (question == null) {
@@ -188,12 +188,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error updating: " + e.getMessage());
             return new Response(false, "Error updating question database: " + e.getMessage(), null);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
@@ -218,13 +218,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error removing player from player list " + e.getMessage());
             return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     @Override
     public Response getPlayerList() {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             if (playerList == null) {
                 logger.severe("Received null player data.");
@@ -236,12 +236,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.severe("Error retrieving player list: " + e.getMessage());
             return new Response(false, "Error retrieving player list: " + e.getMessage(), null);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
     @Override
     public void login(Callback callback) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             PlayerModel player = callback.getPlayer();
 
@@ -260,13 +260,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
                 System.out.println("]");
             }
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     @Override
     public PlayerModel getPlayer(String username, String password) {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
         for (PlayerModel player : playerList) {
             if (player.getUsername().equalsIgnoreCase(username) && player.getPassword().equalsIgnoreCase(password)) {
@@ -275,12 +275,12 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         }
         return null;
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
     @Override
     public void register(String username, String password) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             PlayerModel player = new PlayerModel(username, password, "PLAYER", 0, 0, false);
             playerList.add(player);
@@ -289,17 +289,17 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error registering player: " + e.getMessage());
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 
     @Override
     public void logMessage(String message) throws RemoteException {
-        rwLock.writeLock().lock();
+        lock.lock();
         try {
             LogManager.getInstance().appendLog(message);
         } finally {
-            rwLock.readLock().unlock();
+            lock.unlock();
         }
     }
 }
