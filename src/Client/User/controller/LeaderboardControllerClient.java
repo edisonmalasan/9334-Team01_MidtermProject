@@ -2,10 +2,9 @@ package Client.User.controller;
 /**
  * Controls leaderboard view
  */
-import App.App;
 import Client.connection.ClientConnection;
-import common.AnsiFormatter;
-import common.LoggerSetup;
+import common.Log.AnsiFormatter;
+import common.Log.LoggerSetup;
 import utility.LeaderboardEntryModel;
 import exception.ConnectionException;
 import javafx.beans.property.SimpleStringProperty;

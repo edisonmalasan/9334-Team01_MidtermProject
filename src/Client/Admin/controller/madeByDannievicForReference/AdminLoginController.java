@@ -3,7 +3,7 @@ package Client.Admin.controller.madeByDannievicForReference;
  * Controls input username view window
  */
 import Client.User.controller.LoginController;
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import Client.connection.ClientConnection;
 import exception.ConnectionException;
 import exception.InvalidCredentialsException;

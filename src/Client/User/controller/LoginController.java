@@ -5,8 +5,8 @@ package Client.User.controller;
 import Client.CallbackImpl;
 import Client.connection.ClientConnection;
 import common.model.PlayerModel;
-import common.LogManager;
-import common.AnsiFormatter;
+import common.Log.LogManager;
+import common.Log.AnsiFormatter;
 import exception.ConnectionException;
 import exception.InvalidCredentialsException;
 import javafx.application.Platform;
@@ -18,13 +18,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 import utility.Callback;
-
-import java.io.File;
-import java.io.FileReader;
+import App.App;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -93,17 +88,18 @@ public class LoginController {
                 Callback callback = new CallbackImpl(authenticatedUser);
                 ClientConnection.bombGameServer.login(callback);
                 currentUser = authenticatedUser;
-                logManager.appendLog("User logged in: " + currentUser.getUsername());
+
+                // Log login event with IP
+                String ipAddress = App.fetchIPAddress;
+                logManager.appendLog("User logged in: " + currentUser.getUsername() + " | IP: " + ipAddress);
 
                 if ("ADMIN".equalsIgnoreCase(currentUser.getRole())) {
                     logManager.appendLog("Admin " + currentUser.getUsername() + " logged in");
                     switchToAdminDashboard(event);
                 } else {
-                    logger.info("Player " + currentUser.getUsername() +
-                            " logged in with scores - Classic: " +
-                            currentUser.getClassicScore() +
-                            ", Endless: " +
-                            currentUser.getEndlessScore());
+                    logManager.appendLog("Player " + currentUser.getUsername() +
+                            " logged in. Classic Score: " + currentUser.getClassicScore() +
+                            ", Endless Score: " + currentUser.getEndlessScore());
                     switchToMainMenu(event);
                 }
             } else {

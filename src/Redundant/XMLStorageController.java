@@ -3,7 +3,7 @@ package Redundant;
  * Manages xml files
  */
 
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import common.model.QuestionModel;
 import utility.LeaderboardEntryModel;
 import org.w3c.dom.*;

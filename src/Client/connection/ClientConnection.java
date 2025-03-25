@@ -1,18 +1,14 @@
 package Client.connection;
-import common.AnsiFormatter;
-import common.LoggerSetup;
+import common.Log.AnsiFormatter;
+import common.Log.LoggerSetup;
 import exception.ConnectionException;
 import utility.BombGameServer;
 
 import java.io.*;
 import java.net.InetAddress;
-import java.net.Socket;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Logger;
-
-import static common.Protocol.IP_ADDRESS;
-import static common.Protocol.PORT_NUMBER;
 
 public class ClientConnection {
     private static ClientConnection instance;

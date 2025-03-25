@@ -1,7 +1,7 @@
 package Client.Admin.controller;
 
-import common.LogManager;
-import common.AnsiFormatter;
+import common.Log.LogManager;
+import common.Log.AnsiFormatter;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -4,7 +4,7 @@ package Server.handler;
  */
 
 import Server.controller.JSONStorageController;
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import Client.User.model.PlayerModel;
 import Server.controller.LeaderboardControllerServer;
 import Server.controller.QuestionController;

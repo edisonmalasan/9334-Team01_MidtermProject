@@ -1,9 +1,8 @@
 package Client.Admin.connection;
 
-import common.AnsiFormatter;
-import common.LoggerSetup;
+import common.Log.AnsiFormatter;
+import common.Log.LoggerSetup;
 import exception.ConnectionException;
-import org.json.JSONObject;
 
 import java.io.*;
 import java.net.Socket;

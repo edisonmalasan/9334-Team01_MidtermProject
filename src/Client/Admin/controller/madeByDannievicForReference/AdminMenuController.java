@@ -1,7 +1,7 @@
 package Client.Admin.controller.madeByDannievicForReference;
 
 import Client.User.controller.MainMenuController;
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -2,7 +2,7 @@ package Redundant;
 /**
  * Controls input username view window
  */
-import common.AnsiFormatter;
+import common.Log.AnsiFormatter;
 import exception.InvalidCredentialsException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
