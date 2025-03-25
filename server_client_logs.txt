@@ -344,3 +344,18 @@ ClientConnection: Connected to server successfully!
 [2025-03-25 18:09:16] Admin dashboard loaded with 9 players
 [2025-03-25 18:09:16] Admin dashboard loaded with 9 players
 [2025-03-25 18:09:17] Admin navigated to: Question Management
+[2025-03-25 21:41:57] New RMI registry created on port 1099.
+[2025-03-25 21:41:57] Server started successfully on port 1099.
+[2025-03-25 21:42:03] 
+ClientConnection: Connected to server successfully!
+[2025-03-25 21:42:14] Online : [
+[2025-03-25 21:42:14] Eds
+[2025-03-25 21:42:14] ]
+[2025-03-25 21:42:14] Log In: Eds | IP: 192.168.0.105
+[2025-03-25 21:42:14] Admin Eds logged in
+[2025-03-25 21:42:14] Admin dashboard loaded with 9 players
+[2025-03-25 21:42:14] Admin dashboard loaded with 9 players
+[2025-03-25 21:42:20] Admin navigated to: Player Management
+[2025-03-25 21:42:21] Admin dashboard loaded with 9 players
+[2025-03-25 21:42:21] Admin dashboard loaded with 9 players
+[2025-03-25 21:42:23] Admin navigated to: Question Management

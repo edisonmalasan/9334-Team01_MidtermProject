@@ -2,7 +2,7 @@ package Client.Player.controller;
 /**
  * Controls leaderboard view
  */
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import common.Log.AnsiFormatter;
 import common.Log.LoggerSetup;
 import utility.LeaderboardEntryModel;

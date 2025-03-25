@@ -1,12 +1,9 @@
-package Client.common.connection;
-import common.Log.AnsiFormatter;
+package Client.connection;
 import common.Log.LoggerSetup;
 import common.Protocol;
 import exception.ConnectionException;
 import utility.BombGameServer;
 
-import java.io.*;
-import java.net.InetAddress;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Logger;
@@ -16,7 +13,7 @@ public class ClientConnection {
     public static BombGameServer bombGameServer;
     public static String iPAddress = Protocol.IP_ADDRESS;
 
-    private static final Logger logger = LoggerSetup.setupLogger("ClientLogger", System.getProperty("user.dir") + "/src/Client/Log/client.log");
+    private static final Logger logger = LoggerSetup.setupLogger("ClientLogger", System.getProperty("user.dir") + "/src/Client/common/Log/client.log");
 
     private ClientConnection() throws ConnectionException {
         try {

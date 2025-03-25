@@ -1,6 +1,6 @@
 package Client.Admin.controller;
 
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import Client.Player.utils.ClientSession;
 import common.Log.LogManager;
 import common.Response;
@@ -14,11 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import org.json.JSONArray;
-import org.json.JSONTokener;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;

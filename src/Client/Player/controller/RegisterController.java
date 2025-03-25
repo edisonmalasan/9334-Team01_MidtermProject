@@ -1,6 +1,6 @@
 package Client.Player.controller;
 
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import common.Response;
 import common.model.PlayerModel;
 import common.Log.LogManager;

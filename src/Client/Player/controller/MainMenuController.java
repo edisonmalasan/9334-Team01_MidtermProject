@@ -3,8 +3,7 @@ package Client.Player.controller;
  * Controls main menu view window
  */
 import Client.Player.utils.ClientSession;
-import Client.common.connection.ClientConnection;
-import common.Log.AnsiFormatter;
+import Client.connection.ClientConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,6 @@
 package App;
 
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import Client.Player.utils.SoundUtility;
 import common.Log.LogManager;
 import exception.FXMLLoadingException;

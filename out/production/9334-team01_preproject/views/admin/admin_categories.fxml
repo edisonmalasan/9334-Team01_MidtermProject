@@ -101,7 +101,7 @@
 
                     <Pane id="titleSubhead" layoutX="14.0" layoutY="57.0" prefHeight="42.0" prefWidth="517.0">
                         <children>
-                            <Label id="titleSubheadText" layoutX="14.0" layoutY="8.0" styleClass="titleSubheadText" text="TOTAL CATEGORIES:">
+                            <Label id="titleSubheadText" layoutX="14.0" layoutY="8.0" prefHeight="27.0" prefWidth="491.0" styleClass="titleSubheadText" text="MATHEMATICAL CATEGORIES">
                                 <graphic>
                                     <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                                         <image>
@@ -109,7 +109,6 @@
                                         </image>
                                     </ImageView>
                                 </graphic></Label>
-                            <Label id="titleSubheadText1" layoutX="254.0" layoutY="8.0" styleClass="titleSubheadText" text="00" />
                         </children>
                     </Pane>
                 </children>

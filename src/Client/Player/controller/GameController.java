@@ -3,7 +3,7 @@ package Client.Player.controller;
  * Contains main game logic
  */
 import common.Log.AnsiFormatter;
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import Client.Player.model.ComboModel;
 import common.model.PlayerModel;
 import Client.Player.utils.BombUtility;

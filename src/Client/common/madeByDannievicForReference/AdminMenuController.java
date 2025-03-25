@@ -1,4 +1,4 @@
-package Client.Admin.controller.madeByDannievicForReference;
+package Client.common.madeByDannievicForReference;
 
 import Client.Player.controller.MainMenuController;
 import common.Log.AnsiFormatter;

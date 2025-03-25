@@ -1,10 +1,9 @@
 package Client.Admin.controller;
 
 import App.App;
-import Client.common.connection.ClientConnection;
+import Client.connection.ClientConnection;
 import common.Response;
 import common.model.PlayerModel;
-import common.model.QuestionModel;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -15,7 +14,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
