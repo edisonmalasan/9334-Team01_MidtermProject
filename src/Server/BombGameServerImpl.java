@@ -17,6 +17,8 @@ import java.io.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
 public class BombGameServerImpl extends UnicastRemoteObject implements BombGameServer {
@@ -24,6 +26,7 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
     private ServerView serverView;
     private static final Logger logger = Logger.getLogger(ClientHandler.class.getName());
     private List<PlayerModel> playerList = new ArrayList<>();
+    private final Lock lock = new ReentrantLock();
     private Map<String, Callback> playerCallbacks = new Hashtable<>();
     private Gson gson = new Gson();
 
@@ -38,22 +41,31 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     @Override
     public Response getQuestionsPerCategory(String category) throws RemoteException {
-        logger.info("Server received question request for category: " + category);
+        lock.lock();
+        try {
+            logger.info("Server received question request for category: " + category);
 
-        QuestionController questionController = new QuestionController();
-        List<QuestionModel> questions = questionController.getQuestionsByCategory(category);
+            QuestionController questionController = new QuestionController();
+            List<QuestionModel> questions = questionController.getQuestionsByCategory(category);
 
-        if (questions.isEmpty()) {
-            logger.warning("No questions found for category: " + category);
-            return new Response(false, "No questions found for category: " + category, null);
+            if (questions.isEmpty()) {
+                logger.warning("No questions found for category: " + category);
+                return new Response(false, "No questions found for category: " + category, null);
+            }
+
+            logger.info("Question retrieved successfully for category: " + category);
+            return new Response(true, "Question retrieved successfully.", questions);
+        } catch (Exception e) {
+            logger.severe("Error retrieving questions: " + e.getMessage());
+            return new Response(false, "Error retrieving questions: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
-
-        logger.info("Question retrieved successfully for category: " + category);
-         return new Response(true, "Question retrieved successfully.", questions);
     }
 
     @Override
     public Response getLeaderboards(String leaderboardType) throws RemoteException {
+        lock.lock();
         try {
             List<LeaderboardEntryModel> leaderboard = getLeaderboardEntries(leaderboardType);
 
@@ -67,6 +79,8 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error retrieving leaderboard: " + e.getMessage());
             return new Response(false, "Error retrieving leaderboard: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
     }
 
@@ -101,22 +115,28 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
 
     @Override
     public Response getQuestionsList() throws RemoteException {
-        logger.info("Server received request for question list");
+        lock.lock();
+        try {
+            logger.info("Server received request for question list");
 
-        QuestionController questionController = new QuestionController();
-        List<QuestionModel> allQuestions = questionController.getQuestionsList();
+            QuestionController questionController = new QuestionController();
+            List<QuestionModel> allQuestions = questionController.getQuestionsList();
 
-        if (allQuestions.isEmpty()) {
-            logger.warning("No question list found.");
-            return new Response(false, "No question list found", null);
+            if (allQuestions.isEmpty()) {
+                logger.warning("No question list found.");
+                return new Response(false, "No question list found", null);
+            }
+
+            logger.info("Question list retrieved successfully");
+            return new Response(true, "Question list retrieved successfully.", allQuestions);
+        } finally {
+            lock.unlock();
         }
-
-        logger.info("Question list retrieved successfully");
-        return new Response(true, "Question list retrieved successfully.", allQuestions);
     }
 
     @Override
     public Response updatePlayerScore(PlayerModel player) throws RemoteException {
+        lock.lock();
         try {
             if (player == null) {
                 logger.severe("Received null player data.");
@@ -130,10 +150,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error updating player score: " + e.getMessage());
             return new Response(false, "Error updating player score: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
     }
 
     public Response updateQuestion(QuestionModel question) throws RemoteException {
+        lock.lock();
         try {
             logger.info("Server received request for removing question in database");
             if (question == null) {
@@ -164,10 +187,13 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error updating: " + e.getMessage());
             return new Response(false, "Error updating question database: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
     }
 
     public Response removeFromLeaderboard(LeaderboardEntryModel leaderboardEntry, String leaderboardType) throws RemoteException {
+        lock.lock();
         try {
             logger.info("Server received request for removal of entry in leaderboard");
             if (leaderboardEntry == null) {
@@ -191,11 +217,14 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error removing player from player list " + e.getMessage());
             return new Response(false, "Error removing entry from leaderboard: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
     }
 
     @Override
     public Response getPlayerList() {
+        lock.lock();
         try {
             if (playerList == null) {
                 logger.severe("Received null player data.");
@@ -206,39 +235,52 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
         } catch (Exception e) {
             logger.severe("Error retrieving player list: " + e.getMessage());
             return new Response(false, "Error retrieving player list: " + e.getMessage(), null);
+        } finally {
+            lock.unlock();
         }
     }
     @Override
     public void login(Callback callback) throws RemoteException {
-        PlayerModel player = callback.getPlayer();
+        lock.lock();
+        try {
+            PlayerModel player = callback.getPlayer();
 
-        if (playerCallbacks.containsValue(callback)) {
-            System.out.println("Player already logged in.");
-        } else {
-            playerCallbacks.put(player.getUsername(), callback);
-            System.out.println("Log In: " + player.getUsername());
-            System.out.println("Online : [");
-            Set<String> usernames = playerCallbacks.keySet();
-            int counter = 1;
-            for (String playerUsername : usernames) {
-                System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
-                playerCallbacks.get(playerUsername).loginCall(player);
+            if (playerCallbacks.containsValue(callback)) {
+                System.out.println("Player already logged in.");
+            } else {
+                playerCallbacks.put(player.getUsername(), callback);
+                System.out.println("Log In: " + player.getUsername());
+                System.out.println("Online : [");
+                Set<String> usernames = playerCallbacks.keySet();
+                int counter = 1;
+                for (String playerUsername : usernames) {
+                    System.out.println(playerUsername + (counter++ == usernames.size() ? "" : ", "));
+                    playerCallbacks.get(playerUsername).loginCall(player);
+                }
+                System.out.println("]");
             }
-            System.out.println("]");
+        } finally {
+            lock.unlock();
         }
     }
 
     @Override
     public PlayerModel getPlayer(String username, String password) {
+        lock.lock();
+        try {
         for (PlayerModel player : playerList) {
             if (player.getUsername().equalsIgnoreCase(username) && player.getPassword().equalsIgnoreCase(password)) {
                 return player;
             }
         }
         return null;
+        } finally {
+            lock.unlock();
+        }
     }
     @Override
     public void register(String username, String password) throws RemoteException {
+        lock.lock();
         try {
             PlayerModel player = new PlayerModel(username, password, "PLAYER", 0, 0, false);
             playerList.add(player);
@@ -246,11 +288,18 @@ public class BombGameServerImpl extends UnicastRemoteObject implements BombGameS
             logger.info("Registering player to database.");
         } catch (Exception e) {
             logger.severe("Error registering player: " + e.getMessage());
+        } finally {
+            lock.unlock();
         }
     }
 
     @Override
     public void logMessage(String message) throws RemoteException {
-        LogManager.getInstance().appendLog(message);
+        lock.lock();
+        try {
+            LogManager.getInstance().appendLog(message);
+        } finally {
+            lock.unlock();
+        }
     }
 }

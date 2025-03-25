@@ -22,7 +22,7 @@ public class App extends Application {
     public static BombGameServer bombGameServer;
     public static String fetchIPAddress; // for logs
     private final LogManager logManager = LogManager.getInstance();
-
+    public static String iPAddress = Protocol.IP_ADDRESS;
     public static void main(String[] args) {
         launch(args);
     }
