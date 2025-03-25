@@ -164,7 +164,7 @@
             </AnchorPane>
             <AnchorPane id="content" prefHeight="497.0" prefWidth="737.0">
                 <children>
-                    <GridPane id="categoriesGrid" layoutX="30.0" layoutY="8.0" prefHeight="510.0" prefWidth="677.0" AnchorPane.topAnchor="10.0">
+                    <GridPane id="categoriesGrid" fx:id="categoriesGrid" layoutX="30.0" layoutY="8.0" prefHeight="510.0" prefWidth="677.0" AnchorPane.topAnchor="10.0">
                         <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="339.0" />
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="338.0" />
