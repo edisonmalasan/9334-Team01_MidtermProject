@@ -210,7 +210,7 @@ public abstract class GameController {
                     classicScore = score;
                 }
 
-                PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore);
+                PlayerModel player = new PlayerModel(playerUsername, playerPassword, "PLAYER", classicScore, endlessScore, true);
                 Response response = ClientConnection.bombGameServer.updatePlayerScore(player);
 
                 if (response.isSuccess()) {
