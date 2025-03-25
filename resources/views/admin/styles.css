@@ -351,6 +351,7 @@
     -fx-text-fill: black;
 }
 
+
 .view2:hover {
     -fx-background-image: url("/images/exit_Button.png");
     -fx-background-size:216px 31px;
