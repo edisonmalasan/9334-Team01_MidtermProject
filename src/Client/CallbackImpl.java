@@ -1,13 +1,23 @@
 package Client;
 
+import Client.User.controller.LoginController;
+import common.AnsiFormatter;
+import common.LogManager;
 import utility.Callback;
 import common.model.PlayerModel;
 
 import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.logging.Logger;
 
 public class CallbackImpl extends UnicastRemoteObject implements Callback, Serializable {
+    private static final Logger logger = Logger.getLogger(LoginController.class.getName());
+
+    private final LogManager logManager = LogManager.getInstance();
+    static {
+        AnsiFormatter.enableColorLogging(logger);
+    }
     private PlayerModel player;
     public CallbackImpl(PlayerModel player) throws RemoteException {
         this.player = player;
@@ -19,11 +29,11 @@ public class CallbackImpl extends UnicastRemoteObject implements Callback, Seria
 
     @Override
     public void loginCall(PlayerModel player) throws RemoteException {
-        System.out.println(player.getUsername() + " logged in...");
+       logger.info(player.getUsername() + " logged in...");
     }
 
     @Override
     public void logoutCall(PlayerModel player) throws RemoteException {
-        System.out.println(player.getUsername() + " logged out...");
+        logger.info(player.getUsername() + " logged out...");
     }
 }
